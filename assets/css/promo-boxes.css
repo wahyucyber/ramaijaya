@@ -1,0 +1,73 @@
+
+section.promo .promo-inner {
+	margin: 0 65px;
+	width: auto;
+	height: 100%;
+}
+
+section.promo .promo-inner .title {
+	font-size: 22px;
+	color: #007bff;
+	font-weight: 500;
+	margin-left: 10px;
+	margin-bottom: 20px;
+	display: block;
+}
+
+section.promo .promo-inner .promo-content {
+	width: 100%;
+	margin: 0px 10px;
+}
+
+section.promo .promo-inner .promo-content a.item-promo-inner {
+	text-decoration: none;
+	display: inline-block;
+	width: 190px;
+	height: auto;
+	margin-bottom: 15px;
+	margin-right: 10px;
+}
+
+section.promo .promo-inner .promo-content a.item-promo-inner:nth-child(6n + 6) {
+	margin-right: 0;
+}
+
+section.promo .promo-inner .promo-content a.item-promo-inner .item-promo {
+	width: 100%;
+	height: auto;
+	position: relative;
+	overflow: hidden;
+}
+
+section.promo .promo-inner .promo-content a.item-promo-inner .item-promo img {
+	width: 100%;
+	height: 100%;
+	-webkit-border-radius: 4px;
+	        border-radius: 4px;
+}
+
+section.promo .promo-inner .promo-content a.item-promo-inner .item-promo span.end-product {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 22px;
+	line-height: 22px;
+	width: 50%;
+	min-width: 50%;
+	text-align: center;
+	font-size: 12px;
+	color: #fff;
+	background: #dc3545;
+	-webkit-border-radius: 4px 0 18px 0;
+	        border-radius: 4px 0 18px 0;
+}
+
+section.promo .promo-inner .promo-content a.item-promo-inner .category-promo {
+	font-size: 14px;
+	color: #343a40;
+	text-align: left;
+	margin-top: 10px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

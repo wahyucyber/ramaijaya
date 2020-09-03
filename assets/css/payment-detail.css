@@ -1,0 +1,219 @@
+div.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+div.payment-detail {
+	margin-bottom: 20px;
+}
+
+div.payment-detail div.grid div.payment-card {
+	width: 100%;
+	border: 1px solid #ddd;
+	background-color: #F7F7F7;
+	padding: 10px;
+}
+
+div.payment-detail div.payment-card div.payment-title {
+	font-size: 11px;
+	padding: 5px;
+	color: grey;
+	font-family: Arial;
+}
+
+div.payment-detail div.payment-card div.payment-body {
+	font-size: 14px;
+	font-family: arial;
+	padding: 5px;
+}
+
+div.payment-detail div.payment-card div.payment-body a.detail-pembayaran {
+	border-bottom: 1px dotted red;
+	color: red;
+	font-size: 13px;
+}
+
+div.payment-detail div.payment-card div.payment-body div.produk--img {
+	width: 60px;
+	float: left;
+	margin-right: 30px;
+}
+
+div.payment-detail div.payment-card div.payment-body div.produk--informasi {
+	width: 65%;
+	margin: auto;
+	float: left;
+}
+
+div.payment-detail div.payment-card div.payment-body div.produk--informasi div.informasi {
+	font-size: 13px;
+	color: grey;
+}
+
+div.payment-detail div.payment-card div.payment-body div.payment-status {
+	width: auto;
+	padding-top: 5px;
+	border-radius: 50px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	float: left;
+	margin-right: 10px;
+	padding-right: 10px;
+	border: 1px solid grey;
+	color: grey;
+}
+
+div.payment-detail div.payment-card div.payment-body div.payment-status.payment-active {
+	border-color: #DA4949;
+	color: #DA4949;
+}
+
+div.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  margin-top: -70px;
+  display: inline-block;
+  /*margin-left: -5px;*/
+  position: relative;
+  margin-bottom: 10px;
+}
+
+div.rating span {
+  display: inline-block;
+  font-size: 40px;
+  padding: 0;
+  margin-right: -25px;
+}
+
+div.rating div {
+	margin-top: -37px;
+	width: 100%;
+	font-size: 13px;
+	color: grey;
+	display: relative;
+}
+
+div.rating span:hover:before,
+div.rating span:hover ~ span:before {
+   content: "\2605";
+   color: yellow;
+   position: absolute;
+}
+
+div.rating span.active:before,
+div.rating span.active ~ span:before {
+	content: "\2605";
+	color: yellow;
+   	position: absolute;
+}
+
+div.ulasan-label {
+	border: 1px solid grey;
+	box-sizing: border-box;
+	width: auto;
+	padding: 2.5px 10px 2.5px 10px;
+	border-radius: 20px;
+	font-family: arial;
+	left: 0;
+	font-size: 13px;
+	cursor: pointer;
+	color: grey;
+	margin-right: 5px;
+	display: inline-block;
+}
+
+div.ulasan-label.active {
+	color: red;
+	border-color: red;
+}
+
+div.upload label {
+	width: 90px;
+	height: 90px;
+	border: 1px dashed grey;
+	line-height: 90px;
+	text-align: center;
+	font-size: 11px;
+	background: url(../img/default/no-image-small.png);
+	background-size: 100%;
+}
+
+div.ulasan {
+	border-bottom: 1px solid grey;
+}
+
+div.ulasan:last-child {
+	border-bottom: 0;
+}
+
+div.ulasan div.ulasan-header img {
+	float: left;
+	margin-right: 10px;
+}
+
+div.ulasan div.ulasan-header div.identity div.produk {
+	font-size: 14px;
+	font-weight: bold;
+	font-family: Arial;
+}
+
+div.ulasan div.ulasan-header div.identity div.produk-detail {
+	font-size: 13px;
+	font-family: Arial;
+	color: grey;
+}
+
+div.ulasan div.ulasan-body div.upload-foto label {
+	display: block;
+	position: relative;
+}
+
+div.ulasan div.ulasan-body div.upload-foto div.upload {
+	margin-left: auto;
+	position: relative;
+	display: inline-block;
+}
+
+div.ulasan div.ulasan-body div.upload-foto div.output-foto {
+	width: auto;
+	float: left;
+}
+
+div.ulasan div.ulasan-body div.upload-foto div.output-foto-db {
+	width: auto;
+	float: left;
+	display: inline-block;
+}
+
+div.ulasan div.ulasan-body div.upload-foto div.output-foto img,
+div.ulasan div.ulasan-body div.upload-foto div.output-foto-db img {
+	width: 90px;
+	height: 90px;
+	margin-right: 5px;
+}
+
+label.payment-upload {
+	width: 100%;
+	padding: 15px;
+	text-align: center;
+	height: 100px auto;
+	border: 1px dashed grey;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+label.payment-upload > i {
+	font-size: 11px;
+	color: grey;
+}
+
+button.btn-ulasan {
+	font-size: 13px;
+	padding: 3px 7px 3px 7px;
+	font-family: arial;
+	border: 1px solid #ccc;
+	background-color: #e7e7e7;
+	color: black;
+}

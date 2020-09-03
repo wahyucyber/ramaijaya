@@ -1,0 +1,33 @@
+
+section.register .box {
+	width: 500px;
+	min-height: 525px;
+	padding-top: 5%;
+}
+
+section.register .box a.logo {
+	width: 100%;
+}
+
+section.register .box a.logo img {
+	display: block;
+	width: 200px;
+	margin: 30px auto;
+}
+
+
+section.register .box .logo {
+	display: block;
+	width: 200px;
+	margin: 30px auto;
+}
+
+section.register .box select {
+	cursor: pointer;
+}
+
+section.register .box h6 {
+	font-size: 18px;
+	margin-bottom: 15px;
+	text-align: center;
+}

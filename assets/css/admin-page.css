@@ -1,0 +1,77 @@
+
+section.admin {
+	position: relative;
+}
+
+section.admin .admin-inner {
+	padding: 0 1rem;
+}
+
+/* is hide */
+
+
+section.admin .sidebar-x.sidebar-x-collapse .sidebar-x-content .detail-shop {
+	display: block;
+	padding: 0 10px;
+}
+
+section.admin .sidebar-x.sidebar-x-collapse .sidebar-x-content .detail-shop .column:first-child {
+	width: 100%;
+}
+
+section.admin .sidebar-x.sidebar-x-collapse .sidebar-x-content .detail-shop .column:last-child {
+	width: 65%;
+	padding-left: 10px;
+	opacity: 0;
+}
+
+section.admin .sidebar-x.sidebar-x-collapse .sidebar-x-content .list-menu .label-list {
+	display: flex;
+	padding-left: 20px;
+	opacity: 0;
+}
+
+section.admin .sidebar-x.sidebar-x-collapse .sidebar-x-content .list-menu .label-list span {
+	width: 50%;
+}
+
+section.admin .sidebar-x.sidebar-x-collapse .sidebar-x-content .list-menu .label-list .percent-perform {
+	width: 50%;
+	padding-left: 20px;
+}
+
+section.admin .sidebar-x.sidebar-x-collapse .sidebar-x-content .list-menu .menu > li > a {
+	border: none;
+	-webkit-border-radius: 0;
+	        border-radius: 0;
+	border-left: 3px solid transparent;
+	-webkit-transition: border .4s, color .4s;
+	   -moz-transition: border .4s, color .4s;
+	    -ms-transition: border .4s, color .4s;
+	     -o-transition: border .4s, color .4s;
+	        transition: border .4s, color .4s;
+}
+
+section.admin .sidebar-x.sidebar-x-collapse .sidebar-x-content .list-menu .menu > li > a span {
+	display: none;
+}
+
+section.admin .sidebar-x.sidebar-x-collapse .sidebar-x-content .list-menu .menu > li > a > .icon-sidebar {
+	width: 20px;
+	height: 20px;
+	margin-right: 17px;
+	display: inline-block;
+}
+
+section.admin .sidebar-x.sidebar-x-collapse .sidebar-x-content .list-menu .menu > li > a:hover {
+	border-left: 3px solid #007bff;
+	color: #007BFF;
+	background: transparent;
+}
+
+section.admin .sidebar-x.sidebar-x-collapse .sidebar-x-header {
+	width: 100%;
+	height: 40px;
+	border-bottom: 1px solid #e0e0e0;
+	padding: 0 20px;
+}

@@ -1,0 +1,80 @@
+
+.btn--dropify {
+	position: relative;
+	display: inline-block;
+}
+
+.btn--dropify .btn {
+	background: #28a745;
+	color: #fff;
+	font-size: 14px;
+	padding: .25rem 4rem;
+	position: relative;
+	z-index: 95;
+	-webkit-border-radius: 9px;
+	        border-radius: 9px;
+}
+
+.btn--dropify .btn::before {
+	content: "\f107";
+	font-family: "Font Awesome 5 Pro";
+	font-weight: 400;
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	transform: translateY(-50%);
+}
+
+.btn--dropify.open .btn::before {
+	content: "\f106";
+	font-family: "Font Awesome 5 Pro";
+	font-weight: 400;
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	transform: translateY(-50%);
+}
+
+.btn--dropify .dropify--content {
+	display: none;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	top: 80%;
+	left: 0;
+	z-index: 90;
+	background: #FFF;
+	width: 100%;
+	padding-top: 10px;
+	-webkit-box-shadow: 0 2px 8px rgba(0,0,0,.15);
+	        box-shadow: 0 2px 8px rgba(0,0,0,.15);
+	-webkit-border-radius: 0 0 9px 9px;
+	        border-radius: 0 0 9px 9px;
+}
+
+.btn--dropify .dropify--content li {
+	padding: .5rem 1rem;
+	padding-right: 2rem;
+	cursor: pointer;
+	position: relative;
+}
+
+.btn--dropify .dropify--content li.selected {
+	background: #eee;
+}
+
+.btn--dropify .dropify--content li.selected::before {
+	content: "\f058";
+	font-family: "Font Awesome 5 Pro";
+	font-weight: 300;
+	position: absolute;
+	top: 50%;
+	right: 13px;
+	transform: translateY(-50%);
+	color: #28a745;
+	font-size: 16px;
+}
+
+.btn--dropify.open .dropify--content {
+	display: block;
+}

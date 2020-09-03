@@ -1,0 +1,158 @@
+div.payment {
+	position: fixed;
+	z-index: 1040;
+	top: 0;
+	border: 1px solid grey;
+	width: 100%;
+	height: 670px;
+	margin: auto;
+	background-color: white;
+}
+
+div.payment div.payment-header {
+	padding-left: 120px;
+	padding-right: 120px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+div.payment div.payment-body {
+	overflow-y: auto;
+	height: 590px;
+}
+
+div.payment div.payment-body div.card-detail {
+	margin-bottom: 10px;
+}
+
+div.payment div.payment-body div.pull-left {
+	float: left;
+}
+
+div.payment div.payment-body div.pull-right {
+	float: right;
+}
+
+div.payment div.payment-body div.card-info-payment {
+	font-size: 15px;
+	font-family: times new roman;
+}
+
+div.payment div.payment-body div.card-info-payment:hover,
+div.payment div.payment-body div.card-detail:hover,
+div.payment div.payment-body div.card-metode-pembayaran:hover {
+	box-shadow: 0px 0px 8px grey;
+}
+
+div.payment div.payment-body div.text-info-payment {
+	padding: 6px;
+}
+
+div.payment div.payment-body div.text-info-payment-total {
+	border-top: 1px solid black;
+	padding: 5px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+div.payment div.payment-body div.card-info-payment div.card-header {
+	background-color: #F2F2F2;
+}
+
+div.payment div.payment-body div.card-info-payment {
+	border-color: #ddd;
+}
+
+div.payment div.payment-body button.btn-link {
+	text-decoration: none;
+}
+
+div.payment div.payment-body div.toko-img img {
+	width: 40px;
+	border-radius: 100%;
+	float: left;
+}
+
+div.payment div.payment-body div.toko-name {
+	font-size: 14px;
+	font-style: times new roman;
+	position: relative;
+	margin-left: 50px;
+}
+
+div.payment div.payment-body div.toko-kabupaten {
+	font-size: 14px;
+	font-weight: bold;
+	font-style: times new roman;
+	position: relative;
+	margin-left: 50px;
+}
+
+div.payment div.payment-body div.card-info-payment {
+	position: fixed;
+	width: 262px;
+}
+
+div.payment div.payment-body div.kurir {
+	width: 100%;
+	border: 1px solid #ddd;
+	height: auto;
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+
+div.payment div.payment-body div.kurir div.kurir-body {
+	padding: 15px;
+	text-align: center;
+}
+
+div.payment div.payment-body div.kurir div.kurir-body div.kurir-harga {
+	position: absolute;
+	background-color: red;
+	color: white;
+	padding: 3px;
+	z-index: 1001;
+	width: auto;
+	border-bottom-left-radius: 10px;
+	right: 15px;
+	margin-top: -15px;
+	font-size: 13px;
+}
+
+div.payment div.payment-body div.kurir div.kurir-body img {
+	height: 50px;
+	position: relative;
+}
+
+div.payment div.payment-body div.kurir div.kurir-footer {
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #ddd;
+	padding-left: 15px;
+	height: auto;
+	padding-right: 15px;
+	border-top: 1px solid #ddd;
+	font-size: 13px;
+}
+
+div.payment div.payment-body div.kurir-active {
+	box-shadow: 0px 0px 7px grey;
+}
+
+div.payment-metode {
+	border: 1px solid #aeaeae;
+	color: #aeaeae;
+	border-radius: 1px;
+	text-align: center;
+	margin-top: 10px;
+	cursor: pointer;
+	padding: 5px;
+	width: 50%;
+	float: left;
+}
+
+div.payment-metode.active {
+	border: 1px solid red;
+	color: red;
+}

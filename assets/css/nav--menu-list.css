@@ -1,0 +1,13 @@
+
+
+.nav--menu-list .list-group {
+	margin: 0;
+	padding: 0;
+	margin-bottom: .5rem;
+}
+
+.nav--menu-list .list-group .list-group-item {
+	border: 0;
+	color: var(--dark);
+	font-size: 15px;
+}

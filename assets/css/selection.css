@@ -1,0 +1,17 @@
+
+section.selection {
+	margin-bottom: 40px;
+	position: relative;
+}
+
+section.selection .selection-inner {
+	width: 91%;
+	height: auto;
+	margin: 0 auto;
+	padding: 5px 10px;
+	overflow: hidden;
+}
+
+section.selection .selection-inner .slick-list {
+	padding: 0 5px !important;
+}

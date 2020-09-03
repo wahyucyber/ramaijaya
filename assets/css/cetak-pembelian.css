@@ -1,0 +1,35 @@
+div.cetak-pembelian table.cetak {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+div.cetak-pembelian table.cetak,
+div.cetak-pembelian table.cetak tbody tr td,
+div.cetak-pembelian table.cetak thead tr th,
+div.cetak-pembelian table.cetak tbody tr th {
+	border: 1px solid black;
+	vertical-align: top;
+}
+
+div.cetak-pembelian table.cetak thead tr th {
+	text-align: center;
+	align-items: center;
+	align-content: center;
+	background-color: #D13737;
+	color: white;
+	/*padding: 1px;*/
+}
+
+div.cetak-pembelian table.cetak tbody tr td {
+	padding: 5px;
+	font-size: 13px;
+}
+
+div.cetak-pembelian table.cetak tbody tr th {
+	background-color: #D4D4D4;
+	font-size: 15px;
+	padding: 3px;
+	text-align: center;
+	align-items: center;
+	align-content: center;
+}

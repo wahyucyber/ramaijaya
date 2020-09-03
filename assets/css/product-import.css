@@ -1,0 +1,17 @@
+div.import-produk {
+	width: 100%;
+	min-height: 150px;
+	height: auto;
+	border: 1px dotted #ddd;
+	text-align: center;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+div.import-produk div.info-text {
+	color: grey;
+	font-size: 12px;
+	font-family: italic;
+}

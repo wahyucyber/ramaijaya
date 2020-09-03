@@ -1,0 +1,193 @@
+
+section.brand .brand-inner {
+	margin: 0 65px;
+	padding: 0 12px;
+	width: auto;
+	height: 100%;
+}
+
+section.brand .brand-inner .brand-content {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	height: 300px;
+	border: 1px solid #eee;
+	background: #fff;
+	-webkit-border-radius: 12px 0 0 12px;
+	        border-radius: 12px 0 0 12px;
+	overflow: hidden;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+/* arrow */
+
+section.brand .brand-inner .slick-prev,
+section.brand .brand-inner .slick-next
+{
+    z-index: 1;
+    
+}
+
+
+section.brand .brand-inner .slick-prev::before,
+section.brand .brand-inner .slick-next::before
+{
+    font-family: 'slick';
+    font-size: 30px;
+    line-height: 1;
+    -webkit-border-radius: auto;
+            border-radius: auto;
+    opacity: 1;
+    color: rgba(52,58,64,.8);
+}
+
+section.brand .brand-inner .slick-slider .slick-arrow:hover::before {
+	color: #000;
+}
+
+section.brand .brand-inner .slick-dots
+{
+    bottom: 10px;
+}
+
+section.brand .brand-inner .slick-slider .slick-arrow.slick-disabled::before {
+	display: none;
+}
+
+section.brand .brand-inner .slick-slider .slick-prev {
+	left: 10px;
+}
+
+section.brand .brand-inner .slick-slider .slick-next {
+	right: 20px;
+}
+
+section.brand .brand-inner .brand-content .column:first-child {
+	width: 20%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	background: #A3A3A3;
+	-webkit-border-radius: 8px 0 0 8px;
+	        border-radius: 8px 0 0 8px;
+}
+
+section.brand .brand-inner .brand-content .column:first-child img {
+	width: 100%;
+	height: 100%;
+}
+
+section.brand .brand-inner .brand-content .column:first-child button {
+	position: absolute;
+	top: 50%;
+	left: 16%;
+	right: 16%;
+	font-size: 14px;
+}
+
+section.brand .brand-inner .brand-content .column:last-child {
+	width: 80%;
+	height: 100%;
+}
+
+section.brand .brand-inner .brand-content .column:last-child a.brand-item {
+	width: 150px;
+	height: 300px;
+	position: relative;
+	border-right: 1px solid #eee;
+	-webkit-border-radius: none !important;
+	        border-radius: none !important;
+	text-decoration: none;
+}
+
+section.brand .brand-inner .brand-content .column:last-child a.brand-item:hover {
+	-webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+	        box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+
+section.brand .brand-inner .brand-content .column:last-child .brand-item .label-promo {
+	background: rgba(255,86,106,.85);
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: #fff;
+	text-align: center;
+	z-index: 1;
+	padding: 4px 4px 6px 8px;
+	font-size: 12px;
+	-webkit-border-radius: 0 0 0 12px;
+	        border-radius: 0 0 0 12px;
+}
+
+section.brand .brand-inner .brand-content .column:last-child .brand-item .brand-card_head {
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+	background: #fff;
+	-webkit-border-radius: 8px;
+	        border-radius: 8px;
+	-webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+	        box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+	position: absolute;
+	top: 40%;
+	left: 17%;
+	z-index: 1;
+	-webkit-transform: translateX(-50%,-50%);
+	   -moz-transform: translateX(-50%,-50%);
+	    -ms-transform: translateX(-50%,-50%);
+	     -o-transform: translateX(-50%,-50%);
+	        transform: translateX(-50%,-50%);
+}
+
+section.brand .brand-inner .brand-content .column:last-child .brand-item .brand-card_head .brand-logo {
+	width: 100%;
+	height: auto;
+}
+
+section.brand .brand-inner .brand-content .column:last-child .brand-item .brand-card_head .brand-logo img {
+	display: block;
+	width: 100%;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
+}
+
+section.brand .brand-inner .brand-content .column:last-child .brand-item .brand-card_body {
+	height: 100%;
+	position: relative;
+	background: #fff;
+	overflow: hidden;
+}
+
+section.brand .brand-inner .brand-content .column:last-child .brand-item .brand-card_body img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: .4;
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+section.brand .brand-inner .brand-content .column:last-child .brand-item .brand-card_body .brand-name {
+	padding: 0 12px 18px 12px;
+	color: #333;
+	width: 100%;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	text-align: center;
+	-webkit-transform: translateX(-50%);
+	   -moz-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	     -o-transform: translateX(-50%);
+	        transform: translateX(-50%);
+}
+
+section.brand .brand-inner .brand-content .column:last-child .brand-item .brand-card_body .brand-name span {
+	height: auto;
+	font-size: 13px;
+	line-height: 20px;
+}

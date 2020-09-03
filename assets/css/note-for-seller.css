@@ -1,0 +1,64 @@
+
+.note-for-seller {
+	position: relative;
+	width: 250px;
+}
+
+.note-for-seller._nfs .display-target {
+	display: none;
+}
+
+.note-for-seller._nfs .olc-wrapper {
+	display: none;
+}
+
+.note-for-seller._nfs .olc-wrapper .olc-text {
+	max-width: 200px;
+}
+
+.note-for-seller._nfs.olc-displayed .olc-wrapper {
+	display: flex;
+}
+
+.note-for-seller._nfs.olc-displayed.textfield-displayed .olc-wrapper {
+	display: none;
+}
+
+.note-for-seller._nfs.olc-displayed.textfield-displayed .display-target {
+	display: block;
+}
+
+.note-for-seller._nfs.olc-displayed .display-handler {
+	display: none;
+}
+
+.note-for-seller._nfs.textfield-displayed .display-handler {
+	display: none;
+}
+
+.note-for-seller._nfs.textfield-displayed .display-target {
+	display: block;
+}
+
+.note-for-seller .display-target textarea.note-text {
+	border: none;
+	border-bottom: 1px solid #B5BBC5;
+	outline: none;
+	resize: none;
+	overflow: hidden;
+	min-height: 40px;
+	font-size: 13px;
+	width: 100%;
+	padding: 10px 0;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.note-for-seller .display-target textarea.note-text:focus {
+	border-bottom: 1px solid #007bff;
+}
+
+.note-for-seller .display-handler span {
+	color: #007bff;
+}

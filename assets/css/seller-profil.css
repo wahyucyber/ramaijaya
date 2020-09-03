@@ -1,0 +1,51 @@
+div.img-profil {
+	width: 100%;
+	height: auto;
+	margin: auto;
+}
+
+div.img-profil div.img-rounded {
+	width: 100%;
+	height: auto;
+	border-radius: 100%;
+	border: 3px solid grey;
+	background-size: cover;
+	overflow: hidden;
+}
+
+div.img-profil div.img-rounded  img.img-seller {
+	border-radius: 100%;
+}
+
+div.img-profil div.img-rounded div.img-browse-file{
+	position: relative;
+	margin-top: -60px;
+	padding: 5px;
+	background-color: rgba(218, 218, 218, 0.8);
+	width: 100%;
+	font-size: 14px;
+	text-align: center;
+}
+
+div.img-profil div.img-rounded div.img-browse-file label {
+	width: 100%;
+	height: auto;
+}
+
+div.img-profil div.img-rounded div.img-browse-file label i{
+	font-size: 15px;
+}
+
+div.img-profil div.img-rounded div.img-browse-file input[type=file]{
+	display: none;
+}
+
+div.img-profil  div.img-tumbhnail {
+	margin-top: 10px;
+	font-size: 13px;
+	padding: 7px;
+	text-align: center;
+	font-family: Times New Roman;
+	border-left: 5px solid #D2D2D2;
+	background-color: #F3F3F3;
+}

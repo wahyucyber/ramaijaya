@@ -1,0 +1,26 @@
+
+.line-separtor {
+	position: relative;
+	text-align: center;
+}
+
+.line-separtor::before {
+	background: #999;
+	content: "";
+	display: block;
+	height: 1px;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	z-index: 0;
+}
+
+.line-separtor .line-separator-text {
+	font-size: 15px;
+	line-height: 1.4;
+	background: #fff;
+	color: #999;
+	padding: 0 1em;
+	position: relative;
+	z-index: 1;	
+}

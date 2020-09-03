@@ -1,0 +1,64 @@
+
+
+.discuss-list {
+	width: 100%;
+	display: block;
+}
+
+.discuss-list .list-box {
+	padding: 0;
+	width: 100%;
+}
+
+.discuss-list .list-box .discuss-list-container {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.discuss-list .list-box .discuss-list-container .discuss-list-content {
+	border: 1px solid #e0e0e0;
+	-webkit-border-radius: 4px;
+	        border-radius: 4px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.discuss-list .list-box .discuss-list-container .discuss-list-content .discuss-comment {
+	padding: 16px;
+	position: relative;
+	display: block;
+}
+
+.discuss-list .list-box .discuss-list-container .discuss-list-content .img-profile {
+	position: relative;
+	width: 37px;
+	height: 37px;
+	float: left;
+	margin-left: 10px;
+}
+
+.discuss-list .list-box .discuss-list-container .discuss-list-content .discuss-response {
+	padding: 16px 32px;
+	background: #FAFAFA;
+	border-top: 1px solid #e0e0e0;
+}
+
+.question-discuss {
+	padding: 16px;
+	position: relative;
+	border: 1px solid #e0e0e0;
+	-webkit-border-radius: 4px;
+	        border-radius: 4px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.question-discuss .d-flex {
+	float: left;
+}
+
+.question-discuss .btn-question {
+	float: right;
+}

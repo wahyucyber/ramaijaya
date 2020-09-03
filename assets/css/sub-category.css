@@ -1,0 +1,97 @@
+
+section.sub-category {
+	margin-bottom: 40px;
+	position: relative;
+}
+
+section.sub-category .sub-category-inner {
+	width: 91%;
+	height: auto;
+	margin: 0 auto;
+	padding: 5px 10px;
+	overflow: hidden;
+}
+
+section.sub-category .sub-category-inner .slick-list {
+	padding: 0 5px !important;
+}
+
+/* Arrows */
+
+section.sub-category .sub-category-inner .slick-prev::before,
+section.sub-category .sub-category-inner .slick-next::before
+{
+    font-family: 'slick';
+    font-size: 30px;
+    line-height: 1;
+    opacity: 1;
+    color: #fff;
+    text-shadow: 2px 2px 6px rgba(0,0,0,.4);
+}
+
+section.sub-category .sub-category-inner .slick-prev.slick-disabled {
+	left: -50px;
+}
+
+section.sub-category .sub-category-inner .slick-next.slick-disabled {
+	right: -50px;
+}
+
+section.sub-category .sub-category-inner .slick-prev {
+	left: -10px;
+	opacity: 1;
+	z-index: 1;
+	-webkit-transition: .8s;
+       -moz-transition: .8s;
+        -ms-transition: .8s;
+         -o-transition: .8s;
+            transition: .8s;
+}
+
+section.sub-category .sub-category-inner .slick-next {
+	right: 2px;
+	opacity: 1;
+	z-index: 1;
+    -webkit-transition: .8s;
+       -moz-transition: .8s;
+        -ms-transition: .8s;
+         -o-transition: .8s;
+            transition: .8s;
+}
+
+section.sub-category .sub-category-inner a.slider-item {
+	display: inline-block;
+	position: relative;
+	width: 141px;
+	height: 141px;
+	padding: 10px;
+	text-align: center;
+	-webkit-box-shadow: 0 1px 6px 0 rgba(49, 53, 59, 0.12);
+	        box-shadow: 0 1px 6px 0 rgba(49, 53, 59, 0.12);
+	background: #FFF;
+	margin: 10px 0 10px 15px;
+	-webkit-border-radius: 10px;
+	        border-radius: 10px;
+}
+
+section.sub-category .sub-category-inner a.slider-item .head {
+	height: 79px;
+	width: 125px;
+	position: relative;
+	overflow: hidden;
+}
+
+section.sub-category .sub-category-inner a.slider-item .body {
+	height: calc(141px - 79px);
+	width: 100%;
+	display: flex;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+
+section.sub-category .sub-category-inner img{
+	width: 100%;
+	height: 100%;
+}

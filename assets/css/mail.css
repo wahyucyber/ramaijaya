@@ -1,0 +1,47 @@
+
+section.mail {
+	width: 100%;
+	height: 50vh;
+	display: flex;
+	-webkit-align-items: center;
+	        align-items: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+}
+
+section.mail .mail-content {
+	width: 900px;
+	min-height: 300px;
+	background: #eee;
+	-webkit-border-radius: 10px;
+	        border-radius: 10px;
+	display: flex;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+
+section.mail .mail-content .mail-item {
+	max-width: 80%;
+	text-align: center;
+}
+
+section.mail .mail-content .mail-item .icon i {
+	font-size: 90px;
+}
+
+section.mail .mail-content .mail-item .icon i::before {
+	color: #dc3545;
+	content: "\f057";
+}
+
+section.mail .mail-content .mail-item.success .icon i::before {
+	content: "\f058";
+	color: #28A745;
+}
+
+section.mail .mail-content .mail-item.warning .icon i::before {
+	content: "\f071";
+	color: #FFB007;
+}

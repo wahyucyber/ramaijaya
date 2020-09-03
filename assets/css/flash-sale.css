@@ -1,0 +1,156 @@
+
+section.flash-sale {
+	background: linear-gradient(120deg, #6a4ee1 0%, #57C1FE 100%) !important;
+}
+
+section.flash-sale .flash-sale-inner {
+	margin: 0 65px;
+	padding: 18px 12px;
+	width: auto;
+	height: 100%;
+}
+
+section.flash-sale .flash-sale-inner span.title {
+	font-size: 22px;
+	color: #fff;
+	font-weight: 500;
+}
+
+section.flash-sale .flash-sale-inner span.badge {
+	margin-left: 40px;
+	padding: 5px;
+}
+
+section.flash-sale .flash-sale-inner .flash-sale-content {
+	width: 100%;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-top: 20px;
+}
+
+/* arrow */
+
+section.flash-sale .flash-sale-inner .slick-prev,
+section.flash-sale .flash-sale-inner .slick-next
+{
+    z-index: 1;
+    
+}
+
+section.flash-sale .flash-sale-inner .slick-prev::before,
+section.flash-sale .flash-sale-inner .slick-next::before
+{
+    font-family: 'slick';
+    font-size: 30px;
+    line-height: 1;
+    -webkit-border-radius: auto;
+            border-radius: auto;
+    opacity: 1;
+    color: rgba(52,58,64,.8);
+}
+
+section.flash-sale .flash-sale-inner .slick-slider .slick-arrow:hover::before {
+	color: #000;
+}
+
+section.flash-sale .flash-sale-inner .slick-slider .slick-arrow.slick-disabled::before {
+	display: none;
+}
+
+section.flash-sale .flash-sale-inner .slick-slider .slick-prev {
+	left: 10px;
+}
+
+section.flash-sale .flash-sale-inner .slick-slider .slick-next {
+	right: 20px;
+}
+
+section.flash-sale .flash-sale-inner .flash-sale-content a.flash-item {
+	width: 198px;
+	height: 340px;
+	border: none;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	-webkit-border-radius: 2px;
+	        border-radius: 2px;
+	display: inline-block;
+	text-decoration: none;
+}
+
+section.flash-sale .flash-sale-inner .flash-sale-content a.flash-item:hover {
+	-webkit-box-shadow: 1px 1px 3px rgba(159,166,176,.8);
+	        box-shadow: 1px 1px 3px rgba(159,166,176,.8);
+}
+
+section.flash-sale .flash-sale-inner .flash-sale-content a.flash-item .head {
+	padding: 0;
+	width: 100%;
+	height: 198px;
+	overflow: hidden;
+	background: transparent;
+	border: none;
+}
+
+section.flash-sale .flash-sale-inner .flash-sale-content a.flash-item .head img {
+	width: 100%;
+	height: auto;
+	max-height: 100%;
+}
+
+section.flash-sale .flash-sale-inner .flash-sale-content a.flash-item .head span.label-discount {
+	background: #dc3545;
+	width: 36px;
+	height: 36px;
+	text-align: center;
+	line-height: 25px;
+	font-size: 11px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #fff;
+	-webkit-box-shadow: 1px 2px 3px #343a40;
+	        box-shadow: 1px 2px 3px #343a40;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
+}
+
+section.flash-sale .flash-sale-inner .flash-sale-content a.flash-item .body {
+	padding: 12px;
+	border: none;
+}
+
+section.flash-sale .flash-sale-inner .flash-sale-content a.flash-item .body .small {
+	height: auto;
+	color: #343a40;
+	font-size: 13px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+section.flash-sale .flash-sale-inner .flash-sale-content a.flash-item .body .price-flash-sale {
+	margin-bottom: 15px;
+}
+
+section.flash-sale .flash-sale-inner .flash-sale-content a.flash-item .body .price-flash-sale .price-original {
+	font-size: 12px;
+	text-decoration: line-through;
+	color: rgb(135,135,135);
+}
+
+section.flash-sale .flash-sale-inner .flash-sale-content a.flash-item .body .price-flash-sale .price-reduced {
+	font-size: 14px;
+	font-weight: 700;
+	color: #dc3545;
+}
+
+section.flash-sale .flash-sale-inner .flash-sale-content a.flash-item .body span.stock_sw {
+	font-size: 10px;
+	color: #343a40;
+}
+
+section.flash-sale .flash-sale-inner .flash-sale-content a.flash-item .body .item-stock {
+	height: 6px;
+}

@@ -1,0 +1,144 @@
+
+@media screen and (min-width: 540px){
+
+	.step--status {
+		width: 100%;
+		height: 60px;
+		position: relative;
+	}
+
+	.step--status .step--status-line {
+		width: 100%;
+		height: 10px;
+		background: #eee;
+		display: flex;
+		position: absolute;
+		top: 30%;
+		left: 0;
+		transform: translateY(-50%);
+	}
+
+	.step--status .step--status-line .step--status-value {
+		/* background: #ffc107; */
+		height: 100%;
+	}
+
+	.step--status .step--status-list {
+		width: 100%;
+		display: flex;
+		z-index: 5;
+		position: absolute;
+		top: 30%;
+		left: 0;
+		transform: translateY(-30%);
+		justify-content: space-between;
+	}
+
+	.step--status .step--status-list .step--list-item {
+		width: 120px;
+		height: 60px;
+		text-align: center;
+		display: flex;
+		align-items: flex-end;
+		position: relative;
+	}
+
+	.step--status .step--status-list .step--list-item small {
+		display: block;
+		width: 100%;
+	}
+
+	.step--status .step--status-list .step--list-item .list-item-content {
+		--step-bg: #eee;
+	}
+
+	.step--status .step--status-list .step--list-item .list-item-content::before {
+		content: "";
+		width: 30px;
+		height: 30px;
+		display: block;
+		background: var(--step-bg);
+		border-radius: 50%;
+		position: absolute;
+		left: 50%;
+		top: 30%;
+		transform: translate(-50%,-50%);
+	}
+
+	/* .step--status .step--status-list .step--list-item.active .list-item-content::before {
+		background: #28a745;
+	} */
+
+}
+
+@media screen and (max-width: 539px){
+
+	.step--status {
+		width: 100%;
+		height: 80px;
+		position: relative;
+	}
+
+	.step--status .step--status-line {
+		width: 100%;
+		height: 10px;
+		background: #eee;
+		display: flex;
+		position: absolute;
+		top: 30%;
+		left: 0;
+		transform: translateY(-50%);
+	}
+
+	.step--status .step--status-line .step--status-value {
+		/* background: #ffc107; */
+		height: 100%;
+	}
+
+	.step--status .step--status-list {
+		width: 100%;
+		display: flex;
+		z-index: 5;
+		position: absolute;
+		top: 30%;
+		left: 0;
+		transform: translateY(-30%);
+		justify-content: space-between;
+	}
+
+	.step--status .step--status-list .step--list-item {
+		width: 120px;
+		height: 80px;
+		text-align: center;
+		display: flex;
+		align-items: flex-end;
+		position: relative;
+	}
+
+	.step--status .step--status-list .step--list-item small {
+		display: block;
+		width: 100%;
+	}
+
+	.step--status .step--status-list .step--list-item .list-item-content {
+		--step-bg: #eee;
+	}
+
+	.step--status .step--status-list .step--list-item .list-item-content::before {
+		content: "";
+		width: 30px;
+		height: 30px;
+		display: block;
+		background: var(--step-bg);
+		border-radius: 50%;
+		position: absolute;
+		left: 50%;
+		top: 30%;
+		transform: translate(-50%,-50%);
+	}
+
+	/* .step--status .step--status-list .step--list-item.active .list-item-content::before {
+		background: #28a745;
+	} */
+
+}

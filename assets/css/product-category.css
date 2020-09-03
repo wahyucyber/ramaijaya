@@ -1,0 +1,102 @@
+
+
+section.product-category .product-category-inner {
+	margin: 0 65px;
+	padding: 0 12px;
+	width: auto;
+	height: 100%;
+	position: relative;
+}
+
+section.product-category .product-category-content {
+	width: 100%;
+	overflow: hidden;
+	height: auto;
+	z-index: 30;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	position: sticky;
+	padding: 10px 0;
+	top: 83px;
+	left: 0;
+	background: #FFF;
+	margin-bottom: 20px;
+}
+
+section.product-category .list-item {
+	width: 216px;
+	height: 64px;
+	position: relative;
+	margin-right: 10px;
+}
+
+section.product-category .list-item button {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-repeat: round !important;
+	-webkit-background-size: cover !important;
+	     -o-background-size: cover !important;
+	        background-size: cover !important;
+	-webkit-border-radius: 8px;
+	        border-radius: 8px;
+	position: relative;
+	background: transparent;
+	color: #FFF;
+	text-align: left;
+}
+
+section.product-category .list-item button.active::before {
+	content: "";
+	width: 50px;
+	height: 3px;
+	background: #FFF;
+	position: absolute;
+	top: 13px;
+	left: 13px;
+}
+
+/* arrow */
+
+section.product-category .product-category-inner .slick-prev::before,
+section.product-category .product-category-inner .slick-next::before
+{
+    font-family: 'slick';
+    font-size: 30px;
+    line-height: 1;
+    opacity: 1;
+    color: #fff;
+    text-shadow: 2px 2px 6px rgba(0,0,0,.4);
+}
+
+section.product-category .product-category-inner .slick-prev.slick-disabled {
+	left: -100%;
+}
+
+section.product-category .product-category-inner .slick-next.slick-disabled {
+	right: -100%;
+}
+
+section.product-category .product-category-inner .slick-prev {
+	left: -11px;
+	opacity: 1;
+	z-index: 1;
+	-webkit-transition: .8s;
+       -moz-transition: .8s;
+        -ms-transition: .8s;
+         -o-transition: .8s;
+            transition: .8s;
+}
+
+section.product-category .product-category-inner .slick-next {
+	right: 0;
+	opacity: 1;
+	z-index: 1;
+    -webkit-transition: .8s;
+       -moz-transition: .8s;
+        -ms-transition: .8s;
+         -o-transition: .8s;
+            transition: .8s;
+}

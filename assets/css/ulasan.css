@@ -1,0 +1,13 @@
+div.ulasan {
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+div.ulasan div.ulasan-header {
+	width: 100%;
+	height: auto;
+}
+
+div.ulasan div.ulasan-header img {
+	width: 10%;
+}

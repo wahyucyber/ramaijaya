@@ -1,0 +1,27 @@
+.breadcrumb {
+	background: #EFEFEF;
+	font-size: 13px;
+	/*padding-left: ;*/
+}
+
+.breadcrumb-item.active {
+	width: 100px;
+	white-space: nowrap;
+	-ms-text-overflow: ellipsis;
+	    text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.breadcrumb-item.active:hover {
+	width: auto;
+	white-space: normal;
+	overflow: visible;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+	font-family: "Font Awesome 5 Pro";
+	font-weight: 900;
+	content: "\f105";
+	color: rgb(159,166,176);
+	/*color: white;*/
+}

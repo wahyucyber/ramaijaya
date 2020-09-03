@@ -1,0 +1,106 @@
+
+.category--nav-list {
+	--shadow-category: 1px 2px 2px rgba(0,0,0,.15);
+	--link-color: #6C757D;
+	--link-color-hover: var(--dark);
+	padding-left: 0;
+	min-width: 200px;
+	min-height: 350px;
+	position: relative;
+	background: #fff;
+	padding: .5rem 0;
+	border-radius: 0 0 0 6px;
+	box-shadow: var(--shadow-category);
+	z-index: 1000;
+	/* overflow-x: hidden;
+	overflow-y: auto; */
+    box-shadow: inset 0 2px 3px rgba(211,211,211,.7);
+    margin-bottom: 0;
+
+}
+
+.category--nav-list .category--nav-item {
+	padding: .1rem .5rem;
+	/* cursor: pointer; */
+}
+
+.category--nav-list a.parent-category {
+	border-radius: 6px;
+	transition: background .2s, color .2s;
+	width: 100%;
+	padding: .5rem 1rem;
+	font-size: 12px;
+	font-weight: 600;
+	position: relative;
+	color:  var(--link-color);
+}
+
+.category--nav-list .category--nav-item:hover a.parent-category,
+.category--nav-list .sub-category--nav-list .sub-category--nav-item:hover {
+	background: rgba(221,221,221,.5);
+	color:  var(--link-color-hover);
+}
+
+.category--nav-list .category--nav-item a.parent-category .right--arrow {
+	position: absolute;
+	top: 50%;
+	right: .5rem;
+	transform: translateY(-50%);
+}
+
+.category--nav-list .category--nav-item:hover .sub-category--nav-list {
+	display: block;
+}
+
+.category--nav-list .sub-category--nav-list {
+	padding-left: 0;
+	min-width: 620px;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	background: #fff;
+	min-height: 350px;
+	padding: 1rem .5rem;
+	border-radius: 0 0 6px 0;
+	display: none;
+	box-shadow: var(--shadow-category);
+	z-index: 1045;
+	box-shadow: inset 0 2px 3px rgba(211,211,211,.7);
+
+}
+
+.category--nav-list .sub-category--nav-list .sub-category--nav-item {
+	width: 194px;
+	min-height: 48px;
+	display: inline-block;
+	border-radius: 6px;
+	overflow: hidden;
+	transition: background .2s, color .2s;
+}
+
+.category--nav-list .sub-category--nav-list a.child-category {
+	width: 100%;
+	padding: 8px;
+	font-weight: 600;
+	color:  var(--link-color);
+	display: flex;
+	align-items: center;
+	font-size: 12px;
+}
+
+.category--nav-list .sub-category--nav-list a.child-category .label-sub {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 75%;
+}
+
+.category--nav-list .sub-category--nav-list a.child-category img.sub-category--icon {
+	width: 32px;
+	height: 32px;
+	line-height: 48px;
+	margin-right: 5px;
+	-webkit-border-radius: 8px;
+	        border-radius: 8px;
+	border: 1px solid rgba(211,211,211,.7)
+}

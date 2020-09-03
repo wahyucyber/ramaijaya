@@ -1,0 +1,908 @@
+
+@import url(./module.css);
+@import url(./navbar.css);
+@import url(./loader.css);
+@import url(./product_loader.css);
+@import url(./shop-rating.css);
+@import url(./breadcrumb.css);
+@import url(./product-item.css);
+@import url(./quantity-input.css);
+@import url(./shop-single.css);
+@import url(./notif-alert.css);
+
+@import url(./dropdowns.css);
+@import url(./category--nav-list.css);
+@import url(./cart--nav.css);
+@import url(./shop--nav.css);
+@import url(./nav--menu-list.css);
+@import url(./menu--card-nav.css);
+
+@import url(./sidebar-sm.css);
+@import url(./backend-sidebar.css);
+@import url(./shimmer-effect.css);
+@import url(./slider.css);
+@import url(./flash-sale.css);
+@import url(./promo-boxes.css);
+@import url(./brand.css);
+@import url(./product.css);
+@import url(./star-rate.css);
+@import url(./single-product.css);
+@import url(./reviews-list.css);
+@import url(./discuss-list.css);
+@import url(./product-rating-summary.css);
+@import url(./category-single.css);
+@import url(./category-item.css);
+@import url(./file-upload.css);
+@import url(./newsletter.css);
+@import url(./search-single.css);
+@import url(./shop-product--reviews.css);
+@import url(./shop-item.css);
+@import url(./register-page.css);
+@import url(./login-page.css);
+@import url(./line-separator.css);
+@import url(./cart-single.css);
+@import url(./note-for-seller.css);
+@import url(./my-shop.css);
+@import url(./admin-page.css);
+@import url(./sub-category.css);
+@import url(./selection.css);
+@import url(./product-category.css);
+@import url(./footer.css);
+@import url(./ajax-loader.css);
+@import url(./working-page.css);
+@import url(./mail.css);
+@import url(./loader-ellipsis.css);
+@import url(./header-shop.css);
+@import url(./category-boxes.css);
+@import url(./lock-screen.css);
+@import url(./people.css);
+@import url(./payment.css);
+@import url(./payment-detail.css);
+@import url(./cetak-pembelian.css);
+@import url(./ulasan.css);
+@import url(./kurir.css);
+@import url(./category-header.css);
+@import url(./responsive.css);
+@import url(./shared--content.css);
+@import url(./chat--content.css);
+@import url(./chat--box.css);
+@import url(./nav--notification.css);
+@import url(./product-import.css);
+@import url(./order--list.css);
+@import url(./tracking--content.css);
+@import url(./btn--dropify.css);
+@import url(../ext/chart/Chart.min.css);
+@import url(./step--status.css);
+
+.text-caret {
+	text-decoration: line-through;
+}
+
+.navbar-inner .column:last-child .btn-login-sm-inner {
+	padding: 8px 0;
+	display: none;
+}
+
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+table.table {
+	width: 100%;
+}
+
+.none {
+	display: none;
+}
+
+.required {
+	color: red;
+}
+
+.main-wrapper {
+	width: 100%;
+	height: 100%;
+}
+
+.backdrop-nav {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	background: rgba(0,0,0,.6);
+	display: none;
+	z-index: 1001;
+	-webkit-animation: fadeIn .5s;
+	   -moz-animation: fadeIn .5s;
+	     -o-animation: fadeIn .5s;
+	        animation: fadeIn .5s;
+}
+
+.backdrop-nav.active {
+	display: block;
+}
+
+.backdrop-nav.is-active {
+	display: block;
+}
+
+
+.backdrop-sidebar {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	background: rgba(0,0,0,.6);
+	display: none;
+	z-index: 1045;
+	-webkit-animation: fadeIn .5s;
+	   -moz-animation: fadeIn .5s;
+	     -o-animation: fadeIn .5s;
+	        animation: fadeIn .5s;
+}
+
+.backdrop-sidebar.active {
+	display: block;
+}
+
+.backdrop-sidebar.is-active {
+	display: block;
+}
+
+
+.review--img-box img {
+	width: 80px;
+	-webkit-border-radius: 6px;
+	        border-radius: 6px;
+	border: 1px solid #eee;
+	box-shadow: 0 0 6px rgba(0,0,0,.15);
+	margin-right: 8px;
+}
+
+/* .backend-sidebar .backend-sidebar-body .backend-sidebar-list li.list-profile .profile-img img {
+  max-width: 100%;
+  -webkit-border-radius: 100%;
+          border-radius: 100%;
+  border: 1px solid #e0e0e0;
+} */
+
+.status-indicator {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #ffaf00;
+  border-radius: 100%;
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+}
+
+.status-indicator.online {
+  border-color: #28a745;
+}
+
+.status-indicator.offline {
+  border-color: #dc3545;
+}
+
+.modal-slider-img {
+	-webkit-border-radius: 6px;
+	        border-radius: 6px;
+	overflow: hidden;
+	max-height: 170px;
+}
+
+
+/* seller-content-right */
+
+.content-right {
+	width: 80%;
+	margin-left: auto;
+	padding: 0 20px;
+}
+
+.content-right.expanded {
+	width: calc(100% - 61px);
+}
+
+.order-list-fill {
+	width: 100%;
+	position: relative;
+	padding: 0;
+}
+
+.order-list-fill li.order-item {
+	width: 100%;
+	min-height: 260px;
+	background: #fff;
+	border: 2px solid rgba(238,238,238,.4);
+	-webkit-border-radius: 20px;
+	        border-radius: 20px;
+	/* padding: 20px; */
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.order-list-fill li.order-item .order-item-head {
+	background: rgba(238,238,238,.4);
+	/* display: flex; */
+	padding: 10px 20px;
+	min-height: 41px;
+}
+
+.order-list-fill li.order-item .order-item-body {
+	padding: 20px;
+	min-height: 172px;
+	-webkit-border-radius: 8px;
+	        border-radius: 8px;
+}
+
+.order-list-fill li.order-item .order-item-footer {
+	padding: 10px 20px;
+	min-height: 60px;
+	border-top: 2px solid rgba(238,238,238,.4)
+}
+
+.order-list-fill li.order-item .order-item-body .order-details {
+	display: flex;
+}
+
+.order-list-fill li.order-item .order-item-body .order-details .column-1 {
+	width: 8%;
+	margin-right: 2%;
+}
+
+.order-list-fill li.order-item .order-item-body .order-details .column-2 {
+	width: 28%;
+	margin-right: 2%;
+}
+
+.order-list-fill li.order-item .order-item-body .order-details .column-3 {
+	width: 18%;
+	margin-right: 2%;
+}
+
+.order-list-fill li.order-item .order-item-body .order-details .column-4 {
+	width: 20%;
+	margin-right: 2%;
+}
+
+.order-list-fill li.order-item .order-item-body .order-details .column-5 {
+	width: 18%;
+}
+
+.order-list-fill li.order-item .order-item-body .order-details .img-product {
+	width: 76px;
+	height: 76px;
+	position: relative;
+	-webkit-border-radius: 8px;
+	        border-radius: 8px;
+	overflow: hidden;
+}
+
+.order-list-fill li.order-item .order-item-body .order-details .img-product img {
+	max-width: 100%;
+} 
+
+/* content */
+
+.content-wrapper {
+	width: 100%;
+	margin-top: 125px;
+}
+
+.content-wrapper.ps_active {
+	padding-bottom: 89px;
+}
+
+
+.icon-pb.fill {
+	color: #FEBF35;
+}
+
+
+.cta-wishlist.active {
+	color: #dc3545;
+}
+
+
+
+/* admin */
+
+
+/* selection */
+
+
+/* category single */
+
+
+
+/* selection */
+
+section.person .person-inner {
+	margin: 0 65px;
+	padding: 0 12px;
+	width: auto;
+	height: 100%;
+}
+
+/* footer */
+
+
+
+.slide-dekstop .slide-item .card {
+
+	border: none;
+	-webkit-box-shadow: 4px 4px 5px rgba(211,211,211,.7);
+	        box-shadow: 4px 4px 5px rgba(211,211,211,.7);
+	overflow: hidden;
+	position: relative;
+	height: 170px;
+	border-radius: 6px;
+
+}
+
+.slide-dekstop .slide-item .card .card-header {
+
+	padding: 0;
+	background: #FFF;
+	border: none;
+
+}
+.slide-dekstop .slide-item .card .card-header img {
+	width: 100%;
+}
+
+.slide-dekstop .slide-item .card:hover .card-body {
+	top: 50%;
+}
+
+.slide-dekstop .slide-item .card .card-body {
+	
+	width: 100%;
+	height: 50%;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	transition: .4s;
+	background: rgba(255,255,255,.9);
+	box-shadow: 0 -1px 18px 0px rgba(221,221,221,.8);
+	border-left: 3px solid var(--danger);
+
+}
+
+.slide-dekstop .slide-item.active .card .card-body {
+	top: 50%;
+	border-color: var(--success);
+	border-width: 4px;
+}
+
+.slide-dekstop .slide-item .card .card-body .card-title {
+	font-size: 18px;
+}
+
+.modal-sub-icon {
+	width: auto;
+	max-width: 200px;
+	height: auto;
+	overflow: hidden;
+	-webkit-border-radius: 8px;
+	        border-radius: 8px;
+	border: 1px solid rgba(211,211,211,.7);
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.avatar--table {
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+	overflow: hidden;
+	-webkit-border-radius: 8px;
+	        border-radius: 8px;
+	border: 1px solid rgba(211,211,211,.7);
+	display: inline-block;
+}
+
+.modal-user-avatar {
+	width: 254px;
+	height: 254px;
+	-webkit-border-radius: 6px;
+	        border-radius: 6px;
+	overflow: hidden;
+	position: relative;
+}
+
+.modal-user-avatar button.btn-change {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background: rgba(0,0,0,.6);
+	color: #FFF;
+}
+
+.primary {
+	padding: .25rem .5rem;
+	font-size: .875rem;
+	font-weight: bold;
+	margin: 0;
+	-webkit-border-radius: .25rem;
+	        border-radius: .25rem;
+	background: rgba(89, 203, 255, .4);
+	color: #309fff;
+}
+
+.primary.primary-sm {
+	font-size: .675rem;
+}
+
+
+/* comment list */
+
+.comment-content-list img {
+	width: 50px;
+	height: 50px;
+}
+
+
+/* Septian */
+
+
+.ongkir {
+	display: flex;
+	width: 100%;
+}
+.ongkir .card {
+	padding: 10px;
+	-webkit-border-radius: 2px;
+	        border-radius: 2px;
+}
+.ongkir .card.district {
+	width: 50%;
+}
+.ongkir .card.postal {
+	width: 30%;
+}
+.ongkir .card.weight {
+	width: 20%;
+	background: #eee;
+}
+.ongkir .weight label {
+	display: block;
+}
+
+
+.img-pembeli{
+	border-radius: 20px;
+}
+
+.detail{
+	display: flex;
+	width: 100%;
+}
+.detail .dilihat{
+	width :  20%;
+}
+.detail .terkirim{
+	width: 20px;
+}
+.detail .kondisi{
+	width: 20px;
+}
+.detail .min-beli{
+	width: 20px;
+}
+.detail .asuransi{
+	width: 20px;
+}
+
+.card-kualitas{
+	width: 100%;
+}
+
+.card-ulasan-membantu{
+	width: 1150px;
+}
+
+.card-info-owner-kiri{
+	width: 300px;
+	height: 500px;
+}
+
+.card-info-owner-kanan{
+	margin-left: 20px;
+	width: 850px;
+}
+
+.rating{
+	font-size: 100px;
+}
+
+.btn-filter{
+	border-radius: 20px;
+}
+
+.btn-hidden{
+	height: 50px;
+}
+
+/*.slider {
+    width: 100%;
+    margin: 100px auto;
+}
+
+.slick-slide {
+  margin: 0px 20px;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+
+
+.slick-slide {
+  transition: all ease-in-out .3s;
+  opacity: .2;
+}
+
+.slick-active {
+  opacity: 1;
+}
+
+.slick-current {
+  opacity: 1;
+}*/
+
+.textarea{
+	height: 250px;
+}
+
+.card-store-cari{
+	width: 1150px;
+}
+
+.progress-bar1 {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  margin:0 auto;
+}
+ 
+.progress-bar1 div {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+ 
+.progress-bar1 div span {
+  position: absolute;
+  font-family: Arial;
+  font-size: 25px;
+  line-height: 75px;
+  height: 75px;
+  width: 75px;
+  left: 12.5px;
+  top: 12.5px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: white;
+}
+ 
+.progress-bar1 .background { background-color: #b3cef6; }
+ 
+.progress-bar1 .rotate {
+  clip: rect(0 50px 100px 0);
+  background-color: #4b86db;
+}
+ 
+.progress-bar1 .left {
+  clip: rect(0 50px 100px 0);
+  opacity: 1;
+  background-color: #b3cef6;
+}
+ 
+.progress-bar1 .right {
+  clip: rect(0 50px 100px 0);
+  transform: rotate(180deg);
+  opacity: 0;
+  background-color: #4b86db;
+}
+ 
+@keyframes toggle { 
+	0% {
+	 opacity: 0;
+	}
+	 100% {
+	 opacity: 1;
+	}
+} 
+
+section.official .img-top-official{
+	margin-top: -15px;
+	position: relative;
+}
+
+section.official .img-foto-profil{
+	margin-top: -90px;
+}
+
+.card-person{
+	border-bottom-right-radius: 40%; 
+	border-bottom-left-radius: 40%;
+	display: block;
+    width: 100%;
+    height: 273px;
+    position: relative;
+    opacity: 0.82;
+	background-image: linear-gradient(32deg, red, var(--blue));
+}
+
+.label-edit-profil{
+	margin-top: 35px;
+}
+
+.txt-urutkan-edit{
+	text-align: right;
+}
+
+.img-notifikasi-edit{
+	width: 50%;
+	text-align: center;
+}
+
+.label-biodata{
+	display: none;
+}
+
+._33RROMAe {
+    outline: 0;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    width: 216px;
+    height: 64px;
+    padding: 6px 8px;
+    margin-right: 10px;
+    border-radius: 8px;
+    background-repeat: round;
+}
+
+.img-artikel{
+	border-radius: 10px;
+}
+
+.p-artikel{
+	overflow: hidden; 
+	white-space: nowrap; 
+	text-overflow: ellipsis;
+	margin-top: 10px;
+}
+
+.card-produk-teratas{
+	margin-top: 2%;
+	border-bottom-right-radius: 50px ;
+	border-style: ;		
+}
+
+.img_sampul{
+	border-radius: 20px;
+}
+
+.btn-ganti-sampul{
+	margin-top: -50px;
+	text-align: right;
+	margin-right: 10px;
+}
+
+.kolom-statistik{
+	height: 320px;
+}
+
+.card-no-list{
+	height: 200px;
+	margin-top: 50px;
+}
+
+.card-transaksi-wawasan{
+	height: 234px;
+}
+
+.card-jumlah-transaksi{
+	height: 100%;
+}
+
+.card-user-statistic-dashboard{
+	height: 542px;
+}
+
+.dekstop-card-user-statistic-dashboard{
+	margin-top: 190px;
+}
+
+.card-transaksi-pin-map{
+	height: 462px;
+}
+
+#circle-container {
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;
+}
+
+.progress-text {
+  font-size: 1.25em;
+  color: black;
+  margin-bottom: 1em;
+  font-weight: 600;
+}
+
+
+
+/*progresbar-circle*/
+.progress-circle {
+  width: 150px;
+  height: 150px;
+  background: none;
+  position: relative;
+}
+
+.progress-circle::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 6px solid #eee;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.progress-circle>span {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.progress-circle .progress-left {
+  left: 0;
+}
+
+.progress-circle .progress-bar {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-width: 6px;
+  border-style: solid;
+  position: absolute;
+  top: 0;
+}
+
+.progress-circle .progress-left .progress-bar {
+  left: 100%;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-left: 0;
+  -webkit-transform-origin: center left;
+  transform-origin: center left;
+}
+
+.progress-circle .progress-right {
+  right: 0;
+}
+
+.progress-circle .progress-right .progress-bar {
+  left: -100%;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  border-right: 0;
+  -webkit-transform-origin: center right;
+  transform-origin: center right;
+}
+
+.progress-circle .progress-value {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/*end progress*/
+
+.card-data-transaksi-right{
+	height: 487px;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container-slide:hover .image {
+  opacity: 0.3;
+}
+
+.container-slide:hover .middle {
+  opacity: 1;
+}
+
+.button {
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+.card-icon-dashboard{
+	margin-top: -40px;
+}
+
+.card-mitra-baru-dashboard{
+	margin-top: -40px;
+}
+
+.card-label-edit-profil{
+	margin-top: -50px;
+}
+
+.card-label-edit-profil-img{
+	margin-top: -50px;
+	width: 35%;
+}
+
+#img-profil-mitra{
+	margin-left: 10%;
+}
+
+.img-icon-store-product{
+	width: 4%;
+}
+
+.dashboard-phone{
+	display: none;
+}
+
+.dashboard-dekstop{
+	display: block;
+}
+
+.slide-phone{
+	display: none;
+}
+
+.mitra-dekstop{
+	display: block;
+}
+
+.mitra-phone{
+	display: none;
+}
+
+.hr-produk{
+	display: none;
+}

@@ -1,0 +1,30 @@
+.official-store--badge {
+		width: 150px;
+		height: 40px;
+		-webkit-border-radius: 16px 0 16px 0;
+		        border-radius: 16px 0 16px 0;
+		position: absolute;
+		background: rgb(51,199,255);
+background: linear-gradient(90deg, rgba(51,199,255,1) 32%, rgba(177,24,210,1) 92%);
+		top: 0;
+		left: 0;
+		display: flex;
+		color: #fff;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+
+.official-store--badge .official-store--icon {
+	font-size: 28px;
+	color: var(--primary);
+}
+
+.official-store--badge .official-store--title {
+	font-size: 14px;
+	font-weight: 600;
+	margin-bottom: 0;
+	margin-left: 10px;
+	font-family: var(--font-family-sans-serif);
+}

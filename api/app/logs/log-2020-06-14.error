@@ -1,0 +1,69 @@
+ERROR - 2020-06-14 13:16:12 --> Query error: Unknown column 'mst_produk_diskusi.user' in 'where clause' - Invalid query: SELECT
+    									mst_produk_diskusi.id,
+    									mst_produk.nama_produk,
+    									mst_user.nama as nama_user,
+    									mst_toko.nama_toko,
+    									mst_produk_diskusi.diskusi,
+    									mst_produk_diskusi.created_at as tanggal,
+    									mst_produk_diskusi.reply_id
+    								FROM
+										mst_produk_diskusi
+									LEFT JOIN
+										mst_produk
+										ON
+										mst_produk_diskusi.produk_id = mst_produk.id
+									LEFT JOIN
+										mst_toko
+										ON
+										mst_produk_diskusi.toko_id = mst_toko.id
+									LEFT JOIN
+										mst_user
+										ON
+										mst_produk_diskusi.user_id = mst_user.id
+									WHERE
+										mst_produk_diskusi.toko_id = '4'
+										AND
+										mst_produk_diskusi.reply_id = '0'
+										AND
+										mst_produk_diskusi.user != '12'
+ERROR - 2020-06-14 13:16:12 --> Severity: error --> Exception: Call to a member function num_rows() on boolean /home/adminjp/public_html/api/app/models/seller/M_Diskusi.php 82
+ERROR - 2020-06-14 13:33:04 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE
+										toko_id = '11'' at line 5 - Invalid query: SELECT
+										code
+									FROM
+										
+									WHERE
+										toko_id = '11'
+ERROR - 2020-06-14 13:33:04 --> Severity: error --> Exception: Call to a member function num_rows() on boolean /home/adminjp/public_html/api/app/models/M_Ongkir.php 89
+ERROR - 2020-06-14 13:34:10 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE
+										toko_id = '11'' at line 5 - Invalid query: SELECT
+										code
+									FROM
+										
+									WHERE
+										toko_id = '11'
+ERROR - 2020-06-14 13:34:10 --> Severity: error --> Exception: Call to a member function num_rows() on boolean /home/adminjp/public_html/api/app/models/M_Ongkir.php 89
+ERROR - 2020-06-14 13:46:49 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE
+										toko_id = '11'' at line 5 - Invalid query: SELECT
+										code
+									FROM
+										
+									WHERE
+										toko_id = '11'
+ERROR - 2020-06-14 13:46:49 --> Severity: error --> Exception: Call to a member function num_rows() on boolean /home/adminjp/public_html/api/app/models/M_Ongkir.php 89
+ERROR - 2020-06-14 13:46:53 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE
+										toko_id = '4'' at line 5 - Invalid query: SELECT
+										code
+									FROM
+										
+									WHERE
+										toko_id = '4'
+ERROR - 2020-06-14 13:46:53 --> Severity: error --> Exception: Call to a member function num_rows() on boolean /home/adminjp/public_html/api/app/models/M_Ongkir.php 89
+ERROR - 2020-06-14 13:47:39 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE
+										toko_id = '4'' at line 5 - Invalid query: SELECT
+										code
+									FROM
+										
+									WHERE
+										toko_id = '4'
+ERROR - 2020-06-14 13:47:39 --> Severity: error --> Exception: Call to a member function num_rows() on boolean /home/adminjp/public_html/api/app/models/M_Ongkir.php 89

@@ -1,0 +1,3 @@
+ERROR - 2020-05-31 17:01:36 --> Severity: error --> Exception: Call to undefined function __hsc() /home/adminjp/public_html/api/app/models/user/M_Pembelian.php 590
+ERROR - 2020-05-31 18:46:35 --> Query error: Column 'kurir' cannot be null - Invalid query: INSERT INTO `mst_transaksi_detail` (`status`, `transaksi_id`, `toko_id`, `user_id`, `no_transaksi`, `kurir`, `kurir_service`, `kurir_etd`, `kurir_value`, `kurir_code`) VALUES ('1', 13, '11', '54', '112005310635', NULL, NULL, NULL, NULL, NULL)
+ERROR - 2020-05-31 19:05:03 --> 404 Page Not Found: Tracking/index

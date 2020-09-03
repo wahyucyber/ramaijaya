@@ -1,0 +1,4 @@
+ERROR - 2020-06-08 21:08:54 --> Severity: Warning --> Invalid argument supplied for foreach() /home/adminjp/public_html/api/app/models/M_Product_diskusi.php 91
+ERROR - 2020-06-08 21:11:48 --> Severity: Warning --> Invalid argument supplied for foreach() /home/adminjp/public_html/api/app/models/M_Product_diskusi.php 91
+ERROR - 2020-06-08 21:15:09 --> Severity: Warning --> Invalid argument supplied for foreach() /home/adminjp/public_html/api/app/models/M_Product_diskusi.php 91
+ERROR - 2020-06-08 21:15:28 --> Severity: Warning --> Invalid argument supplied for foreach() /home/adminjp/public_html/api/app/models/M_Product_diskusi.php 91

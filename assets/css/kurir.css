@@ -1,0 +1,45 @@
+div.kurir {
+	width: 100%;
+	border: 1px solid #ddd;
+	height: auto;
+	position: relative;
+	overflow: hidden;
+}
+
+div.kurir-action:hover {
+	background-color: black;
+}
+
+div.kurir div.kurir-body {
+	width: 100%;
+	padding: 15px;
+	height: auto;
+	text-align: center;
+}
+
+div.kurir div.kurir-body img {
+	height: 50px;
+}
+
+div.kurir div.kurir-footer {
+	padding: 15px;
+	text-align: center;
+	background-color: #f2f2f2;
+}
+
+div.kurir div.kurir-action {
+	position: absolute;
+	margin-top: -135px;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 125px;
+	transition: .7s;
+	background-color: rgba(25,25,25,0.4);
+}
+
+div.kurir:hover div.kurir-action {
+	margin-top: 0px;
+	transition: .7s;
+}

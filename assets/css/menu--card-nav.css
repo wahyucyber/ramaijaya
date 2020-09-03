@@ -1,0 +1,41 @@
+
+.menu--card-nav .menu--card-nav-content {
+	width: 414px;
+	position: relative;
+	box-shadow: inset 0 2px 3px rgba(211,211,211,.7);
+	background: #FFF;
+	text-align: left;
+	padding: 16px 15px 24px 15px;
+	border-radius: 0 0 6px 6px;
+}
+
+.menu--card-nav .menu--card-nav-content .menu--card-nav-detail {
+	display: flex;
+	align-items: center;
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: .5rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.menu--card-nav .menu--card-nav-content .menu--card-nav-detail .menu--card-nav-avatar {
+	width: 45px;
+	height: 45px;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
+	margin-right: 10px;
+}
+
+.menu--card-nav .menu--card-nav-content .menu--card-nav-detail .menu--card-nav-detail-info {
+	width: auto;
+	flex: 1;
+}
+
+@media only screen and (max-width: 539px)
+{
+	.menu--card-nav .menu--card-nav-content {
+		min-height: 100vh;
+		width: 100%;
+	} 
+}
