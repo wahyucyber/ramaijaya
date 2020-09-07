@@ -11,9 +11,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
     <meta name="theme-color" content="#007bff">
 	<meta name="title" content="<?= $title; ?>">
-	<meta name="app_name" content="<?= env('APP_NAME'); ?>">
+	<meta name="app_name" content="Ramai Jaya">
 	<title><?= env('APP_NAME'); ?></title>
-	<link rel="shortcut icon" href="<?= base_url(); ?>fav.ico">
+	<!-- <link rel="shortcut icon" href="<?= base_url(); ?>fav.ico"> -->
 	<meta property="og:url" content="<?= current_url(); ?>"/>
 	<meta property="og:title" content="<?= $title == 'Beranda'? 'JPSTORE.ID' : $title ?>"/>
     <meta property="og:description" content="<?= isset($og_description)? ($og_description? $og_description : 'Deskripsi tidak tersedia') : env('APP_DESCRIPTION','PT.Nyata Grafika Media Surakarta') ?>"/>
@@ -217,7 +217,7 @@
 						<div class="span4 d-flex">
 							<img src="<?= base_url(); ?>fav.ico" alt="Logo">
 							<div class="copy">
-								<small class="text-muted">&copy; 2019, PT.Nyata Grafika Media Surakarta.</small><br>
+								<small class="text-muted">&copy; 2020, PT. Mascitra Teknologi Informasi.</small><br>
 								<small class="text-muted">Server process time: {elapsed_time}</small>
 							</div>
 						</div>
