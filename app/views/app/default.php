@@ -74,10 +74,10 @@
 			<div class="sub-header">
 				<div class="sub-header-inner">
 					<div class="sub-header-left">
-						<a href="#">Download <?= env('APP_NAME'); ?> App</a>
+						<a href="#">Download Ramai Jaya App</a>
 					</div>
 					<div class="sub-header-right">
-						<a href="https://siplah.jpstore.id" target="_blank">SIPLah <?= env('APP_NAME'); ?></a>
+						<!-- <a href="https://siplah.jpstore.id" target="_blank">SIPLah <?= env('APP_NAME'); ?></a> -->
 						<a href="<?= base_url('faq'); ?>">Pusat Bantuan</a>
 					</div>
 				</div>
