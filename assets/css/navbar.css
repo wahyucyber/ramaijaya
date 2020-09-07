@@ -1,10 +1,10 @@
 
 .sub-header {
 	display: block;
-	height: 32px;
+	height: 30px;
 	width: 100%;
 	/* border-bottom: .5px solid #E5E5E5; */
-	background: #007bff;
+	    background: #f53d2d;
 	font-size: 12px;
 }
 
@@ -44,7 +44,7 @@
 	display: flex;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
-	background: #3E4095;
+	    background: linear-gradient(-180deg, #f53d2d, #f63);
 }
 
 .navbar-inner .column:first-child {

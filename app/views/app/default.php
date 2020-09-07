@@ -87,7 +87,8 @@
 					<a href="javascript:;" class="text-link navbar-toggle" id="sidebar-toggle">
 						<span class="fal fa-bars"></span>
 					</a>
-					<a href="<?= base_url(); ?>" class="navbar-brand"><img src="<?= base_url('cdn/favicon_white.png'); ?>"></a>
+					<!-- <a href="<?= base_url(); ?>" class="navbar-brand"><img src="<?= base_url('cdn/favicon_white.png'); ?>"></a> -->
+					<a href="<?= base_url(); ?>" class="navbar-brand"><img src="<?= base_url('assets/img/logo/favicon_white.png') ?>" alt=""></a>
 					<div id="category--nav-list" class="d-inline-block"></div>
 
 					<?php if (segment(1) !== 'seller' && segment(1) !== 'admin'): ?>

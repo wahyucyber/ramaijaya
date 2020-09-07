@@ -1,11 +1,35 @@
-<section class="category--box">
+<div class="container-fluid">
+
+	<div class="row">
+	
+		<div class="col-8">
+			<section class="slider">
+				<div class="slider-inner _c287e" id="slick-slider-inner">
+					<div class="slider-content d-none" id="top-slider"></div>
+				</div>
+			</section>
+		</div>
+	
+		<div class="col-4">
+			<section>
+				<img class="w-100 mb-4" src="https://cf.shopee.co.id/file/a8131ff04e955fd353176535b11ed8df" alt="">
+				<img class="w-100" src="https://cf.shopee.co.id/file/a8131ff04e955fd353176535b11ed8df" alt="">
+			</section>
+		</div>
+	
+	</div>
+
+</div>
+
+
+<!-- <section class="category--box">
 	<div class="page--title-header">Kategori</div>
 	<div class="category--inner">
 		<div class="category--box-content" id="home--category">
 			<?= loader(); ?>
 		</div>
 	</div>
-</section>
+</section> -->
 
 <section class="flash-sale produk--diskon d-none">
 	<div class="flash-sale-inner">
@@ -26,12 +50,6 @@
 				
 			</div>
 		</div>
-	</div>
-</section>
-
-<section class="slider">
-	<div class="slider-inner _c287e" id="slick-slider-inner">
-		<div class="slider-content d-none" id="top-slider"></div>
 	</div>
 </section>
 

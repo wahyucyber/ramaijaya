@@ -293,7 +293,8 @@ table.table {
 
 .content-wrapper {
 	width: 100%;
-	margin-top: 125px;
+	margin-top: 120px;
+	/* margin-top: 150px; */
 }
 
 .content-wrapper.ps_active {
