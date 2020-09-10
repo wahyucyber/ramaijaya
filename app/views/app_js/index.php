@@ -204,7 +204,7 @@
 				if (res.Error) {
 					html += `
 						<div class="dropdowns to-left">
-							<a href="javascript:;" class="btn btn-dropdowns" title="Notifikasi"><i class="fas fa-bell icon--btn-dropdowns"></i> </a>
+							<a href="javascript:;" class="btn btn-dropdowns" title="Notifikasi"><i class="fal fa-bell icon--btn-dropdowns"></i> </a>
 							<div class="dropdowns-item">
 								<div class="dropdowns-header--sm">
 									<button class="btn btn-dropdowns--header"><i class="fa fa-times"></i></button>
@@ -284,7 +284,7 @@
 					jumlah_keranjang += parseInt(data.jumlah);
 				});
 				output += `<div class="dropdowns to-left ml-0 ml-lg-1">
-								<a href="${link_cart}" class="btn btn-dropdowns"><i class="fad fa-shopping-cart icon--btn-dropdowns"></i> <span class="badge badge-info" style="margin-top: -1px; color: white; margin-left: -5px; display: inline-block; position: absolute; padding: 4px;">${jumlah_keranjang}</span></a>
+								<a href="${link_cart}" class="btn btn-dropdowns"><i class="fal fa-shopping-cart icon--btn-dropdowns"></i> <span class="badge badge-info" style="margin-top: -1px; color: white; margin-left: -5px; display: inline-block; position: absolute; padding: 4px;">${jumlah_keranjang}</span></a>
 								<div class="dropdowns-item">
 									<div class="dropdowns-header--sm">
 										<button class="btn btn-dropdowns--header"><i class="fa fa-times"></i></button>
@@ -329,7 +329,7 @@
 							</div>`
 			}else{
 				output += `<div class="dropdowns to-left">
-							<a href="${link_cart}" class="btn btn-dropdowns"><i class="fad fa-shopping-cart icon--btn-dropdowns"></i></a>
+							<a href="${link_cart}" class="btn btn-dropdowns"><i class="fal fa-shopping-cart icon--btn-dropdowns"></i></a>
 							<div class="dropdowns-item">
 								<div class="dropdowns-header--sm">
 									<button class="btn btn-dropdowns--header"><i class="fa fa-times"></i></button>

@@ -2,10 +2,10 @@
 <section class="product-single">
 	<div class="product-single-inner" id="single-product">
 		<nav aria-label="breadcrumb">
-		  <ol class="breadcrumb" id="nav-product">
-		    <li class="breadcrumb-item"><a href="<?php echo base_url(''); ?>">Beranda</a></li>
-		    <li class="breadcrumb-item"><a href="javascript:;" class="kategori--nama">Produk</a></li>
-		    <li class="breadcrumb-item active text-elipsis produk--nama" aria-current="page">Produknya Lorem ipsum dolor sit amet.</li>
+		  <ol class="breadcrumb bg-transparent" id="nav-product">
+		    <li class="breadcrumb-item "><a class="text-dark" href="<?php echo base_url(''); ?>">Beranda</a></li>
+		    <li class="breadcrumb-item "><a class="text-dark" href="javascript:;" class="kategori--nama">Produk</a></li>
+		    <li class="breadcrumb-item active text-elipsis produk--nama text-dark" aria-current="page">Produknya Lorem ipsum dolor sit amet.</li>
 		  </ol>
 		</nav>
 		<div class="product-single-content">

@@ -127,7 +127,7 @@
 												${harga}
 											</div>
 											<div class="dtl">
-												<span class="fad fa-sm fa-store"></span>
+												<span class="fal fa-sm fa-store"></span>
 												<div class="dtl-product">
 													<span class="dtl-item">${data.nama_kabupaten}</span>
 													<span class="dtl-item">${data.nama_toko}</span>
@@ -139,7 +139,7 @@
 											</div>
 											${$jp_client_token?
 												 `<div class="content-add-to-cart">
-												 	<button class="btn btn-sm btn-primary btn-add-to-cart add--product-to-cart" data-id="${data.id_produk}"><i class="fas fa-cart-plus"></i> Tambahkan ke Keranjang</button>
+												 	<button class="btn btn-sm btn-orange btn-add-to-cart add--product-to-cart" data-id="${data.id_produk}"><i class="fal fa-cart-plus"></i> Tambah ke Keranjang</button>
 													</div>` : ''}
 										</div>
 									</a>`
@@ -237,7 +237,7 @@
 
 		DrawProductList(page = 1)
 		{
-			$('#product-list .more-inner').html(`<button class="btn btn-primary" type="button" disabled>
+			$('#product-list .more-inner').html(`<button class="btn btn-orange" type="button" disabled>
 									  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
 									  <small>Memuat...</small>
 									</button>`)
@@ -282,7 +282,7 @@
 												harga = `<div class="price">Rp ${Format_Rupiah(data.harga)}</div>`
 											}else{
 												harga = `<span class="price">Rp ${Format_Rupiah(data.harga_diskon.toString())}</span><span class="text-caret fs-13 text-secondary ml-1">Rp ${Format_Rupiah(data.harga)}</span>`
-												diskon = `<span class="free-ongkir badge badge-danger">-${data.diskon}%</span>`
+												diskon = `<span class="free-ongkir badge badge-danger">-${data.diskon}% <br> <b class="text-white">OFF</b></span>`
 											}
 								output += `${diskon}
 										</div>
@@ -292,7 +292,7 @@
 												${harga}
 											</div>
 											<div class="dtl">
-												<span class="fad fa-sm fa-store"></span>
+												<span class="fal fa-sm fa-store"></span>
 												<div class="dtl-product">
 													<span class="dtl-item">${data.nama_kecamatan}</span>
 													<span class="dtl-item">${data.nama_toko}</span>
@@ -303,7 +303,7 @@
 												<span class="counter">(${data.rating})</span>
 											</div>
 											${$jp_client_token? `<div class="content-add-to-cart">
-												<button class="btn btn-sm btn-primary btn-add-to-cart add--product-to-cart"  data-id="${data.id_produk}"><i class="fas fa-cart-plus"></i> Tambahkan ke Keranjang</button>
+												<button class="btn btn-sm btn-orange btn-add-to-cart add--product-to-cart"  data-id="${data.id_produk}"><i class="fal fa-cart-plus"></i> Tambah ke Keranjang</button>
 											</div>` : ''}
 											
 										</div>
@@ -316,7 +316,7 @@
 					// }
 
 					if (parseInt(pagination.Halaman) < parseInt(pagination.Jml_halaman)) {
-						next += `<button class="btn btn-outline-primary" onclick="home.DrawProductList(${parseInt(pagination.Halaman) + 1})">Muat Lebih Banyak</button>`
+						next += `<button class="btn btn-orange" onclick="home.DrawProductList(${parseInt(pagination.Halaman) + 1})"><i class="fal fa-angle-double-down"></i> Lihat Lainnya</button>`
 					}else{
 						next += `<button class="btn btn-outline-secondary" disabled>Sudah yang terakhir</button>`
 					}
@@ -410,7 +410,7 @@
 				content += `
 					<div class="footer-item">
 						<div class="box">
-							<a href="https://play.google.com/store/apps/details?id=com.mascitra.jpmall">
+							<a href="">
 								<img src="<?= base_url(''); ?>assets/img/default/MOCKUP SMARTPHONE JPSTORE.png" alt="Mobile App" width="100%">
 							</a>
 						</div>
@@ -434,7 +434,7 @@
 						output += `<a href="<?= base_url(); ?>shop/${key.slug_toko}/${key.slug_produk}" class="card flash-item">
 									<div class="card-header head">
 										<img src="${key.foto_produk}" class="shine">
-										<span class="label-discount badge">-${key.diskon}%</span>
+										<span class="label-discount badge">-${key.diskon}%<p><b>OFF</b></p></span>
 									</div>
 									<div class="card-body body">
 										<div class="small">${key.nama_produk}</div>

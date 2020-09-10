@@ -4,7 +4,7 @@
 }
 
 body{
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Muli', sans-serif;
 	background: #fff !important;
 }
 
@@ -341,4 +341,19 @@ section {
 
 [data-toggle=show-password].show .icon::before{
 	content: "\f070";
+}
+
+hr.hr-white{
+	border-color: white;
+}
+
+.btn-orange{
+	background-color: #ee4d2d;
+	color: white;
+}
+
+.btn-orange:hover{
+	background-color: white;
+	color: #ee4d2d;
+	border: 1px solid #ee4d2d;
 }

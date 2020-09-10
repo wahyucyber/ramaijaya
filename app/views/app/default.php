@@ -13,7 +13,7 @@
 	<meta name="title" content="<?= $title; ?>">
 	<meta name="app_name" content="Ramai Jaya">
 	<title><?= env('APP_NAME'); ?></title>
-	<!-- <link rel="shortcut icon" href="<?= base_url(); ?>fav.ico"> -->
+	<link rel="shortcut icon" href="<?= base_url(); ?>assets/img/logo/favicon.png">
 	<meta property="og:url" content="<?= current_url(); ?>"/>
 	<meta property="og:title" content="<?= $title == 'Beranda'? 'JPSTORE.ID' : $title ?>"/>
     <meta property="og:description" content="<?= isset($og_description)? ($og_description? $og_description : 'Deskripsi tidak tersedia') : env('APP_DESCRIPTION','PT.Nyata Grafika Media Surakarta') ?>"/>
@@ -27,7 +27,7 @@
 		$cdn_url = '<?= cdn_url(); ?>';
 		$csrf = "<?= base64_encode(json_encode($this->Func->get_token())); ?>";
 	</script>
-	<?= stylesheet_url('https://fonts.googleapis.com/css?family=Roboto&display=swap'); ?>
+	<?= stylesheet_url('https://fonts.googleapis.com/css2?family=Muli:wght@500&display=swap'); ?>
 	<?= stylesheet([
 		'ext/fontawesome/css/all.min.css',
 		'ext/bootstrap/css/bootstrap.min.css',
@@ -88,7 +88,7 @@
 						<span class="fal fa-bars"></span>
 					</a>
 					<!-- <a href="<?= base_url(); ?>" class="navbar-brand"><img src="<?= base_url('cdn/favicon_white.png'); ?>"></a> -->
-					<a href="<?= base_url(); ?>" class="navbar-brand"><img src="<?= base_url('assets/img/logo/favicon_white.png') ?>" alt=""></a>
+					<a href="<?= base_url(); ?>" class="navbar-brand p-2"><img src="<?= base_url('assets/img/logo/logo.png') ?>" alt=""></a>
 					<div id="category--nav-list" class="d-inline-block"></div>
 
 					<?php if (segment(1) !== 'seller' && segment(1) !== 'admin'): ?>
@@ -213,11 +213,11 @@
 					</div>
 				</div>
 				<div class="footer-additional">
-					<div class="row">
+					<div class="row justify-content-center text-center">
 						<div class="span4 d-flex">
-							<img src="<?= base_url(); ?>fav.ico" alt="Logo">
+							<img src="<?= base_url(); ?>assets/img/logo/favicon.png" alt="Logo">
 							<div class="copy">
-								<small class="text-muted">&copy; 2020, PT. Mascitra Teknologi Informasi.</small><br>
+								<small class="text-muted">&copy; Ramai Jaya 2020, PT. Mascitra Teknologi Informasi.</small><br>
 								<small class="text-muted">Server process time: {elapsed_time}</small>
 							</div>
 						</div>

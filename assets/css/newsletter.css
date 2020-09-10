@@ -1,3 +1,6 @@
+section.newsletter {
+	border-top: 5px solid #ee4d2d;
+}
 
 section.newsletter .newsletter-inner {
 	margin: 0 76px;
@@ -60,7 +63,7 @@ section.newsletter .newsletter-inner .row:first-child .column {
 
 
 section.newsletter .newsletter-inner .row:nth-child(2) {
-	border-top: 1px dashed #ccc;
+	/* border-top: 1px dashed #ccc; */
 	margin: 0;
 }
 
@@ -113,7 +116,7 @@ section.newsletter .newsletter-inner .row:last-child .column a {
 section.newsletter .newsletter-inner .row:last-child .column a img{
 	margin-top: 5px;
 	margin-right: 10px;
-	width: 110px;
+	width: 94px;
 	height: 100%;	
 }
 

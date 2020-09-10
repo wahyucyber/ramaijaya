@@ -10,7 +10,7 @@ section.slider .slider-inner {
 	height: 293px;
 	margin: 0 auto;
 	overflow: hidden;
-	padding: 0 15px;
+	padding: 0 10px;
 }
 
 /* Arrows */
@@ -44,7 +44,7 @@ section.slider .slider-inner .slick-slider a.slick-slide {
 	position: relative;
 	width: 880px;
 	height: 293px;
-	/* padding: 20px 40px; */
+	padding: 20px 10px;
 	text-align: center;
 }
 
@@ -97,4 +97,24 @@ section.slider .slider-inner .slick-slider:hover .slick-next {
 	right: 30px;
 	opacity: 1;
 	z-index: 1;
+}
+
+/* new */
+.top--home{
+	width: 100%;
+	display: flex;
+	padding-right: 50px;
+	padding-left: 50px;
+}
+
+.top--home .top-slider--home {
+	width: 70%;
+}
+
+.top--home .top-banner--home{
+	width: 30%;
+}
+
+.top--home .top-banner--home img{
+	height: 140px;
 }

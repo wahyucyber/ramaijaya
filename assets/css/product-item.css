@@ -94,12 +94,19 @@ a.product-item .head .wishlist.active {
 
 a.product-item .head .free-ongkir {
 	position: absolute;
-	top: 190px;
-	left: 10px;
-	padding: 5px;
-	font-size: 12px;
-	-webkit-border-radius: 10px;
-	        border-radius: 10px;
+	top: 0;
+	right: 0;
+	background: rgba(255, 212, 36, .9);
+	width: 50px;
+	height: 60px;
+	text-align: center;
+	line-height: 25px;
+	font-size: 14px;
+	color: #ee4d2d;
+	-webkit-border-radius: 0px;
+			border-radius: 0px;
+	-webkit-box-shadow: 1px 2px 3px #343a40;
+		    box-shadow: 1px 2px 3px #343a40;
 }
 
 a.product-item .body {
@@ -123,7 +130,7 @@ a.product-item .body .price-product {
 a.product-item .body .price-product .price {
 	font-size: 14px;
 	font-weight: 700;
-	color: #dc3545;
+	color: #ee4d2d;
 }
 
 a.product-item .body .dtl {
@@ -133,7 +140,7 @@ a.product-item .body .dtl {
 a.product-item .body .dtl span:not(.dtl-item) {
 	line-height: 30px;
 	margin-right: 3px;
-	color: #007bff;
+	color: #ee4d2d;
 }
 
 a.product-item .body .dtl .dtl-product {

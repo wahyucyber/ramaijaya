@@ -1,22 +1,18 @@
-<div class="container-fluid">
+<div class="top--home">
 
-	<div class="row">
-	
-		<div class="col-8">
-			<section class="slider">
-				<div class="slider-inner _c287e" id="slick-slider-inner">
-					<div class="slider-content d-none" id="top-slider"></div>
-				</div>
-			</section>
-		</div>
-	
-		<div class="col-4">
-			<section>
-				<img class="w-100 mb-4" src="https://cf.shopee.co.id/file/a8131ff04e955fd353176535b11ed8df" alt="">
-				<img class="w-100" src="https://cf.shopee.co.id/file/a8131ff04e955fd353176535b11ed8df" alt="">
-			</section>
-		</div>
-	
+	<div class="top-slider--home">
+		<section class="slider">
+			<div class="slider-inner _c287e" id="slick-slider-inner">
+				<div class="slider-content d-none" id="top-slider"></div>
+			</div>
+		</section>
+	</div>
+
+	<div class="top-banner--home">
+		<section>
+			<img class="w-100 mb-2" src="<?= base_url() ?>assets/img/banner/banner.png" alt="">
+			<img class="w-100 mb-2" src="<?= base_url() ?>assets/img/banner/banner.png" alt="">
+		</section>
 	</div>
 
 </div>
@@ -32,8 +28,9 @@
 </section> -->
 
 <section class="flash-sale produk--diskon d-none">
-	<div class="flash-sale-inner">
-		<span class="title">Diskon Produk</span>
+	<div class="flash-sale-inner text-center">
+		<span class="title "><b> FLASH SALE </b></span>
+		<hr class="w-50 hr-white">
 		<div class="flash-sale-content" id="produk-diskon">
 		</div>
 	</div>
@@ -41,7 +38,7 @@
 
 <section class="product">
 	<div class="inner">
-		<span class="title">Produk Rekomendasi</span>
+		<span class="title"><b> Produk Rekomendasi </b></span>
 		<div class="product-content" id="product-list">
 			<div class="w-100">
 				<?= product_loader(); ?>
@@ -53,14 +50,14 @@
 	</div>
 </section>
 
-<section class="flash-sale">
+<!-- <section class="flash-sale">
 	<div class="flash-sale-inner">
 		<span class="title">Produk Terbaru</span>
 		<div class="flash-sale-content" id="new-product-list">
 			<?= product_loader(); ?>
 		</div>
 	</div>
-</section>
+</section> -->
 
 <!--<section class="category">-->
 <!--	<div class="category-inner">-->
@@ -116,7 +113,7 @@
 		<div class="row">
 			<div class="column"> <!-- this looping -->
 				<a href="">
-					<img src="<?= base_url() ?>assets/img/default/Gratis_ongkir.png" style="width: 19%;" alt="">
+					<img src="<?= base_url() ?>assets/img/default/Gratis_ongkir.png" style="width: 24%;" alt="">
 					<div class="paragraph">
 						<span class="title">Gratis Biaya Pengiriman</span>
 						<p class="sub-title">Kami Telah Bekerja Sama Dengan Ekspedisi Yang Kredibel, Sehingga Setiap Pembelian Anda Tidak Dikenakan Biaya Pengiriman.</p>
@@ -134,7 +131,7 @@
 			</div>
 			<div class="column"> <!-- this looping -->
 				<a href="">
-					<img src="https://ecs7.tokopedia.net/img/transparan-01.png" alt="">
+					<img src="<?= base_url() ?>assets/img/default/transparan.png" alt="">
 					<div class="paragraph">
 						<span class="title">Transparan</span>
 						<p class="sub-title">Pembayaran Anda baru diteruskan ke penjual setelah barang Anda terima</p>
