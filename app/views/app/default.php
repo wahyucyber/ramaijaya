@@ -88,7 +88,7 @@
 						<span class="fal fa-bars"></span>
 					</a>
 					<!-- <a href="<?= base_url(); ?>" class="navbar-brand"><img src="<?= base_url('cdn/favicon_white.png'); ?>"></a> -->
-					<a href="<?= base_url(); ?>" class="navbar-brand p-2"><img src="<?= base_url('assets/img/logo/logo.png') ?>" alt=""></a>
+					<a href="<?= base_url(); ?>" class="navbar-brand"><img src="<?= base_url('assets/img/logo/logo.png') ?>" alt=""></a>
 					<div id="category--nav-list" class="d-inline-block"></div>
 
 					<?php if (segment(1) !== 'seller' && segment(1) !== 'admin'): ?>

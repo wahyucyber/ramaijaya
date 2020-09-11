@@ -143,7 +143,7 @@
 			<div class="store-wrapper row">
 				<div class="shop-info col-md-4">
 					<a href="" class="img-store">
-						<img src="<?= base_url(); ?>cdn/fav.png" class="toko--logo" alt="">
+						<img src="<?= base_url(); ?>cdn/fav.png" class="toko--logo rounded-circle" alt="">
 					</a>
 					<div class="__info">
 						<div class="__info-name">
@@ -221,52 +221,18 @@
 	<div class="chat--inner">
 		<div class="chat--header">
 			<div class="user--img">
-				<img src="<?= base_url('fav.ico'); ?>" alt="" class="toko--logo">
+				<img src="<?= base_url('fav.ico'); ?>" alt="" class="toko--logo ">
 			</div>
 			<div class="user--info">
-				<strong class="chat--name nama--toko"></strong> <span class="badge badge-success p-1">Penjual</span>
+				<strong class="chat--name nama--toko"></strong> <span class="badge badge-light p-1">Penjual</span>
 				<p class="mb-0 chat--since">Online</p>
 			</div>
 			<div class="chat--header-action">
-				<button class="btn btn--chat-action close--btn"><i class="far fa-times"></i></button>
+				<button class="btn btn--chat-action close--btn text-white"><i class="far fa-times"></i></button>
 			</div>
 		</div>
 		<div class="chat--body">
 			<ul class="chat--msg-list" id="chat--content">
-<!--				<li class="chat--msg-item meta">-->
-<!--					<div class="msg--text-content">-->
-<!--						<div class="msg--meta">-->
-<!--							<div class="meta--image">-->
-<!--								<img src="<?= base_url('fav.ico'); ?>" alt="">-->
-<!--							</div>-->
-<!--							<div class="meta--info">-->
-<!--								<div class="meta--title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, deleniti!</div>-->
-<!--								<div class="meta--description">JPStore</div>-->
-<!--							</div>-->
-<!--						</div>-->
-<!--					</div>-->
-<!--				</li>-->
-<!--				<li class="chat--msg-item">-->
-<!--					<div class="msg--text-content">-->
-<!--						<div class="msg--text">Ready Kak?</div>-->
-<!--					</div>-->
-<!--				</li>-->
-<!--				<li class="chat--msg-item reply">-->
-<!--					<div class="msg--text-content">-->
-<!--						<div class="msg--text">Ready,-->
-<!--Silahkan di order</div>-->
-<!--					</div>-->
-<!--				</li>-->
-<!--				<li class="chat--msg-item">-->
-<!--					<div class="msg--text-content">-->
-<!--						<div class="msg--text">Siap Kak</div>-->
-<!--					</div>-->
-<!--				</li>-->
-<!--				<li class="chat--msg-item reply">-->
-<!--					<div class="msg--text-content">-->
-<!--						<div class="msg--text">Kami Tunggu</div>-->
-<!--					</div>-->
-<!--				</li>-->
 			</ul>
 		</div>
 		<div class="chat--footer">
@@ -281,7 +247,7 @@
 					</div>
 				</div>
 				<div class="meta--close">
-					<button class="btn btn--chat-action"><i class="far fa-times"></i></button>
+					<button class="btn btn--chat-action "><i class="far fa-times"></i></button>
 				</div>
 			</div>
 			<div class="chat--footer-content">
