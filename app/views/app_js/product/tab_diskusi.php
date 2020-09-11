@@ -69,8 +69,8 @@
 												<textarea rows="1" class="form-control diskusi-balasan" placeholder="Balas diskusi.."></textarea>
 											</div>
 											<div class="text-right">
-												<button class="btn btn-secondary btn--batal-balasan">Batal</button>
-												<button class="btn btn-success btn--kirim-balasan" data-id="${data.id}">Kirim</button>
+												<button class="btn btn-sm btn-danger btn--batal-balasan"><i class="fal fa-times-circle"></i>	Batal</button>
+												<button class="btn btn-sm btn-success btn--kirim-balasan" data-id="${data.id}"><i class="fal fa-paper-plane"></i>	Kirim</button>
 											</div>
 										</div>
 									</div>`
@@ -79,9 +79,9 @@
 					})
 
 					if (parseInt(pagination.Halaman) < parseInt(pagination.Jml_halaman)) {
-						next += `<button class="btn btn-outline-primary" onclick="diskusi_produk.load(${parseInt(pagination.Halaman) + 1})">Muat Lebih Banyak</button>`
+						next += `<button class="btn btn-outline-orange" onclick="diskusi_produk.load(${parseInt(pagination.Halaman) + 1})"><i class="fal fa-angle-double-down"></i>	Lihat Lainnya</button>`
 					}else{
-						next += `<button class="btn btn-outline-secondary" disabled>Sudah yang terakhir</button>`
+						next += `<button class="btn btn-outline-secondary" disabled><i class="fal fa-ban"></i>	Sudah yang terakhir</button>`
 					}
 					$('#Pagination').html(next)
 				}

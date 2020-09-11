@@ -11,10 +11,11 @@ section.auth .box {
 	width: 430px;
 	min-height: 300px;
 	/* padding-top: 5%; */
-	border-radius: 8px;
+	/* border-radius: 8px; */
 	background: #FFF;
 	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 	padding: .5rem 1rem;
+	border-top: 5px solid #ee4d2d;
 }
 
 section.auth .box a.logo {
@@ -23,8 +24,8 @@ section.auth .box a.logo {
 
 section.auth .box a.logo img {
 	display: block;
-	width: 200px;
-	margin: 30px auto;
+	/* width: 200px; */
+	margin: 23px auto;
 }
 
 section.auth .box h6 {

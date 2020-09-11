@@ -35,8 +35,8 @@ body.dropdowns-open {
 
 .nav-tabs .nav-link.active {
 	border: none;
-	border-bottom: 3px solid #007bff;
-	color: #007bff;
+	border-bottom: 3px solid #ee4d2d;
+	color: #ee4d2d;
 }
 
 .curs-p {
@@ -353,7 +353,26 @@ hr.hr-white{
 }
 
 .btn-orange:hover{
+	background-color: #bd381e;
+	color: white;
+	border: 1px solid #bd381e;
+}
+
+.btn-outline-orange{
 	background-color: white;
 	color: #ee4d2d;
 	border: 1px solid #ee4d2d;
+}
+
+.btn-outline-orange:hover{
+	background-color: #ee4d2d;
+	color: white;
+}
+
+.text-orange{
+	color: #ee4d2d !important;
+}
+
+.bg-orange{
+	background-color: #ee4d2d !important;
 }

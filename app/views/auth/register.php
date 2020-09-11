@@ -4,7 +4,7 @@
 		<div class="box mx-auto">
 		<form action="#" id="register-form">
 			<a href="<?= base_url(); ?>" class="text-link logo">
-				<img src="<?= base_url(); ?>cdn/favicon.png" alt="">
+				<img src="<?= base_url(); ?>assets/img/logo/logo-light.png" class="w-75" alt="">
 			</a>
 			<h6>Daftar Akun Baru Sekarang</h6>
 			<div class="msg-content"></div>
@@ -34,12 +34,12 @@
 				  <input type="checkbox" class="custom-control-input" id="syarat-ketentuan">
 				  <label class="custom-control-label fs-13" for="syarat-ketentuan">
 				  	Saya telah membaca dan menyetujui 
-				  		<a href="https://jpstore.id/content/6" class="text-primary text-link" target="_blank">Syarat dan Ketentuan</a>
-				  	Jpstore
+				  		<a href="https://jpstore.id/content/6" class="text-orange text-link" target="_blank">Syarat dan Ketentuan</a>
+				  	Ramai Jaya
 				  	</label>
 				</div>
 			</div>
-			<button class="btn btn-primary btn-block mb-3" type="submit" id="submit-register">Daftar</button>
+			<button class="btn btn-orange btn-block mb-3" type="submit" id="submit-register"><i class="fal fa-user-plus"></i>	Daftar</button>
 		</form>
 			<!-- <div class="row mt-3">
 				<div class="col-md-6 mb-3">
@@ -49,9 +49,9 @@
 					<button class="btn btn-block btn-google"><i class="fab fa-google"></i> <small class="fs-12">Daftar dengan </small> <b>Google</b></button>
 				</div>
 			</div> -->
-		</div>
-		<div class="text-center mt-3">
-			<span class="fs-14">Sudah punya akun? <a href="<?= base_url(); ?>login" class="text-link text-primary">Silahkan Login</a></span>
+			<div class="text-center mt-3 mb-3">
+				<span class="fs-14">Sudah punya akun? <a href="<?= base_url(); ?>login" class="text-link text-orange">Silahkan Login</a></span>
+			</div>
 		</div>
 		
 	</div>

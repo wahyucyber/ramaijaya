@@ -136,9 +136,10 @@
 						$('span.total--beli').html(`Rp ${Format_Rupiah(val.harga)}`)
 						$("input.harga--produk").val(val.harga);
 					}else{
-						$("#harga--produk").html(`<span class="text-harga">Rp ${Format_Rupiah(val.harga_diskon.toString())}</span> 
+						$("#harga--produk").html(` 
 							<div class="text-secondary text-caret ml-2 d-inline-block fs-16">Rp ${Format_Rupiah(val.harga)}</div>
-							<small class="badge badge-danger badge-pill fs-11 ml-1">-${val.diskon}%</small>`);
+							<span class="text-harga">Rp ${Format_Rupiah(val.harga_diskon.toString())}</span>
+							<small class="badge badge-danger badge-pill fs-11 ml-1">-${val.diskon}% OFF</small>`);
 						$('span.total--beli').html(`Rp ${Format_Rupiah(val.harga_diskon.toString())}`)
 						$("input.harga--produk").val(val.harga_diskon);
 					}
@@ -345,7 +346,7 @@
 						harga = `<div class="price">Rp ${Format_Rupiah(val.harga)}</div>`
 					}else{
 						harga = `<span class="price">Rp ${Format_Rupiah(val.harga_diskon.toString())}</span><span class="text-caret fs-13 text-secondary ml-1">Rp ${Format_Rupiah(val.harga)}</span>`
-						diskon = `<span class="free-ongkir badge badge-danger">-${val.diskon}%</span>`
+						diskon = `<span class="free-ongkir badge badge-danger">-${val.diskon}% <br><b class="text-light">OFF</b></span>`
 					}
 
 					content += `
@@ -380,7 +381,7 @@
 									<span class="counter">(${val.rating})</span>
 								</div>
 								${$jp_client_token? `<div class="content-add-to-cart">
-												<button class="btn btn-sm btn-primary btn-add-to-cart add--product-to-cart"  data-id="${val.id}"><i class="fas fa-cart-plus"></i> Tambahkan ke Keranjang</button>
+												<button class="btn btn-sm btn-orange btn-add-to-cart add--product-to-cart"  data-id="${val.id}"><i class="fal fa-cart-plus"></i> <small>Tambahkan ke Keranjang</small></button>
 											</div>` : ''}
 							</div>
 						</a>

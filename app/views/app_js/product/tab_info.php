@@ -78,9 +78,9 @@
 					});
 
 					if (parseInt(pagination.Halaman) < parseInt(pagination.Jml_halaman)) {
-						next += `<button class="btn btn-outline-primary" onclick="produk_info.ulasan(${parseInt(pagination.Halaman) + 1})">Muat Lebih Banyak</button>`
+						next += `<button class="btn btn-outline-orange" onclick="produk_info.ulasan(${parseInt(pagination.Halaman) + 1})"><i class="fal fa-angle-double-down"></i>	Lihat Lainnya</button>`
 					}else{
-						next += `<button class="btn btn-outline-secondary" disabled>Sudah yang terakhir</button>`
+						next += `<button class="btn btn-outline-secondary" disabled><i class="fal fa-ban"></i>	Sudah yang terakhir</button>`
 					}
 					$('#Pagination').html(next)
 				}

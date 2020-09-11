@@ -108,7 +108,7 @@ section.product-single .product-single-inner .product-single-content .first-colu
 section.product-single .product-single-inner .product-single-content .first-column .product-detail .column:last-child .product-info .product-info-item {
 	float: left;
 	width: 20%;
-	padding: 20px 0;
+	padding-bottom: 20px;
 	display: flex;
 	-webkit-align-items: center;
 	        align-items: center;
@@ -435,4 +435,18 @@ section.product-single .product-single-inner .product-single-content .last-colum
 		margin-left: auto !important;
 	}
 
+}
+
+/* NEW */
+.store-detail .store-wrapper .shop-info{
+	display: flex;
+}
+
+.store-detail .store-wrapper .shop-info .img-store{
+	width: 23%;
+}
+
+.store-detail .store-wrapper .shop-info .__info{
+	width: 77%;
+	padding-left: 15px;
 }

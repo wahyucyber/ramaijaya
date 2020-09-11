@@ -26,10 +26,10 @@
 						</div>
 					</div>
 					<div class="column" id="product-single--content">
-						<a href="" class="text-primary fs-13 link--toko"><i class="fad fa-store text-success mb-1"></i> <span class="nama--toko">Nama Toko</span></a>
+						<!-- <a href="" class="text-primary fs-13 link--toko"><i class="fad fa-store text-orange mb-1"></i> <span class="nama--toko text-orange">Nama Toko</span></a> -->
 						<h3 class="font-weight-bold mb-1 nama--produk">Nama Produk</h3>
 						<div class="shared--content mb-2">
-							<button class="btn btn-sm shared--btn" data-url="<?= current_url(); ?>"><i class="fa fa-share-alt"></i> Bagikan</button>
+							<button class="btn btn-sm shared--btn" data-url="<?= current_url(); ?>"><i class="fal fa-share-alt"></i> Bagikan</button>
 							<div class="shared--overlay">
 								<div class="shared--item">
 									<div class="shared--header">
@@ -79,28 +79,28 @@
 						</div> -->
 						<div class="product-info clearfix">
 							<div class="product-info-item">
-								<i class="fa fa-eye text-muted"></i>
+								<i class="text-orange fal fa-eye text-muted"></i>
 								<div class="d-inline-block ml-2">
 									<div class="text-muted fs-11">Dilihat</div>
 									<div class="font-weight-bold fs-14 p-0 dilihat--">0</div>
 								</div>
 							</div>
 							<div class="product-info-item">
-								<i class="fa fa-truck text-muted"></i>
+								<i class="text-orange fal fa-truck text-muted"></i>
 								<div class="d-inline-block ml-2">
 									<div class="text-muted fs-11">Terkirim</div>
 									<div class="font-weight-bold fs-14 p-0">0</div>
 								</div>
 							</div>
 							<div class="product-info-item">
-								<i class="fa fa-box-open text-muted"></i>
+								<i class="text-orange fal fa-box-open text-muted"></i>
 								<div class="d-inline-block ml-2">
 									<div class="text-muted fs-11">Kondisi</div>
 									<div class="font-weight-bold fs-14 p-0 kondisi--">-</div>
 								</div>
 							</div>
 							<div class="product-info-item">
-								<i class="fa fa-tag text-muted"></i>
+								<i class="text-orange fal fa-tag text-muted"></i>
 								<div class="d-inline-block ml-2">
 									<div class="text-muted fs-11">Min. Beli</div>
 									<div class="font-weight-bold fs-14 p-0 minimal--beli">0</div>
@@ -114,48 +114,22 @@
 								</div>
 							</div> -->
 						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<button class="btn btn-block btn-orange btn-cart-nav add--to-cart"><i class="fal fa-cart-plus"></i>	Masukkan Keranjang</button>
+							</div>
+							<div class="col-md-5">
+								<button class="btn btn-block btn-outline-orange btn-buy-nav add--to-cart-order"><i class="fal fa-money-bill-wave"></i>	Beli Sekarang</button>
+							</div>
+							<div class="col-md-1">
+								<button class="btn btn-light btn-wishlist-nav produk--favorit" title="Tambahkan Ke Wishlist"><i class="fa fa-heart"></i></button>
+							</div>
+						</div>
 					</div>
 				</div>
-				<nav class="navbar navbar-store-bottom" id="shop-nav--bottom">
-					<div class="store-wrapper">
-						<div class="shop-info">
-							<a href="" class="img-store">
-								<img src="<?= base_url(); ?>cdn/fav.png" class="toko--logo" alt="">
-							</a>
-							<div class="__info">
-								<div class="__info-name">
-									<a href="" class="mr-1 link--toko"><span class="fw-600 text-dark nama--toko">Nama Toko</span></a>
-									<i class="fa fa-check-circle icon-pb fill" title="Power Badge"></i>
-								</div>
-								<p class="fs-10"><span class="toko--kabupaten">Kabupaten</span> &#9679; Online Hari Ini &#9679; </p>
-							</div>
-						</div>
-						<div class="shop--event">
-						    <?php if ($Auth['Error']): ?>
-                            <?php else: ?>
-							<button class="btn btn-outline-success btn--chat" data-toggle="chating">
-								<i class="fas fa-comment-lines"></i>
-								<span class="text">Chat Penjual</span>
-							</button>
-							<?php endif ?>
-							<!-- <div class="d-inline-block btn-follow">
-								<button class="btn btn-primary">Follow</button>
-							</div> -->
-						</div>
-						<div class="shop-action">
-							<div class="pd-price">
-								<div class="fs-10 text-white-lightern-3 text-uppercase">Total</div>
-								<span class="fs-18 fw-700 total--beli">Rp 0</span>
-							</div>
-							<!-- <button class="btn btn-light ml-2 btn-chat-nav"><i class="fa fa-comment"></i></button> -->
-							<button class="btn btn-light ml-2 btn-wishlist-nav produk--favorit"><i class="fa fa-heart"></i></button>
-							<button class="btn btn-outline-primary ml-2 btn-buy-nav add--to-cart-order">Beli</button>
-							<button class="btn btn-primary ml-2 btn-cart-nav add--to-cart">Tambah Ke Keranjang</button>
-						</div>
-					</div>
-				</nav>
+				<!-- <nav class="navbar navbar-store-bottom" id="shop-nav--bottom"></nav> -->
 			</div>
-			<div class="last-column" id="product-single--right">
+			<!-- <div class="last-column" id="product-single--right">
 				<div class="shop-notes">
 					<div class="card p-3 mb-3">
 						<h4 class="mb-3 fs-12">Catatan Toko</h4>
@@ -163,46 +137,52 @@
 						</div>
 					</div>
 				</div>
-				<!-- <div class="shipping-list">
-					<div class="card p-3 mb-3">
-						<h4 class="mb-3 fs-12">Dukungan Pengiriman</h4>
-						<div class="shipping-item">
-							<div class="img-shipping">
-								<img src="https://ecs7.tokopedia.net/img/kurir-pos.png" alt="" title="Pos Indonesia">
-							</div>
-							<ul class="list-unstyled text-white-lightern-3">
-								<li title="POs Kilat Khusus">POs Kilat Khusus</li>
-							</ul>
+			</div> -->
+		</div>
+		<div class="card-body border mb-3 store-detail">
+			<div class="store-wrapper row">
+				<div class="shop-info col-md-4">
+					<a href="" class="img-store">
+						<img src="<?= base_url(); ?>cdn/fav.png" class="toko--logo" alt="">
+					</a>
+					<div class="__info">
+						<div class="__info-name">
+							<a href="" class="mr-1 link--toko"><span class="fw-600 text-dark nama--toko">Nama Toko</span></a>
+							<i class="fa fa-check-circle icon-pb fill" title="Power Badge"></i>
 						</div>
-						<div class="shipping-item">
-							<div class="img-shipping">
-								<img src="https://ecs7.tokopedia.net/img/kurir-jnt.png" alt="" title="SiCepat">
-							</div>
-							<ul class="list-unstyled text-white-lightern-3">
-								<li title="Reguler">Reguler</li>
-							</ul>
-						</div>
-						<div class="shipping-item">
-							<div class="img-shipping">
-								<img src="https://ecs7.tokopedia.net/img/kurir-jne.png" alt="" title="JNE">
-							</div>
-							<ul class="list-unstyled text-white-lightern-3">
-								<li title="Reguler">Reguler</li>
-								<li title="OKE">OKE</li>
-								<li title="YES">YES</li>
-							</ul>
+						<p class="fs-10 mb-1"><span class="toko--kabupaten">Kabupaten</span> &#9679; Online Hari Ini &#9679; </p>
+						<div class="btn--chat">
+							<?php if ($Auth['Error']): ?>
+							<?php else: ?>
+							<button class="btn btn-outline-orange btn--chat btn-sm" data-toggle="chating">
+								<i class="fal fa-comment-lines"></i>
+								<span class="text">Chat Penjual</span>
+							</button>
+							<?php endif ?>
 						</div>
 					</div>
+				</div>
+				<!-- <div class="shop--event">
+					<div class="d-inline-block btn-follow">
+						<button class="btn btn-primary">Follow</button>
+					</div>
 				</div> -->
+				<div class="shop-notes col-md-8">
+					<div class="">
+						<h4 class="mb-3 fs-12">Catatan Toko</h4>
+						<div class="catatan--toko">
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="summary-product">
 			<ul class="nav nav-tabs">
 			  <li class="nav-item">
-			    <a class="nav-link <?= $tabs == 1? 'active' : ''; ?>" href="<?= base_url("shop/$toko/$produk?tab=1"); ?>"><i class="fa fa-file-alt icon"></i> Informasi Produk</a>
+			    <a class="nav-link <?= $tabs == 1? 'active' : ''; ?>" href="<?= base_url("shop/$toko/$produk?tab=1"); ?>"><i class="fal fa-file-alt icon"></i> Informasi Produk</a>
 			  </li>
 			  <li class="nav-item">
-			    <a class="nav-link <?= $tabs == 2? 'active' : ''; ?>" href="<?= base_url("shop/$toko/$produk?tab=2"); ?>"><i class="fa fa-comments icon"></i> Ulasan</a>
+			    <a class="nav-link <?= $tabs == 2? 'active' : ''; ?>" href="<?= base_url("shop/$toko/$produk?tab=2"); ?>"><i class="fal fa-comments icon"></i> Ulasan</a>
 			  </li>
 			  <li class="nav-item">
 			    <a class="nav-link <?= $tabs == 3? 'active' : ''; ?>" href="<?= base_url("shop/$toko/$produk?tab=3"); ?>"><i class="fab fa-discourse icon"></i> Diskusi Produk </a>
@@ -227,7 +207,7 @@
 			</div>
 		</div>
 		<div class="more-product">
-			<h4 class="fs-18 mb-3 fw-600">Produk lainnya dari toko ini</h4>
+			<h4 class="fs-18 mb-3 fw-600">PRODUK LAIN DARI TOKO INI</h4>
 			<div class="product-list other-product" id="other-product">
 			</div>
 		</div>

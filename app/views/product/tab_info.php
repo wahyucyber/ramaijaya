@@ -7,7 +7,7 @@
 				<h4 class="fs-18 mb-3 fw-600">Ulasan Terbaru</h4>
 			</div>
 			<div class="float-right">
-				<div class="text-primary curs-p"><a href="<?php echo base_url('shop/'.$toko."/".$produk."/?tab=2"); ?>">Lihat semua ulasan</a></div>
+				<div class="text-orange curs-p"><a href="<?php echo base_url('shop/'.$toko."/".$produk."/?tab=2"); ?>" class="text-orange">Lihat semua ulasan</a></div>
 			</div>
 		</div>
 		<div class="clearfix"></div>

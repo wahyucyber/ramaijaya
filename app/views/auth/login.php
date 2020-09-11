@@ -4,9 +4,9 @@
 		<div class="box mx-auto">
 			<form action="" id="login-form">
 				<a href="<?= base_url(); ?>" class="text-link logo">
-					<img src="<?= base_url(); ?>cdn/favicon.png" alt="">
+					<img src="<?= base_url(); ?>assets/img/logo/logo-light.png" class="w-75" alt="">
 				</a>
-				<h6>Silahkan masuk dengan akun kamu</h6>
+				<!-- <h6>Silahkan masuk dengan akun kamu</h6> -->
 				<div class="msg-content">
 					<?php if (flashdata('msg_success')): ?>
 						<div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -44,16 +44,16 @@
 						</div>
 					</div>
 					<div class="col-6 text-right">
-						<a href="<?= base_url('forgot'); ?>" class="text-link text-primary fs-13">Lupa Password?</a>
+						<a href="<?= base_url('forgot'); ?>" class="text-link text-orange fs-13">Lupa Password?</a>
 					</div>
 				</div>
-				<button class="btn btn-primary btn-block mb-3" type="submit" id="btn-submit-login">Login</button>
+				<button class="btn btn-orange btn-block mb-3" type="submit" id="btn-submit-login"><i class="fal fa-sign-in"></i>	Login</button>
 			</form>
 			<!-- <button class="btn btn-block btn-facebook"><i class="fab fa-facebook-square fs-20"></i> <small class="fs-12">Login dengan</small> <b>Facebook</b></button>
 			<button class="btn btn-block btn-google"><i class="fab fa-google"></i> <small class="fs-12">Login dengan</small> <b>Google</b></button> -->
-		</div>
-		<div class="text-center mt-3">
-			<span class="fs-14">Belum punya akun? <a href="<?= base_url(); ?>register" class="text-link text-primary">Silahkan Daftar</a></span>
+			<div class="text-center mt-3 mb-3">
+				<span class="fs-14">Belum punya akun? <a href="<?= base_url(); ?>register" class="text-link text-orange">Silahkan Daftar</a></span>
+			</div>
 		</div>
 		
 	</div>

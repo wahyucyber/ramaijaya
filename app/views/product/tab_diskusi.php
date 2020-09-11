@@ -1,7 +1,7 @@
 <div class="pt-3">
 	<div class="question-discuss mb-3">
 		<div class="d-flex">
-			<i class="fa fa-comments fa-2x text-info"></i>
+			<i class="fal fa-comments fa-2x text-orange"></i>
 			<p class="m-0 ml-3 mt-auto">
 				Ada pertanyaan? <b class="fw-600">Diskusikan dengan penjual atau pengguna lain</b>
 			</p>
@@ -9,7 +9,7 @@
 		<div class="btn-question">
 			<?php if ($Auth['Error']): ?>
 			<?php else: ?>
-			<a href="" class="btn btn-primary" data-toggle="collapse" data-target="#pertanyaan--baru">Tulis Pertanyaan</a>
+			<a href="" class="btn btn-orange" data-toggle="collapse" data-target="#pertanyaan--baru"><i class="fal fa-pen"></i>	Tulis Pertanyaan</a>
 			<?php endif ?>
 		</div>
 		<div class="clearfix"></div>
@@ -20,8 +20,8 @@
 				<textarea rows="1" class="form-control diskusi" placeholder="Masukkan pertanyaan anda disini"></textarea>
 			</div>
 			<div class="text-right">
-				<button class="btn btn-secondary">Batal</button>
-				<button class="btn btn-success btn--send-diskusi">Kirim</button>
+				<button class="btn btn-sm btn-danger"><i class="fal fa-times-circle"></i>	Batal</button>
+				<button class="btn btn-sm btn-success btn--send-diskusi"><i class="fal fa-paper-plane"></i>	Kirim</button>
 			</div>
 		</div>
 		<?php endif ?>
