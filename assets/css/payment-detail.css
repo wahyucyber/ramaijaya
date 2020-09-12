@@ -11,21 +11,21 @@ div.payment-detail {
 
 div.payment-detail div.grid div.payment-card {
 	width: 100%;
-	border: 1px solid #ddd;
-	background-color: #F7F7F7;
+	border-bottom: 1px solid #ddd;
+	/* background-color: #F7F7F7; */
 	padding: 10px;
 }
 
 div.payment-detail div.payment-card div.payment-title {
-	font-size: 11px;
+	font-size: 13px;
 	padding: 5px;
 	color: grey;
-	font-family: Arial;
+	
 }
 
 div.payment-detail div.payment-card div.payment-body {
 	font-size: 14px;
-	font-family: arial;
+	
 	padding: 5px;
 }
 
@@ -115,7 +115,7 @@ div.ulasan-label {
 	width: auto;
 	padding: 2.5px 10px 2.5px 10px;
 	border-radius: 20px;
-	font-family: arial;
+	
 	left: 0;
 	font-size: 13px;
 	cursor: pointer;
@@ -156,12 +156,12 @@ div.ulasan div.ulasan-header img {
 div.ulasan div.ulasan-header div.identity div.produk {
 	font-size: 14px;
 	font-weight: bold;
-	font-family: Arial;
+	
 }
 
 div.ulasan div.ulasan-header div.identity div.produk-detail {
 	font-size: 13px;
-	font-family: Arial;
+	
 	color: grey;
 }
 
@@ -212,7 +212,7 @@ label.payment-upload > i {
 button.btn-ulasan {
 	font-size: 13px;
 	padding: 3px 7px 3px 7px;
-	font-family: arial;
+	
 	border: 1px solid #ccc;
 	background-color: #e7e7e7;
 	color: black;

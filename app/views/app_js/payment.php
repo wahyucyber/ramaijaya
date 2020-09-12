@@ -157,16 +157,16 @@ if (env('MIDTRANS_ENV') == "development") {
 					content += `
 						<div class="grid">
 							<div class="payment-card">
-								<div class="payment-title">
-									NO. TRANSAKSI
+								<div class="payment-title text-orange">
+									<b>NO. TRANSAKSI</b>
 								</div>
-								<div class="payment-body">
+								<div class="payment-body text-orange">
 									<span style="font-size: 11px; color: #ababab; font-family: arial;">Note* No. Transaksi generate otomatis oleh system.</span>
 								</div>
 							</div>
-							<div class="payment-card">
-								<div class="payment-title">
-									LAPAK
+							<div class="payment-card ">
+								<div class="payment-title text-orange">
+									<b>LAPAK</b>
 								</div>
 								<div class="payment-body">
 									${val.toko_nama}
@@ -175,14 +175,14 @@ if (env('MIDTRANS_ENV') == "development") {
 						</div>
 						<div class="grid">
 							<div class="payment-card bg-white">
-								<div class="payment-title">
+								<div class="payment-title ">
 									<b>Items</b>
 								</div>
 							</div>
 						</div>
 						<div class="grid">
 							<div class="payment-card bg-white">
-								<div class="payment-title">
+								<div class="payment-title text-orange">
 									<div class="row">
 										<div class="col-md-2">Foto</div>
 										<div class="col-md-3">Nama</div>
@@ -200,7 +200,7 @@ if (env('MIDTRANS_ENV') == "development") {
 						</div>
 						<div class="grid">
 							<div class="payment-card">
-								<div class="payment-title">
+								<div class="payment-title text-orange">
 									Opsi Pengiriman
 								</div>
 								<div class="payment-body">
@@ -285,7 +285,7 @@ if (env('MIDTRANS_ENV') == "development") {
 				});
 				content += `
 					<div align="right">
-						<button type="button" class="btn btn-success btn-sm alamat--set-utama">Set utama</button>
+						<button type="button" class="btn btn-orange btn-sm alamat--set-utama">Set utama</button>
 					</div>
 				`;
 

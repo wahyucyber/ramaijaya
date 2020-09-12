@@ -1,112 +1,34 @@
 <section class="cart">	
 	<div class="cart-inner">
 		<div class="cart-content">
-			<div class="column col-first">
-				<div class="cart-header">
+			<div class="column col-first card shadow border-0">
+				<div class="cart-header card-header bg-orange">
 					<div class="column p-0">
-						<div class="custom-control custom-checkbox">
+						<div class="custom-control custom-checkbox text-white">
 						  <input type="checkbox" class="custom-control-input" id="checkAll">
 						  <label class="custom-control-label" for="checkAll">Pilih Semua Produk</label>
 						</div>
 					</div>
 					<div class="column p-0 text-right">
-						<a href="javascript:;" class="text-link text-muted-fs-12 hapus--all" data-toggle="modal" data-target="#konfirmasi-semua">Hapus</a>
+						<a href="javascript:;" class="text-link text-muted-fs-12 hapus--all text-white" data-toggle="modal" data-target="#konfirmasi-semua"><i class="fal fa-trash-alt"></i>	Hapus</a>
 					</div>
 				</div>
-				<div class="cart-list-item" id="contentCart">
+				<div class="cart-list-item card-body" id="contentCart">
 					<img src="<?php echo base_url('assets/img/default/loader.gif'); ?>" style="width: 10%;" alt="">
-					<!-- <div class="cart-item">
-						<div class="cart-store">
-							<div class="column">
-								<div class="custom-control custom-checkbox">
-								  <input type="checkbox" class="custom-control-input" id="store">
-								  <label class="custom-control-label" for="store"></label>
-								</div>
-							</div>
-							<div class="column">
-								<label for="store">
-									<h6 class="m-0">JPMall</h6>
-									<small class="fs-12 text-muted">Kota Gresik</small>
-								</label>
-							</div>
-						</div>
-						<div class="cart-product mb-3">
-							<div class="column">
-								<div class="custom-control custom-checkbox">
-								  <input type="checkbox" class="custom-control-input" id="product">
-								  <label class="custom-control-label" for="product"></label>
-								</div>
-							</div>
-							<div class="column">
-								<label for="product" class="row">
-									<div class="column">
-										<img src="http://jpstore.online/files/product/2019/buku-nonteks-smp-belajar-berbahagia.jpg" alt="">
-									</div>
-									<div class="column">
-										<div class="product-name">
-											<a href="<?= base_url(); ?>product" class="text-elipsis">Belajar Berbahagia</a>
-										</div>
-										<div>
-											<div class="product-price">
-												Rp 39.500
-											</div>
-										</div>
-									</div>
-								</label>
-								<div class="note-for-seller _nfs mt-3">
-									<div class="olc-wrapper fs-13">
-										<div class="olc-text text-elipsis text-muted"></div>
-										<span class="olc-handler curs-p ml-2 text-dominan">Ubah</span>
-									</div>
-									<div class="display-handler fs-12">
-										<span class="curs-p ">Tulis Catatan Untuk Toko</span>
-									</div>
-									<div class="display-target">
-										<div class="form-group">
-											<div class="fs-12 mb-2 text-muted">Catatan Untuk Penjual (Opsional)</div>
-											<textarea name="note" maxlength="144" id="note_23" rows="1" class="note-text"></textarea>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="column d-flex text-right">
-								<div class="wishlist-btn">
-									<div class="cta-wishlist curs-p fs-23 text-white-lightern-3" data-product-id=""><span class="fa fa-heart"></span></div>
-								</div>
-								<div class="delete-btn">
-									<div class="cta-delete curs-p fs-23 text-white-lightern-3" data-product-id=""><span class="fa fa-trash"></span></div>
-								</div>
-								<div class="qty-input">
-									<div class="quantity-input">
-										<div class="qty-min qty-btn disabled"></div>
-										<input class="qty" min="1" name="quantity" value="1" type="number" style="width: 22px">
-										<div class="qty-plus qty-btn"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div> -->
+					
 				</div>
 			</div>
 			<div class="column">
-				<div class="summary card card-body shadow border-0">
-					<div class="title border-bottom pb-3 mb-3">
-						<h6 class="fs-18 font-weight-bold">Ringkasan Belanja</h6>
+				<div class="summary card  shadow border-0">
+					<div class="title border-bottom pb-3 card-header text-center">
+						<h6 class="fs-18 font-weight-bold text-orange"><i class="fal fa-info"></i>	Ringkasan Belanja</h6>
 					</div>
-					<div class="detail d-flex border-bottom pb-3 mb-3">
+					<div class="detail d-flex border-bottom pb-3 card-body">
 						<div class="dt-label w-50">Total Harga</div>
 						<div class="dt-value w-50 text-right" id="grand-total-product">Rp 0</div>
 					</div>
 					<div class="btn-checkout">
-						<!-- <div class="form-group">
-							<select name="" id="" class="form-control select2 payment--alamat-pengiriman">
-								<option value="">-Pilih Alamat Pengiriman-</option>
-							</select>
-							<div class="text-info" data-toggle="modal" data-target="#add--alamat-pengiriman" style="font-size: 13px; cursor: pointer; margin-top: 5px;">
-								<i class="fa fa-plus"></i> Tambahkan alamat
-							</div>
-						</div> -->
-						<button class="btn btn-info btn-block text-white lanjut--kepembayaran">Checkout</button>
+						<button class="btn btn-orange btn-block text-white lanjut--kepembayaran"><i class="fal fa-check-circle"></i>	Checkout</button>
 					</div>
 				</div>
 			</div>
@@ -155,18 +77,21 @@
 <div class="modal fade" id="konfirmasi">
 	<div class="modal-dialog">
 		<div class="modal-content">
-			<div class="modal-header">
-				Konfirmasi
+			<div class="modal-header bg-orange text-white">
+				<h5 class="modal-title"><i class="fal fa-exclamation-triangle"></i>	Konfirmasi</h5>
+				<button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
 			</div>
 			<div class="modal-body">
-				<p>
+				<div class="alert alert-warning">
 					<input type="hidden" name="" class="produk-id">
 					Apakah anda yakin ingin menghapus produk <b class="nama-produk"></b>
-				</p>
+				</div>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
-				<button type="button" class="btn btn-danger btn-hapus">Ya</button>
+				<button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fal fa-times-circle"></i>	Batal</button>
+				<button type="button" class="btn btn-warning btn-hapus"><i class="fal fa-check-circle"></i>	Ya</button>
 			</div>
 		</div>
 	</div>
@@ -175,17 +100,20 @@
 <div class="modal fade" id="konfirmasi-semua">
 	<div class="modal-dialog">
 		<div class="modal-content">
-			<div class="modal-header">
-				Konfirmasi
+			<div class="modal-header bg-orange text-white">
+				<h5 class="modal-title"><i class="fal fa-exclamation-triangle"></i>	Konfirmasi</h5>
+				<button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
 			</div>
 			<div class="modal-body">
-				<p>
-					Apakah anda yakin ingin menghapus produk yang terpilih.
-				</p>
+				<div class="alert alert-warning">
+					Apakah anda yakin ingin menghapus produk yang terpilih ?
+				</div>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
-				<button type="button" class="btn btn-danger btn-hapus-semua">Ya</button>
+				<button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fal fa-times-circle"></i>	Batal</button>
+				<button type="button" class="btn btn-warning btn-hapus-semua"><i class="fal fa-check-circle"></i>	Ya</button>
 			</div>
 		</div>
 	</div>

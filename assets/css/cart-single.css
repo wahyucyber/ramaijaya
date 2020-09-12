@@ -25,7 +25,7 @@ section.cart .cart-inner .cart-content .column.col-first:first-child {
 
 section.cart .cart-inner .cart-content .column:first-child .cart-header {
 	padding-bottom: 1rem;
-	margin-bottom: 1rem;
+	/* margin-bottom: 1rem; */
 	border-bottom: 2px solid #f3f4f5;
 	display: flex;
 	-webkit-flex-wrap: wrap;
@@ -121,7 +121,7 @@ section.cart .cart-inner .cart-content .column:first-child .cart-list-item .cart
 }
 
 section.cart .cart-inner .cart-content .column:first-child .cart-list-item .cart-item .cart-product .column:nth-child(2) label.row .column:last-child .product-name > a {
-	display: inline-block
+	display: inline-block;
 	text-decoration: none;
 	color: #343a40;
 	font-weight: bold;

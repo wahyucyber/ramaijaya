@@ -30,6 +30,7 @@
 				this.run()
 			}
 			this.getCategory()
+			this.drawFooter()
 			
 		}
 
@@ -191,6 +192,58 @@
 					init_app.CartDraw(output);
 				// }
 			})
+		}
+
+		drawFooter() {
+			let output = $("div.footer-main").html('');
+
+			callApi("footer", null, res => {
+				if (res.Data.length == 0) {
+					$("div.footer-main").html('');
+				}
+
+				let content = '';
+				$.each(res.Data, function(index, val) {
+
+					let sub_content = '';
+
+					$.each(val.tab_content, function(tab_content_index, tab_content_val) {
+						sub_content += `
+							<li><a href="<?php echo base_url('content'); ?>/${tab_content_val.id}">${tab_content_val.title}</a></li>
+						`;
+					});
+
+					if (val.tab_content.length != 0) {
+						content += `
+							<div class="footer-item">
+								<h3>${val.nama}</h3>
+								<ul>
+									${sub_content}
+								</ul>
+							</div>
+						`;
+					}else{
+						content += `
+							<div class="footer-item">
+								<h3>${val.nama}</h3>
+							</div>
+						`;
+					}
+				});
+
+				content += `
+					<div class="footer-item">
+						<div class="box">
+							<a href="">
+								<img src="<?= base_url(''); ?>assets/img/default/MOCKUP SMARTPHONE JPSTORE.png" alt="Mobile App" width="100%">
+							</a>
+						</div>
+					</div>
+				`;
+
+				output.append(content);
+			})
+
 		}
 		
 		Notification()

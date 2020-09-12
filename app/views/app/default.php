@@ -154,62 +154,7 @@
 			<footer class="footer-wrapper">
 				<div class="footer-header">
 					<div class="footer-main">
-						<!-- <div class="footer-item">
-							<h3><?= env('APP_NAME'); ?></h3>
-							<ul>
-								<li><a href="">Tentang Kami</a></li>
-							</ul>
-						</div>
-						<div class="footer-item">
-							<h3>Beli</h3>
-							<ul>
-								<li><a href="">Cara Belanja</a></li>
-							</ul>
-						</div>
-						<div class="footer-item">
-							<h3>Jual</h3>
-							<ul>
-								<li><a href="">Cara Berjualan Online</a></li>
-							</ul>
-						</div>
-						<div class="footer-item">
-							<h3>Bantuan</h3>
-							<ul>
-								<li><a href="">Syarat dan Ketentuan</a></li>
-							</ul>
-						</div> -->
-						<!-- <div class="footer-item">
-							<h3>Keamanan</h3>
-							<a href="" class="mt-2">
-								<img src="https://ecs7.tokopedia.net/img/footer/PCI_logo.png" oncontextmenu="return false">
-							</a>
-						</div> -->
-						<!-- <div class="footer-item">
-							<div class="box text-center">
-								<a href="https://play.google.com/store/apps/details?id=com.mascitra.jpmall">
-									<div class="row">
-										<span>
-											<img src="<?php echo base_url('assets/img/default/MOCKUP SMARTPHONE.png'); ?>" alt="Mobile App" style="width: 100%;">
-										</span>
-									</div>
-								</a>
-							</div>
-						</div> -->
-						<!-- <div class="footer-item">
-							<div class="box text-center">
-								<a href="https://play.google.com/store/apps/details?id=com.mascitra.jpmall">
-									<div class="row" style="text-align: center;">
-										<span style="width: 100%; text-align: center;">
-											<img src="https://jpstore.id/assets/images/MOCKUP SMARTPHONE.png" style="width: 1200px; margin-left: -1px;" alt="Mobile App">
-										</span>
-										<span class="span9" style="margin-right: 10px; text-align: center;">
-											<h3 class="text-left">Dapatkan Aplikasi Mobile JPStore&nbsp;»</h3>
-											<span class="text-left small">Android</span>
-										</span>
-									</div>
-								</a>
-							</div>
-						</div> -->
+						
 					</div>
 				</div>
 				<div class="footer-additional">

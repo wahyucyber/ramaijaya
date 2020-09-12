@@ -1,12 +1,12 @@
-<div class="container">
-	<div class="row mb-3">
-		<div class="col-6">
+<div class="container card">
+	<div class="row mb-3 card-header bg-orange text-white">
+		<div class="col-6 pl-0">
 			<h3>
-				| <i class="fa fa-bullhorn"></i> Checkout
+				<i class="fal fa-bullhorn"></i> Checkout
 			</h3>
 		</div>
-		<div class="col-6 mb-2" align="right">
-			<a href="<?php echo base_url('cart'); ?>" class="btn btn-danger btn-sm"><i class="fa fa-arrow-circle-left"></i> Kembali</a>
+		<div class="col-6 mb-2 pr-0" align="right">
+			<a href="<?php echo base_url('cart'); ?>" class="btn btn-light btn-sm"><i class="fal fa-arrow-circle-left"></i> Kembali</a>
 		</div>
 	</div>
 	<div class="row">
@@ -14,8 +14,8 @@
 			<div class="payment-detail">
 				<div class="grid mb-2 grid--alamat-pengiriman">
 					<div class="payment-card">
-						<div class="payment-title">
-							<i class="fa fa-map-marker-alt"></i> Alamat Pengiriman
+						<div class="payment-title text-orange">
+							<i class="fal fa-map-marker-alt"></i> Alamat Pengiriman
 						</div>
 						<div class="payment-body">
 							<div class="row">
@@ -23,7 +23,7 @@
 									-
 								</div>
 								<div class="col-md-2" align="right">
-									<button class="btn btn-info btn-sm ubah--alamat-pengiriman">Ubah</button>
+									<button class="btn btn-orange btn-sm ubah--alamat-pengiriman"><i class="fal fa-edit"></i></button>
 								</div>
 							</div>
 						</div>
@@ -33,11 +33,11 @@
 					<div class="payment-card">
 						<div class="payment-title">
 							<div class="row">
-								<div class="col-md-6">
-									<i class="fa fa-map-marker-alt"></i> Alamat Pengiriman
+								<div class="col-md-6 text-orange">
+									<i class="fal fa-map-marker-alt"></i> Alamat Pengiriman
 								</div>
 								<div class="col-md-6" align="right">
-									<a href="javascript:;" data-toggle="modal" data-target="#add--alamat-pengiriman"><i class="fa fa-plus"></i> tambah alamat pengiriman</a>
+									<a href="javascript:;" data-toggle="modal" data-target="#add--alamat-pengiriman" class="text-orange"><i class="fal fa-plus"></i> Tambah alamat pengiriman</a>
 								</div>
 							</div>
 						</div>
@@ -54,8 +54,8 @@
 			<div class="payment-detail">
 				<div class="grid">
 					<div class="payment-card bg-white">
-						<div class="payment-title">
-							<i class="fa fa-cart-arrow-down"></i> Sub. Total
+						<div class="payment-title text-orange">
+							<i class="fal fa-cart-arrow-down"></i><b> Sub. Total </b>
 						</div>
 						<div class="payment-body pesanan--sub-total">
 							Rp. 0
@@ -64,9 +64,9 @@
 				</div>
 				<div class="grid">
 					<div class="payment-card bg-white">
-						<div class="payment-title">
-							<!-- <i class="fa fa-cart-arrow-down"></i> PPN 10% -->
-							<i class="fa fa-file-invoice-dollar"></i> PPN
+						<div class="payment-title text-orange">
+							<!-- <i class="fal fa-cart-arrow-down"></i> PPN 10% -->
+							<i class="fal fa-file-invoice-dollar"></i><b> PPN </b>
 						</div>
 						<div class="payment-body pesanan--ppn">
 							Rp. 0
@@ -75,8 +75,8 @@
 				</div>
 				<div class="grid">
 					<div class="payment-card bg-white">
-						<div class="payment-title">
-							<i class="fa fa-car-side"></i> Total Ongkir
+						<div class="payment-title text-orange">
+							<i class="fal fa-car-side"></i><b> Total Ongkir </b>
 						</div>
 						<div class="payment-body pesanan--total-ongkir">
 							Rp. 0
@@ -85,8 +85,8 @@
 				</div>
 				<div class="grid">
 					<div class="payment-card bg-white">
-						<div class="payment-title">
-							<i class="fa fa-bullhorn"></i> Biaya Penanganan
+						<div class="payment-title text-orange">
+							<i class="fal fa-bullhorn"></i><b> Biaya Penanganan </b>
 						</div>
 						<div class="payment-body" id="biaya--admin">
 							Rp. 0
@@ -95,8 +95,8 @@
 				</div>
 				<div class="grid">
 					<div class="payment-card bg-white">
-						<div class="payment-title">
-							<b><i class="fa fa-hands-helping"></i> Total Bayar</b>
+						<div class="payment-title text-orange">
+							<b><i class="fal fa-hands-helping"></i> Total Bayar</b>
 						</div>
 						<input type="hidden" name="" class="pesanan--total-bayar">
 						<div class="payment-body pesanan--total-bayar">
@@ -106,8 +106,8 @@
 				</div>
 				<div class="grid">
 					<div class="payment-card">
-						<div class="payment-title">
-							<i class="fa fa-credit-card"></i> Cara pembayaran
+						<div class="payment-title text-orange">
+							<i class="fal fa-credit-card"></i><b> Cara pembayaran</b>
 						</div>
 						<div class="payment-body">
 							<div class="payment-metode active" data-payment="midtrans">Online</div>
@@ -115,7 +115,7 @@
 						</div>
 					</div>
 				</div>
-				<button type="button" class="btn btn-info btn-lg btn-block mt-2 pesanan--buat">Buat Pesanan</button>
+				<button type="button" class="btn btn-orange btn-lg btn-block mt-2 pesanan--buat"><i class="fal fa-dolly-flatbed-alt"></i>	Buat Pesanan</button>
 			</div>
 		</div>
 	</div>

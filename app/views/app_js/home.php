@@ -15,7 +15,7 @@
 			// this.DrawKategoriList()
 			this.DrawCategory()
 			this.DrawSlider()
-			this.drawFooter();
+			// this.drawFooter();
 		}
 
 		DrawCategory()
@@ -117,7 +117,7 @@
 												harga = `<div class="price">Rp ${Format_Rupiah(data.harga)}</div>`
 											}else{
 												harga = `<span class="price">Rp ${Format_Rupiah(data.harga_diskon.toString())}</span><span class="text-caret fs-13 text-secondary ml-1">Rp ${Format_Rupiah(data.harga)}</span>`
-												diskon = `<span class="free-ongkir badge badge-danger">-${data.diskon}%</span>`
+												diskon = `<span class="free-ongkir badge badge-danger">-${data.diskon}% <br><b class="text-white">OFF</b></span>`
 											}
 								output += `${diskon}
 										</div>
@@ -370,56 +370,7 @@
 			})
 		}
 
-		drawFooter() {
-			let output = $("div.footer-main").html('');
-
-			callApi("footer", null, res => {
-				if (res.Data.length == 0) {
-					$("div.footer-main").html('');
-				}
-
-				let content = '';
-				$.each(res.Data, function(index, val) {
-
-					let sub_content = '';
-
-					$.each(val.tab_content, function(tab_content_index, tab_content_val) {
-						sub_content += `
-							<li><a href="<?php echo base_url('content'); ?>/${tab_content_val.id}">${tab_content_val.title}</a></li>
-						`;
-					});
-
-					if (val.tab_content.length != 0) {
-						content += `
-							<div class="footer-item">
-								<h3>${val.nama}</h3>
-								<ul>
-									${sub_content}
-								</ul>
-							</div>
-						`;
-					}else{
-						content += `
-							<div class="footer-item">
-								<h3>${val.nama}</h3>
-							</div>
-						`;
-					}
-				});
-
-				content += `
-					<div class="footer-item">
-						<div class="box">
-							<a href="">
-								<img src="<?= base_url(''); ?>assets/img/default/MOCKUP SMARTPHONE JPSTORE.png" alt="Mobile App" width="100%">
-							</a>
-						</div>
-					</div>
-				`;
-
-				output.append(content);
-			})
-		}
+		
 
 		get_diskon_produk()
 		{

@@ -46,7 +46,7 @@
 
 					output += `
 						<div class="row">
-							<div class="col-md-12 mb-2">
+							
 					`;
 
 					$.each(data,function(no, data) {
@@ -57,37 +57,43 @@
 						}
 
 						output += `
-							<a href="<?php echo base_url(''); ?>shop/${data.toko_slug}/${data.slug}" class="card mb-2">
+							<div class="col-md-6 mb-2">
+							<a href="<?php echo base_url(''); ?>shop/${data.toko_slug}/${data.slug}" class="card shadow mb-2">
 								<div class="card-body">
 									<div class="row">
-										<div class="col-md-3">
-											<img src="${img_produk}">
+										<div class="col-3 p-0">
+											<img src="${img_produk}" class="w-100">
 										</div>
-										<div class="col-md-9">
-											<table class="table">
-												<tbody>
-													<tr>
-														<td width="150px">Nama</td>
-														<td>${data.nama}</td>
-													</tr>
-													<tr>
-														<td>Harga</td>
-														<td>Rp. ${rupiah(data.harga)}</td>
-													</tr>
-													<tr>
-														<td>Berat</td>
-														<td>Rp. ${data.berat}</td>
-													</tr>
-													<tr>
-														<td>Penjual</td>
-														<td>${data.toko_nama}</td>
-													</tr>
-												</tbody>
-											</table>
+										<div class="col-9">
+											<div class="row">
+												<div class="col-12 mb-2">
+													<small for="" class="text-orange"><b> Nama </b></small>
+													<br>
+													<label class="text-dark">${data.nama}</label>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-4 mb-2">
+													<small for="" class="text-orange"><b> Harga </b></small>
+													<br>
+													<label class="text-dark">Rp. ${rupiah(data.harga)}</label></label>
+												</div>
+												<div class="col-4 mb-2">
+													<small for="" class="text-orange"><b> Berat </b></small>
+													<br>
+													<label class="text-dark">Rp. ${data.berat}</label></label>
+												</div>
+												<div class="col-4 mb-2">
+													<small for="" class="text-orange"><b> Penjual </b></small>
+													<br>
+													<label class="text-dark">${data.toko_nama}</label></label>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
 							</a>
+							</div>
 						`;
 					
 					// output += `<a href="<?php echo base_url(''); ?>shop/${data.toko_slug}/${data.slug}" class="card product-item">
@@ -125,14 +131,13 @@
 				}
 
 				output += `
-					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-12">
-						<button type="button" class="btn btn-primary btn-sm produk-left"><i class="fa fa-angle-left"></i></button>
-						<button type="button" class="btn btn-primary btn-sm produk-double-left"><i class="fa fa-angle-double-left"></i></button>
-						<button type="button" class="btn btn-primary btn-sm produk-double-right"><i class="fa fa-angle-double-right"></i></button>
-						<button type="button" class="btn btn-primary btn-sm produk-right"><i class="fa fa-angle-right"></i></button>
+						<button type="button" class="btn btn-orange btn-sm produk-left"><i class="fa fa-angle-left"></i></button>
+						<button type="button" class="btn btn-orange btn-sm produk-double-left"><i class="fa fa-angle-double-left"></i></button>
+						<button type="button" class="btn btn-orange btn-sm produk-double-right"><i class="fa fa-angle-double-right"></i></button>
+						<button type="button" class="btn btn-orange btn-sm produk-right"><i class="fa fa-angle-right"></i></button>
 					</div>
 				</div>
 				`;

@@ -14,9 +14,9 @@
 				if (req.Data.length == 0) {
 				// 	notif('div#contentCart', 'info', 'Keranjang belanja anda kosong.');
 					$('#contentCart').html(`<div class="jumbotron cart-empty text-center bg-white shadow">
-            			<!-- <img src="https://ecs7.tokopedia.net/img/new-checkout/ic_empty.svg" alt="" width="300" class="mb-4"> -->
+            			 <img src="<?= base_url() ?>assets/img/default/empty-cart.png" alt="" width="300" class="mb-4">
             			<h2 class="fs-20 text-muted mb-4">Keranjang Belanja Kosong</h2>
-            			<a href="<?= base_url(); ?>" class="btn btn-primary">Belanja Sekarang</a>
+            			<a href="<?= base_url(); ?>" class="btn btn-orange"><i class="fal fa-shopping-cart"></i>	Belanja Sekarang</a>
             		</div>`)
 					$("input[type=checkbox]").prop('checked', false);
 					$('button.lanjut--kepembayaran').attr('disabled',true)
@@ -95,8 +95,8 @@
 											<div class="olc-text text-elipsis text-muted">${produk.catatan}</div>
 											<span class="olc-handler curs-p ml-2 text-dominan">Ubah</span>
 										</div>
-										<div class="display-handler fs-12">
-											<span class="curs-p ">Tulis Catatan Untuk Toko</span>
+										<div class="display-handler  fs-12">
+											<span class="curs-p text-orange">Tulis Catatan Untuk Toko</span>
 										</div>
 										<div class="display-target">
 											<div class="form-group">

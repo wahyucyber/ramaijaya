@@ -88,15 +88,15 @@
 				</div> -->
 			</div>
 			<div class="column w-100 pl-0">
-				<ul class="nav nav-tabs" id="searchTabs" role="tablist">
+				<ul class="nav nav-tabs justify-content-center" id="searchTabs" role="tablist">
 				  <li class="nav-item">
-				    <a class="nav-link <?= $tabs == 'produk'? 'active' : ''; ?>" href="<?= base_url('search?q='.urlencode($keyword).'&st=produk&kategori='.$_GET['kategori'].'&filter='.$_GET['filter'].'&page='.$_GET['page'].'&provinsi='.$_GET['provinsi'].'&kabupaten='.$_GET['kabupaten'].'&kecamatan='.$_GET['kecamatan']); ?>"><i class="fa fa-archive icon"></i> Produk</a>
+				    <a class="nav-link <?= $tabs == 'produk'? 'active' : ''; ?>" href="<?= base_url('search?q='.urlencode($keyword).'&st=produk&kategori='.$_GET['kategori'].'&filter='.$_GET['filter'].'&page='.$_GET['page'].'&provinsi='.$_GET['provinsi'].'&kabupaten='.$_GET['kabupaten'].'&kecamatan='.$_GET['kecamatan']); ?>"><i class="fal fa-archive icon"></i> Produk</a>
 				  </li>
 				  <li class="nav-item">
-				    <a class="nav-link <?= $tabs == 'katalog'? 'active' : ''; ?>" href="<?= base_url('search?q='.urlencode($keyword).'&st=katalog&kategori='.$_GET['kategori'].'&filter='.$_GET['filter'].'&page='.$_GET['page'].'&provinsi='.$_GET['provinsi'].'&kabupaten='.$_GET['kabupaten'].'&kecamatan='.$_GET['kecamatan']); ?>"><i class="fa fa-book icon"></i> Katalog</a>
+				    <a class="nav-link <?= $tabs == 'katalog'? 'active' : ''; ?>" href="<?= base_url('search?q='.urlencode($keyword).'&st=katalog&kategori='.$_GET['kategori'].'&filter='.$_GET['filter'].'&page='.$_GET['page'].'&provinsi='.$_GET['provinsi'].'&kabupaten='.$_GET['kabupaten'].'&kecamatan='.$_GET['kecamatan']); ?>"><i class="fal fa-book icon"></i> Katalog</a>
 				  </li>
 				  <li class="nav-item">
-				    <a class="nav-link <?= $tabs == 'toko'? 'active' : ''; ?>" href="<?= base_url('search?q='.urlencode($keyword).'&st=toko&kategori='.$_GET['kategori'].'&filter='.$_GET['filter'].'&page=1&provinsi='.$_GET['provinsi'].'&kabupaten='.$_GET['kabupaten'].'&kecamatan='.$_GET['kecamatan']); ?>"><i class="fa fa-store icon"></i> Toko</a>
+				    <a class="nav-link <?= $tabs == 'toko'? 'active' : ''; ?>" href="<?= base_url('search?q='.urlencode($keyword).'&st=toko&kategori='.$_GET['kategori'].'&filter='.$_GET['filter'].'&page=1&provinsi='.$_GET['provinsi'].'&kabupaten='.$_GET['kabupaten'].'&kecamatan='.$_GET['kecamatan']); ?>"><i class="fal fa-store icon"></i> Toko</a>
 				  </li>
 				</ul>
 				<div class="tab-content pt-3" id="searchTabsContent">

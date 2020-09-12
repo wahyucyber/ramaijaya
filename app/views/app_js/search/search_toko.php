@@ -50,13 +50,13 @@
 
 					$.each(data,(no,data) => {
 
-						output += `<div class="card store_items">
+						output += `<div class="card store_items shadow">
 										<div class="store-head">
 											<a href="<?php echo base_url(''); ?>shop/${data.toko_slug}" class="img-store">
 												<img src="${(data.toko_logo != null) ? data.toko_logo : '<?php echo base_url(''); ?>assets/img/default/shop.png'}" alt="">
 											</a>
 											<div class="store-detail">
-												<span class="text-elipsis d-block store-name fs-14" style="width: 170px;">${data.toko_nama}</span>
+												<a href="<?php echo base_url(''); ?>shop/${data.toko_slug}" class="text-elipsis d-block store-name fs-14 text-orange" style="width: 170px;"><b> ${data.toko_nama} </b></a>
 												<span class="text-white-lightern-3 fs-13"><i class="fad fa-map-marker-alt"></i> <span>${data.toko_kabupaten_nama}</span></span>
 											</div>
 											<!--<div class="fav_btn ml-auto">
@@ -74,11 +74,11 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-12">
-						<button type="button" class="btn btn-primary btn-sm produk-left"><i class="fa fa-angle-left"></i></button>
-						<button type="button" class="btn btn-primary btn-sm produk-double-left"><i class="fa fa-angle-double-left"></i></button>
-						<button type="button" class="btn btn-primary btn-sm produk-double-right"><i class="fa fa-angle-double-right"></i></button>
-						<button type="button" class="btn btn-primary btn-sm produk-right"><i class="fa fa-angle-right"></i></button>
+					<div class="col-md-12 text-center">
+						<button type="button" class="btn btn-orange btn-sm produk-left"><i class="fa fa-angle-left"></i></button>
+						<button type="button" class="btn btn-orange btn-sm produk-double-left"><i class="fa fa-angle-double-left"></i></button>
+						<button type="button" class="btn btn-orange btn-sm produk-double-right"><i class="fa fa-angle-double-right"></i></button>
+						<button type="button" class="btn btn-orange btn-sm produk-right"><i class="fa fa-angle-right"></i></button>
 					</div>
 				</div>
 				`;

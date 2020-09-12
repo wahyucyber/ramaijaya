@@ -56,8 +56,8 @@
 						if (data.diskon == 0) {
 							harga = `<div class="price">Rp ${Format_Rupiah(data.harga)}</div>`
 						}else{
-							harga = `<span class="price">Rp ${Format_Rupiah(data.harga_diskon.toString())}</span><span class="text-caret fs-13 text-secondary ml-1">Rp ${Format_Rupiah(data.harga)}</span>`
-							diskon = `<span class="free-ongkir badge badge-danger">-${data.diskon}%</span>`
+							harga = `<span class="text-caret fs-13 text-secondary ">Rp ${Format_Rupiah(data.harga)}</span><span class="price ml-1">Rp ${Format_Rupiah(data.harga_diskon.toString())}</span>`
+							diskon = `<span class="free-ongkir badge badge-danger">-${data.diskon}% <br><b class="text-white">OFF</b></span>`
 						}
 					output += `<a href="<?php echo base_url(''); ?>shop/${data.toko_slug}/${data.slug}" class="card product-item">
 									<div class="card-header head">
@@ -95,11 +95,11 @@
 
 				output += `
 				<div class="row">
-					<div class="col-md-12">
-						<button type="button" class="btn btn-primary btn-sm produk-left"><i class="fa fa-angle-left"></i></button>
-						<button type="button" class="btn btn-primary btn-sm produk-double-left"><i class="fa fa-angle-double-left"></i></button>
-						<button type="button" class="btn btn-primary btn-sm produk-double-right"><i class="fa fa-angle-double-right"></i></button>
-						<button type="button" class="btn btn-primary btn-sm produk-right"><i class="fa fa-angle-right"></i></button>
+					<div class="col-md-12 text-center">
+						<button type="button" class="btn btn-orange btn-sm produk-left"><i class="fa fa-angle-left"></i></button>
+						<button type="button" class="btn btn-orange btn-sm produk-double-left"><i class="fa fa-angle-double-left"></i></button>
+						<button type="button" class="btn btn-orange btn-sm produk-double-right"><i class="fa fa-angle-double-right"></i></button>
+						<button type="button" class="btn btn-orange btn-sm produk-right"><i class="fa fa-angle-right"></i></button>
 					</div>
 				</div>
 				`;
