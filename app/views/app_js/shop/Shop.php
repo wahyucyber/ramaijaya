@@ -49,7 +49,7 @@
                     				</div>`
                         $('#ModalCatatanToko .modal-body').html(catatan)
 					}else{
-					    $('#ModalCatatanToko .modal-body').html('<div class="alert alert-light border">Toko tidak memiliki catatan</div>')
+					    $('#ModalCatatanToko .modal-body').html('<div class="alert alert-danger text-center"> Toko tidak memiliki catatan</div>')
 					}
 
 				}

@@ -21,7 +21,7 @@
 				filter: filter,
 				client_token: $jp_client_token
 			}
-			$('#pagination').html(`<button class="btn btn-primary" type="button" disabled>
+			$('#pagination').html(`<button class="btn btn-orange" type="button" disabled>
 									  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
 									  <small>Memuat...</small>
 									</button>`)
@@ -58,8 +58,8 @@
 								if (val.diskon == 0) {
 									harga = `<div class="price">Rp ${Format_Rupiah(val.harga)}</div>`
 								}else{
-									harga = `<span class="price">Rp ${Format_Rupiah(val.harga_diskon.toString())}</span><span class="text-caret fs-13 text-secondary ml-1">Rp ${Format_Rupiah(val.harga)}</span>`
-									diskon = `<span class="free-ongkir badge badge-danger">-${val.diskon}%</span>`
+									harga = `<span class="text-caret fs-13 text-secondary ml-1">Rp ${Format_Rupiah(val.harga)}</span> <span class="price">Rp ${Format_Rupiah(val.harga_diskon.toString())}</span>`
+									diskon = `<span class="free-ongkir badge badge-danger">-${val.diskon}% <br> <b class="text-white">OFF</b></span>`
 								}
 					output += `${diskon}
 							</div>
@@ -80,7 +80,7 @@
 									<span class="counter">(${val.rating})</span>
 								</div>
 								${$jp_client_token? `<div class="content-add-to-cart">
-												<button class="btn btn-sm btn-primary btn-add-to-cart add--product-to-cart"  data-id="${val.id}"><i class="fas fa-cart-plus"></i> Tambahkan ke Keranjang</button>
+												<button class="btn btn-sm btn-orange btn-add-to-cart add--product-to-cart"  data-id="${val.id}"><i class="fal fa-cart-plus"></i><small> Tambahkan ke Keranjang </small></button>
 											</div>` : ''}
 							</div>
 						</a>`
@@ -92,9 +92,9 @@
 					})
 
 					if (pagination.Jml_halaman > 1) {
-						$('#pagination').html(`<button class="btn btn-outline-primary" onclick="shop_product.load(page = ${parseInt(pagination.Halaman) + 1},kategori = ${kategori},keyword = ${keyword},type = ${type},filter = ${filter})">Muat Lebih Banyak</button>`)
+						$('#pagination').html(`<button class="btn btn-orange" onclick="shop_product.load(page = ${parseInt(pagination.Halaman) + 1},kategori = ${kategori},keyword = ${keyword},type = ${type},filter = ${filter})"><i class="fal fa-angle-double-down"></i>	Lihat Lainnya</button>`)
 					}else{
-						$('#pagination').html(`<button class="btn btn-outline-secondary" disabled>Sudah yang terakhir</button>`)
+						$('#pagination').html(`<button class="btn btn-danger" disabled><i class="fal fa-ban"></i>	Sudah yang terakhir</button>`)
 					}
 
 				}

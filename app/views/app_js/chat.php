@@ -31,7 +31,7 @@
 									<div class="message--info">
 										<div class="user--name">
 											<strong>${data.nama_penerima}</strong>
-											<span class="badge badge-success p-1">${data.penjual == 1? 'Penjual' : 'Pembeli'}</span>
+											<span class="badge badge-success bg-orange p-1">${data.penjual == 1? 'Penjual' : 'Pembeli'}</span>
 										</div>
 										<div class="message--text">${data.pesan_terakhir? data.pesan_terakhir.pesan : ''}</div>
 									</div>

@@ -46,7 +46,7 @@
 													</span>
 												</div>
 												<div class="mb-1">
-													<span class="text-muted fs-14">Produk >> </span> <a href="${base_url(`shop/${uri_segment(2)}/${data.slug_produk}`)}" class="text-link fs-14">${data.nama_produk}</a>
+													<span class="text-muted fs-14">Produk</span> <a href="${base_url(`shop/${uri_segment(2)}/${data.slug_produk}`)}" class="text-link fs-14">${data.nama_produk}</a>
 												</div>
 												<div class="comment-by fs-14 text-muted mb-3">
 													<span>Oleh </span>
@@ -83,9 +83,9 @@
 
 					})
 					if (pagination.Jml_halaman > 1) {
-						next += `<button class="btn btn-outline-primary" onclick="ulasan_toko.load(${parseInt(pagination.Halaman) + 1})">Muat Lebih Banyak</button>`
+						next += `<button class="btn btn-orange" onclick="ulasan_toko.load(${parseInt(pagination.Halaman) + 1})"><i class="fal fa-angle-double-down"></i>	Lihat Lainnya</button>`
 					}else{
-						next += `<button class="btn btn-outline-secondary" disabled>Sudah yang terakhir</button>`
+						next += `<button class="btn btn-danger" disabled><i class="fal fa-ban"></i> Sudah yang terakhir</button>`
 					}
 
 				}

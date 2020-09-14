@@ -72,7 +72,7 @@
 	</div>
 </div> -->
 
-<div class="card shadow" style="min-height: 300px">
+<div class="card shadow" style="">
 	<div class="card-body text-center d-flex align-items-center justify-content-center">
 		<marquee behavior="scroll" direction="left"><h4 class="fw-500">Selamat Datang Di <b class="nama--toko"></b></h4></marquee>
 	</div>

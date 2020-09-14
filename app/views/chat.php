@@ -4,7 +4,7 @@
 		<div class="chat--box-content">
 			<div class="chat--box-left">
 				<div class="chat--box-header">
-					<h4 class="mb-0 title--header">Chat</h4>
+					<h4 class="mb-0 title--header"><i class="fal fa-comments"></i> Chat</h4>
 				</div>
 				<!-- <div class="input-group">
 					<div class="input-group-prepend">
@@ -31,8 +31,10 @@
 			</div>
 			<div class="chat--box-right-no-content">
 				<div class="no--chat-content">
-					<i class="fad fa-comments icon"></i>
-					<h4 class="fw-bold">Tidak ada Pesan</h4>
+					<!-- <i class="fad fa-comments icon"></i> -->
+					<img src="<?= base_url() ?>assets/img/default/no-chat-selected.png" class="w-50" alt="">
+					<br>
+					<span class="fw-bold fs-20 mt-3 badge badge-warning">Tidak ada Pesan Terpilih</span>
 				</div>
 			</div>
 			<div class="chat--box-right">
@@ -58,7 +60,7 @@
 							<textarea rows="1" class="form-control form--type-msg" placeholder="Tulis Pesan"></textarea>
 						</div>
 						<div class="chat--send-btn">
-							<button class="btn btn--chat-send"><i class="fas fa-angle-right"></i></button>
+							<button class="btn btn--chat-send bg-orange"><i class="fas fa-angle-right"></i></button>
 						</div>
 					</div>
 				</div>
@@ -66,3 +68,4 @@
 		</div>
 	</div>
 </div>
+

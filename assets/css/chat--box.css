@@ -29,8 +29,16 @@
 	.chat--box .chat--box-left .chat--box-header {
 		width: 100%;
 		padding: 1rem .8rem;
-		background: #fff;
+		background: #ee4d2d;
 		border-bottom: 1px solid #eee;
+		text-align: center;
+		color: white;
+		width: 100%;
+		padding: 1rem .8rem;
+		background: #ee4d2d;
+		border-bottom: 1px solid #eee;
+		text-align: center;
+		color: white;
 	}
 
 	.chat--box .chat--box-left .chat--box-list {
@@ -58,8 +66,8 @@
 	}
 
 	.chat--box .chat--box-left .chat--box-message-item.active {
-		border-left: 3px solid rgb(0,123,255);
-		background: rgba(0,123,255,.15);
+		border-left: 3px solid #ee4d2d;
+		background: #FEEDEA;
 	}
 
 	.chat--box .chat--box-left .chat--box-message-item .message--content {
@@ -317,7 +325,7 @@
 	}
 
 	.chat--box .chat--box-right .chat--box-footer .chat--type-msg .form--type-msg:focus {
-		border-color: #28a745;
+		border-color: #ee4d32;
 	}
 
 	.chat--box .chat--box-right .chat--box-footer .chat--type-msg .form--type-msg {
@@ -381,8 +389,10 @@
 	.chat--box .chat--box-left .chat--box-header {
 		width: 100%;
 		padding: 1rem .8rem;
-		background: #fff;
+		background: #ee4d2d;
 		border-bottom: 1px solid #eee;
+		color: white;
+		text-align: center;
 	}
 
 	.chat--box .chat--box-left .chat--box-list {
@@ -656,7 +666,7 @@
 	}
 
 	.chat--box .chat--box-right .chat--box-footer .chat--type-msg .form--type-msg:focus {
-		border-color: #28a745;
+		border-color: #ee4d2d;
 	}
 
 	.chat--box .chat--box-right .chat--box-footer .chat--type-msg .form--type-msg {

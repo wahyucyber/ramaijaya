@@ -1,6 +1,6 @@
 <nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item text-primary nama--toko"></li>
+  <ol class="breadcrumb bg-white">
+    <li class="breadcrumb-item text-orange nama--toko"></li>
     <li class="breadcrumb-item" aria-current="page">Produk</li>
   </ol>
 </nav>
