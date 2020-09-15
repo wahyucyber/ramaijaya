@@ -1,17 +1,17 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
-			<nav aria-label="breadcrumb">
-			  <ol class="breadcrumb">
-			    <li class="breadcrumb-item"><a href="<?php echo base_url(''); ?>">Home</a></li>
-			    <li class="breadcrumb-item"><a href="<?php echo base_url('user/profil?tab=profil'); ?>">Akun Saya</a></li>
-			    <li class="breadcrumb-item"><a href="<?php echo base_url('user/pembelian'); ?>">Pembelian</a></li>
-			    <li class="breadcrumb-item"><a href="<?php echo base_url('user/pembelian/detail/'.$no_invoice); ?>"><?php echo $no_invoice ?></a></li>
+			<nav aria-label="breadcrumb text-white">
+			  <ol class="breadcrumb bg-white p-0">
+			    <li class="breadcrumb-item"><a class="text-dark" href="<?php echo base_url(''); ?>">Home</a></li>
+			    <li class="breadcrumb-item"><a class="text-dark" href="<?php echo base_url('user/profil?tab=profil'); ?>">Akun Saya</a></li>
+			    <li class="breadcrumb-item"><a class="text-dark" href="<?php echo base_url('user/pembelian'); ?>">Pembelian</a></li>
+			    <li class="breadcrumb-item"><a class="text-dark" href="<?php echo base_url('user/pembelian/detail/'.$no_invoice); ?>"><?php echo $no_invoice ?></a></li>
 			  </ol>
 			</nav>
 		</div>
 		<div class="col-md-6" align="left">
-			<u>Detail Transaksi</u>
+			<span class="badge badge-success bg-orange fs-18">Detail Transaksi</span>
 		</div>
 		<div class="col-md-6 mb-2" align="right">
 			<a href="<?php echo base_url('user/pembelian/cetak/'.$no_invoice); ?>" class="btn btn-info btn-print-transaksi btn-sm"><i class="fa fa-print"></i></a>

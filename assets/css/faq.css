@@ -1,0 +1,28 @@
+.header-faq {
+    margin-top: -39px;
+    height: 130px;
+    background: linear-gradient(-0deg, #f53d2d, #f63);
+}
+
+.header-faq .row--header-faq .content--header-faq h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+}
+
+.list-group{
+    margin-top: 30px;
+}
+
+.list-group-item{
+    border: 0px !important;
+    border-bottom: 1px solid rgba(0, 0, 0, .125) !important;
+    margin-bottom: 0px !important;
+}
+
+.list-group-item.active{
+    background: rgba(0, 0, 0, .03);
+    color: #ee4d2d;
+}
+

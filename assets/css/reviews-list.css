@@ -107,8 +107,8 @@
 .reviews-filter .btn_filter.active,
 .reviews-filter .btn_filter:hover
 {
-	border: 1px solid #007bff;
-	color: #007bff;
+	border: 1px solid #ee4d2d;
+	color: #ee4d2d;
 }
 
 .reviews-filter .btn_filter:hover .rate_icon {

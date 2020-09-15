@@ -23,7 +23,7 @@
 					output += `<div class="card">
 									<div class="card-body d-flex align-items-center justify-content-center">
 										<div class="order-empty text-center">
-											<img src="https://ecs7.tokopedia.net/assets-frontend-resolution/production/media/ic-laporkan-masalah-copy-5@2x.14ca80fb.png" class="w-25">
+											<img src="<?= base_url() ?>assets/img/default/no-order.png" class="w-25">
 											<h6 class="mt-3 fw-600">${res.Message}</h6>
 											<small>Anda tidak memiliki pesanan</small>
 										</div>
@@ -45,7 +45,7 @@
 						var batal_pesanan = ''
 
 						if(data.status == 'Belum dibayar'){
-					        batal_pesanan = `<button class="btn btn-sm btn-danger mb-2" onclick="pembelian.M_Cancel('${data.no_invoice}')"> Batalkan Pesanan</button>`
+					        batal_pesanan = `<button class="btn btn-sm btn-danger mb-2" onclick="pembelian.M_Cancel('${data.no_invoice}')"><i class="fal fa-times-circle"></i> Batalkan Pesanan</button>`
 					    }
 
 					    var detail_pembayaran = ''
@@ -53,10 +53,10 @@
 						if (data.status !== 'Dibatalkan' && data.status !== 'Dibayar') {
 							if (data.payment_metode == "midtrans") {
 								if (data.payment_output) {
-									detail_pembayaran = `<a href="${JSON.parse(data.payment_output).pdf_url}" target="blank" class="text-info fs-12">Detail Pembayaran</a>`;
+									detail_pembayaran = `<a href="${JSON.parse(data.payment_output).pdf_url}" target="blank" class="text-orange fs-12">Detail Pembayaran</a>`;
 								}
 							}else{
-								detail_pembayaran = `<a href="javascript:;" class="detail-pembayaran detail-pembayaran-manual text-info fs-12" data-toggle="modal" data-target="#payment-manual">klik disini untuk detail pembayaran</a>`;
+								detail_pembayaran = `<a href="javascript:;" class="detail-pembayaran detail-pembayaran-manual text-orange fs-12" data-toggle="modal" data-target="#payment-manual">klik disini untuk detail pembayaran</a>`;
 							}
 						}
 
@@ -96,7 +96,7 @@
 											</div>
 										</div>
 										<div class="order--list-item_footer border-top text-center text-lg-right">
-											<button class="btn btn-sm btn-info mb-2" onclick="redirect('user/pembelian/detail/${data.no_invoice}')"> Detail Pesanan</button>
+											<button class="btn btn-sm btn-orange mb-2" onclick="redirect('user/pembelian/detail/${data.no_invoice}')"><i class="fal fa-info"></i> Detail Pesanan</button>
 											${batal_pesanan}
 										</div>
 									</div>`

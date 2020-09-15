@@ -73,6 +73,7 @@
 @import url(./btn--dropify.css);
 @import url(../ext/chart/Chart.min.css);
 @import url(./step--status.css);
+@import url(./faq.css);
 
 .text-caret {
 	text-decoration: line-through;
@@ -693,7 +694,6 @@ section.official .img-foto-profil{
 .card-produk-teratas{
 	margin-top: 2%;
 	border-bottom-right-radius: 50px ;
-	border-style: ;		
 }
 
 .img_sampul{

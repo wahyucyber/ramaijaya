@@ -41,18 +41,18 @@
 						detail = ''
 
 					$.each(result,function(index,data){
-						detail += `<div class="card">
-								    <div class="card-body bg-info p-2" id="head--${data.id}">
+						detail += `<div class="">
+								    <div class="card-body p-2" id="head--${data.id}">
 								      <h2 class="mb-0">
-								        <button class="btn text-white btn-block text-left" type="button" data-toggle="collapse" data-target="#menu-${data.id}-detail" aria-expanded="true" aria-controls="menu-${data.id}-detail">
-								          <strong>Q:</strong> ${data.pertanyaan}
+								        <button class="btn text-white btn-block text-left" type="button" data-toggle="collapse" data-target="#menu-${data.id}-detail" aria-controls="menu-${data.id}-detail">
+								          <span class="badge badge-success bg-orange fs-20">${data.pertanyaan}</span>
 								        </button>
 								      </h2>
 								    </div>
 
-								    <div id="menu-${data.id}-detail" class="collapse ${index == 0? 'show' : ''}" aria-labelledby="head--${data.id}" data-parent="#detail--content">
+								    <div id="menu-${data.id}-detail" class="collapse ${index == 0? 'show' : ''}" >
 								      <div class="card-body">
-								        <strong>A:</strong> ${data.jawaban}
+								    	${data.jawaban}
 								      </div>
 								    </div>
 								  </div>`

@@ -1,10 +1,22 @@
-<div class="container">
+<div class="container-fluid text-white header-faq">
+	<div class="row row--header-faq">
+		<div class="col-md-1"></div>
+		<div class="col-md-10 content--header-faq">
+			<div class="text-center form-group">
+				<h1>Halo! Apa yang bisa kami bantu ?</h1>
+			</div>
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+</div>
+
+<div class="container mt-5">
 	
-	<div class="card shadow" style="min-height: 400px">
-		<div class="card-body">
-			<h5 class="fs-25 fw-400 mb-4">Pertanyaan yang sering diajukan</h5>
+	<div class="" style="min-height: 400px">
+		<div class="">
 			<div class="row" id="faq--list">
 				<div class="col-md-4 mb-3">
+					<h4 class="mb-3"><b> Kategori </b></h4>
 					<div class="list-group" id="menu--content">
 					  
 					</div>

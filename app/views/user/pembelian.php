@@ -2,7 +2,7 @@
 	<div class="row">
 		<div class="col-md-12">
 			<nav aria-label="breadcrumb">
-			  <ol class="breadcrumb">
+			  <ol class="breadcrumb ">
 			    <li class="breadcrumb-item"><a href="<?php echo base_url(''); ?>">Home</a></li>
 			    <li class="breadcrumb-item"><a href="<?php echo base_url('user/profil?tab=profil'); ?>">Akun Saya</a></li>
 			    <li class="breadcrumb-item"><a href="<?php echo base_url('user/pembelian'); ?>">Pembelian</a></li>

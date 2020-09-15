@@ -40,7 +40,7 @@
 				<div class="card">
 					<div class="card-body d-flex align-items-center justify-content-center">
 						<div class="order-empty text-center">
-							<img src="https://ecs7.tokopedia.net/assets-frontend-resolution/production/media/ic-laporkan-masalah-copy-5@2x.14ca80fb.png" class="w-25">
+							<img src="<?= base_url() ?>assets/img/default/no-order.png" class="w-25">
 							<h6 class="mt-3 fw-600">Belum Ada Pesanan</h6>
 							<small>Anda tidak memiliki pesanan</small>
 						</div>
