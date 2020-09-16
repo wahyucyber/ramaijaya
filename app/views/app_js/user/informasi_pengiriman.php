@@ -35,32 +35,32 @@
 						data: null,
 						render: function(res) {
 							return `
-							<table class="table" style="font-size: 13px; padding: 1px;">
-								<tr>
-									<td>Nama Penerima</td>
-									<td align="right">${res.penerima_nama}</td>
-								</tr>
-								<tr>
-									<td>No. Telepon Penerima</td>
-									<td align="right">${res.penerima_no_telepon}</td>
-								</tr>
-								<tr>
-									<td>Provinsi</td>
-									<td align="right">${res.provinsi_nama}</td>
-								</tr>
-								<tr>
-									<td>Kabupaten</td>
-									<td align="right">${res.kabupaten_nama}</td>
-								</tr>
-								<tr>
-									<td>Kecamatan</td>
-									<td align="right">${res.kecamatan_nama}</td>
-								</tr>
-								<tr>
-									<td>Alamat</td>
-									<td align="right">${res.alamat}</td>
-								</tr>
-							</table>
+							<div class="row">
+								<div class="col-md-3 ">
+									<small class="text-orange"><b>Nama Penerima</b></small>
+									<p>${res.penerima_nama}</p>
+								</div>
+								<div class="col-md-3 ">
+									<small class="text-orange"><b>No. Telp. Penerima</b></small>
+									<p>${res.penerima_no_telepon}</p>
+								</div>
+								<div class="col-md-3 ">
+									<small class="text-orange"><b>Provinsi</b></small>
+									<p>${res.provinsi_nama}</p>
+								</div>
+								<div class="col-md-3 ">
+									<small class="text-orange"><b>Kabupaten</b></small>
+									<p>${res.kabupaten_nama}</p>
+								</div>
+								<div class="col-md-3 ">
+									<small class="text-orange"><b>Kecamatan</b></small>
+									<p>${res.kecamatan_nama}</p>
+								</div>
+								<div class="col-md-8 ">
+									<small class="text-orange"><b>Alamat</b></small>
+									<p>${res.alamat}</p>
+								</div>
+							</div>
 							`;
 						}
 					},
@@ -69,14 +69,14 @@
 						render: function(res) {
 							if (res.is_utama == 1) {
 								return `
-								<button type="button" class="btn btn-primary btn-sm alamat--edit" data-toggle="modal" data-target="#edit" data-id="${res.id}" data-nama="${res.nama}" data-penerima-nama="${res.penerima_nama}" data-penerima-telepon="${res.penerima_no_telepon}" data-provinsi="${res.provinsi_id}" data-kabupaten="${res.kabupaten_id}" data-kecamatan="${res.kecamatan_id}" data-alamat="${res.alamat}"><i class="fa fa-edit"></i></button>
-								<button type="button" class="btn btn-danger btn-sm alamat--hapus" data-toggle="modal" data-target="#delete" data-id="${res.id}" data-nama="${res.nama}"><i class="fa fa-trash"></i></button>
+								<button type="button" class="btn btn-primary btn-sm alamat--edit" title="Ubah Alamat" data-toggle="modal" data-target="#edit" data-id="${res.id}" data-nama="${res.nama}" data-penerima-nama="${res.penerima_nama}" data-penerima-telepon="${res.penerima_no_telepon}" data-provinsi="${res.provinsi_id}" data-kabupaten="${res.kabupaten_id}" data-kecamatan="${res.kecamatan_id}" data-alamat="${res.alamat}"><i class="fal fa-edit"></i></button>
+								<button type="button" class="btn btn-danger btn-sm alamat--hapus" title="Hapus" data-toggle="modal" data-target="#delete" data-id="${res.id}" data-nama="${res.nama}"><i class="fal fa-trash-alt"></i></button>
 								`;
 							}else{
 								return `
-								<button type="button" class="btn btn-primary btn-sm alamat--set-utama" data-id="${res.id}"><i class="fa fa-check-circle"></i></button>
-								<button type="button" class="btn btn-primary btn-sm alamat--edit" data-toggle="modal" data-target="#edit" data-id="${res.id}" data-nama="${res.nama}" data-penerima-nama="${res.penerima_nama}" data-penerima-telepon="${res.penerima_no_telepon}" data-provinsi="${res.provinsi_id}" data-kabupaten="${res.kabupaten_id}" data-kecamatan="${res.kecamatan_id}" data-alamat="${res.alamat}"><i class="fa fa-edit"></i></button>
-								<button type="button" class="btn btn-danger btn-sm alamat--hapus" data-toggle="modal" data-target="#delete" data-id="${res.id}" data-nama="${res.nama}"><i class="fa fa-trash"></i></button>
+								<button type="button" class="btn btn-success btn-sm alamat--set-utama" data-id="${res.id}" title="Set Utama"><i class="fal fa-check-circle"></i></button>
+								<button type="button" title="Ubah Alamat" class="btn btn-primary btn-sm alamat--edit" data-toggle="modal" data-target="#edit" data-id="${res.id}" data-nama="${res.nama}" data-penerima-nama="${res.penerima_nama}" data-penerima-telepon="${res.penerima_no_telepon}" data-provinsi="${res.provinsi_id}" data-kabupaten="${res.kabupaten_id}" data-kecamatan="${res.kecamatan_id}" data-alamat="${res.alamat}"><i class="fal fa-edit"></i></button>
+								<button type="button" title="Hapus" class="btn btn-danger btn-sm alamat--hapus" data-toggle="modal" data-target="#delete" data-id="${res.id}" data-nama="${res.nama}"><i class="fal fa-trash-alt"></i></button>
 								`;
 							}
 						}

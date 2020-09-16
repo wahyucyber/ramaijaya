@@ -1,10 +1,11 @@
 
-<div class="container">
-	<div class="card border-0 shadow">
+<div class="container-fluid">
+	<div class="">
 		<div class="card-body">
+			<h1 class="text-center">Ulasan</h1>
 			<div class="table-responsive">
 				<table class="table table-striped" id="data--ulasan">
-					<thead class="bg-primary text-white">
+					<thead class="bg-orange text-white">
 						<tr>
 							<th>No</th>
 							<th>Produk</th>

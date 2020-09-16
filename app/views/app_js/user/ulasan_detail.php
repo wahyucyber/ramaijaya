@@ -65,7 +65,7 @@
 															<span class="text-dark fw-600">${data.user_nama} </span>
 														</div>
 														<div class="mb-3">
-															<span class="badge badge-success badge-pill fs-11">Penjual</span>
+															<span class="badge badge-success bg-orange badge-pill fs-11">Penjual</span>
 															<span class="fs-12 text-white-lightern-3">${data.created_at}</span>
 														</div>
 														<div class="list-box-text">
@@ -79,8 +79,8 @@
 															<textarea rows="1" class="form-control ulasan" placeholder="Masukkan jawaban anda disini"></textarea>
 														</div>
 														<div class="text-right">
-															<button class="btn btn-secondary btn-sm">Batal</button>
-															<button class="btn btn-success btn-sm btn--kirim-ulasan" data-id="${data.id}">Kirim</button>
+															<button class="btn btn-danger btn-sm"><i class="fal fa-times-circle"></i>	Batal</button>
+															<button class="btn btn-success btn-sm btn--kirim-ulasan" data-id="${data.id}"><i class="fal fa-paper-plane"></i>	Kirim</button>
 														</div>
 													</div>`
 									}

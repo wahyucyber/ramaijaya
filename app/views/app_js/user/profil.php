@@ -76,15 +76,15 @@
 						$("img.profil--img").attr('src', val.foto);
 					}
 
-					$("td.profil--nama").html(val.nama);
-					$("td.profil--jenis-kelamin").html(jenis_kelamin);
-					$("td.profil--tempat-tanggal-lahir").html(tempat_tanggal_lahir);
-					$("td.profil--provinsi").html(provinsi);
-					$("td.profil--kabupaten").html(kabupaten);
-					$("td.profil--kecamatan").html(kecamatan);
-					$("td.profil--alamat").html(alamat);
-					$("td.profil--kode-pos").html(kode_pos);
-					$("td.profil--no-telp").html(no_telepon);
+					$("p.profil--nama").html(val.nama);
+					$("p.profil--jenis-kelamin").html(jenis_kelamin);
+					$("p.profil--tempat-tanggal-lahir").html(tempat_tanggal_lahir);
+					$("p.profil--provinsi").html(provinsi);
+					$("p.profil--kabupaten").html(kabupaten);
+					$("p.profil--kecamatan").html(kecamatan);
+					$("p.profil--alamat").html(alamat);
+					$("p.profil--kode-pos").html(kode_pos);
+					$("p.profil--no-telp").html(no_telepon);
 
 					$("input.profil--nama").val(val.nama);
 					$("select.profil--jenis-kelamin").val(val.jenis_kelamin).trigger('selected');
