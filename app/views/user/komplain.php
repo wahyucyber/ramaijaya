@@ -1,22 +1,17 @@
- 
-<div class="container">
-	<div class="card shadow">
-		<div class="card-body">
-			<table class="table table-striped" id="data-komplain">
-				<thead class="bg-primary text-white">
-					<tr>
-					<th>No</th>
-					<th>Produk</th>
-					<th>Nama Penjual</th>
-					<th>Komplain</th>
-					<th>Aksi</th>
-				</tr>
-				</thead>
-				<tbody></tbody>
-			</table>
-		</div>
-	</div>
-
+<div class="container-fluid">
+	<h3 class="text-center">Komplain</h3>
+	<table class="table " id="data-komplain">
+		<thead class="bg-orange text-white">
+			<tr>
+			<th>No</th>
+			<th>Produk</th>
+			<th>Nama Penjual</th>
+			<th>Komplain</th>
+			<th>Aksi</th>
+		</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
 </div>
 
 <div class="chat--content komplain--chat">
@@ -53,7 +48,7 @@
 <div class="modal fade" id="modalKomentarOpen">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header bg-warning">
+      <div class="modal-header bg-orange">
         <h5 class="modal-title text-white">Konfirmasi</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true" class="text-white">&times;</span>
@@ -66,8 +61,8 @@
 			</div>
 	      </div>
 	      <div class="modal-footer">
-	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-	        <button type="submit" class="btn btn-warning">Iya</button>
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fal fa-times-circle"></i>	Batal</button>
+	        <button type="submit" class="btn btn-warning"><i class="fal fa-check-circle"></i>	Iya</button>
 	      </div>
       </form>
     </div>
@@ -77,7 +72,7 @@
 <div class="modal fade" id="modalKomentarClose">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header bg-danger">
+      <div class="modal-header bg-orange">
         <h5 class="modal-title text-white">Konfirmasi</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true" class="text-white">&times;</span>
@@ -90,8 +85,8 @@
 			</div>
 	      </div>
 	      <div class="modal-footer">
-	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-	        <button type="submit" class="btn btn-danger">Iya</button>
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fal fa-times-circle"></i>	Batal</button>
+	        <button type="submit" class="btn btn-danger"><i class="fal fa-check-circle"></i>	Iya</button>
 	      </div>
       </form>
     </div>

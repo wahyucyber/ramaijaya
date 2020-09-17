@@ -53,11 +53,11 @@
 						render: function(data){
 							var action = ''
 							if (data.status == 2) {
-								action += `<button class="btn btn-success btn-sm btn-komentar-open" title="Buka percakapan" data-id="${data.id}"><i class="fal fa-check"></i></button>`
+								action += `<button class="btn btn-success btn-sm btn-komentar-open" title="Buka percakapan" data-id="${data.id}"><i class="fal fa-check">	Buka</i></button>`
 							}
 
 							if(data.status !== 2){
-								action += `<button class="btn btn-info btn-sm btn-komentar ml-2" title="Beri jawaban" data-toggle="chating" data-id="${data.id}" data-toko-id="${data.toko_id}" data-nama="${data.nama_toko}" data-foto="${base_url($(this).attr('data-foto')? $(this).attr('data-foto') : 'fav.ico')}"><i class="fal fa-comments"></i></button>`
+								action += `<button class="btn btn-orange btn-sm btn-komentar ml-2" title="Beri jawaban" data-toggle="chating" data-id="${data.id}" data-toko-id="${data.toko_id}" data-nama="${data.nama_toko}" data-foto="${base_url($(this).attr('data-foto')? $(this).attr('data-foto') : 'fav.ico')}"><i class="fal fa-comments"></i></button>`
 							}
 
 							if (data.status == 1) {

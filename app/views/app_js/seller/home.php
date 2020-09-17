@@ -50,7 +50,7 @@
 					output += `<div class="card">
 									<div class="card-body d-flex align-items-center justify-content-center">
 										<div class="order-empty text-center">
-											<img src="https://ecs7.tokopedia.net/assets-frontend-resolution/production/media/ic-laporkan-masalah-copy-5@2x.14ca80fb.png" class="w-25">
+											<img src="<?= base_url() ?>assets/img/default/no-order.png" class="w-25">
 											<h6 class="mt-3 fw-600">${res.Message}</h6>
 											<small>Anda tidak memiliki pesanan</small>
 										</div>
@@ -98,21 +98,21 @@
 													<div class="fs-13 fw-400">
 														Total Belanja
 													</div>
-													<h5 class="fw-600 text-primary fs-15">Rp ${rupiah(data.total_bayar)}</h5>
+													<h5 class="fw-600 text-orange fs-15">Rp ${rupiah(data.total_bayar)}</h5>
 													<h6 class="fw-600 fs-14">${data.detail_status}</h6>
 												</div>
 											</div>
 										</div>
 										<div class="order--list-item_footer border-top text-center text-lg-right">
-											<button class="btn btn-sm btn-info mb-2" onclick="redirect('seller/penjualan/detail/${data.no_transaksi}')"> Detail Pesanan</button>
+											<button class="btn btn-sm btn-orange mb-2" onclick="redirect('seller/penjualan/detail/${data.no_transaksi}')"><i class="fal fa-info"></i> Detail Pesanan</button>
 										</div>
 									</div>`
 					})
 					var next = ''
 					if (parseInt(pagination.Halaman) < parseInt(pagination.Jml_halaman)) {
-						next += `<button class="btn btn-outline-primary" onclick="seller_home.pesanan(${parseInt(pagination.Halaman) + 1})">Muat Lebih Banyak</button>`
+						next += `<button class="btn btn-outline-primary" onclick="seller_home.pesanan(${parseInt(pagination.Halaman) + 1})"><i class="fal fa-angle-double-dow"></i>	Lihat Lainnya</button>`
 					}else{
-						next += `<button class="btn btn-outline-secondary" disabled>Sudah yang terakhir</button>`
+						next += `<button class="btn btn-outline-secondary" disabled><i class="fal fa-ban"></i> Sudah yang terakhir</button>`
 					}
 					$('#Pagination').html(next)
 

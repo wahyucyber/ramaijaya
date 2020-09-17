@@ -11,8 +11,8 @@
 			</div>
 
 			<div class="col-md-12 mb-2" align="right">
-				<button class="btn btn-success btn-sm" data-toggle="modal" data-target="#add"><i class="fa fa-plus"></i></button>
-				<button class="btn btn-default btn-sm btn-refresh"><i class="fa fa-retweet"></i></button>
+				<button class="btn btn-success btn-sm" data-toggle="modal" data-target="#add"><i class="fa fa-plus"></i> Tambah Kurir</button>
+				<button class="btn btn-warning btn-sm btn-refresh"><i class="fal fa-retweet"></i> Refresh</button>
 			</div>
 
 			<div class="col-md-12 list--kurir">
@@ -28,8 +28,8 @@
 <div class="modal fade" id="add">
 	<div class="modal-dialog">
 		<div class="modal-content">
-			<div class="modal-header">
-				Tambah kurir
+			<div class="modal-header bg-orange text-white">
+				<h5>Tambah Kurir</h5>
 			</div>
 			<form class="add">
 				<div class="modal-body">
@@ -42,8 +42,8 @@
 					</select>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Batal</button>
-					<button type="submit" class="btn btn-success btn-sm">Simpan</button>
+					<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal"><i class="fal fa-times-circle"></i>	Batal</button>
+					<button type="submit" class="btn btn-success btn-sm"><i class="fal fa-save"></i>	Simpan</button>
 				</div>
 			</form>
 		</div>
@@ -53,18 +53,18 @@
 <div class="modal fade" id="delete">
 	<div class="modal-dialog">
 		<div class="modal-content">
-			<div class="modal-header">
-				Konfirmasi
+			<div class="modal-header bg-danger text-white">
+				<h5>Konfirmasi</h5>
 			</div>
 			<div class="modal-body">
-				<p>
-					Apakah anda yaking ingin menghapus kurir <b class="nama--kurir">Nama Kurir.</b>
+				<p class="alert alert-warning">
+					Apakah anda yaking ingin menghapus kurir <b class="nama--kurir">Nama Kurir ?</b>
 				</p>
 			</div>
 			<div class="modal-footer">
 				<input type="hidden" name="" class="code">
-				<button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Batal</button>
-				<button type="button" class="btn btn-danger btn-sm ya--hapus">Ya</button>
+				<button type="button" class="btn btn-warning btn-sm" data-dismiss="modal"><i class="fal fa-times-circle"></i>	Batal</button>
+				<button type="button" class="btn btn-danger btn-sm ya--hapus"><i class="fal fa-check-circle"></i>	Ya</button>
 			</div>
 		</div>
 	</div>

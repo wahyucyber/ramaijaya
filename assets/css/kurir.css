@@ -22,9 +22,10 @@ div.kurir div.kurir-body img {
 }
 
 div.kurir div.kurir-footer {
-	padding: 15px;
+	padding: 6px;
 	text-align: center;
-	background-color: #f2f2f2;
+	background-color: #ee4d2d;
+	color: white;
 }
 
 div.kurir div.kurir-action {
