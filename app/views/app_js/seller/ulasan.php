@@ -41,7 +41,7 @@
 					{
 						data: null,
 						render: function(data){
-							return`<button class="btn btn-info btn-sm" onclick="redirect(base_url('seller/ulasan/detail/${data.id}'))"><i class="fa fa-eye"></i> Detail</button`
+							return`<button class="btn btn-orange btn-sm" onclick="redirect(base_url('seller/ulasan/detail/${data.id}'))" title="Detail"><i class="fal fa-info"></i></button`
 						}
 					}
 				]

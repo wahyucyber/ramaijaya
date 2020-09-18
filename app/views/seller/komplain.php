@@ -4,17 +4,17 @@
 	<div class="content-right" id="content-right">
 		<div class="clearfix mb-1">
 			<div class="float-left">
-				<h5 class="fs-24 mb-3">Daftar Komplain</h5>
+				<h5 class="fs-20 mb-3 badge badge-success bg-orange"><i class="fal fa-file-alt"></i>	Daftar Komplain</h5>
 			</div>
 			<div class="float-right">
-				<button class="btn btn-default btn-sm btn-refresh" title="segarkan" onclick="komplain.load()"><i class="fa fa-retweet"></i></button>
+				<button class="btn btn-warning btn-sm btn-refresh" title="segarkan" onclick="komplain.load()"><i class="fa fa-retweet"></i> Refresh</button>
 			</div>
 		</div>
-		<div class="card">
+		<div class="card shadow">
 			<div class="card-body">
 				<div class="table-responsive">
-					<table class="table table-striped" id="data-komplain">
-						<thead class="bg-primary text-white">
+					<table class="table " id="data-komplain">
+						<thead class="bg-orange text-white">
 							<tr>
 								<th>No</th>
 								<th>Produk</th>

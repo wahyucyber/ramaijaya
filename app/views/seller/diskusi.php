@@ -4,10 +4,10 @@
 	<div class="content-right" id="content-right">
 		<div class="clearfix mb-1">
 			<div class="float-left">
-				<h5 class="fs-24 mb-3">Daftar Diskusi</h5>
+				<h5 class="fs-20 mb-3 badge badge-success bg-orange"><i class="fal fa-file-alt"></i>	Daftar Diskusi</h5>
 			</div>
 			<div class="float-right">
-				<button class="btn btn-default btn-sm btn-refresh" title="segarkan" onclick="diskusi.load()"><i class="fa fa-retweet"></i></button>
+				<button class="btn btn-default btn-sm btn-warning" title="segarkan" onclick="diskusi.load()"><i class="fa fa-retweet"></i> Refresh</button>
 			</div>
 		</div>
 		

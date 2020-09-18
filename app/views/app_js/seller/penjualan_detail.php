@@ -50,16 +50,16 @@
 
 					var status = `
 						<div class="payment-status">
-							<i class="fa fa-smile"></i> Menunggu diproses
+							<i class="text-orange fal fa-smile"></i> Menunggu diproses
 						</div>
 						<div class="payment-status">
-							<i class="fa fa-box"></i> Diproses
+							<i class="text-orange fal fa-box"></i> Diproses
 						</div>
 						<div class="payment-status">
-							<i class="fa fa-car-side"></i> Dikirim
+							<i class="text-orange fal fa-car-side"></i> Dikirim
 						</div>
 						<div class="payment-status">
-							<i class="fa fa-box-open"></i> Selesai
+							<i class="text-orange fal fa-box-open"></i> Selesai
 						</div>
 					`;
 
@@ -70,36 +70,36 @@
 						if (res.Data.status == "Menunggu diproses") {
 							status = `
 								<div class="payment-status payment-active">
-									<i class="fa fa-smile"></i> Menunggu diproses
+									<i class="text-orange fal fa-smile"></i> Menunggu diproses
 								</div>
 								<div class="payment-status">
-									<i class="fa fa-box"></i> Diproses
+									<i class="text-orange fal fa-box"></i> Diproses
 								</div>
 								<div class="payment-status">
-									<i class="fa fa-car-side"></i> Dikirim
+									<i class="text-orange fal fa-car-side"></i> Dikirim
 								</div>
 								<div class="payment-status">
-									<i class="fa fa-box-open"></i> Selesai
+									<i class="text-orange fal fa-box-open"></i> Selesai
 								</div>
 							`;
 							action = `
-								<button type="button" class="btn btn-danger btn-sm">Tolak</button>
-								<button type="button" class="btn btn-success btn-sm transaksi--proses" data-no-invoice="${res.Data.no_invoice}">Prosess</button>
+								<button type="button" class="btn btn-danger btn-sm"><i class="fal fa-times-circle"></i>	Tolak</button>
+								<button type="button" class="btn btn-success btn-sm transaksi--proses" data-no-invoice="${res.Data.no_invoice}"><i class="fal fa-check-circle"></i>	Prosess</button>
 							`;
 							info = `Pesanan akan dibatalkan secara otomatis oleh system jika pesanan belum dikirim sampai tanggal <b>${res.Data.expired_at}</b>`;
 						}else if (res.Data.status == "Diproses") {
 							status = `
 								<div class="payment-status payment-active">
-									<i class="fa fa-smile"></i> Menunggu diproses
+									<i class="text-orange fal fa-smile"></i> Menunggu diproses
 								</div>
 								<div class="payment-status payment-active" title="${res.Data.log_diproses}">
-									<i class="fa fa-box"></i> Diproses
+									<i class="text-orange fal fa-box"></i> Diproses
 								</div>
 								<div class="payment-status">
-									<i class="fa fa-car-side"></i> Dikirim
+									<i class="text-orange fal fa-car-side"></i> Dikirim
 								</div>
 								<div class="payment-status">
-									<i class="fa fa-box-open"></i> Selesai
+									<i class="text-orange fal fa-box-open"></i> Selesai
 								</div>
 							`;
 							action = `
@@ -109,7 +109,7 @@
 								      <input type="text" class="form-control mb-2 form-control-sm no-resi" data-no-invoice="${res.Data.no_invoice}" placeholder="Input No. RESI">
 								    </div>
 								    <div class="col-auto">
-								      <button type="submit" class="btn btn-warning mb-2 btn-sm">Kirim</button>
+								      <button type="submit" class="btn btn-warning mb-2 btn-sm"><i class="fal fa-paper-plane"></i>	Kirim</button>
 								    </div>
 								  </div>
 								</form>
@@ -118,16 +118,16 @@
 						}else if (res.Data.status == "Dikirim") {
 							status = `
 								<div class="payment-status payment-active">
-									<i class="fa fa-smile"></i> Menunggu diproses
+									<i class="text-orange fal fa-smile"></i> Menunggu diproses
 								</div>
 								<div class="payment-status payment-active" title="${res.Data.log_diproses}">
-									<i class="fa fa-box"></i> Diproses
+									<i class="text-orange fal fa-box"></i> Diproses
 								</div>
 								<div class="payment-status payment-active" title="${res.Data.log_dikirim}">
-									<i class="fa fa-car-side"></i> Dikirim
+									<i class="text-orange fal fa-car-side"></i> Dikirim
 								</div>
 								<div class="payment-status">
-									<i class="fa fa-box-open"></i> Selesai
+									<i class="text-orange fal fa-box-open"></i> Selesai
 								</div>
 							`;
 
@@ -135,16 +135,16 @@
 						}else if (res.Data.status == "Selesai") {
 							status = `
 								<div class="payment-status payment-active">
-									<i class="fa fa-smile"></i> Menunggu diproses
+									<i class="text-orange fal fa-smile"></i> Menunggu diproses
 								</div>
 								<div class="payment-status payment-active" title="${res.Data.log_diproses}">
-									<i class="fa fa-box"></i> Diproses
+									<i class="text-orange fal fa-box"></i> Diproses
 								</div>
 								<div class="payment-status payment-active" title="${res.Data.log_dikirim}">
-									<i class="fa fa-car-side"></i> Dikirim
+									<i class="text-orange fal fa-car-side"></i> Dikirim
 								</div>
 								<div class="payment-status payment-active" title="${res.Data.log_diterima}">
-									<i class="fa fa-box-open"></i> Selesai
+									<i class="text-orange fal fa-box-open"></i> Selesai
 								</div>
 							`;
 
@@ -162,7 +162,7 @@
 
 					var no_resi = '-';
 					if (res.Data.kurir_resi != "") {
-						no_resi = `<a href="javascript:;" class="text-link" onclick="penjualan_detail.get_tracking('${res.Data.kurir_resi}','${res.Data.kurir_code}')">${res.Data.kurir_resi}</a>`;
+						no_resi = `<a href="javascript:;" class="text-link text-dark" onclick="penjualan_detail.get_tracking('${res.Data.kurir_resi}','${res.Data.kurir_code}')">${res.Data.kurir_resi}</a>`;
 					}
 
 					var produk = '';
@@ -238,22 +238,22 @@
 														<div class="step--list-item" data-status="Menunggu diproses">
 															<div class="list-item-content" style="">
 															</div>
-															<small><i class="fa fa-smile"></i> Menunggu diproses</small>
+															<small><i class="text-orange fal fa-smile"></i> Menunggu diproses</small>
 														</div>
 														<div class="step--list-item" data-status="Diproses">
 															<div class="list-item-content" style="">
 															</div>
-															<small><i class="fa fa-box"></i> diproses</small>
+															<small><i class="text-orange fal fa-box"></i> diproses</small>
 														</div>
 														<div class="step--list-item" data-status="Dikirim">
 															<div class="list-item-content" style="">
 															</div>
-															<small><i class="fa fa-car-side"></i> Dikirim</small>
+															<small><i class="text-orange fal fa-car-side"></i> Dikirim</small>
 														</div>
 														<div class="step--list-item" data-status="Selesai">
 															<div class="list-item-content" style="">
 															</div>
-															<small><i class="fa fa-box-open"></i> Diterima</small>
+															<small><i class="text-orange fal fa-box-open"></i> Diterima</small>
 														</div>
 													</div>
 												</div>
@@ -275,7 +275,7 @@
 									<div class="payment-title">
 										NO. RESI
 									</div>
-									<div class="payment-body">
+									<div class="payment-body ">
 										${no_resi}
 									</div>
 								</div>

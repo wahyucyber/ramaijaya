@@ -6,7 +6,7 @@
 		<div class="row">
 			
 			<div class="col-md-6 mb-3">
-				<h4 class="fs-24 badge badge-success bg-orange"><i class="fal fa-file-alt"></i>	Pesanan</h4>
+				<h4 class="fs-20 badge badge-success bg-orange"><i class="fal fa-file-alt"></i>	Pesanan</h4>
 			</div>
 
 			<div class="col-md-6 mb-3 " align="right">

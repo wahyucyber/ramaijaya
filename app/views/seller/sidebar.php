@@ -27,9 +27,9 @@
 			<li class="list-item <?= segment(2) == 'kurir'? 'active' : '' ; ?>">
 				<a href="<?= base_url(); ?>seller/kurir"><i class="fad fa-car-side _icon"></i> Kurir</a>
 			</li>
-			<li class="list-item <?= segment(2) == 'penjualan' || segment(2) == 'komplain' || segment(2) == 'ulasan'? 'active' : '' ; ?>">
+			<li class="list-item <?= segment(2) == 'penjualan' || segment(2) == 'komplain' || segment(2) == 'ulasan'? 'active' : '' || segment(2) == 'diskusi'? 'active' : '' ; ?>">
 				<a href="javascript:;" class="btn-collapse"><i class="fad fa-file-alt _icon"></i> Penjualan <span class="fa _icon-right"></span></a>
-				<ul class="collapse <?= segment(2) == 'penjualan' || segment(2) == 'komplain' || segment(2) == 'ulasan'? 'show' : '' ; ?>">
+				<ul class="collapse <?= segment(2) == 'penjualan' || segment(2) == 'komplain' || segment(2) == 'ulasan'? 'show' : '' || segment(2) == 'diskusi'? 'show' : ''; ?>">
 					<li class="list-item <?= segment(2) == 'penjualan'? 'active' : '' ; ?>">
 						<a href="<?= base_url(); ?>seller/penjualan" class="sub-list-item"><i class="fa fa-xs _icon"></i> Pesanan 
 						<!--<span class="badge badge-primary sidebar-list--notif">12</span>-->

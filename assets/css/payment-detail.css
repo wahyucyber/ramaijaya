@@ -19,8 +19,8 @@ div.payment-detail div.grid div.payment-card {
 div.payment-detail div.payment-card div.payment-title {
 	font-size: 13px;
 	padding: 5px;
-	color: grey;
-	
+	color: #ee4d2d;
+	font-weight: bold;
 }
 
 div.payment-detail div.payment-card div.payment-body {

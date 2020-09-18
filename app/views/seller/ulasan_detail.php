@@ -2,12 +2,14 @@
 	<?php require 'sidebar.php'; ?>
 	
 	<div class="content-right" id="content-right">
-		<div class="clearfix mb-1">
-			<div class="float-left">
-				<h5 class="fs-24 mb-3">Detail Ulasan</h5>
-			</div>
-			<div class="float-right">
-				<button class="btn btn-primary btn-sm" onclick="redirect('seller/ulasan')"><i class="fa fa-arrow-left"></i></button>
+		<div class="card shadow border-0 mb-4">
+			<div class="card-header bg-orange text-white clearfix">
+				<div class="float-left">
+					<h5 class="fs-20"><i class="fal fa-info"></i>	Detail Ulasan</h5>
+				</div>
+				<div class="float-right">
+					<button class="btn btn-light btn-sm" onclick="redirect('seller/ulasan')"><i class="fa fa-arrow-left"></i>	Kembali</button>
+				</div>
 			</div>
 		</div>
 		<div class="card shadow border-0">

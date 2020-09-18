@@ -11,14 +11,17 @@
 				<a href="" class="btn btn-info btn-sm print-pesanan"><i class="fa fa-print"></i> Cetak</a>
 				<a href="<?php echo base_url('seller/penjualan/'); ?>" class="btn btn-primary btn-sm"><i class="fa fa-arrow-circle-left"></i> Kembali</a>
 			</div>
-			<div class="col-md-8">
+		</div>
+
+		<div class="row">
+			<div class="col-md-8 ">
 				<div class="payment-detail--loading" align="center">
 					<img src="<?php echo base_url('assets/img/default/loader.gif'); ?>" style="width: 10%;" alt="">
 				</div>
 				<div class="payment-detail--list none">
 				</div>
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-4 ">
 				<div class="payment-detail">
 					<div class="grid">
 						<div class="payment-card bg-white">

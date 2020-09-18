@@ -58,7 +58,7 @@
 							// }
 
 							if(data.status != 2){
-								btn_chat = `<button class="btn btn-info btn-sm btn-komentar" title="Beri jawaban" data-toggle="chating" data-id="${data.id}" data-user-id="${data.user_id}" data-nama="${data.nama}" data-foto="${data.foto_user}"><i class="fal fa-comments"></i></button>`
+								btn_chat = `<button class="btn btn-orange btn-sm btn-komentar" title="Beri jawaban" data-toggle="chating" data-id="${data.id}" data-user-id="${data.user_id}" data-nama="${data.nama}" data-foto="${data.foto_user}"><i class="fal fa-comments"></i></button>`
 							}else{
 								btn_chat = `<small style="color: #6c757d;font-size: 12px;">Komplain telah diclose</small>`
 							}

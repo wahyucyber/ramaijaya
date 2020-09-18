@@ -33,31 +33,18 @@
 						}
 						var penjual_status = ''
 						if (data.penjual == 1) {
-							penjual_status = `<span class="badge badge-success">Penjual</span>`
+							penjual_status = `<span class="badge badge-success bg-orange">Penjual</span>`
 						}
 						output += `<li class="list-reviews-container"> <!-- loop -->
-									<div class="list-box-content">
+									<div class="list-box-content shadow">
 										<div class="list-box-comment">
-											<div class="comment-by fs-14 text-muted">
-												<div class="card shadow-sm border-0"><div class="card-body">
-													<div class="row">
-														<div class="col-4 col-lg-1">
-															<img src="${data.foto_produk}" alt="">
-														</div>
-														<div class="col-8 col-lg-11 pl-0">
-															<span class="text-dark fw-600">${data.nama_produk}</span>
-														</div>
-													</div>
-												</div></div>
-											</div>
-										</div>
-										<div class="list-box-comment">
-											<div class="comment-by fs-14 text-muted mb-3">
+											<span class="text-orange fw-600 mb-3">${data.nama_produk}</span>
+											<div class="comment-by fs-14 text-muted mt-3">
 												<span class="text-dark fw-600">${data.nama_user}</span>${penjual_status}
 												<span class="fs-12 text-white-lightern-3"> - ${data.tanggal}</span>
 											</div>
 											<div class="list-box-text">
-												<div class="review--img-box mb-3">
+												<div class="review--img-box ">
 													${diskusi_foto}
 												</div>
 												<span class="text-review text-muted fs-14">${data.diskusi}</span>
@@ -86,8 +73,7 @@
 												<textarea rows="1" class="form-control diskusi-balasan" placeholder="Balas diskusi.."></textarea>
 											</div>
 											<div class="text-right">
-												<button class="btn btn-secondary btn--batal-balasan">Batal</button>
-												<button class="btn btn-success btn--kirim-balasan" data-id="${data.id}">Kirim</button>
+												<button class="btn btn-success btn--kirim-balasan" data-id="${data.id}"><i class="fal fa-paper-plane"></i>	Kirim</button>
 											</div>
 										</div>
 									</div>`
