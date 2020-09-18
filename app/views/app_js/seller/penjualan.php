@@ -51,7 +51,7 @@
 					{
 						data: null,
 						render: res => {
-							return `<a href="<?php echo base_url('seller/penjualan/detail/'); ?>${res.no_transaksi}" class="btn btn-info btn-sm"><i class="fa fa-eye"></i></href>`;
+							return `<a href="<?php echo base_url('seller/penjualan/detail/'); ?>${res.no_transaksi}" class="btn btn-orange btn-sm" title="Detail"><i class="fal fa-info"></i></href>`;
 						}
 					}
 				]

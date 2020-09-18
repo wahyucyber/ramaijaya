@@ -5,11 +5,11 @@
 
 		<div class="row">
 			<div class="col-md-6" align="left">
-				<u>Detail Transaksi</u>
+				<h4 class="badge badge-success bg-orange fs-16"><i class="fal fa-info"></i>	Detail Transaksi</h4>
 			</div>
 			<div class="col-md-6 mb-2" align="right">
-				<a href="" class="btn btn-info btn-sm print-pesanan"><i class="fa fa-print"></i></a>
-				<a href="<?php echo base_url('seller/penjualan/'); ?>" class="btn btn-primary btn-sm"><i class="fa fa-arrow-circle-left"></i></a>
+				<a href="" class="btn btn-info btn-sm print-pesanan"><i class="fa fa-print"></i> Cetak</a>
+				<a href="<?php echo base_url('seller/penjualan/'); ?>" class="btn btn-primary btn-sm"><i class="fa fa-arrow-circle-left"></i> Kembali</a>
 			</div>
 			<div class="col-md-8">
 				<div class="payment-detail--loading" align="center">

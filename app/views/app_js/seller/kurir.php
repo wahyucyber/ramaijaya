@@ -34,7 +34,7 @@
 
 						kurir += `
 							<div class="col-md-3">
-				      			<div class="kurir">
+				      			<div class="kurir shadow">
 				      				<div class="kurir-body">
 				      				${kurir_img}
 				      				</div>
@@ -42,7 +42,7 @@
 				      					${kurir_nama}
 				      				</div>
 				      				<div class="kurir-action">
-				      					<button class="btn btn-danger btn-sm kurir--delete" data-toggle="modal" data-target="#delete" data-code="${val.code}"><i class="fa fa-trash-alt"></i></button>
+				      					<button class="btn btn-danger btn-sm kurir--delete" data-toggle="modal" data-target="#delete" data-code="${val.code}"><i class="fal fa-trash-alt"></i></button>
 				      				</div>
 				      			</div>
 				      		</div>

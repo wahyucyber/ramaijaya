@@ -12,7 +12,7 @@
 							<img src="<?= base_url(); ?>cdn/default/shop.png" alt="" class="shop--avatar-default img-thumbnail rounded-circle">
 						</div>
 						<div class="text-wrapper">
-							<a href="" class="fw-500 mb-0 text-elipsis shop--name text-elipsis" style="max-width: 80%" title="">Nama Toko</a>
+							<a href="" class="fw-500 mb-0 text-elipsis shop--name text-elipsis text-orange" style="max-width: 80%" title="">Nama Toko</a>
 							<div>
 								<small class="mr-1 user--name" title="Pemilik Toko">Pemilik toko</small>
 								<span class="status-indicator online" title="Aktif"></span>

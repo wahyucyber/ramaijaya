@@ -5,15 +5,16 @@
 
 		<div class="row">
 			
-			<div class="col-md-12">
-				<h4 class="fs-24">Kurir</h4>
-				<hr>
+			<div class="col-md-6 mb-3">
+				<h4 class="fs-24 badge badge-success bg-orange"><i class="fal fa-car-side "></i> Kurir</h4>
 			</div>
 
-			<div class="col-md-12 mb-2" align="right">
+			<div class="col-md-6 mb-3" align="right">
 				<button class="btn btn-success btn-sm" data-toggle="modal" data-target="#add"><i class="fa fa-plus"></i> Tambah Kurir</button>
 				<button class="btn btn-warning btn-sm btn-refresh"><i class="fal fa-retweet"></i> Refresh</button>
 			</div>
+
+			<hr>
 
 			<div class="col-md-12 list--kurir">
 				<img src="<?php echo base_url('assets/img/default/loader.gif'); ?>" style="width: 10%;" alt="">
