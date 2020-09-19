@@ -1,16 +1,16 @@
-<div class="container-fluid">
+<div class="container">
 	<h3 class="text-center">Komplain</h3>
 	<table class="table " id="data-komplain">
-		<thead class="bg-orange text-white">
+		<thead class="bg-orange text-white fs-14">
 			<tr>
-			<th>No</th>
-			<th>Produk</th>
-			<th>Nama Penjual</th>
-			<th>Komplain</th>
-			<th>Aksi</th>
-		</tr>
+				<th style="width: 5%;">No</th>
+				<th style="width: 40%;">Produk</th>
+				<th style="width: 25%;">Nama Penjual</th>
+				<th style="width: 25%;">Komplain</th>
+				<th style="width: 5%;">Aksi</th>
+			</tr>
 		</thead>
-		<tbody></tbody>
+		<tbody class="fs-14"></tbody>
 	</table>
 </div>
 

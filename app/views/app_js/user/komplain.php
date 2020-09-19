@@ -37,8 +37,8 @@
 							}else if(data.status == 2) {
 								status = `<span class="badge badge-danger">Close</span>`
 							}
-							return `<div class="fs-16 fw-bold">${data.nama_produk}</div>
-							<div class="fs-13">${data.no_invoice}</div>
+							return `<div class="fs-14 fw-bold text-orange">${data.nama_produk}</div>
+							<div class="fs-10">${data.no_invoice}</div>
 							${status}`
 						}
 					},

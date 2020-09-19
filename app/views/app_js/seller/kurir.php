@@ -38,7 +38,7 @@
 				      				<div class="kurir-body">
 				      				${kurir_img}
 				      				</div>
-				      				<div class="kurir-footer">
+				      				<div class="kurir-footer fs-12">
 				      					${kurir_nama}
 				      				</div>
 				      				<div class="kurir-action">

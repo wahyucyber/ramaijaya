@@ -24,7 +24,7 @@
 					{
 						data: null,
 						render: function(data){
-							return `<h6 class="mb-1">${data.nama_produk}</h6>
+							return `<h6 class="mb-1 fs-14">${data.nama_produk}</h6>
 							<span class="fs-12 text-secondary">${data.nama_toko}</span>`
 						}
 					},

@@ -14,16 +14,16 @@
 			<div class="card-body">
 				<div class="table-responsive">
 					<table class="table " id="data-komplain">
-						<thead class="bg-orange text-white">
+						<thead class="bg-orange text-white fs-14">
 							<tr>
-								<th>No</th>
-								<th>Produk</th>
-								<th>Nama Pengguna</th>
-								<th>Komplain</th>
-								<th>Aksi</th>
+								<th style="width: 5%">No</th>
+								<th style="width: 45%">Produk</th>
+								<th style="width: 20%">Nama Pengguna</th>
+								<th style="width: 25%">Komplain</th>
+								<th style="width: 5%">Aksi</th>
 							</tr>
 						</thead>
-						<tbody></tbody>
+						<tbody class="fs-14"></tbody>
 					</table>
 				</div>
 			</div>

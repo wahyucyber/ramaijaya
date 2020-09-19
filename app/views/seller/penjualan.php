@@ -6,7 +6,7 @@
 		<div class="row">
 			
 			<div class="col-md-6 mb-3">
-				<h4 class="fs-20 badge badge-success bg-orange"><i class="fal fa-file-alt"></i>	Pesanan</h4>
+				<h4 class="fs-18 badge badge-success bg-orange"><i class="fal fa-file-alt"></i>	Pesanan</h4>
 			</div>
 
 			<div class="col-md-6 mb-3 " align="right">
@@ -22,16 +22,16 @@
 									<table class="table table-hover table-condensed table-bordered tabel--pesanan">
 										<thead class="bg-orange text-white">
 											<tr>
-												<th width="20px">No.</th>
-												<th>No. Transaksi</th>
-												<th>Tanggal</th>
-												<th>Status</th>
-												<th>Status Pencairan</th>
-												<th>Total Transaksi</th>
-												<th width="20px">Aksi</th>
+												<th width="20px"><small>No.</small</th>
+												<th><small>No. Transaksi</small</th>
+												<th><small>Tanggal</small</th>
+												<th><small>Status</small</th>
+												<th><small>Status Pencairan</small</th>
+												<th><small>Total Transaksi</small</th>
+												<th width="20px"><small>Aksi</small</th>
 											</tr>
 										</thead>
-										<tbody>
+										<tbody class="fs-13">
 										</tbody>
 									</table>
 								</div>
