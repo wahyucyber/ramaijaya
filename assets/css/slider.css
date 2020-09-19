@@ -118,3 +118,25 @@ section.slider .slider-inner .slick-slider:hover .slick-next {
 .top--home .top-banner--home img{
 	height: 140px;
 }
+
+@media (max-width: 575.98px) {
+	.top--home{
+		width: 100%;
+		/* display: flex; */
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+	
+	.top--home .top-slider--home {
+		width: 100%;
+	}
+	
+	.top--home .top-banner--home{
+		width: 100%;
+	}
+	
+	.top--home .top-banner--home img{
+		height: auto;
+	}
+	
+}
