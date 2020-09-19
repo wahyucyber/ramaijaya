@@ -21,27 +21,30 @@
 				var output = ''
 				if (res.Error) {
 					output += `<div class="jumbotron jumbotron-fluid text-center rounded">
-									<h5>${res.Message}</h5>
-									<p>Tambahkan kebijakan serta syarat & ketentuan toko anda pada catatan toko di halaman toko anda</p>
-									<button class="btn btn-sm btn-info" onclick="catatan.ModalAdd()"><i class="fas fa-plus"></i> Tambah catatan</button>
+									<h5 class="text-danger"><i class="fal fa-exclamation-triangle"></i>	${res.Message}</h5>
+									<p class="fs-13">Tambahkan kebijakan serta syarat & ketentuan toko anda pada catatan toko di halaman toko anda</p>
 								</div>`
 					AjaxPagination.clear()
 				}else{
 					var data = res.Data,
 						pagination = res.Pagination
 						AjaxPagination.make(pagination,'#pagination')
-					output += `<div class="card">
-									<div class="card-header">
-										<h5 class="fs-16 mb-0">Judul Catatan</h5>
-									</div>
+					output += `<div class="card border-0">
 									<div class="catatan--list">`
 						$.each(data,function(index,data){
-							output += `<div class="card-body d-flex">
-										<h6 class="fs-13">${data.judul}</h6>
-										<div class="ml-auto">
-											<button class="btn btn-sm btn-info btn--preview" data-judul="${data.judul}" data-teks="${data.teks}"><i class="fa fa-eye"></i> Preview</button>
-											<button class="btn btn-sm btn-primary btn--update" data-judul="${data.judul}" data-teks="${data.teks}" data-id="${data.id}"><i class="fa fa-edit"></i> Ubah</button>
-											<button class="btn btn-sm btn-danger btn--delete" data-judul="${data.judul}" data-id="${data.id}"><i class="fa fa-trash-alt"></i> Hapus</button>
+							output += `<div class="card-body border-bottom">
+										<div class="row">
+											<div class="col-md-10">
+												<h5 class="fs-16 mb-0">${data.judul}</h5>
+												<h6 class="fs-13">${data.teks}</h6>
+											</div>
+											<div class="col-md-2">
+												<div class="text-right">
+													<button class="btn btn-sm btn-info btn--preview" data-judul="${data.judul}" data-teks="${data.teks}"><i class="fal fa-info"></i> </button>
+													<button class="btn btn-sm btn-primary btn--update" data-judul="${data.judul}" data-teks="${data.teks}" data-id="${data.id}"><i class="fal fa-edit"></i> </button>
+													<button class="btn btn-sm btn-danger btn--delete" data-judul="${data.judul}" data-id="${data.id}"><i class="fal fa-trash-alt"></i> </button>
+												</div>
+											</div>
 										</div>
 									</div>`
 						})

@@ -1,17 +1,17 @@
 <div class="container d-flex justify-content-center mb-5 add-product-page">
 	<div class="content">
 		<div class="pull-left mb-2">
-			<a href="<?php echo base_url('seller/product'); ?>" class="btn btn-primary"><i class="fa fa-arrow-circle-left"></i> Kembali</a>
+			<a href="<?php echo base_url('seller/product'); ?>" class="btn btn-orange btn-sm"><i class="fa fa-arrow-circle-left"></i> Kembali</a>
 		</div>
 		<form action="" id="add-product-form">
 			<h5 class="d-inline-block fs-18 mb-3">Tambah Produk</h5>
-			<div class="alert alert-light border-primary mb-3 fs-13">
+			<div class="alert alert-light border-orange mb-3 fs-13">
 				Sebelum menambahkan produk, pastikan produk tersebut sudah sesuai dengan syarat dan ketentuan JPStore. Semua produk yang melanggar syarat dan ketentuan akan dinon-aktifkan oleh tim kami.
 			</div>
 			<div class="msg-div-add-product"></div>
-			<div class="card mb-3">
+			<div class="card mb-3 shadow">
 				<div class="card-body">
-					<h5 class="d-inline-block fs-18">Upload Produk</h5> <span class="badge badge-secondary badge-pill ml-2">Wajib</span>
+					<h5 class="d-inline-block fs-18">Upload Foto Produk</h5> <span class="badge badge-danger badge-pill ml-2">Wajib</span>
 					<small class="d-block fs-11 fw-500 mb-3">Format gambar .jpg .jpeg .png dan ukuran minimum 300 x 300px (Untuk gambar optimal gunakan ukuran minimum 700 x 700 px)</small>
 
 					<div class="file-upload">
@@ -19,7 +19,7 @@
 							<div class="mb-3 mx-auto file-upload-item btn-browse-file active">
 								<div class="img-viewer">
 									<div class="display">
-										<img src="<?= base_url(); ?>assets/img/default/JP.png" alt="" data-default="<?= base_url(); ?>assets/img/default/JP.png">
+										<img src="<?= base_url(); ?>assets/img/logo/favicon.png" alt="" data-default="<?= base_url(); ?>assets/img/default/JP.png">
 									</div>
 								</div>
 								<div class="action">
@@ -31,7 +31,7 @@
 							<div class="mb-3 mx-auto file-upload-item btn-browse-file disabled">
 								<div class="img-viewer">
 									<div class="display">
-										<img src="<?= base_url(); ?>assets/img/default/JP.png" alt="" data-default="<?= base_url(); ?>assets/img/default/JP.png">
+										<img src="<?= base_url(); ?>assets/img/logo/favicon.png" alt="" data-default="<?= base_url(); ?>assets/img/default/JP.png">
 									</div>
 								</div>
 								<div class="action">
@@ -43,7 +43,7 @@
 							<div class="mb-3 mx-auto file-upload-item btn-browse-file disabled">
 								<div class="img-viewer">
 									<div class="display">
-										<img src="<?= base_url(); ?>assets/img/default/JP.png" alt="" data-default="<?= base_url(); ?>assets/img/default/JP.png">
+										<img src="<?= base_url(); ?>assets/img/logo/favicon.png" alt="" data-default="<?= base_url(); ?>assets/img/default/JP.png">
 									</div>
 								</div>
 								<div class="action">
@@ -55,7 +55,7 @@
 							<div class="mb-3 mx-auto file-upload-item btn-browse-file disabled">
 								<div class="img-viewer">
 									<div class="display">
-										<img src="<?= base_url(); ?>assets/img/default/JP.png" alt="" data-default="<?= base_url(); ?>assets/img/default/JP.png">
+										<img src="<?= base_url(); ?>assets/img/logo/favicon.png" alt="" data-default="<?= base_url(); ?>assets/img/default/JP.png">
 									</div>
 								</div>
 								<div class="action">
@@ -67,7 +67,7 @@
 							<div class="mb-3 mx-auto file-upload-item btn-browse-file disabled">
 								<div class="img-viewer">
 									<div class="display">
-										<img src="<?= base_url(); ?>assets/img/default/JP.png" alt="" data-default="<?= base_url(); ?>assets/img/default/JP.png">
+										<img src="<?= base_url(); ?>assets/img/logo/favicon.png" alt="" data-default="<?= base_url(); ?>assets/img/default/JP.png">
 									</div>
 								</div>
 								<div class="action">
@@ -80,7 +80,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="card mb-3">
+			<div class="card mb-3 shadow">
 				<div class="card-body">
 					<h4 class="">Informasi Produk</h4> 
 					<div class="form-group mb-4">
@@ -137,7 +137,7 @@
 					</div> -->
 				</div>
 			</div>
-			<div class="card mb-3">
+			<div class="card mb-3 shadow">
 				<div class="card-body">
 					<h4>Deskripsi Produk</h4>
 					<div class="form-group mb-4">
@@ -198,7 +198,7 @@
 				</div>
 			</div>
 			<div class="card mb-3">
-				<div class="card-body">
+				<div class="card-body shadow">
 					<h4>Harga</h4>
 					<div class="form-group mb-4">
 						<div class="row">
@@ -232,7 +232,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="card mb-3">
+			<div class="card mb-3 shadow">
 				<div class="card-body">
 					<h4>Pengelolaan Produk</h4>
 					<div class="form-group mb-4">
@@ -272,7 +272,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="card mb-3">
+			<div class="card mb-3 shadow">
 				<div class="card-body">
 					<h4>Berat Pengiriman</h4>
 					<div class="form-group mb-4">
@@ -352,11 +352,11 @@
 				</div>
 			</div>
 			<div class="text-right">
-				<button type="button" class="btn btn-sm btn-light" onclick="redirect('seller/product')">Batal</button>
+				<button type="button" class="btn btn-sm btn-danger" onclick="redirect('seller/product')"><i class="fal fa-times-circle"></i>	Batal</button>
 				<!--<button class="btn btn-sm btn-light" type="button" onclick="product_add.add('product/add')">Simpan & Tambah Baru</button>-->
 				<!--<button class="btn btn-sm btn-primary" type="button" onclick="product_add.add('product')">Simpan</button>-->
-				<button class="btn btn-sm btn-light btn--add" type="button">Simpan & Tambah Baru</button>
-				<button class="btn btn-sm btn-primary btn--add-only" type="button">Simpan</button>
+				<button class="btn btn-sm btn-primary btn--add-only" type="button"><i class="fal fa-save"></i>	Simpan</button>
+				<button class="btn btn-sm btn-success btn--add" type="button"><i class="fal fa-file-plus"></i>	Simpan & Tambah Baru</button>
 			</div>
 		</form>	
 	</div>

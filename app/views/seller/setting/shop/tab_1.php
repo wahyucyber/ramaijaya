@@ -52,7 +52,7 @@
         <div class="form-group row mb-5">
         	<h4 class="col-md-3 fs-14 fw-bold"></h4>
             <div class="col-md-9">
-              <button type="submit" class="btn btn-success btn-sm">Simpan</button>
+              <button type="submit" class="btn btn-success btn-sm"><i class="fal fa-save"></i>  Simpan</button>
             </div>
         </div>
     </form>

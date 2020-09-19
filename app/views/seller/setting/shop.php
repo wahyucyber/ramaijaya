@@ -2,16 +2,16 @@
 	<?php include __DIR__.'/../sidebar.php' ?>
 	<div class="content-right" id="content-right">
 		<h3 class="mb-4 nama_toko-title"></h3>
-		<div class="card">
-			<ul class="nav nav-tabs" id="searchTabs" role="tablist">
+		<div class="card shadow">
+			<ul class="nav nav-tabs justify-content-center" id="searchTabs" role="tablist">
 			  <li class="nav-item">
-			    <a class="nav-link<?= $tabs == 1? ' active' : ''; ?>" href="<?= base_url('seller/setting/shop?tab=1'); ?>"> Informasi</a>
+			    <a class="nav-link<?= $tabs == 1? ' active' : ''; ?>" href="<?= base_url('seller/setting/shop?tab=1'); ?>"><i class="fal fa-info"></i> Informasi</a>
 			  </li>
 			  <!-- <li class="nav-item">
 			    <a class="nav-link<?= $tabs == 2? ' active' : ''; ?>"  href="<?= base_url('seller/setting/shop?tab=2'); ?>"> Etalase</a>
 			  </li> -->
 			   <li class="nav-item">
-			    <a class="nav-link<?= $tabs == 3? ' active' : ''; ?>"  href="<?= base_url('seller/setting/shop?tab=3'); ?>"> Catatan</a>
+			    <a class="nav-link<?= $tabs == 3? ' active' : ''; ?>"  href="<?= base_url('seller/setting/shop?tab=3'); ?>"><i class="fal fa-sticky-note"></i> Catatan</a>
 			  </li>
 			  <!-- <li class="nav-item">
 			    <a class="nav-link<?= $tabs == 4? ' active' : ''; ?>"  href="<?= base_url('seller/setting/shop?tab=4'); ?>"> Pengiriman</a>

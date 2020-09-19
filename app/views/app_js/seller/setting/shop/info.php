@@ -32,7 +32,7 @@
 
 					$('#content--shop .logo img').attr('src',data.logo_toko? data.logo_toko : base_url('assets/img/default/shop.png'));
 
-					$('.nama_toko-title').html(`<i class="fad fa-store text-primary"></i> ${data.nama_toko}`)
+					$('.nama_toko-title').html(`<i class="fad fa-store text-orange"></i> ${data.nama_toko}`)
 
 					$('#content--shop input.nama_toko').val(data.nama_toko)
 
@@ -60,8 +60,8 @@
 												Catatan: Catatan alasan tutup toko
 											</div>
 											<div id="btn-close-edit" class="shop-status-edit collapse show">
-												<button class="btn btn-success btn-sm">Buka Toko</button>
-												<button class="btn btn-light btn-sm" data-toggle="collapse" data-target=".shop-status-edit" aria-controls="close-shop btn-close-edit">Ubah jadwal Tutup Toko</button>
+												<button class="btn btn-success btn-sm"><i class="fal fa-check-circle"></i>	Buka Toko</button>
+												<button class="btn btn-light btn-sm" data-toggle="collapse" data-target=".shop-status-edit" aria-controls="close-shop btn-close-edit"><i class="fal fa-edit"></i>	Ubah jadwal Tutup Toko</button>
 											</div>
 											<div class="card shadow-sm collapse shop-status-edit" id="close-shop">
 												<div class="card-body">
@@ -80,8 +80,8 @@
 														<label>Catatan</label>
 														<textarea rows="1" class="form-control"></textarea>
 													</div>
-													<button class="btn btn-sm btn-success">Ubah</button>
-													<button class="btn btn-sm btn-light" data-toggle="collapse" data-target=".shop-status-edit" aria-controls="close-shop btn-close-edit">Batal</button>
+													<button class="btn btn-sm btn-success"><i class="fal fa-check-circle"></i>	Ubah</button>
+													<button class="btn btn-sm btn-danger" data-toggle="collapse" data-target=".shop-status-edit" aria-controls="close-shop btn-close-edit"><i class="fal fa-times-circle"></i>	Batal</button>
 												</div>
 											</div>`
 
@@ -111,8 +111,8 @@
 														<label>Catatan</label>
 														<textarea rows="1" class="form-control"></textarea>
 													</div>
-													<button class="btn btn-sm btn-success">Atur</button>
-													<button class="btn btn-sm text-success">Reset</button>
+													<button class="btn btn-sm btn-success"><i class="fal fa-cog"></i>	Atur</button>
+													<button class="btn btn-sm btn-warning"><i class="fal fa-sync"></i>	Reset</button>
 												</div>
 											</div>`
 

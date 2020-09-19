@@ -1,12 +1,12 @@
 <div class="container mb-5">
 	<div class="pull-left mb-2">
-		<a href="<?php echo base_url('seller/product'); ?>" class="btn btn-primary"><i class="fa fa-arrow-circle-left"></i> Kembali</a>
+		<a href="<?php echo base_url('seller/product'); ?>" class="btn btn-orange btn-sm"><i class="fa fa-arrow-circle-left"></i> Kembali</a>
 	</div>
 	<h5>Import Produk</h5>
 	<div class="row">
 		<div class="col-md-12">
-			<div class="alert alert-warning">
-				<a href="https://jpstore.id/cdn/Dokumen/Doc-20200418.xlsx" download="Import Product.xlsx">Download</a> template import produk. <br>
+			<div class="alert alert-warning text-center">
+				<a href="https://jpstore.id/cdn/Dokumen/Doc-20200418.xlsx" download="Import Product.xlsx">	Download</a> template import produk. <br>
 				<a href="javascript:;" class="download-kategori-excel">Download</a> kategori excel.
 			</div>
 		</div>
@@ -19,7 +19,7 @@
 					Klik disini untuk import produk.
 				</div>
 				<div class="info-text">
-					Note* File harus sesuai template yang sudah disediakan.
+					<span class="badge badge-danger">Note*</span> File harus sesuai template yang sudah disediakan.
 				</div>
 			</div>
 		</div>

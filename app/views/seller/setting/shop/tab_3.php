@@ -1,11 +1,12 @@
 <div class="card-body">
 	<div class="row mb-3">
 		<div class="col-4">
-			<h6 class="mb-2">Catatan Toko</h6>
-			<small>Lihat Catatan Toko di <a href="" class="link--toko">Halaman toko</a></small>
+			<h6 class="badge badge-success bg-orange fs-14 mb-0">Catatan Toko</h6>
+			<br>
+			<small>Lihat Catatan Toko di <a href="" class="link--toko text-orange">Halaman toko</a></small>
 		</div>
 		<div class="col-8 text-left text-lg-right">
-			<button class="btn btn-sm btn-info" onclick="catatan.ModalAdd()"><i class="fas fa-plus"></i> Tambah catatan</button>
+			<button class="btn btn-sm btn-orange" onclick="catatan.ModalAdd()"><i class="fas fa-plus"></i> Tambah catatan</button>
 		</div>
 	</div>
 	<div class="msg--content"></div>   
@@ -37,9 +38,9 @@
 <div class="modal fade" id="Modal">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title"></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <div class="modal-header bg-orange ">
+        <h5 class="modal-title text-white"></h5>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -56,8 +57,8 @@
 			</div>
 	      </div>
 	      <div class="modal-footer">
-	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-	        <button type="submit" class="btn btn-primary">Simpan</button>
+	        <button type="button" class="btn btn-sm btn-danger" data-dismiss="modal"><i class="fal fa-times-circle"></i>	Batal</button>
+	        <button type="submit" class="btn btn-sm btn-success"><i class="fal fa-save"></i>	Simpan</button>
 	      </div>
       </form>
     </div>
@@ -67,20 +68,20 @@
 <div class="modal fade" id="ModalPreview">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header bg-info text-white">
-        <h5 class="modal-title">Preview</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <div class="modal-header bg-orange text-white">
+        <h5 class="modal-title">Detail</h5>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true" class="text-white">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-		<div class="card-body bg-light judul fw-bold">
+		<div class="badge badge-success bg-orange fs-16 mb-2 text-center judul fw-bold">
 			
 		</div>
-		<div class="card-body teks"></div>
+		<div class=" teks"></div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal"><i class="fal fa-times-circle"></i>	Tutup</button>
       </div>
     </div>
   </div>
@@ -89,7 +90,7 @@
 <div class="modal fade" id="ModalConfirm">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header bg-danger text-white">
+      <div class="modal-header bg-orange text-white">
         <h5 class="modal-title">Konfirmasi</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true" class="text-white">&times;</span>
@@ -102,10 +103,11 @@
 			</div>
 	      </div>
 	      <div class="modal-footer">
-	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-	        <button type="submit" class="btn btn-danger">Iya</button>
+	        <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal"><i class="fal fa-times-circle"></i>	Batal</button>
+	        <button type="submit" class="btn btn-sm btn-danger"><i class="fal fa-check-circle"></i>	Iya</button>
 	      </div>
       </form>
     </div>
   </div>
 </div>
+

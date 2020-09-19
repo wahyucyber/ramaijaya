@@ -53,10 +53,10 @@
 							<div class="media">
 								<img src="${data.foto_produk}" alt="" width="47px" class="img-thumbnail">
 								<div class="media-body ml-3">
-									<h5 class="m-0 fs-15 fw-600">
-									<a href="${base_url()}shop/${data.slug_toko}/${data.slug_produk}" target="_blank" class="text-success">${data.nama_produk}</a></h5>
-									<div class="fs-13 text-dark-2">${data.nama_kategori}</div>
-									<small class="text-muted">${data.keterangan}</small>
+									<h5 class="m-0 fs-14 fw-600">
+									<a href="${base_url()}shop/${data.slug_toko}/${data.slug_produk}" target="_blank" class="text-orange">${data.nama_produk}</a></h5>
+									<span class="badge badge-success bg-orange fs-10">${data.nama_kategori}</span>
+									<small class="text-muted fs-10">${data.keterangan}</small>
 								</div>
 							</div>
 							${blokir}
@@ -69,7 +69,7 @@
 							if (data.diskon == 0) {
 								return `Rp `+rupiah(data.harga);
 							}else{
-								return `Rp ${rupiah(data.harga_diskon)} <span class="fs-13 text-secondary text-caret">${rupiah(data.harga)}</span> <small class="badge badge-danger ml-1">-${data.diskon}%</small>`;
+								return `Rp ${rupiah(data.harga_diskon)} <span class="fs-10 text-secondary text-caret">${rupiah(data.harga)}</span> <small class="badge badge-danger ml-1">-${data.diskon}%</small>`;
 							}
 						}
 					},
@@ -77,7 +77,7 @@
 						data: null,
 						render: function (data) {
 							var output;
-							output = `<h4 class="fs-13 mb-0">Status</h4>`;
+							output = `<small class="fs-13 mb-0">Status :</small>`;
 
 							if (data.status_produk == 0) {
 								output += `
@@ -88,7 +88,7 @@
 								output += `
 								<span class="text-success fs-13 mb-1">Aktif</span>
 								<span class="d-block fs-13 mb-1">Stok: <i class="text-success">${data.stok}</i></span>
-								<button class="btn btn-sm btn-light fs-12 set-status" 
+								<button class="btn btn-sm btn-danger fs-12 set-status" 
 								data-id="${data.id_produk}"><i class="fal fa-times-circle fs-13"></i> Set Nonaktif</button>`
 							}
 
@@ -99,10 +99,10 @@
 						data: null,
 						render: function (data) {
 							return `
-							<a href="${base_url()}seller/product/edit/${data.id_produk}" class="btn btn-sm text-primary" title="edit"><i class="fal fa-edit"></i></a>
-							<button class="btn btn-sm btn-delete text-danger" title="hapus" 
+							<a href="${base_url()}seller/product/edit/${data.id_produk}" class="btn btn-primary btn-sm " title="edit"><i class="fal fa-edit"></i></a>
+							<button class="btn btn-sm btn-delete  btn-danger" title="hapus" 
 							data-nama="${data.nama_produk}"
-							data-id="${data.id_produk}"><i class="fal fa-trash"></i></button>
+							data-id="${data.id_produk}"><i class="fal fa-trash-alt"></i></button>
 							`;
 						}
 					}
@@ -114,7 +114,7 @@
 		{
 			this.ProdukId = data.produk_id
 			$('#ModalConfirm .modal-body').html(`
-				<div class="alert alert-warning">
+				<div class="alert alert-warning text-center">
 					Apakah anda yakin ingin menghapus produk : <br> ~ <strong>${data.nama_produk}</strong> ?
 				</div>
 			`)

@@ -376,3 +376,17 @@ hr.hr-white{
 .bg-orange{
 	background-color: #ee4d2d !important;
 }
+
+.border-orange{
+	border-color: #ee4d2d;
+}
+
+.page-item .page-link{
+	color: #ee4d2d !important;
+}
+
+.page-item.active .page-link{
+	color: white !important;
+	background-color: #ee4d2d !important;
+	border-color: #ee4d2d !important;
+}

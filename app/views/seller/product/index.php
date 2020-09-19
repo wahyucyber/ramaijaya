@@ -4,13 +4,14 @@
 		
 		<div class="clearfix mb-1">
 			<div class="float-left">
-				<h5 class="fs-24 mb-3">Daftar produk</h5>
+				<h5 class="fs-20 mb-3 badge badge-success bg-orange"><i class="fal fa-briefcase "></i>	Daftar produk</h5>
 			</div>
 			<div class="float-right">
-				<button class="btn btn-default btn-sm btn-refresh"><i class="fa fa-retweet"></i></button>
-				<button class="btn btn-default btn-sm btn-info btn-slideFilter"><i class="fa fa-filter"></i></button>
-				<a href="<?php base_url(''); ?>product/import" class="btn btn-success btn-add-once btn-sm"><i class="fa fa-cloud-upload"></i></a>
-				<a href="<?= base_url(); ?>seller/product/add" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+				<button class="btn btn-warning btn-sm btn-refresh"><i class="fa fa-retweet"></i>	Refresh</button>
+				<!-- <button class="btn btn-default btn-sm btn-info btn-slideFilter"><i class="fal fa-filter"></i>	Filter</button
+				tton> -->
+				<a href="<?php base_url(''); ?>product/import" class="btn btn-success btn-add-once btn-sm"><i class="fal fa-cloud-upload"></i> Import</a>
+				<a href="<?= base_url(); ?>seller/product/add" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Tambah Produk</a>
 			</div>
 		</div>
 
@@ -59,9 +60,9 @@
 			</div>
 		</div> -->
 
-		<div class="card mb-1 panel-filter">
+		<div class="card mb-3 panel-filter shadow">
 			<div class="card-body">
-				<h6 class="fs-15">Filter</h6>
+				<span class="fs-14 badge badge-primary bg-orange mb-3"><i class="fal fa-filter"></i>	Filter</span>
 				<div class="row">
 					<!-- <div class="col-md-4">
 						<select class="form-control select2" data-placeholder="Berdasarkan Produk">
@@ -87,19 +88,19 @@
 			</div>
 		</div>
 
-		<div class="card">
+		<div class="card shadow">
 			<div class="card-body">
 				<div class="msg-div-manage-product"></div>
 				<div class="table-responsive">
 					<table class="table table-borderless table-hover table-product" style="width: 100%;">
-						<thead class="bg-primary text-white">
+						<thead class="bg-orange text-white">
 							<tr>
-								<th>No</th>
-								<th>Produk</th>
-								<th>Pengaturan Harga</th>
+								<th style="width: 5%;">No</th>
+								<th style="width: 45%;">Produk</th>
+								<th style="width: 20%">Harga</th>
 								<!-- <th><i class="fal fa-star fs-15"></i> 0/5</th> -->
-								<th>Stok</th>
-								<th>&nbsp;</th>
+								<th style="width: 20%;">Stok</th>
+								<th style="width: 10%;">Aksi</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -116,7 +117,7 @@
 	<div class="modal fade" id="ModalConfirm">
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
-	      <div class="modal-header bg-danger">
+	      <div class="modal-header bg-orange">
 	        <h5 class="modal-title text-white">Konfirmasi</h5>
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 	          <span aria-hidden="true" class="text-white">&times;</span>
@@ -127,8 +128,8 @@
 	      	
 	      </div>
 	      <div class="modal-footer">
-	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-	        <button type="submit" class="btn btn-danger">Iya</button>
+	        <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal"><i class="fal fa-times-circle"></i>	Batal</button>
+	        <button type="submit" class="btn btn-sm btn-danger"><i class="fal fa-check-circle"></i>	Iya</button>
 	      </div>
 	      <?= form_close(); ?>
 	    </div>
