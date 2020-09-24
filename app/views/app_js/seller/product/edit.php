@@ -2,6 +2,8 @@
 <?php include __DIR__.'/../Seller.php' ?>
 
 <script>
+
+	var urutan = 0;
 	
 	class EditProduct {
 		constructor()
@@ -14,7 +16,7 @@
 		{
 			var data = {
 				client_token: $jp_client_token,
-				produk_id: uri_segment(4)
+				produk_id: <?php echo $produk_id; ?>
 			}
 
 			callApi('seller/product/get/',data,res => {
@@ -61,6 +63,28 @@
 						$('.edit-product-page input.lama--preorder').val(data.lama_preorder)
 						$('.edit-product-page select.waktu--preorder').val(data.waktu_preorder).trigger('change')
 					}
+
+
+					let html = '';
+					// var urutan = 0;
+					$.each(data.grosir, function (index, value) { 
+						html += `
+							<tr data-urutan="${urutan}">
+								<td>
+									<input type="number" name="qty-min[]" data-urutan="${urutan}" class="qty-min form-control" value="${value.qty_min}" id="">
+								</td>
+								<td>
+									<input type="number" name="qty-max[]" data-urutan="${urutan}" class="qty-max form-control" value="${value.qty_max}" id="">
+								</td>
+								<td>
+									<input type="number" name="harga[]" data-urutan="${urutan}" class="harga form-control" value="${value.harga}" id="">
+								</td>
+								<td><button type="button" class="btn btn-danger btm-sm _repeater-bapus" data-urutan="${urutan++}"><i class="fas fa-trash"></i></button></td>
+							</tr>
+						`;
+					});
+
+					$("table.grosir tbody").append(html);
 				}
 			})
 
@@ -152,9 +176,21 @@
 
 			})
 
+			let qty_min = $("table.grosir input.qty-min");
+
+			let grosir = [];
+			$.each(qty_min, function (index, value) { 
+				let urutan = $(this).data('urutan');
+				grosir.push({
+					qty_min: $(this).val(),
+					qty_max: $(`table.grosir input.qty-max[data-urutan=${urutan}]`).val(),
+					harga: $(`table.grosir input.harga[data-urutan=${urutan}]`).val(),
+				});
+			});
+
 			var data = {
 				client_token: $jp_client_token,
-				produk_id: uri_segment(4),
+				produk_id: <?php echo $produk_id; ?>,
 				foto: data_foto_produk,
 				hapus_foto: this.HapusFoto,
 				nama_produk: nama_produk,
@@ -169,6 +205,7 @@
 				sku: sku,
 				satuan_berat: satuan_berat,
 				berat: berat,
+				grosir: grosir,
 				// asuransi: asuransi,
 				// preorder: preorder,
 				// lama_preorder: lama_preorder,
@@ -269,5 +306,30 @@
 		$(this).val(this.checked? 1 : 0)
 		$(this).parent().find('.title-status').text(this.checked? 'Aktif' : 'Nonaktif')
 	});
+
+	$(document).on("click", "button._repeater-tambah", function() {
+		let html = `
+			<tr data-urutan="${urutan}">
+				<td>
+					<input type="number" name="qty-min[]" data-urutan="${urutan}" class="qty-min form-control" value="0" id="">
+				</td>
+				<td>
+					<input type="number" name="qty-max[]" data-urutan="${urutan}" class="qty-max form-control" value="0" id="">
+				</td>
+				<td>
+					<input type="number" name="harga[]" data-urutan="${urutan}" class="harga form-control" value="0" id="">
+				</td>
+				<td><button type="button" class="btn btn-danger btm-sm _repeater-bapus" data-urutan="${urutan++}"><i class="fas fa-trash"></i></button></td>
+			</tr>
+		`;
+
+		$("table.grosir tbody").append(html);
+	})
+
+	$(document).on("click", "button._repeater-bapus", function() {
+		let urutan = $(this).data('urutan');
+
+		$(`table.grosir tbody tr[data-urutan=${urutan}]`).remove();
+	})
 
 </script>

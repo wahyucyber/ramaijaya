@@ -13,6 +13,8 @@ class M_Product extends MY_Model {
 
 	protected $tabel_kategori = 'mst_kategori';
 
+	protected $grosir = "mst_produk_grosir";
+
 	public function __construct()
 	{
 		parent::__construct();
@@ -313,10 +315,32 @@ class M_Product extends MY_Model {
 											WHERE
 												$this->tabel.toko_id = $toko[id_toko]
 											AND 
-												$this->tabel.id = $produk_id")->row_array();
+												$this->tabel.id = '$produk_id'")->row_array();
+
+					$grosir = $this->db->query("
+						SELECT
+							qty_min,
+							qty_max,
+							harga
+						FROM
+							$this->grosir
+						WHERE
+							produk_id = '$produk_id'
+					");
 
 
 				if ($produk) {
+
+					$array_grosir = [];
+					$array_grosir_no = 0;
+					foreach ($grosir->result_array() as $key) {
+						$array_grosir[$array_grosir_no++] = [
+							'qty_min' => $key['qty_min'],
+							'qty_max' => $key['qty_max'],
+							'harga' => $key['harga']
+						];
+					}
+
 					$no = 0;
 					$result['Error'] = false;
 					$result['Message'] = null;
@@ -329,6 +353,7 @@ class M_Product extends MY_Model {
 						'nama_produk' => $produk['nama_produk'],
 						'keterangan' => $produk['keterangan'],
 						'harga' => $produk['harga'],
+						'grosir' => $array_grosir,
 						'berat' => $produk['berat'],
 						'stok_awal' => $produk['stok_awal'],
 						'stok' => $produk['stok'],
@@ -417,6 +442,7 @@ class M_Product extends MY_Model {
 		// $url_video = isset($params['url_video'])? $params['url_video'] : '';
 		$min_beli = isset($params['min_beli'])? $params['min_beli'] : 1;
 		$harga = isset($params['harga'])? $params['harga'] : '';
+		$grosir = isset($params['grosir']) ? $params['grosir'] : [];
 		// $status_produk = isset($params['status_produk'])? $params['status_produk'] : '';
 		$stok = isset($params['stok'])? $params['stok'] : '';
 		$sku = isset($params['sku'])? $params['sku'] : '';
@@ -533,9 +559,9 @@ class M_Product extends MY_Model {
         		                            AND
         		                            toko_id = '$toko[id_toko]'")->num_rows();
                 if($sku > 1){
-                    $result['Error'] = true;
-        			$result['Message'] = "Sku tidak tersedia";
-        			goto output;
+                  	$result['Error'] = true;
+							$result['Message'] = "Sku tidak tersedia";
+							goto output;
                 }
 				
 				$produk = $this->db->query("SELECT
@@ -588,6 +614,25 @@ class M_Product extends MY_Model {
 					'slug' => $slug,
 					'status' => 1
 				];
+
+				if(count($grosir) != 0) {
+					$data_grosir = [];
+					$data_grosir_no = 0;
+					foreach ($grosir as $key) {
+
+						if(!empty($key['qty_min']) && !empty($key['harga'])) {
+							$data_grosir[$data_grosir_no++] = [
+								'produk_id' => $produk_id,
+								'qty_min' => $key['qty_min'],
+								'qty_max' => $key['qty_max'],
+								'harga' => $key['harga']
+							];
+						}
+					}
+
+					$this->db->insert_batch($this->grosir, $data_grosir);
+					
+				}
 
 				$config['tabel'] = $this->tabel;
 				$config['data'] = $data;
@@ -645,6 +690,7 @@ class M_Product extends MY_Model {
 		// $url_video = isset($params['url_video'])? $params['url_video'] : '';
 		$min_beli = isset($params['min_beli'])? $params['min_beli'] : 1;
 		$harga = isset($params['harga'])? $params['harga'] : '';
+		$grosir = isset($params['grosir']) ? $params['grosir'] : [];
 		// $status_produk = isset($params['status_produk'])? $params['status_produk'] : '';
 		$stok = isset($params['stok'])? $params['stok'] : '';
 		$sku = isset($params['sku'])? $params['sku'] : '';
@@ -811,6 +857,29 @@ class M_Product extends MY_Model {
 
 				// 	goto output;
 				// }
+
+				$this->db->delete($this->grosir, [
+					'produk_id' => $produk['id_produk']
+				]);
+
+				if(count($grosir) != 0) {
+					$data_grosir = [];
+					$data_grosir_no = 0;
+					foreach ($grosir as $key) {
+
+						if(!empty($key['qty_min']) && !empty($key['harga'])) {
+							$data_grosir[$data_grosir_no++] = [
+								'produk_id' => $produk['id_produk'],
+								'qty_min' => $key['qty_min'],
+								'qty_max' => $key['qty_max'],
+								'harga' => $key['harga']
+							];
+						}
+					}
+
+					$this->db->insert_batch($this->grosir, $data_grosir);
+					
+				}
 				
 				if (!empty($hapus_foto)) {
 					if (empty($foto)) {
@@ -1018,6 +1087,10 @@ class M_Product extends MY_Model {
 						$this->upload_image->remove($_foto['foto']);
 						$no++;
 					}
+
+					$this->db->delete($this->grosir, [
+						'produk_id' => $produk['id_produk']
+					]);
 
 					$config['tabel'] = $this->tabel;
 					$config['filter'] = "id = $produk[id_produk] AND toko_id = $toko[id_toko]";

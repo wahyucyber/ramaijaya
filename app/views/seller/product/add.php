@@ -230,6 +230,26 @@
 							</div>
 						</div>
 					</div>
+					<div class="form-group mb-4">
+						<div class="row">
+							<label for="" class="col-md-3">Grosir <i><sup>(Optional)</sup></i></label>
+							<div class="col-md-9">
+								<table class="table grosir">
+									<thead>
+										<tr>
+											<th>QTY Min.</th>
+											<th>QTY Max.</th>
+											<th>Harga</th>
+											<th>Aksi</th>
+										</tr>
+									</thead>
+									<tbody>
+									</tbody>
+								</table>
+								<button type="button" class="btn btn-success btn-sm _repeater-tambah">Tambah</button>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="card mb-3 shadow">

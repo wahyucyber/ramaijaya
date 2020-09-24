@@ -29,6 +29,7 @@ class Product extends MY_Seller {
 		// 	show_404();
 		// }else{
 			$data['title'] = 'Edit Produk';
+			$data['produk_id'] = $produk_id;
 	        $params['view'] = 'seller/product/edit';
 	        $params['js'] = 'seller/product/edit';
 
