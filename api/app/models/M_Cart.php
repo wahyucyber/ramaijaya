@@ -26,6 +26,8 @@ class M_Cart extends MY_Model {
 
 	protected $tabel_ppn = 'mst_ppn';
 
+	protected $grosir = "mst_produk_grosir";
+
 	public function __construct()
 	{
 		parent::__construct();
@@ -84,7 +86,9 @@ class M_Cart extends MY_Model {
 		")->result_array();
 		$hasil = array();
 		$no = 0;
+
 		foreach ($get_produk as $key) {
+
 			$hasil[$no++] = array(
 				'id' => $key['produk_id'],
 				'foto' => $this->foto_produk($key['produk_id']),
@@ -305,7 +309,36 @@ class M_Cart extends MY_Model {
 			$hasil['Error'] = false;
 			$hasil['Message'] = "success.";
 			$hasil['Data'] = array();
+
+			$where_grosir = "";
 			foreach ($get_keranjang as $key) {
+				$where_grosir .= $key['produk_id'].",";
+			}
+
+			$grosir = [];
+			if(!empty($where_grosir)) {
+				$grosir = $this->db->query("
+					SELECT
+						produk_id,
+						qty_min,
+						qty_max,
+						harga
+					FROM
+						$this->grosir
+					WHERE
+						produk_id IN (".rtrim($where_grosir, ',').")
+				")->result_array();
+			}
+
+			foreach ($get_keranjang as $key) {
+				$harga = $key['harga'];
+
+				foreach ($grosir as $harga_grosir) {
+					if($harga_grosir['produk_id'] == $key['produk_id'] && $key['jumlah'] >= $harga_grosir['qty_min'] && $key['jumlah'] <= $harga_grosir['qty_max']) {
+						$harga = $harga_grosir['harga'];
+					}
+				}
+
 				$hasil['Data'][$no++] = array(
 					'id' => $key['id'],
 					'toko_id' => $key['toko_id'],
@@ -321,7 +354,7 @@ class M_Cart extends MY_Model {
 					'produk_id' => $key['produk_id'],
 					'produk_foto' => $this->foto_produk($key['produk_id']),
 					'produk_nama' => $key['nama_produk'],
-					'harga' => $key['harga'],
+					'harga' => $harga,
 					'diskon' => $key['diskon'],
 					'harga_diskon' => ceil($key['harga'] - (($key['diskon']/100)*$key['harga'])),
 					'berat' => $key['berat'],
