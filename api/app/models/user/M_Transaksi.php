@@ -85,6 +85,52 @@ class M_Transaksi extends MY_Model {
 				$this->tabel_keranjang.user_id = '$user_id'
 		")->result_array();
 
+		$where_grosir = "";
+		foreach ($get_produk as $key) {
+			$where_grosir .= $key['produk_id'].",";
+		}
+
+		$grosir = [];
+		if(!empty($where_grosir)) {
+			$grosir = $this->db->query("
+				SELECT
+					produk_id,
+					qty_min,
+					qty_max,
+					harga
+				FROM
+					$this->grosir
+				WHERE
+					produk_id IN (".rtrim($where_grosir, ',').")
+			")->result_array();
+		}
+
+		$produk = [];
+		$produk_no = 0;
+		foreach ($get_produk as $key) {
+
+			$harga = $key['produk_harga'];
+
+			foreach ($grosir as $harga_grosir) {
+				if($harga_grosir['produk_id'] == $key['produk_id'] && $key['jumlah'] >= $harga_grosir['qty_min'] && $key['jumlah'] <= $harga_grosir['qty_max']) {
+					$harga = $harga_grosir['harga'];
+				}
+			}
+
+			$produk[$produk_no++] = array(
+				'produk_id' => $key['produk_id'],
+				'produk_nama' => $key['produk_nama'],
+				'produk_harga' => $harga,
+				'diskon' => $key['diskon'],
+				'produk_stok' => $key['produk_stok'],
+				'jumlah' => $key['jumlah'],
+				'catatan' => $key['catatan'],
+				'toko_id' => $key['toko_id'],
+				'created_at' => $key['created_at'],
+				'updated_at' => $key['updated_at']
+			);
+		}
+
 		return $get_produk;
 	}
 
