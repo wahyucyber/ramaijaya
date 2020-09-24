@@ -131,7 +131,7 @@ class M_Transaksi extends MY_Model {
 			);
 		}
 
-		return $get_produk;
+		return $produk;
 	}
 
 	private function get_kurir($user_id)
