@@ -30,6 +30,8 @@ class M_Transaksi extends MY_Model {
 	
 	protected $tabel_toko = 'mst_toko';
 
+	protected $grosir = "mst_produk_grosir";
+
 	public function __construct()
 	{
 		parent::__construct();
