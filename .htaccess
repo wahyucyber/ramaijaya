@@ -11,10 +11,10 @@ RewriteRule ^(.*)$ index.php/$1 [L]
 # SetEnv CI_ENV testing
 
 #http to https
-    RewriteCond %{HTTPS} off
-    RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
-    RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
-    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    #RewriteCond %{HTTPS} off
+    #RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+    #RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+    #RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # <IfModule mime_module>
 # 	AddHandler application/x-httpd-ea-php72 .php .php7 .phtml
