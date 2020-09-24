@@ -755,12 +755,41 @@ class M_Cart extends MY_Model {
 		")->result_array();
 		$no = 0;
 		$hasil = array();
+
+		$where_grosir = "";
 		foreach ($get_produk as $key) {
+			$where_grosir .= $key['produk_id'].",";
+		}
+
+		$grosir = [];
+		if(!empty($where_grosir)) {
+			$grosir = $this->db->query("
+				SELECT
+					produk_id,
+					qty_min,
+					qty_max,
+					harga
+				FROM
+					$this->grosir
+				WHERE
+					produk_id IN (".rtrim($where_grosir, ',').")
+			")->result_array();
+		}
+
+		foreach ($get_produk as $key) {
+			$harga = $key['harga'];
+
+			foreach ($grosir as $harga_grosir) {
+				if($harga_grosir['produk_id'] == $key['produk_id'] && $key['jumlah'] >= $harga_grosir['qty_min'] && $key['jumlah'] <= $harga_grosir['qty_max']) {
+					$harga = $harga_grosir['harga'];
+				}
+			}
+
 			$hasil[$no++] = array(
 				'produk_id' => $key['produk_id'],
 				'foto' => $this->foto_produk($key['produk_id']),
 				'nama_produk' => $key['nama_produk'],
-				'harga' => $key['harga'],
+				'harga' => $harga,
 				'diskon' => $key['diskon'],
 				'harga_diskon' => ceil($key['harga'] - (($key['diskon']/100)*$key['harga'])),
 				'berat' => $key['berat'],
