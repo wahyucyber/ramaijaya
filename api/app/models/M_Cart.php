@@ -355,6 +355,7 @@ class M_Cart extends MY_Model {
 					'produk_foto' => $this->foto_produk($key['produk_id']),
 					'produk_nama' => $key['nama_produk'],
 					'harga' => $harga,
+					'grosir' => $grosir,
 					'diskon' => $key['diskon'],
 					'harga_diskon' => ceil($key['harga'] - (($key['diskon']/100)*$key['harga'])),
 					'berat' => $key['berat'],
