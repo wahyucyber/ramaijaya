@@ -21,6 +21,7 @@
     <meta property="og:image:width" content="200" />
     <meta property="og:image:height" content="200" />
     <meta property="og:image:alt" content="<?= $title ?>" />
+	 <meta name="google-signin-client_id" content="<?php echo env('GOOGLE_CLIENT_ID'); ?>">
 	<script>
 		$app_url = '<?= base_url(); ?>';
 		$api_url = '<?= api_url(); ?>';
@@ -202,12 +203,52 @@ if (segment(1) == 'login' || segment(1) == 'register' || segment(1) == 'forgot')
 	'js/bundle.js',
 	'js/module.js'
 ]); ?>
+
+<script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
+
+<script type="text/javascript">
+function init() {
+	gapi.load('auth2', function() {
+		gapi.auth2.init(
+		{
+			client_id: "<?php echo env('GOOGLE_CLIENT_ID'); ?>"
+		});
+	});
+}
+
+function Google_signIn(googleUser) {
+	if (!check_auth()) {
+		var profile = googleUser.getBasicProfile();
+
+		var account = {
+			'id': profile.getId(),
+			'name': profile.getName(),
+			'image_url': profile.getImageUrl(),
+			'email': profile.getEmail()
+		};
+
+		callApi("auth/google", account, res => {
+			if(res.Error){
+				notif('#login-form .msg-content','danger',res.Message)
+			}else {
+				notif('#login-form .msg-content','success',res.Message)
+				$('#login-form input').val('')
+				var data = res.Data
+				cookie.set(data)
+				redirect('');
+			}
+		})
+	}
+}
+</script>
+
 <?php 
 if (segment(1) == 'login' || segment(1) == 'register') {
 }else{
 	include VIEWPATH . '/app_js/index.php';
 }
 ?>
+
 <?= $default_js; ?>
 </body>
 </html>

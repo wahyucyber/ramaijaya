@@ -772,11 +772,12 @@
 	});
 	
 	$(document).on('click', '#modalLogout button[type=submit]', function(event) {
+		gapi.auth2.getAuthInstance().signOut();
 		var cookie = new Cookie;
 		event.preventDefault();
 		session.destroy_userdata($userdata)
 		cookie.remove('role')
-		redirect('')
+		redirect('');
 	});
 
 </script>

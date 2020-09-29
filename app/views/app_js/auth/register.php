@@ -5,7 +5,8 @@
 	class Register {
 		constructor()
 		{
-			this.render()
+			// this.render()
+			this.authGoogle();
 		}
 		render()
 		{
@@ -31,9 +32,18 @@
 				}
 			})
 		}
+
+		authGoogle() {
+			callApi('auth/google', null, res => {
+				console.log(res);
+			})
+		}
 	}
+
+	var register = new Register;
+
 	$('#register-form').on('submit', function(e) {
 		e.preventDefault();
-		new Register
+		register.render();
 	});
 </script>

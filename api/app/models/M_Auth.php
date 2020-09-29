@@ -27,12 +27,13 @@ class M_Auth extends MY_Model {
 
 	protected $filter = "status = 1";
 
-	function register($params)
+	public function register($params)
 	{
 		$params = __hsp($params);
 		$nama = isset($params['nama'])? htmlspecialchars($params['nama']) : '';
 		$email = isset($params['email'])? htmlspecialchars(trim($params['email'])) : '';
 		$password = isset($params['password'])? htmlspecialchars($params['password']) : '';
+		$google_id = isset($params['google_id'])? htmlspecialchars($params['google_id']) : '';
 		$konfirmasi_password = isset($params['konfirmasi_password'])? htmlspecialchars($params['konfirmasi_password']) : '';
 
 		if (empty($nama)) {
@@ -122,7 +123,7 @@ class M_Auth extends MY_Model {
 
 		$username = uniqid(strtolower(explode(' ',$nama)[0]),false);
 
-		if ($level == 1) {
+		if ($level == 1 || !empty($google_id)) {
 			$kode_verifikasi = null;
 			$kirim_email = false;
 			$status = 1;
@@ -136,6 +137,7 @@ class M_Auth extends MY_Model {
 			
 		if ($kirim_email) {
 			$data = [
+				'google_id' => $google_id,
 				'nama' => $nama,
 				'email' => $email,
 				'username' => $username,
@@ -154,20 +156,6 @@ class M_Auth extends MY_Model {
 			$kode = strtolower($kode_verifikasi);
 
 			if ($create) {
-
-				// $this->db->query("
-				// 	CREATE TABLE `mst_keranjang_".$user_id."`  (
-				// 	  `id` int(11) NOT NULL AUTO_INCREMENT,
-				// 	  `toko_id` int(11) NOT NULL,
-				// 	  `produk_id` int(11) NOT NULL,
-				// 	  `jumlah` int(11) NULL DEFAULT NULL,
-				// 	  `catatan` varchar(200) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-				// 	  `created_at` timestamp(0) NULL DEFAULT CURRENT_TIMESTAMP(0),
-				// 	  `updated_at` timestamp(0) NULL DEFAULT CURRENT_TIMESTAMP(0) ON UPDATE CURRENT_TIMESTAMP(0),
-				// 	  PRIMARY KEY (`id`, `toko_id`, `produk_id`) USING BTREE
-				// 	) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
-				// ");
-
 			}else{
 				$result['Error'] = true;
 				$result['Message'] = "Gagal mendaftar mohon cek data diri anda";
@@ -192,16 +180,6 @@ class M_Auth extends MY_Model {
 			if ($result['Error']) {
 				$this->db->delete($this->tabel,['email' => $email]);
 			}
-			
-// 			$html = $this->my_email->template_email('Konfirmasi Email',$nama,$url);
-
-// 			$result = $this->my_email->send_email($email,'Verifikasi email',$html);
-
-// 			if ($result['Error']) {
-// 				$this->db->delete($this->tabel,['email' => $email]);
-// 			}
-
-            // $result = $this->my_email->template_email('Konfirmasi Email',$nama,$url, $email);
 
 			goto output;
 
@@ -396,6 +374,80 @@ class M_Auth extends MY_Model {
        output:
        return $result;
 	    
+	}
+
+	public function loginWithGoogle($params)
+	{
+		$id = $params['id'];
+		$email = $params['email'];
+		$name = $params['name'];
+
+		if(empty($id) || empty($email) || empty($name)) {
+			$output = array(
+				'Error' => true,
+				'Message' => 'Akun tidak ditemukan.'
+			);
+			goto output;
+		}
+
+		$get_akun = $this->db->query("
+			SELECT
+				id
+			FROM
+				$this->tabel
+			WHERE
+				email = '$email'
+		");
+
+		if($get_akun->num_rows() == 0) {
+			$password = "PSWD-".date('YmdHis');
+
+			$cost = $get_akun->num_rows() < 1? 12 : 10;
+
+			$username = uniqid(strtolower(explode(' ',$nama)[0]),false);
+
+			$data = [
+				'google_id' => $id,
+				'nama' => $name,
+				'email' => $email,
+				'username' => $username,
+				'password' => $this->hash->make($password,$cost),
+				'api_token' => $this->generate_token(),
+				'status' => '1',
+				'status_utama' => '0',
+				'level' => '2'
+			];
+
+			$this->db->insert($this->tabel,$data);
+		}else {
+			$this->db->update($this->tabel, array(
+				'google_id' => $id
+			), array(
+				'email' => $email
+			));
+		}
+
+		$akun = $this->db->query("
+			SELECT
+				api_token AS client_token
+			FROM
+				$this->tabel
+			WHERE
+				google_id = '$id' AND
+				email = '$email'
+		")->row_array();
+
+		$output = array(
+			'Error' => false,
+			'Message' => 'success.',
+			'Data' => array(
+				'name' => 'role',
+				'value' => $akun['client_token']
+			)
+		);
+
+		output:
+		return $output;
 	}
 
 }

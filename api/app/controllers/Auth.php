@@ -10,6 +10,13 @@ class Auth extends MY_Controller {
 		$this->load->model('M_Auth','auth');
 	}
 
+	public function google_post()
+	{
+		$result = $this->auth->loginWithGoogle($this->post());
+
+		$this->response($result);
+	}
+
 	function login_post()
 	{
 		$result = $this->auth->login($this->post());

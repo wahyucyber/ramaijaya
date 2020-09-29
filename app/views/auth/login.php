@@ -51,6 +51,7 @@
 			</form>
 			<!-- <button class="btn btn-block btn-facebook"><i class="fab fa-facebook-square fs-20"></i> <small class="fs-12">Login dengan</small> <b>Facebook</b></button>
 			<button class="btn btn-block btn-google"><i class="fab fa-google"></i> <small class="fs-12">Login dengan</small> <b>Google</b></button> -->
+			<div class="g-signin2" data-longtitle="true" data-onsuccess="Google_signIn" data-theme="light" data-width="200"></div>
 			<div class="text-center mt-3 mb-3">
 				<span class="fs-14">Belum punya akun? <a href="<?= base_url(); ?>register" class="text-link text-orange">Silahkan Daftar</a></span>
 			</div>
