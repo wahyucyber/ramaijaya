@@ -1,3 +1,1 @@
-- menambahkan tabel mst_produk_grosir
-- mst_user
-   *  ALTER TABLE `mst_user` ADD `google_id` VARCHAR(255) NULL DEFAULT NULL COMMENT 'jika login menggunakan google maka google required' AFTER `id`, ADD UNIQUE (`google_id`);
+ALTER TABLE `mst_user` ADD `facebook_id` VARCHAR(255) NULL DEFAULT NULL AFTER `google_id`, ADD UNIQUE (`facebook_id`);

@@ -7,6 +7,7 @@
 				<img src="<?= base_url(); ?>assets/img/logo/logo-light.png" class="w-75" alt="">
 			</a>
 			<h6>Daftar Akun Baru Sekarang</h6>
+			<div id="status"></div>
 			<div class="msg-content"></div>
 			<div class="line-separtor">
 				<span class="line-separator-text">Informasi Akun</span>
@@ -49,7 +50,10 @@
 					<button class="btn btn-block btn-google"><i class="fab fa-google"></i> <small class="fs-12">Daftar dengan </small><b>Google</b></button>
 				</div> -->
 				<div class="col-md-12">
-					<div class="g-signin2" data-longtitle="true" data-onsuccess="Google_signIn" data-theme="light" data-width="200"></div>
+					<div class="g-signin2" data-longtitle="true" data-onsuccess="Google_signIn" data-theme="light" data-width="397"></div>
+				</div>
+				<div class="col-md-12 mt-2">
+					<div class="fb-login-button" data-size="large" data-button-type="continue_with" onlogin="checkLoginState()" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false" data-width=""></div>
 				</div>
 			</div>
 			<div class="text-center mt-3 mb-3">

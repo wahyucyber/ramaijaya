@@ -38,7 +38,8 @@
 		<div class="line-separtor mb-3">
 			<span class="line-separator-text">Atau</span>
 		</div>
-    <div class="g-signin2" data-longtitle="true" data-onsuccess="Google_signIn" data-theme="light" data-width="200"></div>
+    <div class="g-signin2" data-longtitle="true" data-onsuccess="Google_signIn" data-theme="light" data-width="386"></div>
+    <div class="fb-login-button mt-2" data-size="large" data-button-type="continue_with" onlogin="checkLoginState()" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false" data-width=""></div>
 		<div class="text-center mt-3">
 			<span class="fs-13">Belum punya akun? <a href="<?= base_url(); ?>register" class="text-link text-orange">Silahkan Daftar</a></span>
 		</div>

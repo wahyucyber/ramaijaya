@@ -205,6 +205,8 @@ if (segment(1) == 'login' || segment(1) == 'register' || segment(1) == 'forgot')
 ]); ?>
 
 <script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v8.0" nonce="d2CkeC2i"></script>
 
 <script type="text/javascript">
 function init() {
@@ -240,6 +242,53 @@ function Google_signIn(googleUser) {
 		})
 	}
 }
+</script>
+
+<script>
+function statusChangeCallback(response) {
+    if (response.status === 'connected') {
+      testAPI();  
+    }
+  }
+
+
+  function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '<?php echo env('FACEBOOK_APP_ID'); ?>',
+      cookie     : true,
+      xfbml      : true,
+      version    : '<?php echo env('FACEBOOK_API_VERSION'); ?>'
+    });
+
+	 FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  };
+ 
+  function testAPI() {
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me',{fields: 'first_name,last_name,name,id, email'},  function(response) {
+		callApi("auth/facebook", response, res => {
+			if(res.Error){
+				notif('#login-form .msg-content','danger',res.Message)
+			}else {
+				notif('#login-form .msg-content','success',res.Message)
+				$('#login-form input').val('')
+				var data = res.Data
+				cookie.set(data)
+				redirect('');
+			}
+		})
+    });
+  }
+
 </script>
 
 <?php 

@@ -777,6 +777,7 @@
 		event.preventDefault();
 		session.destroy_userdata($userdata)
 		cookie.remove('role')
+		FB.logout();
 		redirect('');
 	});
 

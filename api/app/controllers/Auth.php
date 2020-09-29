@@ -17,6 +17,13 @@ class Auth extends MY_Controller {
 		$this->response($result);
 	}
 
+	public function facebook_post()
+	{
+		$result = $this->auth->loginWithFacebook($this->post());
+
+		$this->response($result);
+	}
+
 	function login_post()
 	{
 		$result = $this->auth->login($this->post());

@@ -400,7 +400,7 @@ class M_Auth extends MY_Model {
 		");
 
 		if($get_akun->num_rows() == 0) {
-			$password = "PSWD-".date('YmdHis');
+			$password = "Google-".date('YmdHis');
 
 			$cost = $get_akun->num_rows() < 1? 12 : 10;
 
@@ -421,7 +421,8 @@ class M_Auth extends MY_Model {
 			$this->db->insert($this->tabel,$data);
 		}else {
 			$this->db->update($this->tabel, array(
-				'google_id' => $id
+				'google_id' => $id,
+				'nama' => $name
 			), array(
 				'email' => $email
 			));
@@ -434,6 +435,81 @@ class M_Auth extends MY_Model {
 				$this->tabel
 			WHERE
 				google_id = '$id' AND
+				email = '$email'
+		")->row_array();
+
+		$output = array(
+			'Error' => false,
+			'Message' => 'success.',
+			'Data' => array(
+				'name' => 'role',
+				'value' => $akun['client_token']
+			)
+		);
+
+		output:
+		return $output;
+	}
+
+	public function loginWithFacebook($params)
+	{
+		$id = $params['id'];
+		$email = $params['email'];
+		$name = $params['name'];
+
+		if(empty($id) || empty($email) || empty($name)) {
+			$output = array(
+				'Error' => true,
+				'Message' => 'Akun tidak ditemukan.'
+			);
+			goto output;
+		}
+
+		$get_akun = $this->db->query("
+			SELECT
+				id
+			FROM
+				$this->tabel
+			WHERE
+				email = '$email'
+		");
+
+		if($get_akun->num_rows() == 0) {
+			$password = "Facebook-".date('YmdHis');
+
+			$cost = $get_akun->num_rows() < 1? 12 : 10;
+
+			$username = uniqid(strtolower(explode(' ',$nama)[0]),false);
+
+			$data = [
+				'facebook_id' => $id,
+				'nama' => $name,
+				'email' => $email,
+				'username' => $username,
+				'password' => $this->hash->make($password,$cost),
+				'api_token' => $this->generate_token(),
+				'status' => '1',
+				'status_utama' => '0',
+				'level' => '2'
+			];
+
+			$this->db->insert($this->tabel,$data);
+		}else {
+			$this->db->update($this->tabel, array(
+				'facebook_id' => $id,
+				'nama' => $name
+			), array(
+				'email' => $email
+			));
+		}
+
+		$akun = $this->db->query("
+			SELECT
+				api_token AS client_token
+			FROM
+				$this->tabel
+			WHERE
+				facebook_id = '$id' AND
 				email = '$email'
 		")->row_array();
 
