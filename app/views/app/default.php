@@ -273,20 +273,21 @@ function statusChangeCallback(response) {
   };
  
   function testAPI() {
-    console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me',{fields: 'first_name,last_name,name,id, email'},  function(response) {
-		callApi("auth/facebook", response, res => {
-			if(res.Error){
-				notif('#login-form .msg-content','danger',res.Message)
-			}else {
-				notif('#login-form .msg-content','success',res.Message)
-				$('#login-form input').val('')
-				var data = res.Data
-				cookie.set(data)
-				redirect('');
-			}
-		})
-    });
+	  if(!check_out()) {
+			FB.api('/me',{fields: 'first_name,last_name,name,id, email'},  function(response) {
+				callApi("auth/facebook", response, res => {
+					if(res.Error){
+						notif('#login-form .msg-content','danger',res.Message)
+					}else {
+						notif('#login-form .msg-content','success',res.Message)
+						$('#login-form input').val('')
+						var data = res.Data
+						cookie.set(data)
+						redirect('');
+					}
+				})
+			});
+	  }
   }
 
 </script>
