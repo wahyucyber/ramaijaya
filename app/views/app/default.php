@@ -273,7 +273,7 @@ function statusChangeCallback(response) {
   };
  
   function testAPI() {
-	  if(!check_out()) {
+	  if(!check_auth()) {
 			FB.api('/me',{fields: 'first_name,last_name,name,id, email'},  function(response) {
 				callApi("auth/facebook", response, res => {
 					if(res.Error){
