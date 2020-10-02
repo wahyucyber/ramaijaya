@@ -16,7 +16,8 @@ class M_Diskon extends MY_Model {
    {
       $produk = $this->db->query("
          SELECT
-            id
+            id,
+            diskon_ke
          FROM
             $this->produk
          WHERE
@@ -25,7 +26,27 @@ class M_Diskon extends MY_Model {
             diskon_ke IS NOT NULL
       ")->result_array();
 
-      return $produk;
+      $update = [];
+      $update_no = 0;
+      foreach ($produk as $key) {
+         if(strtotime($key['diskon_ke']) < strtotime(date('Y-m-d'))) {
+            $update[$update_no++] = array(
+               'id' => $key['id'],
+               'diskon' => 0,
+               'diskon_dari' => null,
+               'diskon_ke' => null
+            );
+         }
+      }
+
+      if(count($update) > 0) {
+         $this->db->update_batch($this->produk, $update, 'id');
+      }
+
+      return array(
+         'Error' => false,
+         'Message' => "success.";
+      );
    }
    
 
