@@ -280,7 +280,9 @@ class M_Diskon extends MY_Model
 	 	$data = $this->db->query("SELECT
 										id,
 										nama_produk,
-										diskon
+										diskon,
+										diskon_dari,
+										diskon_ke
 									FROM
 										$this->tabel_produk
 									WHERE

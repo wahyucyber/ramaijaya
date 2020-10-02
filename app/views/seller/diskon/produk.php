@@ -58,6 +58,7 @@
 							<th>Nama Produk</th>
 							<th>Harga</th>
 							<th>Harga Diskon</th>
+							<th>Masa Diskon</th>
 							<th>Aksi</th>
 						</tr>
 					</thead>

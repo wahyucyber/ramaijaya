@@ -44,6 +44,12 @@
 					},
 					{
 						data: null,
+						render: function(data) {
+							return `${data.diskon_dari} - ${diskon.diskon_ke}`;
+						}
+					}
+					{
+						data: null,
 						render: function(data){
 							return`<button class="btn btn-danger btn-sm btn--delete-kategori" data-toggle="modal" data-target="#ModalDelete" data-id="${data.id}"><i class="fa fa-times"></i> Hapus</button`
 						}
