@@ -161,7 +161,7 @@ class M_Diskon extends MY_Model
 										$this->tabel_kategori.nama_kategori,
 										$this->tabel_produk.harga,
 										$this->tabel_produk.diskon_dari,
-										$this->tabel_produk.diskon_ke,
+										$this->tabel_produk.diskon_ke
 									FROM
 										$this->tabel_produk
 									LEFT JOIN
