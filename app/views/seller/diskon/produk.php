@@ -11,7 +11,7 @@
 					<span class="badge badge-success bg-orange">Tambah Diskon</span>
 				</div>
 				<div class="row">
-					<div class="col-md-5">
+					<div class="col-md-3">
 						<div class="form-group">
 							<!-- <small>Diskon</small> -->
 							<div class="input-group">
@@ -22,7 +22,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-5">
+					<div class="col-md-3">
 						<div class="form-group mb-0">
 							<!-- <small>Produk</small> -->
 							<select class="form-control select2 produk" data-placeholder="Pilih Produk" multiple>
@@ -30,7 +30,12 @@
 							</select>
 						</div>
 					</div>
-					<div class="col-md-2">
+					<div class="col-md-3">
+						<div class="form-group mb-0">
+							<input type="text" name="" id="" class="form-control daterangepicker">
+						</div>
+					</div>
+					<div class="col-md-3">
 						<div class="form-group">
 							<!-- <small class="d-inline-block">&nbsp;</small> -->
 							<button class="btn btn-orange btn-block" onclick="diskon_produk.add()">
