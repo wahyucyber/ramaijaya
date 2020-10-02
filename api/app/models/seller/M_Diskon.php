@@ -159,7 +159,9 @@ class M_Diskon extends MY_Model
 										$this->tabel_produk.diskon,
 										$this->tabel_produk.nama_produk,
 										$this->tabel_kategori.nama_kategori,
-										$this->tabel_produk.harga
+										$this->tabel_produk.harga,
+										$this->tabel_produk.diskon_dari,
+										$this->tabel_produk.diskon_ke,
 									FROM
 										$this->tabel_produk
 									LEFT JOIN
@@ -183,6 +185,8 @@ class M_Diskon extends MY_Model
         		'nama_kategori' => $key['nama_kategori'],
         		'harga' => $key['harga'],
         		'diskon' => $key['diskon'],
+        		'diskon_dari' => $key['diskon_dari'],
+        		'diskon_ke' => $key['diskon_ke'],
         		'harga_diskon' => $key['harga'] - (($key['diskon']/100)*$key['harga'])
         	];
         }
@@ -280,9 +284,7 @@ class M_Diskon extends MY_Model
 	 	$data = $this->db->query("SELECT
 										id,
 										nama_produk,
-										diskon,
-										diskon_dari,
-										diskon_ke
+										diskon
 									FROM
 										$this->tabel_produk
 									WHERE
