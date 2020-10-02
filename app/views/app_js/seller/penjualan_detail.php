@@ -69,19 +69,28 @@
 					if (res.Data.status_transaksi == "Dibayar") {
 						if (res.Data.status == "Menunggu diproses") {
 							status = `
-								<div class="payment-status payment-active" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-									<i class="text-orange fal fa-smile"></i> Menunggu diproses
+								<div class="step--list-item active" data-status="Menunggu diproses" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+									<div class="list-item-content" style="">
+									</div>
+									<small><i class="text-orange fal fa-smile"></i> Menunggu diproses</small>
 								</div>
-								<div class="payment-status" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-									<i class="text-orange fal fa-box"></i> Diproses
+								<div class="step--list-item" data-status="Diproses" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+									<div class="list-item-content" style="">
+									</div>
+									<small><i class="text-orange fal fa-box"></i> diproses</small>
 								</div>
-								<div class="payment-status" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-									<i class="text-orange fal fa-car-side"></i> Dikirim
+								<div class="step--list-item" data-status="Dikirim" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+									<div class="list-item-content" style="">
+									</div>
+									<small><i class="text-orange fal fa-car-side"></i> Dikirim</small>
 								</div>
-								<div class="payment-status" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-									<i class="text-orange fal fa-box-open"></i> Selesai
+								<div class="step--list-item" data-status="Selesai" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+									<div class="list-item-content" style="">
+									</div>
+									<small><i class="text-orange fal fa-box-open"></i> Diterima</small>
 								</div>
 							`;
+
 							action = `
 								<button type="button" class="btn btn-danger btn-sm"><i class="fal fa-times-circle"></i>	Tolak</button>
 								<button type="button" class="btn btn-success btn-sm transaksi--proses" data-no-invoice="${res.Data.no_invoice}"><i class="fal fa-check-circle"></i>	Prosess</button>
@@ -89,19 +98,28 @@
 							info = `Pesanan akan dibatalkan secara otomatis oleh system jika pesanan belum dikirim sampai tanggal <b>${res.Data.expired_at}</b>`;
 						}else if (res.Data.status == "Diproses") {
 							status = `
-								<div class="payment-status payment-active" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-									<i class="text-orange fal fa-smile"></i> Menunggu diproses
+								<div class="step--list-item active" data-status="Menunggu diproses" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+									<div class="list-item-content" style="">
+									</div>
+									<small><i class="text-orange fal fa-smile"></i> Menunggu diproses</small>
 								</div>
-								<div class="payment-status payment-active" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-									<i class="text-orange fal fa-box"></i> Diproses
+								<div class="step--list-item active" data-status="Diproses" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+									<div class="list-item-content" style="">
+									</div>
+									<small><i class="text-orange fal fa-box"></i> diproses</small>
 								</div>
-								<div class="payment-status" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-									<i class="text-orange fal fa-car-side"></i> Dikirim
+								<div class="step--list-item" data-status="Dikirim" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+									<div class="list-item-content" style="">
+									</div>
+									<small><i class="text-orange fal fa-car-side"></i> Dikirim</small>
 								</div>
-								<div class="payment-status" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-									<i class="text-orange fal fa-box-open"></i> Selesai
+								<div class="step--list-item" data-status="Selesai" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+									<div class="list-item-content" style="">
+									</div>
+									<small><i class="text-orange fal fa-box-open"></i> Diterima</small>
 								</div>
 							`;
+
 							action = `
 								<form class="transaksi--input-resi">
 								  <div class="form-row" style="float: right;">
@@ -117,34 +135,50 @@
 							info = `Pesanan akan dibatalkan secara otomatis oleh system jika pesanan belum dikirim sampai tanggal <b>${res.Data.expired_at}</b>`;
 						}else if (res.Data.status == "Dikirim") {
 							status = `
-								<div class="payment-status payment-active" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-									<i class="text-orange fal fa-smile"></i> Menunggu diproses
+								<div class="step--list-item active" data-status="Menunggu diproses" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+									<div class="list-item-content" style="">
+									</div>
+									<small><i class="text-orange fal fa-smile"></i> Menunggu diproses</small>
 								</div>
-								<div class="payment-status payment-active" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-									<i class="text-orange fal fa-box"></i> Diproses
+								<div class="step--list-item active" data-status="Diproses" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+									<div class="list-item-content" style="">
+									</div>
+									<small><i class="text-orange fal fa-box"></i> diproses</small>
 								</div>
-								<div class="payment-status payment-active" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-									<i class="text-orange fal fa-car-side"></i> Dikirim
+								<div class="step--list-item active" data-status="Dikirim" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+									<div class="list-item-content" style="">
+									</div>
+									<small><i class="text-orange fal fa-car-side"></i> Dikirim</small>
 								</div>
-								<div class="payment-status" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-									<i class="text-orange fal fa-box-open"></i> Selesai
+								<div class="step--list-item" data-status="Selesai" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+									<div class="list-item-content" style="">
+									</div>
+									<small><i class="text-orange fal fa-box-open"></i> Diterima</small>
 								</div>
 							`;
 
 							info = `Pesanan <u>dikirim</u> pada tanggal <b>${res.Data.log_dikirim}</b>`;
 						}else if (res.Data.status == "Selesai") {
 							status = `
-								<div class="payment-status payment-active" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-									<i class="text-orange fal fa-smile"></i> Menunggu diproses
+								<div class="step--list-item active" data-status="Menunggu diproses" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+									<div class="list-item-content" style="">
+									</div>
+									<small><i class="text-orange fal fa-smile"></i> Menunggu diproses</small>
 								</div>
-								<div class="payment-status payment-active" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-									<i class="text-orange fal fa-box"></i> Diproses
+								<div class="step--list-item active" data-status="Diproses" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+									<div class="list-item-content" style="">
+									</div>
+									<small><i class="text-orange fal fa-box"></i> diproses</small>
 								</div>
-								<div class="payment-status payment-active" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-									<i class="text-orange fal fa-car-side"></i> Dikirim
+								<div class="step--list-item active" data-status="Dikirim" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+									<div class="list-item-content" style="">
+									</div>
+									<small><i class="text-orange fal fa-car-side"></i> Dikirim</small>
 								</div>
-								<div class="payment-status payment-active" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-									<i class="text-orange fal fa-box-open"></i> Selesai
+								<div class="step--list-item active" data-status="Selesai" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+									<div class="list-item-content" style="">
+									</div>
+									<small><i class="text-orange fal fa-box-open"></i> Diterima</small>
 								</div>
 							`;
 
@@ -235,26 +269,7 @@
 														<div class="step--status-value"></div>
 													</div>
 													<div class="step--status-list">
-														<div class="step--list-item" data-status="Menunggu diproses">
-															<div class="list-item-content" style="">
-															</div>
-															<small><i class="text-orange fal fa-smile"></i> Menunggu diproses</small>
-														</div>
-														<div class="step--list-item" data-status="Diproses">
-															<div class="list-item-content" style="">
-															</div>
-															<small><i class="text-orange fal fa-box"></i> diproses</small>
-														</div>
-														<div class="step--list-item" data-status="Dikirim">
-															<div class="list-item-content" style="">
-															</div>
-															<small><i class="text-orange fal fa-car-side"></i> Dikirim</small>
-														</div>
-														<div class="step--list-item" data-status="Selesai">
-															<div class="list-item-content" style="">
-															</div>
-															<small><i class="text-orange fal fa-box-open"></i> Diterima</small>
-														</div>
+														${status}
 													</div>
 												</div>
 											</div>
