@@ -82,7 +82,7 @@
 												<div class="col-4 mb-2">
 													<small for="" class="text-orange"><b> Harga </b></small>
 													<br>
-													<label class="text-dark">Rp. ${harga}</label></label>
+													<label class="text-dark">${harga}</label></label>
 												</div>
 												<div class="col-4 mb-2">
 													<small for="" class="text-orange"><b> Berat </b></small>
