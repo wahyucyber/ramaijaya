@@ -183,6 +183,8 @@ if (segment(1) == 'login' || segment(1) == 'register' || segment(1) == 'forgot')
 }
 ?>
 
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+
 <?= script([
 	// 'ext/jquery.min.js',
 	'ext/jquery-3.4.0.min.js',
