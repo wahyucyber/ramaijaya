@@ -47,7 +47,7 @@
 						render: function(data) {
 							return `${data.diskon_dari} - ${diskon.diskon_ke}`;
 						}
-					}
+					},
 					{
 						data: null,
 						render: function(data){
