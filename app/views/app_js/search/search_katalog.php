@@ -59,7 +59,7 @@
 						var harga = `Rp. ${rupiah(data.harga)}`;
 
 						if(data.diskon != 0) {
-							harga = `<del>Rp. ${rupiah(data.harga)}</del><br/>Rp. ${rupiah(data.diskon)}`;
+							harga = `<del>Rp. ${rupiah(data.harga)}</del><br/>Rp. ${rupiah(data.harga_diskon)}`;
 						}
 
 						output += `
