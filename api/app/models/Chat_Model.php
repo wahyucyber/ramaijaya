@@ -138,7 +138,7 @@ class Chat_Model extends MY_Model {
 					'nama' => $key['nama'],
 					'pesan' => $key['pesan'],
 					'reply' => $key['user_id'] == $user['id']? false : true,
-					'waktu' => date('H:i',strtotime($key['waktu'])),
+					'waktu' => date('Y-m-d H:i',strtotime($key['waktu'])),
 					'meta_url' => $key['meta_url'],
 					'meta_image' => $key['meta_image'],
 					'meta_title' => $key['meta_title'],
