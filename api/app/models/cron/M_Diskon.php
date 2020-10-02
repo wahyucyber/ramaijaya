@@ -45,7 +45,7 @@ class M_Diskon extends MY_Model {
 
       return array(
          'Error' => false,
-         'Message' => "success.";
+         'Message' => "success."
       );
    }
    
