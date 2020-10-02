@@ -850,7 +850,7 @@ class M_Product extends MY_Model {
 						'slug' => $key['slug'],
 						'keterangan' => $key['keterangan'],
 						'harga' => $key['harga'],
-						'diskon' => $key['diskon'],
+						'diskon' => (strtotime($key['diskon_dari']) >= strtotime(date('d-m-Y')) && strtotime($key['diskon_ke']) <= strtotime(date('d-m-Y'))) ? $key['diskon'] : 0,
 						'harga_diskon' => (strtotime($key['diskon_dari']) >= strtotime(date('d-m-Y')) && strtotime($key['diskon_ke']) <= strtotime(date('d-m-Y'))) ? ceil($key['harga'] - (($key['diskon']/100)*$key['harga'])) : 0,
 						'berat' => $key['berat'],
 						'stok' => $key['stok'],
