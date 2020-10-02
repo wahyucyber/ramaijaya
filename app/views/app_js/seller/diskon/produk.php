@@ -76,6 +76,8 @@
 			var data = {
 				client_token: $jp_client_token,
 				diskon: $('input.diskon').val(),
+				dari_tanggal: $("input._daterangepicker--dari-tanggal").val(),
+				ke_tanggal: $("input._daterangepicker--ke-tanggal").val(),
 				produk_id: $('select.produk').val()
 			}
 			callApi('seller/diskon/add_produk/',data,function(res){

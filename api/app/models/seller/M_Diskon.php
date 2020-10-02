@@ -444,6 +444,8 @@ class M_Diskon extends MY_Model
 	{
 		$client_token = isset($params['client_token'])? $params['client_token'] : '';
 		$diskon = isset($params['diskon'])? $params['diskon'] : '';
+		$dari_tanggal = $params['dari_tanggal'];
+		$ke_tanggal = $params['ke_tanggal'];
 		$produk_id = isset($params['produk_id'])? $params['produk_id'] : '';
 		if (empty($client_token)) {
 	 		$result['Error'] = true;
@@ -493,11 +495,11 @@ class M_Diskon extends MY_Model
 			 		$result['Message'] = "Produk tidak ditemukan";
 			 		goto output;
 			 	}
-			 	$this->db->update($this->tabel_produk,['diskon' => $diskon],['id' => $value]);
+			 	$this->db->update($this->tabel_produk,['diskon' => $diskon, 'diskon_dari_tanggal' => $dari_tanggal, 'diskon_ke_tanggal' => $ke_tanggal],['id' => $value]);
 	 			
 	 		}
 	 	}else{
-		 	$this->db->update($this->tabel_produk,['diskon' => $diskon],['id' => $produk_id]);
+		 	$this->db->update($this->tabel_produk,['diskon' => $diskon, 'diskon_dari_tanggal' => $dari_tanggal, 'diskon_ke_tanggal' => $ke_tanggal],['id' => $produk_id]);
 
 	 	}
  		$result['Error'] = false;
