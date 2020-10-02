@@ -45,7 +45,11 @@
 					{
 						data: null,
 						render: function(data) {
-							return `${data.diskon_dari} - ${diskon.diskon_ke}`;
+							if(data.diskon_dari == null || data.diskon_ke == null) {
+								return `-`;
+							}else {
+								return `${data.diskon_dari} - ${data.diskon_ke}`;
+							}
 						}
 					},
 					{
