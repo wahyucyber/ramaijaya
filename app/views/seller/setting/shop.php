@@ -25,6 +25,9 @@
 			  <li class="nav-item">
 			    <a class="nav-link<?= $tabs == 7? ' active' : ''; ?>"  href="<?= base_url('seller/setting/shop?tab=7'); ?>"> Layanan</a>
 			  </li> -->
+			  <li class="nav-item">
+			    <a class="nav-link<?= $tabs == 8? ' active' : ''; ?>"  href="<?= base_url('seller/setting/shop?tab=8'); ?>"><i class="fal fa-car-side"></i> Kurir</a>
+			  </li>
 			</ul>
 
 			<div class="tab-content">

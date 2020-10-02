@@ -24,9 +24,9 @@
 			<li class="list-item <?= segment(2) == '' || segment(2) == 'home'? 'active' : '' ; ?>">
 				<a href="<?= base_url(); ?>seller/home"><i class="fad fa-home-lg-alt _icon"></i> Beranda</a>
 			</li>
-			<li class="list-item <?= segment(2) == 'kurir'? 'active' : '' ; ?>">
+			<!-- <li class="list-item <?= segment(2) == 'kurir'? 'active' : '' ; ?>">
 				<a href="<?= base_url(); ?>seller/kurir"><i class="fad fa-car-side _icon"></i> Kurir</a>
-			</li>
+			</li> -->
 			<li class="list-item <?= segment(2) == 'penjualan' || segment(2) == 'komplain' || segment(2) == 'ulasan'? 'active' : '' || segment(2) == 'diskusi'? 'active' : '' ; ?>">
 				<a href="javascript:;" class="btn-collapse"><i class="fad fa-file-alt _icon"></i> Penjualan <span class="fa _icon-right"></span></a>
 				<ul class="collapse <?= segment(2) == 'penjualan' || segment(2) == 'komplain' || segment(2) == 'ulasan'? 'show' : '' || segment(2) == 'diskusi'? 'show' : ''; ?>">
