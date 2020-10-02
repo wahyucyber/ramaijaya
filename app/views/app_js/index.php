@@ -808,4 +808,6 @@
 		$("input[type=hidden]._daterangepicker--ke-tanggal").val(``);
 	});
 
+	$('[data-toggle="tooltip"]').tooltip();
+
 </script>
