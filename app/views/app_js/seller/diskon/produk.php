@@ -48,7 +48,7 @@
 							if(data.diskon_dari == null || data.diskon_ke == null) {
 								return `-`;
 							}else {
-								return `${data.diskon_dari} - ${data.diskon_ke}`;
+								return `${data.diskon_dari} / ${data.diskon_ke}`;
 							}
 						}
 					},
