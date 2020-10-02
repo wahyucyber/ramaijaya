@@ -1425,14 +1425,17 @@ class M_Product extends MY_Model {
 		$result['Error'] = false;
 		$result['Message'] = null;
 		foreach ($produk->result_array() as $key) {
-			$diskon = $key['diskon'];
-			$harga_diskon = ceil($key['harga'] - (($key['diskon']/100)*$key['harga']));
-			if($key['diskon_dari'] != null && $key['diskon_ke'] != null && strtotime(date('Y-m-d')) >= strtotime($key['diskon_dari']) && strtotime(date('Y-m-d')) <= strtotime($key['diskon_ke'])) {
+			if($key['diskon_dari'] != null && $key['diskon_ke'] != null) {
+				if (strtotime(date('Y-m-d')) >= strtotime($key['diskon_dari']) && strtotime(date('Y-m-d')) <= strtotime($key['diskon_ke'])) {
+					$diskon = $key['diskon'];
+					$harga_diskon = ceil($key['harga'] - (($key['diskon']/100)*$key['harga']));
+				}else {
+					$diskon = 0;
+					$harga_diskon = 0;
+				}
+			}else {
 				$diskon = $key['diskon'];
 				$harga_diskon = ceil($key['harga'] - (($key['diskon']/100)*$key['harga']));
-			}else {
-				$diskon = 0;
-				$harga_diskon = 0;
 			}
 
 			$result['Data'][$no++] = [
