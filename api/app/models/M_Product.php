@@ -161,6 +161,19 @@ class M_Product extends MY_Model {
 			$no = 0;
 
 			foreach ($query->result_array() as $key) {
+				if($key['diskon_dari'] != null && $key['diskon_ke'] != null) {
+					if (strtotime(date('Y-m-d')) >= strtotime($key['diskon_dari']) && strtotime(date('Y-m-d')) <= strtotime($key['diskon_ke'])) {
+						$diskon = $key['diskon'];
+						$harga_diskon = ceil($key['harga'] - (($key['diskon']/100)*$key['harga']));
+					}else {
+						$diskon = 0;
+						$harga_diskon = 0;
+					}
+				}else {
+					$diskon = $key['diskon'];
+					$harga_diskon = ceil($key['harga'] - (($key['diskon']/100)*$key['harga']));
+				}
+
 				$result['Error'] = false;
 				$result['Message'] = null;
 				$result['Data'][$no++] = [
@@ -179,8 +192,8 @@ class M_Product extends MY_Model {
 					'nama_produk' => $key['nama_produk'],
 					'keterangan' => $key['keterangan'],
 					'harga' => $key['harga'],
-					'diskon' => (strtotime(date('Y-m-d')) >= strtotime($key['diskon_dari']) && strtotime(date('Y-m-d')) <= strtotime($key['diskon_ke'])) ? $key['diskon'] : 0,
-					'harga_diskon' => (strtotime(date('Y-m-d')) >= strtotime($key['diskon_dari']) && strtotime(date('Y-m-d')) <= strtotime($key['diskon_ke'])) ? ceil($key['harga'] - (($key['diskon']/100)*$key['harga'])) : 0,
+					'diskon' => $diskon,
+					'harga_diskon' => $harga_diskon,
 					'berat' => $key['berat'],
 					'stok_awal' => $key['stok_awal'],
 					'rating' => $this->produk_rating($key['id_produk']),
@@ -379,6 +392,19 @@ class M_Product extends MY_Model {
 			$no = 0;
 
 			foreach ($produk->result_array() as $key) {
+				if($key['diskon_dari'] != null && $key['diskon_ke'] != null) {
+					if (strtotime(date('Y-m-d')) >= strtotime($key['diskon_dari']) && strtotime(date('Y-m-d')) <= strtotime($key['diskon_ke'])) {
+						$diskon = $key['diskon'];
+						$harga_diskon = ceil($key['harga'] - (($key['diskon']/100)*$key['harga']));
+					}else {
+						$diskon = 0;
+						$harga_diskon = 0;
+					}
+				}else {
+					$diskon = $key['diskon'];
+					$harga_diskon = ceil($key['harga'] - (($key['diskon']/100)*$key['harga']));
+				}
+
 				$result['Error'] = false;
 				$result['Message'] = null;
 				$result['Data'][$no++] = [
@@ -397,8 +423,8 @@ class M_Product extends MY_Model {
 					'nama_produk' => $key['nama_produk'],
 					'keterangan' => $key['keterangan'],
 					'harga' => $key['harga'],
-					'diskon' => (strtotime(date('Y-m-d')) >= strtotime($key['diskon_dari']) && strtotime(date('Y-m-d')) <= strtotime($key['diskon_ke'])) ? $key['diskon'] : 0,
-					'harga_diskon' => (strtotime(date('Y-m-d')) >= strtotime($key['diskon_dari']) && strtotime(date('Y-m-d')) <= strtotime($key['diskon_ke'])) ? ceil($key['harga'] - (($key['diskon']/100)*$key['harga'])): 0,
+					'diskon' => $diskon,
+					'harga_diskon' => $harga_diskon,
 					'berat' => $key['berat'],
 					'stok_awal' => $key['stok_awal'],
 					'stok' => $key['stok'],
@@ -619,6 +645,19 @@ class M_Product extends MY_Model {
 			$hasil['Message'] = "success.";
 			$no = 0;
 			foreach ($get_produk->result_array() as $key) {
+				if($key['diskon_dari'] != null && $key['diskon_ke'] != null) {
+					if (strtotime(date('Y-m-d')) >= strtotime($key['diskon_dari']) && strtotime(date('Y-m-d')) <= strtotime($key['diskon_ke'])) {
+						$diskon = $key['diskon'];
+						$harga_diskon = ceil($key['harga'] - (($key['diskon']/100)*$key['harga']));
+					}else {
+						$diskon = 0;
+						$harga_diskon = 0;
+					}
+				}else {
+					$diskon = $key['diskon'];
+					$harga_diskon = ceil($key['harga'] - (($key['diskon']/100)*$key['harga']));
+				}
+
 				$hasil['Data'][$no++] = array(
 					'id' => $key['id'],
 					'toko_id' => $key['toko_id'],
@@ -639,8 +678,8 @@ class M_Product extends MY_Model {
 					'nama' => $key['nama_produk'],
 					'keterangan' => $key['keterangan'],
 					'harga' => $key['harga'],
-					'diskon' => (strtotime(date('Y-m-d')) >= strtotime($key['diskon_dari']) && strtotime(date('Y-m-d')) <= strtotime($key['diskon_ke'])) ? $key['diskon'] : 0,
-					'harga_diskon' => (strtotime(date('Y-m-d')) >= strtotime($key['diskon_dari']) && strtotime(date('Y-m-d')) <= strtotime($key['diskon_ke'])) ? ceil($key['harga'] - (($key['diskon']/100)*$key['harga'])) : 0,
+					'diskon' => $diskon,
+					'harga_diskon' => $harga_diskon,
 					'berat' => $key['berat'],
 					'stok' => $key['stok'],
 					'favorit' => $key['favorit'],
@@ -833,6 +872,19 @@ class M_Product extends MY_Model {
 				$hasil['Message'] = "success.";
 				$no = 0;
 				foreach ($get_produk->result_array() as $key) {
+					if($key['diskon_dari'] != null && $key['diskon_ke'] != null) {
+						if (strtotime(date('Y-m-d')) >= strtotime($key['diskon_dari']) && strtotime(date('Y-m-d')) <= strtotime($key['diskon_ke'])) {
+							$diskon = $key['diskon'];
+							$harga_diskon = ceil($key['harga'] - (($key['diskon']/100)*$key['harga']));
+						}else {
+							$diskon = 0;
+							$harga_diskon = 0;
+						}
+					}else {
+						$diskon = $key['diskon'];
+						$harga_diskon = ceil($key['harga'] - (($key['diskon']/100)*$key['harga']));
+					}
+
 					$hasil['Data'][$no++] = array(
 						'id' => $key['id'],
 						'toko_id' => $key['toko_id'],
@@ -854,8 +906,8 @@ class M_Product extends MY_Model {
 						'slug' => $key['slug'],
 						'keterangan' => $key['keterangan'],
 						'harga' => $key['harga'],
-						'diskon' => (strtotime(date('Y-m-d')) >= strtotime($key['diskon_dari']) && strtotime(date('Y-m-d')) <= strtotime($key['diskon_ke'])) ? $key['diskon'] : 0,
-						'harga_diskon' => (strtotime(date('Y-m-d')) >= strtotime($key['diskon_dari']) && strtotime(date('Y-m-d')) <= strtotime($key['diskon_ke'])) ? ceil($key['harga'] - (($key['diskon']/100)*$key['harga'])) : 0,
+						'diskon' => $diskon,
+						'harga_diskon' => $harga_diskon,
 						'berat' => $key['berat'],
 						'stok' => $key['stok'],
 						// 'favorit' => $key['favorit'],
@@ -1312,6 +1364,19 @@ class M_Product extends MY_Model {
 			$hasil['Message'] = "success.";
 			$no = 0;
 			foreach ($get_produk->result_array() as $key) {
+				if($key['diskon_dari'] != null && $key['diskon_ke'] != null) {
+					if (strtotime(date('Y-m-d')) >= strtotime($key['diskon_dari']) && strtotime(date('Y-m-d')) <= strtotime($key['diskon_ke'])) {
+						$diskon = $key['diskon'];
+						$harga_diskon = ceil($key['harga'] - (($key['diskon']/100)*$key['harga']));
+					}else {
+						$diskon = 0;
+						$harga_diskon = 0;
+					}
+				}else {
+					$diskon = $key['diskon'];
+					$harga_diskon = ceil($key['harga'] - (($key['diskon']/100)*$key['harga']));
+				}
+
 				$hasil['Data'][$no++] = array(
 					'id' => $key['id'],
 					'toko_id' => $key['toko_id'],
@@ -1326,8 +1391,8 @@ class M_Product extends MY_Model {
 					'nama' => $key['nama_produk'],
 					'keterangan' => $key['keterangan'],
 					'harga' => $key['harga'],
-					'diskon' => (strtotime(date('Y-m-d')) >= strtotime($key['diskon_dari']) && strtotime(date('Y-m-d')) <= strtotime($key['diskon_ke'])) ? $key['diskon'] : 0,
-					'harga_diskon' => (strtotime(date('Y-m-d')) >= strtotime($key['diskon_dari']) && strtotime(date('Y-m-d')) <= strtotime($key['diskon_ke'])) ? ceil($key['harga'] - (($key['diskon']/100)*$key['harga'])) : 0,
+					'diskon' => $diskon,
+					'harga_diskon' => $harga_diskon,
 					'berat' => $key['berat'],
 					'stok' => $key['stok'],
 					'rating' => $this->produk_rating($key['id_produk']),
