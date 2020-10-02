@@ -495,11 +495,11 @@ class M_Diskon extends MY_Model
 			 		$result['Message'] = "Produk tidak ditemukan";
 			 		goto output;
 			 	}
-			 	$this->db->update($this->tabel_produk,['diskon' => $diskon, 'diskon_dari_tanggal' => $dari_tanggal, 'diskon_ke_tanggal' => $ke_tanggal],['id' => $value]);
+			 	$this->db->update($this->tabel_produk,['diskon' => $diskon, 'diskon_dari' => $dari_tanggal, 'diskon_ke' => $ke_tanggal],['id' => $value]);
 	 			
 	 		}
 	 	}else{
-		 	$this->db->update($this->tabel_produk,['diskon' => $diskon, 'diskon_dari_tanggal' => $dari_tanggal, 'diskon_ke_tanggal' => $ke_tanggal],['id' => $produk_id]);
+		 	$this->db->update($this->tabel_produk,['diskon' => $diskon, 'diskon_dari' => $dari_tanggal, 'diskon_ke' => $ke_tanggal],['id' => $produk_id]);
 
 	 	}
  		$result['Error'] = false;
