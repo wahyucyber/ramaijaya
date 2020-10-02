@@ -48,7 +48,7 @@ class Setting extends MY_Seller {
 		}else if($tabs == 8) {
 
 			$title = 'Kurir';
-	        $params['js'] = 'seller/setting/shop/layanan';
+	        $params['js'] = 'seller/setting/shop/kurir';
 
 		}else{
 
