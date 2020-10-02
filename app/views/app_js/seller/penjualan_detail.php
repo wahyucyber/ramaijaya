@@ -167,17 +167,17 @@
 															</div>
 															<small><i class="text-orange fal fa-smile"></i> Menunggu diproses</small>
 														</div>
-														<div class="step--list-item" data-status="Diproses" data-toggle="tooltip" data-placement="top" title="${res.Data.log_diproses}">
+														<div class="step--list-item" data-status="Diproses" data-toggle="tooltip" data-placement="top" title="${res.Data.log_diproses ?? ""}">
 															<div class="list-item-content" style="">
 															</div>
 															<small><i class="text-orange fal fa-box"></i> diproses</small>
 														</div>
-														<div class="step--list-item" data-status="Dikirim" data-toggle="tooltip" data-placement="top" title="${res.Data.log_dikirim}">
+														<div class="step--list-item" data-status="Dikirim" data-toggle="tooltip" data-placement="top" title="${res.Data.log_dikirim ?? ""}">
 															<div class="list-item-content" style="">
 															</div>
 															<small><i class="text-orange fal fa-car-side"></i> Dikirim</small>
 														</div>
-														<div class="step--list-item" data-status="Selesai" data-toggle="tooltip" data-placement="top" title="${res.Data.log_diterima}">
+														<div class="step--list-item" data-status="Selesai" data-toggle="tooltip" data-placement="top" title="${res.Data.log_diterima ?? ""}">
 															<div class="list-item-content" style="">
 															</div>
 															<small><i class="text-orange fal fa-box-open"></i> Diterima</small>
