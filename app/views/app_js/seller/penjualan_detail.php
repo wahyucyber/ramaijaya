@@ -49,16 +49,16 @@
 					$("div.payment--detail-pembayaran").html(payment_detail);
 
 					var status = `
-						<div class="payment-status">
+						<div class="payment-status" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
 							<i class="text-orange fal fa-smile"></i> Menunggu diproses
 						</div>
-						<div class="payment-status">
+						<div class="payment-status" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
 							<i class="text-orange fal fa-box"></i> Diproses
 						</div>
-						<div class="payment-status">
+						<div class="payment-status" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
 							<i class="text-orange fal fa-car-side"></i> Dikirim
 						</div>
-						<div class="payment-status">
+						<div class="payment-status" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
 							<i class="text-orange fal fa-box-open"></i> Selesai
 						</div>
 					`;
@@ -69,16 +69,16 @@
 					if (res.Data.status_transaksi == "Dibayar") {
 						if (res.Data.status == "Menunggu diproses") {
 							status = `
-								<div class="payment-status payment-active">
+								<div class="payment-status payment-active" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
 									<i class="text-orange fal fa-smile"></i> Menunggu diproses
 								</div>
-								<div class="payment-status">
+								<div class="payment-status" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
 									<i class="text-orange fal fa-box"></i> Diproses
 								</div>
-								<div class="payment-status">
+								<div class="payment-status" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
 									<i class="text-orange fal fa-car-side"></i> Dikirim
 								</div>
-								<div class="payment-status">
+								<div class="payment-status" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
 									<i class="text-orange fal fa-box-open"></i> Selesai
 								</div>
 							`;
@@ -89,16 +89,16 @@
 							info = `Pesanan akan dibatalkan secara otomatis oleh system jika pesanan belum dikirim sampai tanggal <b>${res.Data.expired_at}</b>`;
 						}else if (res.Data.status == "Diproses") {
 							status = `
-								<div class="payment-status payment-active">
+								<div class="payment-status payment-active" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
 									<i class="text-orange fal fa-smile"></i> Menunggu diproses
 								</div>
-								<div class="payment-status payment-active" title="${res.Data.log_diproses}">
+								<div class="payment-status payment-active" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
 									<i class="text-orange fal fa-box"></i> Diproses
 								</div>
-								<div class="payment-status">
+								<div class="payment-status" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
 									<i class="text-orange fal fa-car-side"></i> Dikirim
 								</div>
-								<div class="payment-status">
+								<div class="payment-status" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
 									<i class="text-orange fal fa-box-open"></i> Selesai
 								</div>
 							`;
@@ -117,16 +117,16 @@
 							info = `Pesanan akan dibatalkan secara otomatis oleh system jika pesanan belum dikirim sampai tanggal <b>${res.Data.expired_at}</b>`;
 						}else if (res.Data.status == "Dikirim") {
 							status = `
-								<div class="payment-status payment-active">
+								<div class="payment-status payment-active" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
 									<i class="text-orange fal fa-smile"></i> Menunggu diproses
 								</div>
-								<div class="payment-status payment-active" title="${res.Data.log_diproses}">
+								<div class="payment-status payment-active" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
 									<i class="text-orange fal fa-box"></i> Diproses
 								</div>
-								<div class="payment-status payment-active" title="${res.Data.log_dikirim}">
+								<div class="payment-status payment-active" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
 									<i class="text-orange fal fa-car-side"></i> Dikirim
 								</div>
-								<div class="payment-status">
+								<div class="payment-status" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
 									<i class="text-orange fal fa-box-open"></i> Selesai
 								</div>
 							`;
@@ -134,16 +134,16 @@
 							info = `Pesanan <u>dikirim</u> pada tanggal <b>${res.Data.log_dikirim}</b>`;
 						}else if (res.Data.status == "Selesai") {
 							status = `
-								<div class="payment-status payment-active">
+								<div class="payment-status payment-active" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
 									<i class="text-orange fal fa-smile"></i> Menunggu diproses
 								</div>
-								<div class="payment-status payment-active" title="${res.Data.log_diproses}">
+								<div class="payment-status payment-active" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
 									<i class="text-orange fal fa-box"></i> Diproses
 								</div>
-								<div class="payment-status payment-active" title="${res.Data.log_dikirim}">
+								<div class="payment-status payment-active" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
 									<i class="text-orange fal fa-car-side"></i> Dikirim
 								</div>
-								<div class="payment-status payment-active" title="${res.Data.log_diterima}">
+								<div class="payment-status payment-active" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
 									<i class="text-orange fal fa-box-open"></i> Selesai
 								</div>
 							`;
