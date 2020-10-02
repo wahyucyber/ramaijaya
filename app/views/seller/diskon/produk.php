@@ -32,7 +32,9 @@
 					</div>
 					<div class="col-md-3">
 						<div class="form-group mb-0">
-							<input type="text" name="" id="" class="form-control daterangepicker">
+							<input type="text" name="" id="" class="form-control _daterangepicker">
+							<input type="hidden" name="" class="_daterangepicker--dari-tanggal">
+							<input type="hidden" name="" class="_daterangepicker--ke-tanggal">
 						</div>
 					</div>
 					<div class="col-md-3">
