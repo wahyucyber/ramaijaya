@@ -81,7 +81,7 @@
 												<div class="col-4 mb-2">
 													<small for="" class="text-orange"><b> Berat </b></small>
 													<br>
-													<label class="text-dark">${data.berat} gram</label></label>
+													<label class="text-dark">${data.berat}g</label></label>
 												</div>
 												<div class="col-4 mb-2">
 													<small for="" class="text-orange"><b> Penjual </b></small>
