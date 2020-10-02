@@ -56,6 +56,10 @@
 							img_produk = data.foto[0].foto;
 						}
 
+						if(data.diskon != 0) {
+							harga = `<del>Rp. ${rupiah(data.harga)}</del><br/>Rp. ${rupiah(data.diskon)}`;
+						}
+
 						output += `
 							<div class="col-md-6 mb-2">
 							<a href="<?php echo base_url(''); ?>shop/${data.toko_slug}/${data.slug}" class="card shadow mb-2">
@@ -76,7 +80,7 @@
 												<div class="col-4 mb-2">
 													<small for="" class="text-orange"><b> Harga </b></small>
 													<br>
-													<label class="text-dark">Rp. ${rupiah(data.harga)}</label></label>
+													<label class="text-dark">Rp. ${harga}</label></label>
 												</div>
 												<div class="col-4 mb-2">
 													<small for="" class="text-orange"><b> Berat </b></small>
