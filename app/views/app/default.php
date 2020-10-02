@@ -36,6 +36,7 @@
 		'ext/DataTables/dataTables.min.css',
 		'ext/DataTables/dist/css/dataTables.bootstrap4.min.css',
 		'ext/jquery-ui/jquery-ui.min.css',
+		'ext/datetimerangepicker/daterangepicker.css',
 		'ext/select2/dist/css/select2.min.css',
 		'ext/slick/slick-theme.css',
 		'ext/slick/slick.css',
@@ -200,6 +201,8 @@ if (segment(1) == 'login' || segment(1) == 'register' || segment(1) == 'forgot')
 	'ext/ckeditor/ckeditor.js',
 	'ext/slick/slick.min.js',
 	'ext/chart/Chart.min.js',
+	'ext/datetimerangepicker/moment.min.js',
+	'ext/datetimerangepicker/daterangepicker.js',
 	'js/bundle.js',
 	'js/module.js'
 ]); ?>
