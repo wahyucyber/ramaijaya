@@ -52,6 +52,10 @@
             <label class="custom-control-label" for="show">Tampilkan Di Halaman Utama</label>
           </div>
         </div>
+        <div class="form-group">
+          <label for="" class="control-label">Body</label>
+          <textarea name="" class="form-control content"></textarea>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Batal</button>
