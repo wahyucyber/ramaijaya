@@ -54,7 +54,7 @@
         </div>
         <div class="form-group">
           <label for="" class="control-label">Body</label>
-          <textarea name="" class="form-control content"></textarea>
+          <textarea name="" class="form-control ckeditor" id="ckeditor"></textarea>
         </div>
       </div>
       <div class="modal-footer">
