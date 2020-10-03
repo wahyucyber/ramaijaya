@@ -23,7 +23,7 @@
 
 <!-- modal plus -->
 <div class="modal fade" id="Modal">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title">Form Slide</h5>
