@@ -46,6 +46,7 @@
 												<h5 class="card-title font-weight-bold">${data.title}</h5> 
 											</div>
 											<div class="col-md-5 text-right">
+												<input type="hidden" class="body" data-id="${data.id_slider}" value="${data.body}"/>
 												<button class="btn btn-primary btn-sm mr-1 btn-update" 
 													data-status="${data.status}" 
 													data-banner="${data.banner_slider}" 
@@ -94,6 +95,7 @@
 		{
 			slider.ModalReset()
 			this.is_update = false
+			_ckeditor('add-ckeditor');
 			$('#Modal .modal-title').html('Tambah Slider')
 			$('#Modal').modal('show')
 		}
@@ -101,13 +103,43 @@
 		ModalUpdateDraw(data)
 		{
 			slider.ModalReset()
+
+			$("#edit div.modal-body").html(`
+				<div class="msg-content"></div>
+				<div class="form-group">
+					<div class="modal-slider-img mb-3">
+						<img src="<?= base_url(); ?>cdn/default/slider.jpg" alt="">
+					</div>
+					<small class="text-muted d-block mb-3"><span class="text-danger">*</span> Note: <i>Gunakan gambar berukuran minimal 1336px x 494px dengan format .png</i></small>
+					<button class="btn btn-secondary btn-sm browse-img" type="button"><i class="fa fa-file-image"></i> Browse</button>
+					<input type="file" class="d-none file-banner" data-base64="" hidden>
+				</div>
+				<div class="form-group">
+					<label for="">Judul</label>
+					<input type="text" class="form-control title" placeholder="Title">
+				</div>
+				<div class="form-group">
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="show" value="1" checked>
+						<label class="custom-control-label" for="show">Tampilkan Di Halaman Utama</label>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="control-label">Body</label>
+					<textarea name="" class="form-control edit-ckeditor" id="edit-ckeditor"></textarea>
+				</div>
+			`);
+
 			this.is_update = true
 			this.id_slider = data.id
-			$('#Modal .modal-title').html('Edit Slider <small class="text-danger">'+data.title+'</small>')
-			$('#Modal input.title').val(data.title)
-			$('#Modal .modal-slider-img img').attr('src',data.banner)
-			$('#Modal input#show').val(data.status).prop('checked',data.status == 1? true : false)
-			$('#Modal').modal('show')
+			$('#edit .modal-title').html('Edit Slider <small class="text-danger">'+data.title+'</small>')
+			$('#edit input.title').val(data.title)
+			$('#edit .modal-slider-img img').attr('src',data.banner)
+			$('#edit input#show').val(data.status).prop('checked',data.status == 1? true : false)
+			$("#edit textarea").val($(`input[type=hidden].body[data-id=${this.id_slider}]`).val());
+			$('#edit').modal('show')
+
+			_ckeditor('edit-ckeditor');
 		}
 
 		ModalConfirmDraw(data)
@@ -128,10 +160,12 @@
 			var input_banner = $('#Modal input.file-banner').attr('data-base64'),
 				input_title = $('#Modal input.title').val(),
 				status = $('#Modal input#show').val(),
+				body = CKEDITOR.instances['add-ckeditor'].getData(),
 				data = {
 					banner: input_banner,
 					title: input_title,
-					status: status
+					status: status,
+					body: body
 				}
 			callApi('admin/slider/add/',data,res => {
 				if (res.Error) {
@@ -145,19 +179,22 @@
 
 		update()
 		{
-			var input_banner = $('#Modal input.file-banner').attr('data-base64'),
-				input_title = $('#Modal input.title').val(),
-				status = $('#Modal input#show').val(),
+			var input_banner = $('#edit input.file-banner').attr('data-base64'),
+				input_title = $('#edit input.title').val(),
+				status = $('#edit input#show').val(),
+				body = CKEDITOR.instances['edit-ckeditor'].getData(),
 				data = {
 					id_slider: this.id_slider,
 					banner: input_banner,
 					title: input_title,
-					status: status
+					status: status,
+					body: body
 				}
 			callApi('admin/slider/update/',data,res => {
 				if (res.Error) {
-					notif('#Modal .msg-content','danger',res.Message,4);
+					notif('#edit .msg-content','danger',res.Message,4);
 				}else{
+					$("#edit").modal('hide');
 					notif('.content--page .msg-content','success',res.Message,4);
 					slider.run()
 				}
@@ -224,11 +261,12 @@
 	
 	$(document).on('submit', '#Modal form', function(event) {
 		event.preventDefault();
-		if(slider.is_update){
-			slider.update()
-		}else{
-			slider.add()
-		}
+		slider.add()
+	});
+
+	$(document).on('submit', '#edit form', function(event) {
+		event.preventDefault();
+		slider.update()
 	});
 
 	$(document).on('click', 'button.btn-delete', function(event) {

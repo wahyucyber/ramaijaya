@@ -1,4 +1,0 @@
-ERROR - 2020-07-09 02:11:34 --> 404 Page Not Found: Jsonws/invoke
-ERROR - 2020-07-09 12:29:11 --> Severity: Warning --> unlink(/home/adminjp/public_html/storage/): Is a directory /home/adminjp/public_html/api/app/libraries/Upload_image.php 76
-ERROR - 2020-07-09 12:29:11 --> Severity: Warning --> unlink(/home/adminjp/public_html/storage/): Is a directory /home/adminjp/public_html/api/app/libraries/Upload_image.php 76
-ERROR - 2020-07-09 12:29:11 --> Severity: Warning --> unlink(/home/adminjp/public_html/storage/): Is a directory /home/adminjp/public_html/api/app/libraries/Upload_image.php 76

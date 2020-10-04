@@ -20,6 +20,7 @@ class M_Slider extends MY_Model {
 			banner as banner_slider,
 			title,
 			slug,
+			body,
 			status
 		";
 		$config['limit'] = empty($params['limit'])? 10 : $params['limit'];
@@ -34,6 +35,7 @@ class M_Slider extends MY_Model {
 
 		$banner = isset($params['banner'])? htmlspecialchars($params['banner']) : null;
 		$title = isset($params['title'])? htmlspecialchars($params['title']) : null;
+		$body = isset($params['body']) ? htmlspecialchars($params['body']) : null;
 		$status = isset($params['status'])? htmlspecialchars($params['status']) : 0;
 
 		if (empty($banner)) {
@@ -45,6 +47,12 @@ class M_Slider extends MY_Model {
 			$result['Error'] = true;
 			$result['Message'] = 'Title tidak boleh kosong';
 
+			goto output;
+		}else if(empty($body)) {
+			$result = array(
+				'Error' => true,
+				'Message' => 'Body tidak boleh kosong'
+			);
 			goto output;
 		}
 
@@ -74,6 +82,7 @@ class M_Slider extends MY_Model {
 		$data = [
 			'banner' => $upload['Url'],
 			'title' => $title,
+			'body' => $body,
 			'slug' => $slug,
 			'status' => $status
 		];
@@ -93,6 +102,7 @@ class M_Slider extends MY_Model {
 		$id_slider = isset($params['id_slider'])? htmlspecialchars($params['id_slider']) : '';
 		$banner = isset($params['banner'])? htmlspecialchars($params['banner']) : '';
 		$title = isset($params['title'])? htmlspecialchars($params['title']) : '';
+		$body = isset($params['body']) ? htmlspecialchars($params['body']) : null;
 		$status = isset($params['status'])? htmlspecialchars($params['status']) : 0;
 
 		if (empty($id_slider)) {
@@ -103,7 +113,14 @@ class M_Slider extends MY_Model {
 			$result['Error'] = true;
 			$result['Message'] = 'Title tidak boleh kosong';
 			goto output;
+		}else if(empty($body)) {
+			$result = array(
+				'Error' => true,
+				'Message' => 'Body tidak boleh kosong'
+			);
+			goto output;
 		}
+
 		$slider = $this->db->query("SELECT
 										id as id_slider,
 										banner,
@@ -146,6 +163,7 @@ class M_Slider extends MY_Model {
 		$data = [
 			'banner' => $upload['Url'],
 			'title' => $title,
+			'body' => $body,
 			'slug' => $slug,
 			'status' => $status
 		];

@@ -1,3 +1,0 @@
-ERROR - 2020-06-03 03:57:46 --> 404 Page Not Found: Systeminfo/index
-ERROR - 2020-06-03 03:57:48 --> 404 Page Not Found: Jpstoreidcdn/fav.png
-ERROR - 2020-06-03 23:45:35 --> Severity: Warning --> unlink(/home/adminjp/public_html/storage/): Is a directory /home/adminjp/public_html/api/app/libraries/Upload_image.php 76

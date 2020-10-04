@@ -1,6 +1,0 @@
-ERROR - 2020-06-04 02:00:22 --> Severity: Warning --> Invalid argument supplied for foreach() /home/adminjp/public_html/api/app/models/M_Product_diskusi.php 91
-ERROR - 2020-06-04 14:10:17 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at /home/adminjp/public_html/api/app/models/seller/M_Product.php:1) /home/adminjp/public_html/api/lib/core/Common.php 570
-ERROR - 2020-06-04 14:10:21 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at /home/adminjp/public_html/api/app/models/seller/M_Product.php:1) /home/adminjp/public_html/api/lib/core/Common.php 570
-ERROR - 2020-06-04 14:10:30 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at /home/adminjp/public_html/api/app/models/seller/M_Product.php:1) /home/adminjp/public_html/api/lib/core/Common.php 570
-ERROR - 2020-06-04 15:10:20 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/adminjp/public_html/api/app/models/user/M_Pembelian.php 1419
-ERROR - 2020-06-04 15:10:20 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/adminjp/public_html/api/app/models/user/M_Pembelian.php 1425
