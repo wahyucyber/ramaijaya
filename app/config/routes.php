@@ -79,3 +79,5 @@ $route['user/(:any)'] = 'User/$1';
 $route['user/pembelian/detail/(:any)'] = 'User/pembelian_detail/$1';
 
 $route['user/ulasan/detail/(:any)'] = 'User/ulasan_detail/$1';
+
+$route['blog/(:any)'] = "Blog/index/$1";

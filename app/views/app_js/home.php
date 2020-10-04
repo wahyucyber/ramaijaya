@@ -51,7 +51,7 @@
 				}else{
 					$.each(res.Data,(index ,data) => {
 
-						output += `<a href="javascript:;"><img src="${data.banner_slider}" alt="${data.title}"></a>`
+						output += `<a href="<?php echo base_url('') ?>blog/${data.slug}"><img src="${data.banner_slider}" alt="${data.title}"></a>`
 
 					})
 

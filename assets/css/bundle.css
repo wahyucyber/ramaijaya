@@ -74,6 +74,7 @@
 @import url(../ext/chart/Chart.min.css);
 @import url(./step--status.css);
 @import url(./faq.css);
+@import url(./blog.css);
 
 .text-caret {
 	text-decoration: line-through;

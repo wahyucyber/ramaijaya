@@ -35,7 +35,7 @@ class M_Slider extends MY_Model {
 
 		$banner = isset($params['banner'])? htmlspecialchars($params['banner']) : null;
 		$title = isset($params['title'])? htmlspecialchars($params['title']) : null;
-		$body = isset($params['body']) ? htmlspecialchars($params['body']) : null;
+		$body = isset($params['body']) ? $params['body'] : null;
 		$status = isset($params['status'])? htmlspecialchars($params['status']) : 0;
 
 		if (empty($banner)) {
@@ -102,7 +102,7 @@ class M_Slider extends MY_Model {
 		$id_slider = isset($params['id_slider'])? htmlspecialchars($params['id_slider']) : '';
 		$banner = isset($params['banner'])? htmlspecialchars($params['banner']) : '';
 		$title = isset($params['title'])? htmlspecialchars($params['title']) : '';
-		$body = isset($params['body']) ? htmlspecialchars($params['body']) : null;
+		$body = isset($params['body']) ? $params['body'] : null;
 		$status = isset($params['status'])? htmlspecialchars($params['status']) : 0;
 
 		if (empty($id_slider)) {

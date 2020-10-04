@@ -1,0 +1,28 @@
+small.blog--description {
+   font-size: 11px;
+}
+
+div.blog--thumbnail {
+   float: left;
+   width: 50%;
+   padding-right: 20px;
+   padding-bottom: 10px;
+}
+
+div.blog--thumbnail img {
+   width: 100%;
+   object-fit: cover;
+   height: 250px;
+}
+
+div.blog--body {
+   text-indent: 30px;
+   font-size: 13px;
+}
+
+@media (max-width: 360px) {
+   div.blog--thumbnail {
+      float: none;
+      width: 100%;
+   }
+}
