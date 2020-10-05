@@ -40,6 +40,7 @@
 		'ext/select2/dist/css/select2.min.css',
 		'ext/slick/slick-theme.css',
 		'ext/slick/slick.css',
+		'ext/emoji/emojionearea.min.css',
 		'css/bundle.css',
 		'css/seller-profil.css'
 	]); ?>
@@ -207,6 +208,7 @@ if (segment(1) == 'login' || segment(1) == 'register' || segment(1) == 'forgot')
 	'ext/chart/Chart.min.js',
 	'ext/datetimerangepicker/moment.min.js',
 	'ext/datetimerangepicker/daterangepicker.js',
+	'ext/emoji/emojionearea.min.js',
 	'js/bundle.js',
 	'js/module.js'
 ]); ?>

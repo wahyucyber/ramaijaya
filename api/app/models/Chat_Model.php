@@ -293,8 +293,9 @@ class Chat_Model extends MY_Model {
 		$client_token = isset($params['client_token'])? $params['client_token'] : '';
 		$slug_toko = isset($params['slug_toko'])? $params['slug_toko'] : '';
 		$penerima_id = isset($params['penerima_id'])? $params['penerima_id'] : '';
-		$pesan = isset($params['pesan'])? $params['pesan'] : '';
+		$pesan = isset($params['pesan'])? htmlspecialchars($params['pesan']) : '';
 		$pesan = trim($pesan);
+
 		if (empty($client_token)) {
 			$result['Error'] = true;
 			$result['Message'] = "Parameter client_token tidak diset";

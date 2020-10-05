@@ -107,6 +107,12 @@
 
 	var chat = new Chat
 
+	$("#emojionearea").emojioneArea({
+      hideSource: false,
+		useSprite: false,
+		inline: true
+    });
+
 	function playNotif()
 	{
 		var audio = new Audio(base_url('assets/audio/chat_notification.mp3'));
@@ -139,6 +145,7 @@
 		var text = $('.chat--box .form--type-msg').val(),
 		        id = $(this).parents('.chat--box-footer').attr('data-id')
 		chat.send(text,id)
+		$("div.emojionearea-editor").html('');
 		$('.chat--box .form--type-msg').val('')
 		$('.chat--box').trigger('save.chat')
 	});

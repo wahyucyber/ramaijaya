@@ -57,7 +57,7 @@
 				<div class="chat--box-footer">
 					<div class="chat--footer-content">
 						<div class="chat--type-msg">
-							<textarea rows="1" class="form-control form--type-msg" placeholder="Tulis Pesan"></textarea>
+							<textarea rows="1" class="form-control form--type-msg none" id="emojionearea" placeholder="Tulis Pesan"></textarea>
 						</div>
 						<div class="chat--send-btn">
 							<button class="btn btn--chat-send bg-orange"><i class="fas fa-angle-right"></i></button>

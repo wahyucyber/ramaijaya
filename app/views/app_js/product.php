@@ -401,6 +401,12 @@
 	}
 
 	var product = new Product;
+
+	$("#emojionearea").emojioneArea({
+      hideSource: false,
+		useSprite: false,
+		inline: true
+    });
 	
 	function playNotif()
 	{
@@ -443,6 +449,7 @@
         	}
 		}
 		product.chat_send(text)
+		$("div.emojionearea-editor").html('');
 		$('.chat--content .form--type-msg').val('')
 	});
 
