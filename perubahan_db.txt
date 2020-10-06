@@ -1,1 +1,0 @@
-ALTER TABLE `mst_toko` ADD `kasier_id_sinkron_date` DATE NULL DEFAULT NULL COMMENT 'terakhir sinkronisasi data' AFTER `kasier_id_key`;
