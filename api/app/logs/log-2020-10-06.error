@@ -12,3 +12,46 @@ ERROR - 2020-10-06 21:25:52 --> Query error: Unknown column 'toko_id' in 'where 
 WHERE `toko_id` = '11'
 ERROR - 2020-10-06 21:26:41 --> Query error: Unknown column 'toko_id' in 'where clause' - Invalid query: UPDATE `mst_toko` SET `kasier_id_key` = '9a8b1eff-da3b-482c-bd11-023ceb2e0cc2'
 WHERE `toko_id` = '11'
+ERROR - 2020-10-06 22:01:50 --> 404 Page Not Found: Sinkron/produk
+ERROR - 2020-10-06 22:01:56 --> 404 Page Not Found: Sinkron/produk
+ERROR - 2020-10-06 22:03:02 --> Query error: Incorrect TIMESTAMP value: '' - Invalid query: 
+         SELECT
+            id,
+            nama_produk,
+            keterangan,
+            harga,
+            diskon,
+            berat,
+            stok,
+            kategori_id
+         FROM
+            mst_produk
+         WHERE
+            toko_id = '11' AND
+            updated_at > ''
+      
+ERROR - 2020-10-06 22:03:02 --> Severity: error --> Exception: Call to a member function result_array() on bool /var/www/html/ramaijaya/api/app/models/M_Sinkron.php 64
+ERROR - 2020-10-06 23:00:36 --> Query error: Unknown column 'mst_kategori.nama' in 'field list' - Invalid query: 
+         SELECT
+            mst_kategori.id,
+            mst_kategori.nama
+         FROM
+            mst_produk
+            LEFT JOIN mst_kategori ON mst_kategori.id = mst_produk.kategori_id
+         WHERE
+            mst_produk.toko_id = '11'
+         GROUP BY kategori_id
+      
+ERROR - 2020-10-06 23:00:36 --> Severity: error --> Exception: Call to a member function result_array() on bool /var/www/html/ramaijaya/api/app/models/M_Sinkron.php 59
+ERROR - 2020-10-06 23:00:54 --> Query error: Unknown column 'mst_kategori.nama' in 'field list' - Invalid query: 
+         SELECT
+            mst_kategori.id,
+            mst_kategori.nama
+         FROM
+            mst_produk
+            LEFT JOIN mst_kategori ON mst_kategori.id = mst_produk.kategori_id
+         WHERE
+            mst_produk.toko_id = '11'
+         GROUP BY mst_produk.kategori_id
+      
+ERROR - 2020-10-06 23:00:54 --> Severity: error --> Exception: Call to a member function result_array() on bool /var/www/html/ramaijaya/api/app/models/M_Sinkron.php 59

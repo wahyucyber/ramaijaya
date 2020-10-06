@@ -1,0 +1,4 @@
+ERROR - 2020-10-07 00:45:17 --> Query error: Unknown column 'kasier_id_sinkron_date' in 'field list' - Invalid query: UPDATE `mst_produk` SET `kasier_id_sinkron_date` = '2020-10-07'
+WHERE `id` = '11'
+ERROR - 2020-10-07 00:45:18 --> Query error: Unknown column 'kasier_id_sinkron_date' in 'field list' - Invalid query: UPDATE `mst_produk` SET `kasier_id_sinkron_date` = '2020-10-07'
+WHERE `id` = '11'
