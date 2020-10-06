@@ -56,6 +56,12 @@
 				</div>
 				<div class="chat--box-footer">
 					<div class="chat--footer-content">
+						<input type="file" name="" class="_files none" multiple="multiple">
+						<div class="_files--output">
+						</div>
+						<div class="field _files" style="padding: 4px 10px; border: 1px solid #ddd; margin-right: 5px; border-radius: 50%; cursor: pointer;">
+							<i class="fas fa-file-archive"></i>
+						</div>
 						<div class="chat--type-msg">
 							<textarea rows="1" class="form-control form--type-msg none" id="emojionearea" placeholder="Tulis Pesan"></textarea>
 						</div>

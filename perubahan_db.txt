@@ -1,0 +1,2 @@
+*  pusher_chat_file
+   -  menambahkan tabel baru

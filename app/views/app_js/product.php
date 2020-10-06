@@ -45,12 +45,25 @@
                                             </div>
                                         </li>`
 						}else{
-						    output += `<li class="chat--msg-item ${data.reply? 'reply' : ''}"> 
+							 output += `
+							 <li class="chat--msg-item ${data.reply? 'reply' : ''}"> 
 								<div class="msg--text-content"> 
-									<div class="msg--text">${data.pesan}</div> 
+									<div class="msg--text">${data.pesan}</div>
 									<div class="msg--since">${data.waktu}</div>
 								</div> 
 							</li>`
+
+							if(data.files.length != 0) {
+								$.each(data.files, function (indexFile, valueFile) { 
+									 output += `
+										<li class="chat--msg-item ${data.reply? 'reply' : ''}"> 
+											<div class="msg--text-content"> 
+												<div class="msg--text" style="font-size: 11px;"><a href="${valueFile.file}" target="_blank">${valueFile.file.replace('<?php echo base_url('cdn/chat/'); ?>', '')}</a></div>
+												<div class="msg--since">${data.waktu}</div>
+											</div> 
+										</li>`;
+								});
+							}
 						}
 					})
 
@@ -60,12 +73,13 @@
 			})
 		}
 		
-		chat_send(content)
+		chat_send(content, files)
 		{
 			var data = {
 				slug_toko: uri_segment(2),
 				client_token: $jp_client_token,
-				pesan: content
+				pesan: content,
+				files: files
 			}
 			callApi('chat/send/',data,function(res){
 				if (res.Error) {
@@ -84,6 +98,7 @@
 				meta_url: data.url,
 				meta_image: data.image,
 				meta_title: data.title,
+				files: data.files,
 				meta_description: data.description
 			}
 			callApi('chat/send_meta/',data,function(res){
@@ -398,6 +413,20 @@
 			})
 		}
 
+		getBase64(file) {
+			// for (let index = 0; index < file.length; index++) {
+				var reader = new FileReader();
+				// reader.readAsDataURL(file[index]);
+				reader.readAsDataURL(file);
+				reader.onload = function () {
+					$("div._files--output").append(`<input type="hidden" name="" class="_files" value="${reader.result}">`);
+				};
+				reader.onerror = function (error) {
+					console.log('Error: ', error);
+				};
+			// }
+		}
+
 	}
 
 	var product = new Product;
@@ -424,6 +453,13 @@
 	
 	$(document).on('click', '.chat--content .btn--chat-send', function(event) {
 		event.preventDefault();
+
+		var files = [];
+		var no = 1;
+		$.each($("input[type=hidden]._files"), function (index, value) { 
+			files.push($(this).val());
+		});
+
 		var meta_url = $('.chat--content .placeholder--meta').attr('data-url'),
 		meta_image = $('.chat--content .placeholder--meta').attr('data-image'),
 		meta_title = $('.chat--content .placeholder--meta').attr('data-title'),
@@ -432,7 +468,8 @@
 		data = {
 		    url: meta_url,
 		    image: meta_image,
-		    title: meta_title,
+			 title: meta_title,
+			 files: files,
 		    description: meta_description
 		}
 		if (meta_url && text) {
@@ -448,8 +485,9 @@
         	    })
         	}
 		}
-		product.chat_send(text)
+		product.chat_send(text, files)
 		$("div.emojionearea-editor").html('');
+		$("div._files--output").html(``);
 		$('.chat--content .form--type-msg').val('')
 	});
 
@@ -517,6 +555,16 @@
 			redirect('login?continue='+base_url(window.location.pathname))
 		}
 
+	})
+
+	$(document).on("click", "div._files", function() {
+		$("input[type=file]._files").trigger('click');
+	})
+
+	$(document).on("change", "input[type=file]._files", function(e) {
+		for (let index = 0; index < e.target.files.length; index++) {
+			product.getBase64(e.target.files[index]);
+		}
 	})
 	
 

@@ -5,6 +5,8 @@ class Chat_Model extends MY_Model {
 
 	protected $tabel = 'pusher_chat';
 
+	protected $pusher_chat_file = 'pusher_chat_file';
+
 	protected $tabel_pusher = 'pusher';
 
 	protected $tabel_user = 'mst_user';
@@ -128,8 +130,36 @@ class Chat_Model extends MY_Model {
 										$this->tabel.channel ='$chat_channel[channel]'
 									ORDER BY $this->tabel.created_at ASC");
 		if ($chat->num_rows() > 0) {
+
+			$where_pusher_chat_file = "";
+			foreach ($chat->result_array() as $key) {
+				$where_pusher_chat_file .= $key['id'].",";
+			}
+
+			$get_files = $this->db->query("
+				SELECT
+					id,
+					pusher_chat_id,
+					file
+				FROM
+					$this->pusher_chat_file
+				WHERE
+					pusher_chat_id IN (".rtrim($where_pusher_chat_file, ',').")
+			")->result_array();
+
 			$no = 0;
 			foreach($chat->result_array() as $key){
+
+				$msgFiles = [];
+				$msgFiles_no = 0;
+				foreach ($get_files as $files) {
+					if($files['pusher_chat_id'] == $key['id']) {
+						$msgFiles[$msgFiles_no++] = [
+							'file' => str_replace('api/', '', base_url()).$files['file']
+						];
+					}
+				}
+
 				$result['Error'] = false;
 				$result['Message'] = null;
 				$result['Data'][$no++] = [
@@ -137,6 +167,7 @@ class Chat_Model extends MY_Model {
 					'channel' => $key['channel'],
 					'nama' => $key['nama'],
 					'pesan' => $key['pesan'],
+					'files' => $msgFiles,
 					'reply' => $key['user_id'] == $user['id']? false : true,
 					'waktu' => date('Y-m-d H:i',strtotime($key['waktu'])),
 					'meta_url' => $key['meta_url'],
@@ -295,6 +326,7 @@ class Chat_Model extends MY_Model {
 		$penerima_id = isset($params['penerima_id'])? $params['penerima_id'] : '';
 		$pesan = isset($params['pesan'])? htmlspecialchars($params['pesan']) : '';
 		$pesan = trim($pesan);
+		$files = $params['files'] ?? [];
 
 		if (empty($client_token)) {
 			$result['Error'] = true;
@@ -406,7 +438,13 @@ class Chat_Model extends MY_Model {
 				];
 
 				$add_chat = $this->db->insert($this->tabel,$data_chat);
+
 				if ($add_chat) {
+
+					$this->_files([
+						'pusher_chat_id' => $this->db->insert_id(),
+						'files' => $files
+					]);
 
 					$result['Error'] = false;
 					$result['Message'] = "Berhasil mengirim pesan";
@@ -436,6 +474,11 @@ class Chat_Model extends MY_Model {
 			$add_chat = $this->db->insert($this->tabel,$data_chat);
 			if ($add_chat) {
 
+				$this->_files([
+					'pusher_chat_id' => $this->db->insert_id(),
+					'files' => $files
+				]);
+
 				$result['Error'] = false;
 				$result['Message'] = "Berhasil mengirim pesan";
 				$config['user_id'] = $receiver;
@@ -454,6 +497,89 @@ class Chat_Model extends MY_Model {
 		return $result;
 
 	}
+
+	private function _files($params) {
+		$files = $params['files'];
+		$pusher_chat_id = $params['pusher_chat_id'];
+
+		$lokasi_file_upload = str_replace('/api', '', str_replace('\api', '', FCPATH))."storage/chat/";
+
+		if (!file_exists($lokasi_file_upload)) {
+			$old = umask(0);
+			mkdir($lokasi_file_upload, 0777);
+			umask($old);
+		}
+
+		$mimes = [
+			'image/pjpeg' => '.jpeg',
+			'image/jpeg' => '.jpeg',
+			'image/gif' => '.gif',
+			'application/pdf' => '.pdf',
+			'application/x-pdf' => '.pdf',
+			'application/mspowerpoint' => '.ppt',
+			'application/powerpoint' => '.ppt',
+			'application/vnd.ms-powerpoint' => '.ppt',
+			'application/x-mspowerpoint' => '.ppt',
+			'application/msword' => '.word',
+			'application/excel' => '.xls',
+			'application/vnd.ms-excel' => '.xls',
+			'application/x-excel' => '.xls',
+			'application/x-msexcel' => '.xls',
+			'application/x-compressed' => '.zip',
+			'application/x-zip-compressed' => '.zip',
+			'application/zip' => '.zip',
+			'multipart/x-zip' => '.zip',
+		];
+
+		$output = [];
+
+		$file = [];
+		$file_no = 0;
+
+		if (count($files) != 0) {
+			for ($i=0; $i < count($files); $i++) { 
+				$get_info = explode(";base64,", $files[$i]);
+				$mime_type = str_replace('data:', "", $get_info[0]);
+
+				$base64 = base64_decode(str_replace("data:".$mime_type.";base64,", "", $files[$i]));
+
+				$nama_file = $this->generate_code().$i;
+
+				$nama_file_baru = strtoupper($nama_file).$mimes[$mime_type];
+
+				if(isset($mimes[$mime_type])) {
+
+					file_put_contents($lokasi_file_upload.$nama_file_baru, $base64);
+
+					$file[$file_no++] = [
+						'pusher_chat_id' => $pusher_chat_id,
+						'file' => "cdn/chat/".$nama_file_baru
+					];
+
+					$output[$file_no++] = [
+						'file' => str_replace('api/', '', base_url())."cdn/chat/".$nama_file_baru
+					];
+				}
+			}
+
+			$this->db->insert_batch($this->pusher_chat_file, $file);
+		}
+
+		return $output;
+	}
+
+	public function generate_code()
+    {
+        mt_srand((double)microtime()*10000);
+        $charid = strtoupper(md5(uniqid(rand(), true)));
+        $hyphen = chr(45);
+        $result = substr($charid, 0, 8).$hyphen
+            .substr($charid, 8, 4).$hyphen
+            .substr($charid, 12, 4).$hyphen
+            .substr($charid, 16, 4).$hyphen
+            .substr($charid, 20, 12);
+        return $result;
+    }
 
 	function send_meta($params)
 	{

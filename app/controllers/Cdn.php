@@ -14,7 +14,7 @@ class Cdn extends CI_Controller {
 			header("Content-type: {$imginfo['mime']}");
 			readfile($lokasi);
 		}else{
-			echo 'Not Found';
+			echo 'Not Found'.$lokasi;
 		}
 
 		// echo FCPATH . "storage\\".$file;

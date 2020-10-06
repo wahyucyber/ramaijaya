@@ -78,6 +78,18 @@
     									<div class="msg--since">${data.waktu}</div>
 									</div>
 								</li>`
+
+								if(data.files.length != 0) {
+								$.each(data.files, function (indexFile, valueFile) { 
+									 output += `
+										<li class="chat--msg-item ${data.reply? 'reply' : ''}"> 
+											<div class="msg--text-content"> 
+												<div class="msg--text" style="font-size: 11px;"><a href="${valueFile.file}" target="_blank">${valueFile.file.replace('<?php echo base_url('cdn/chat/'); ?>', '')}</a></div>
+												<div class="msg--since">${data.waktu}</div>
+											</div> 
+										</li>`;
+								});
+							}
 					    }
 					})
 					$('#chat--content-right').html(output)
@@ -88,12 +100,13 @@
 			})
 		}
 
-		send(text,id)
+		send(text,id, files)
 		{
 			var data = {
 				penerima_id: id,
 				client_token: $jp_client_token,
-				pesan: text
+				pesan: text,
+				files: files
 			}
 			callApi('chat/send/',data,function(res){
 				if (res.Error) {
@@ -102,6 +115,20 @@
 					chat.load()
 				}
 			})
+		}
+		
+		getBase64(file) {
+			// for (let index = 0; index < file.length; index++) {
+				var reader = new FileReader();
+				// reader.readAsDataURL(file[index]);
+				reader.readAsDataURL(file);
+				reader.onload = function () {
+					$("div._files--output").append(`<input type="hidden" name="" class="_files" value="${reader.result}">`);
+				};
+				reader.onerror = function (error) {
+					console.log('Error: ', error);
+				};
+			// }
 		}
 	}
 
@@ -143,11 +170,28 @@
 	$(document).on('click', '.chat--box .btn--chat-send', function(event) {
 		event.preventDefault();
 		var text = $('.chat--box .form--type-msg').val(),
-		        id = $(this).parents('.chat--box-footer').attr('data-id')
-		chat.send(text,id)
+				  id = $(this).parents('.chat--box-footer').attr('data-id')
+
+		var files = [];
+		var no = 1;
+		$.each($("input[type=hidden]._files"), function (index, value) { 
+			files.push($(this).val());
+		});
+				  
+		chat.send(text,id, files);
 		$("div.emojionearea-editor").html('');
 		$('.chat--box .form--type-msg').val('')
 		$('.chat--box').trigger('save.chat')
 	});
+
+	$(document).on("click", "div._files", function() {
+		$("input[type=file]._files").trigger('click');
+	})
+
+	$(document).on("change", "input[type=file]._files", function(e) {
+		for (let index = 0; index < e.target.files.length; index++) {
+			chat.getBase64(e.target.files[index]);
+		}
+	})
 
 </script>

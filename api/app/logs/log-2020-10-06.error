@@ -1,0 +1,5 @@
+ERROR - 2020-10-06 19:25:27 --> Severity: Warning --> mysqli::query(): (HY001/1038): Out of sort memory, consider increasing server sort buffer size /var/www/html/ramaijaya/api/lib/database/drivers/mysqli/mysqli_driver.php 307
+ERROR - 2020-10-06 19:25:27 --> Query error: Out of sort memory, consider increasing server sort buffer size - Invalid query: SELECT * FROM mst_produk 
+										WHERE status = 1 AND verifikasi = 1 
+										ORDER BY created_at DESC LIMIT 0,5
+ERROR - 2020-10-06 19:25:27 --> Severity: error --> Exception: Call to a member function result_array() on bool /var/www/html/ramaijaya/api/app/models/M_Search.php 36
