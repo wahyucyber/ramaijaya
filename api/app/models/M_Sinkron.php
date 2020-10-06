@@ -103,11 +103,11 @@ class M_Sinkron extends MY_Model {
       $toko_id = $get_toko->row_array()['id'];
       $sinkron_date = $get_toko->row_array()['terakhir_sinkron'];
 
-      // $this->db->update($this->toko, array(
-      //    'kasier_id_sinkron_date' => date('Y-m-d')
-      // ), array(
-      //    'id' => $toko_id
-      // ));
+      $this->db->update($this->toko, array(
+         'kasier_id_sinkron_date' => date('Y-m-d')
+      ), array(
+         'id' => $toko_id
+      ));
 
       $where = (!empty($sinkron_date)) ? " AND DATE(updated_at) > '$sinkron_date'" : "";
 
