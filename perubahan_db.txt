@@ -1,2 +1,2 @@
-*  pusher_chat_file
-   -  menambahkan tabel baru
+ALTER TABLE `mst_toko` ADD `kasier_id_key` VARCHAR(255) NOT NULL COMMENT 'kasier id key untuk menyambungkan produk ramaijaya ke kasier.id' AFTER `catatan_diblokir`, ADD INDEX (`kasier_id_key`);
+ALTER TABLE `mst_toko` CHANGE `kasier_id_key` `kasier_id_key` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL COMMENT 'kasier id key untuk menyambungkan produk ramaijaya ke kasier.id';

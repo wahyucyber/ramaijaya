@@ -28,6 +28,9 @@
 			  <li class="nav-item">
 			    <a class="nav-link<?= $tabs == 8? ' active' : ''; ?>"  href="<?= base_url('seller/setting/shop?tab=8'); ?>"><i class="fal fa-car-side"></i> Kurir</a>
 			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link<?= $tabs == 9? ' active' : ''; ?>"  href="<?= base_url('seller/setting/shop?tab=9'); ?>"><i class="fal fa-cash-register"></i> Kasier.id</a>
+			  </li>
 			</ul>
 
 			<div class="tab-content">
