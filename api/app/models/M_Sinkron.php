@@ -73,6 +73,7 @@ class M_Sinkron extends MY_Model {
    public function produk($params)
    {
       $key = $params['key'];
+      $date = $params['date'] ?? "";
 
       if(empty($key)) {
          $output = array(
@@ -84,8 +85,7 @@ class M_Sinkron extends MY_Model {
 
       $get_toko = $this->db->query("
          SELECT
-            id,
-            kasier_id_sinkron_date AS terakhir_sinkron
+            id
          FROM
             $this->toko
          WHERE
@@ -101,15 +101,9 @@ class M_Sinkron extends MY_Model {
       }
 
       $toko_id = $get_toko->row_array()['id'];
-      $sinkron_date = $get_toko->row_array()['terakhir_sinkron'];
+      $sinkron_date = $date;
 
-      $this->db->update($this->toko, array(
-         'kasier_id_sinkron_date' => date('Y-m-d')
-      ), array(
-         'id' => $toko_id
-      ));
-
-      $where = (!empty($sinkron_date)) ? " AND DATE(updated_at) > '$sinkron_date'" : "";
+      $where = (!empty($sinkron_date)) ? " AND DATE(updated_at) >= '$sinkron_date'" : "";
 
       $get_produk = $this->db->query("
          SELECT
