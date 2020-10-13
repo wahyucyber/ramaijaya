@@ -28,8 +28,7 @@ class M_Sinkron extends MY_Model {
 
       $get_toko = $this->db->query("
          SELECT
-            id,
-            kasier_id_sinkron_date AS terakhir_sinkron
+            id
          FROM
             $this->toko
          WHERE

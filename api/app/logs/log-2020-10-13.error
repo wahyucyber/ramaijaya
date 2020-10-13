@@ -1,0 +1,20 @@
+ERROR - 2020-10-13 18:38:09 --> Query error: Unknown column 'kasier_id_sinkron_date' in 'field list' - Invalid query: 
+         SELECT
+            id,
+            kasier_id_sinkron_date AS terakhir_sinkron
+         FROM
+            mst_toko
+         WHERE
+            kasier_id_key = '19a72649-4a06-45ac-a7d5-18706049071e'
+      
+ERROR - 2020-10-13 18:38:09 --> Severity: error --> Exception: Call to a member function num_rows() on bool /var/www/html/ramaijaya/api/app/models/M_Sinkron.php 39
+ERROR - 2020-10-13 18:38:14 --> Query error: Unknown column 'kasier_id_sinkron_date' in 'field list' - Invalid query: 
+         SELECT
+            id,
+            kasier_id_sinkron_date AS terakhir_sinkron
+         FROM
+            mst_toko
+         WHERE
+            kasier_id_key = '19a72649-4a06-45ac-a7d5-18706049071e'
+      
+ERROR - 2020-10-13 18:38:14 --> Severity: error --> Exception: Call to a member function num_rows() on bool /var/www/html/ramaijaya/api/app/models/M_Sinkron.php 39
