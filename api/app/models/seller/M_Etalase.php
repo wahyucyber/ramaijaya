@@ -34,8 +34,8 @@ class M_Etalase extends MY_Model {
       }
 
       $this->db->insert($this->etalase, array(
-         'nama' => $nama,
-         'user_id' => $this->_user($client_token)['toko_id']
+         'nama_etalase' => $nama,
+         'toko_id' => $this->_user($client_token)['toko_id']
       ));
       
       $output = array(
@@ -152,7 +152,6 @@ class M_Etalase extends MY_Model {
             $this->etalase
          WHERE
             id = '$id' AND
-            status = '1' AND
             toko_id = '$toko_id'
       ")->num_rows();
 
@@ -207,7 +206,6 @@ class M_Etalase extends MY_Model {
          FROM
             $this->etalase
          WHERE
-            status = '1' AND
             toko_id = '$toko_id' AND
             id = '$id'
       ")->num_rows();
@@ -220,11 +218,9 @@ class M_Etalase extends MY_Model {
          goto output;
       }
 
-      $this->db->update($this->etalase, array(
-         'status' => '0'
-      ), array(
+      $this->db->delete($this->etalase, array(
+         'toko_id' => $toko_id,
          'id' => $id,
-         'toko_id' => $toko_id
       ));
       
       $output = array(

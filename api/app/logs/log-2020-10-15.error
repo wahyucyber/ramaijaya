@@ -1,0 +1,4 @@
+ERROR - 2020-10-15 13:12:49 --> Query error: Unknown column 'nama' in 'field list' - Invalid query: INSERT INTO `mst_etalase` (`nama`, `user_id`) VALUES ('sdfsfd', '11')
+ERROR - 2020-10-15 13:13:07 --> Query error: Unknown column 'nama' in 'field list' - Invalid query: INSERT INTO `mst_etalase` (`nama`, `user_id`) VALUES ('sdfsfd', '11')
+ERROR - 2020-10-15 13:13:26 --> Query error: Unknown column 'nama' in 'field list' - Invalid query: INSERT INTO `mst_etalase` (`nama`, `user_id`) VALUES ('sdfsfds', '11')
+ERROR - 2020-10-15 13:13:51 --> Query error: Unknown column 'user_id' in 'field list' - Invalid query: INSERT INTO `mst_etalase` (`nama_etalase`, `user_id`) VALUES ('sdfsfds', '11')

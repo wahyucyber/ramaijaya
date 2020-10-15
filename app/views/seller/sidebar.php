@@ -55,9 +55,12 @@
 					</li> -->
 				</ul>
 			</li>
-			<li class="list-item <?= segment(2) == 'product' || segment(2) == 'product' ? 'active' : '' ; ?>">
+			<li class="list-item <?= segment(2) == 'product' || segment(2) == 'etalase' ? 'active' : '' ; ?>">
 				<a href="javascript:;" class="btn-collapse"><i class="fad fa-briefcase _icon"></i> Produk <span class="fa _icon-right"></span></a>
-				<ul class="collapse <?= segment(2) == 'product' || segment(2) == 'product' ? 'show' : '' ; ?>">
+				<ul class="collapse <?= segment(2) == 'product' || segment(2) == 'etalase' ? 'show' : '' ; ?>">
+					<li class="list-item <?= segment(2) == 'etalase'? 'active' : '' ; ?>">
+						<a href="<?= base_url(); ?>seller/etalase" class="sub-list-item"><i class="fa fa-xs _icon"></i> Daftar Etalase</a>
+					</li>
 					<li class="list-item <?= segment(2) == 'product'? 'active' : '' ; ?>">
 						<a href="<?= base_url(); ?>seller/product" class="sub-list-item"><i class="fa fa-xs _icon"></i> Daftar Produk 
 						<!--<span class="badge badge-primary sidebar-list--notif">12</span>-->
