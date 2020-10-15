@@ -15,6 +15,8 @@ class M_Product extends MY_Model {
 
 	protected $grosir = "mst_produk_grosir";
 
+	protected $etalase = "mst_etalase";
+
 	public function __construct()
 	{
 		parent::__construct();
@@ -437,6 +439,7 @@ class M_Product extends MY_Model {
 		$nama_produk = isset($params['nama_produk'])? $params['nama_produk'] : '';
 		$kategori = isset($params['kategori'])? $params['kategori'] : '';
 		$sub_kategori = isset($params['sub_kategori'])? $params['sub_kategori'] : '';
+		$etalase = $params['etalase'];
 		$kondisi = isset($params['kondisi'])? $params['kondisi'] : 0;
 		$keterangan = isset($params['keterangan'])? $params['keterangan'] : '';
 		// $url_video = isset($params['url_video'])? $params['url_video'] : '';
@@ -468,6 +471,12 @@ class M_Product extends MY_Model {
 		}else if(empty($kategori)) {
 			$result['Error'] = true;
 			$result['Message'] = "Kategori produk tidak boleh kosong";
+			goto output;
+		}else if(empty($etalase)) {
+			$result = array(
+				'Error' => true,
+				'Message' => "Etaalse produk tidak boleh kosong."
+			);
 			goto output;
 		}else if(empty($keterangan)) {
 			$result['Error'] = true;
@@ -611,6 +620,7 @@ class M_Product extends MY_Model {
 					// 'lama_preorder' => $lama_preorder,
 					// 'waktu_preorder' => $waktu_preorder,
 					'kategori_id' => $kategori,
+					'etalase_id' => $etalase,
 					'slug' => $slug,
 					'status' => 1
 				];
@@ -685,6 +695,7 @@ class M_Product extends MY_Model {
 		$nama_produk = isset($params['nama_produk'])? $params['nama_produk'] : '';
 		$kategori = isset($params['kategori'])? $params['kategori'] : '';
 		$sub_kategori = isset($params['sub_kategori'])? $params['sub_kategori'] : '';
+		$etalase = $params['etalase'];
 		$kondisi = isset($params['kondisi'])? $params['kondisi'] : 0;
 		$keterangan = isset($params['keterangan'])? $params['keterangan'] : '';
 		// $url_video = isset($params['url_video'])? $params['url_video'] : '';
@@ -716,6 +727,12 @@ class M_Product extends MY_Model {
 		}else if(empty($kategori)) {
 			$result['Error'] = true;
 			$result['Message'] = "Kategori produk tidak boleh kosong";
+			goto output;
+		}else if(empty($etalase)) {
+			$result = array(
+				'Error' => true,
+				'Message' => "Etaalse produk tidak boleh kosong."
+			);
 			goto output;
 		}else if(empty($keterangan)) {
 			$result['Error'] = true;
@@ -847,6 +864,7 @@ class M_Product extends MY_Model {
 					// 'lama_preorder' => $lama_preorder,
 					// 'waktu_preorder' => $waktu_preorder,
 					'kategori_id' => $kategori,
+					'etalase_id' => $etalase,
 					'slug' => $slug,
 					'status' => 1
 				];

@@ -116,7 +116,7 @@
 							</div>
 						</div>
 					</div>
-					<!-- <div class="form-group mb-4">
+					<div class="form-group mb-4">
 						<div class="row">
 							<div class="col-md-3">
 								<label for="">Etalase</label>
@@ -124,18 +124,14 @@
 							<div class="col-md-9">
 								<div class="row">
 									<div class="col-md-6 mb-3">
-										<select class="form-control select2 input-kategori" data-placeholder="Pilih Etalase">
+										<select name="" id="" class="form-control etalase select2" data-placeholder="Pilih Etalase">
 											<option value=""></option>
-											<option value="add">Tambah Etalase</option>
 										</select>
-									</div>
-									<div class="col-md-6 mb-3">
-										<input type="text" class="form-control" placeholder="Masukkan Nama Etalase">
 									</div>
 								</div>
 							</div>
 						</div>
-					</div> -->
+					</div>
 				</div>
 			</div>
 			<div class="card mb-3 shadow">

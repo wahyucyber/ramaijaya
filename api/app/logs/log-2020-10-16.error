@@ -1,0 +1,47 @@
+ERROR - 2020-10-16 06:12:46 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'ramaijay_root'@'localhost' (using password: YES) /var/www/html/ramaijaya/api/lib/database/drivers/mysqli/mysqli_driver.php 203
+ERROR - 2020-10-16 06:12:46 --> Unable to connect to the database
+ERROR - 2020-10-16 06:12:46 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'ramaijay_root'@'localhost' (using password: YES) /var/www/html/ramaijaya/api/lib/database/drivers/mysqli/mysqli_driver.php 203
+ERROR - 2020-10-16 06:12:46 --> Unable to connect to the database
+ERROR - 2020-10-16 06:12:46 --> Query error: Access denied for user 'ramaijay_root'@'localhost' (using password: YES) - Invalid query: 
+         SELECT
+            mst_user.id AS user_id,
+            mst_toko.id AS toko_id
+         FROM
+            mst_user
+            LEFT JOIN mst_toko ON mst_toko.user_id = mst_user.id
+         WHERE
+            mst_user.api_token = '7616c34df97e9807c459a38e1c704574d6a3a02510605374e8efefb7006a42cfe20bc1e2e7621b3e1732e2523f949a78712a'
+      
+ERROR - 2020-10-16 06:12:46 --> Severity: error --> Exception: Call to a member function row_array() on bool /var/www/html/ramaijaya/api/app/models/seller/M_Etalase.php 245
+ERROR - 2020-10-16 06:16:01 --> Query error: Unknown column 'status' in 'where clause' - Invalid query: 
+         SELECT
+            id
+         FROM
+            mst_etalase
+         WHERE
+            toko_id = '11' AND
+            status = '1'
+      
+ERROR - 2020-10-16 06:16:02 --> Severity: error --> Exception: Call to a member function num_rows() on bool /var/www/html/ramaijaya/api/app/models/seller/M_Etalase.php 80
+ERROR - 2020-10-16 06:16:28 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6 - Invalid query: 
+         SELECT
+            id
+         FROM
+            mst_etalase
+         WHERE
+            toko_id = '11' AND
+            
+      
+ERROR - 2020-10-16 06:16:28 --> Severity: error --> Exception: Call to a member function num_rows() on bool /var/www/html/ramaijaya/api/app/models/seller/M_Etalase.php 89
+ERROR - 2020-10-16 06:16:35 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6 - Invalid query: 
+         SELECT
+            id
+         FROM
+            mst_etalase
+         WHERE
+            toko_id = '11' AND
+            
+      
+ERROR - 2020-10-16 06:16:35 --> Severity: error --> Exception: Call to a member function num_rows() on bool /var/www/html/ramaijaya/api/app/models/seller/M_Etalase.php 89
+ERROR - 2020-10-16 06:34:21 --> 404 Page Not Found: Etalase/get
+ERROR - 2020-10-16 06:34:46 --> 404 Page Not Found: Etalase/get

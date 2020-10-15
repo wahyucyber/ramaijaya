@@ -16,6 +16,7 @@
 		constructor()
 		{
 			this.getKategori()
+			this.getEtalase();
 		}
 
 		getKategori()
@@ -71,6 +72,16 @@
 			})
 		}
 
+		getEtalase() {
+			callApi("seller/etalase/get", { client_token: $jp_client_token }, e => {
+				var option = `<option value="">Pilih Etalase</option>`;
+				$.each(e.Data, function (index, value) { 
+					option += `<option value="${value.id}">${value.nama}</option>`;
+				});
+				$("select.etalase").html(option);
+				$("select.etalase").select2('refresh');
+			})
+		}
 
 		add(cons)
 		{
@@ -79,6 +90,7 @@
 				nama_produk = $('.add-product-page input.nama_produk').val(),
 				kategori = $('.add-product-page select.kategori').val(),
 				sub_kategori = $('.add-product-page select.sub_kategori').val(),
+				etalase = $("select.etalase").val(),
 				kondisi = $('.add-product-page input[name=kondisi]:checked').val(),
 				keterangan = CKEDITOR.instances['ckeditor'].getData(),
 				min_beli = $('.add-product-page input.min_beli').val(),
@@ -122,6 +134,7 @@
 				nama_produk: nama_produk,
 				kategori: kategori,
 				sub_kategori: sub_kategori,
+				etalase: etalase,
 				kondisi: kondisi,
 				keterangan: keterangan,
 				url_video: null,

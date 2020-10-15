@@ -8,8 +8,9 @@
 	class EditProduct {
 		constructor()
 		{
-			this.HapusFoto = []
-			this.getKategori()
+			this.HapusFoto = [];
+			this.getKategori();
+			this.getEtalase();
 		}
 
 		run()
@@ -57,6 +58,8 @@
 							$('.edit-product-page select.sub_kategori').val(data.kategori_id).trigger('change')
 						},1000)
 					}
+
+					$("select.etalase").val(data.etalase_id).trigger('change');
 
 					if (data.preorder == 1) {
 
@@ -144,6 +147,17 @@
 			})
 		}
 
+		getEtalase() {
+			callApi("seller/etalase/get", { client_token: $jp_client_token }, e => {
+				var option = `<option value="">Pilih Etalase</option>`;
+				$.each(e.Data, function (index, value) { 
+					option += `<option value="${value.id}">${value.nama}</option>`;
+				});
+				$("select.etalase").html(option);
+				$("select.etalase").select2('refresh');
+			})
+		}
+
 		edit()
 		{
 			var foto_produk = $('input.data-product-image[data-base64]'),
@@ -151,6 +165,7 @@
 				nama_produk = $('.edit-product-page input.nama_produk').val(),
 				kategori = $('.edit-product-page select.kategori').val(),
 				sub_kategori = $('.edit-product-page select.sub_kategori').val(),
+				etalase = $("select.etalase").val(),
 				kondisi = $('.edit-product-page input[name=kondisi]:checked').val(),
 				keterangan = CKEDITOR.instances['ckeditor'].getData(),
 				min_beli = $('.edit-product-page input.min_beli').val(),
@@ -196,6 +211,7 @@
 				nama_produk: nama_produk,
 				kategori: kategori,
 				sub_kategori: sub_kategori,
+				etalase: etalase,
 				kondisi: kondisi,
 				keterangan: keterangan,
 				url_video: null,

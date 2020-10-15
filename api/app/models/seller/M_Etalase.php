@@ -75,8 +75,7 @@ class M_Etalase extends MY_Model {
          FROM
             $this->etalase
          WHERE
-            toko_id = '$toko_id' AND
-            status = '1'
+            toko_id = '$toko_id'
       ")->num_rows();
 
       $recordsFiltered = $this->db->query("
@@ -85,8 +84,7 @@ class M_Etalase extends MY_Model {
          FROM
             $this->etalase
          WHERE
-            toko_id = '$toko_id' AND
-            status = '1'
+            toko_id = '$toko_id'
             $where
       ")->num_rows();
 
@@ -94,14 +92,12 @@ class M_Etalase extends MY_Model {
          SELECT
             id,
             nama_etalase AS nama,
-            status,
             created_at,
             updated_at
          FROM
             $this->etalase
          WHERE
-            toko_id = '$toko_id' AND
-            status = '1'
+            toko_id = '$toko_id'
             $where
          $limit
       ")->result_array();
