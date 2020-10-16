@@ -6,7 +6,7 @@ class M_Sinkron extends MY_Model {
 
    private $toko = "mst_toko";
    private $produk = "mst_produk";
-   private $kategori = "mst_kategori";
+   private $etalase = "mst_etalase";
    
    public function __construct()
    {
@@ -14,7 +14,7 @@ class M_Sinkron extends MY_Model {
       //Do your magic here
    }
 
-   public function kategori($params)
+   public function etalase($params)
    {
       $key = $params['key'];
 
@@ -47,14 +47,14 @@ class M_Sinkron extends MY_Model {
 
       $get_produk = $this->db->query("
          SELECT
-            $this->kategori.id,
-            $this->kategori.nama_kategori AS nama
+            $this->etalase.id,
+            $this->etalase.nama_etalase AS nama
          FROM
             $this->produk
-            LEFT JOIN $this->kategori ON $this->kategori.id = $this->produk.kategori_id
+            LEFT JOIN $this->etalase ON $this->etalase.id = $this->produk.etalase_id
          WHERE
             $this->produk.toko_id = '$toko_id'
-         GROUP BY $this->produk.kategori_id
+         GROUP BY $this->produk.etalase_id
       ")->result_array();
 
       $output['Error'] = false;
@@ -113,7 +113,7 @@ class M_Sinkron extends MY_Model {
             diskon,
             berat,
             stok,
-            kategori_id
+            etalase_id
          FROM
             $this->produk
          WHERE

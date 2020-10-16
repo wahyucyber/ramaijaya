@@ -11,9 +11,9 @@ class Sinkron extends MY_Controller {
       $this->load->model('M_Sinkron', 'sinkron');
    }
 
-   public function kategori_get()
+   public function etalase_get()
    {
-      $result = $this->sinkron->kategori($this->get());
+      $result = $this->sinkron->etalase($this->get());
 
       $this->response($result);
    }
