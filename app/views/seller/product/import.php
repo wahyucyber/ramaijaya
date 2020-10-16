@@ -7,7 +7,8 @@
 		<div class="col-md-12">
 			<div class="alert alert-warning text-center">
 				<a href="https://jpstore.id/cdn/Dokumen/Doc-20200418.xlsx" download="Import Product.xlsx">	Download</a> template import produk. <br>
-				<a href="javascript:;" class="download-kategori-excel">Download</a> kategori excel.
+				<a href="javascript:;" class="download-kategori-excel">Download</a> kategori excel. <br>
+				<a href="javascript:;" class="download-etalase-excel">Download</a> etalase excel.
 			</div>
 		</div>
 		<div class="col-md-12">
@@ -31,6 +32,17 @@
 </div>
 
 <table id="table-export-produk" border="1" class="none">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Nama</th>
+		</tr>
+	</thead>
+	<tbody>
+	</tbody>
+</table>
+
+<table id="table-export-etalase" border="1" class="none">
 	<thead>
 		<tr>
 			<th>ID</th>

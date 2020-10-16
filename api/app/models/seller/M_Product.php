@@ -1214,42 +1214,42 @@ class M_Product extends MY_Model {
 						'Error' => true,
 						'Message' => "<b>#$i</b> Kategori ID harus diisi."
 					);
-				}else if (empty($json_data[$i][3])) {
+				}else if (empty($json_data[$i][4])) {
 					$result[$no_a] = array(
 						'Error' => true,
 						'Message' => "<b>#$i</b> Kondisi harus diisi."
 					);
-				}else if (empty($json_data[$i][4])) {
+				}else if (empty($json_data[$i][5])) {
 					$result[$no_a] = array(
 						'Error' => true,
 						'Message' => "<b>#$i</b> Keterangan harus diisi."
 					);
-				}else if (empty($json_data[$i][5])) {
+				}else if (empty($json_data[$i][6])) {
 					$result[$no_a] = array(
 						'Error' => true,
 						'Message' => "<b>#$i</b> Minimum Pemesanan harus diisi."
 					);
-				}else if (empty($json_data[$i][6])) {
+				}else if (empty($json_data[$i][7])) {
 					$result[$no_a] = array(
 						'Error' => true,
 						'Message' => "<b>#$i</b> Harga harus diisi."
 					);
-				}else if (empty($json_data[$i][7])) {
+				}else if (empty($json_data[$i][8])) {
 					$result[$no_a] = array(
 						'Error' => true,
 						'Message' => "<b>#$i</b> Status harus diisi."
 					);
-				}else if (empty($json_data[$i][8])) {
+				}else if (empty($json_data[$i][9])) {
 					$result[$no_a] = array(
 						'Error' => true,
 						'Message' => "<b>#$i</b> Stok harus diisi."
 					);
-				}else if (empty($json_data[$i][9])) {
+				}else if (empty($json_data[$i][10])) {
 					$result[$no_a] = array(
 						'Error' => true,
 						'Message' => "<b>#$i</b> SKU (Stok Keeping Unit) harus diisi."
 					);
-				}else if (empty($json_data[$i][10])) {
+				}else if (empty($json_data[$i][11])) {
 					$result[$no_a] = array(
 						'Error' => true,
 						'Message' => "<b>#$i</b> Berat harus diisi."
@@ -1265,10 +1265,10 @@ class M_Product extends MY_Model {
 						if ($json_data[$i][2] == $key['id']) {
 							$kondisi = 1;
 
-							if (!empty($json_data[$i][3])) {
-								if (strtolower($json_data[$i][3]) == "baru") {
+							if (!empty($json_data[$i][4])) {
+								if (strtolower($json_data[$i][4]) == "baru") {
 									$kondisi = 1;
-								}else if(strtolower($json_data[$i][3]) == "bekas") {
+								}else if(strtolower($json_data[$i][4]) == "bekas") {
 									$kondisi = 0;
 								}else{
 									$kondisi = 1;
@@ -1277,10 +1277,10 @@ class M_Product extends MY_Model {
 
 							$status = 1;
 
-							if (!empty($json_data[$i][7])) {
-								if (strtolower($json_data[$i][7]) == "aktif") {
+							if (!empty($json_data[$i][8])) {
+								if (strtolower($json_data[$i][8]) == "aktif") {
 									$status = 1;
-								}else if(strtolower($json_data[$i][7]) == "tidak aktif") {
+								}else if(strtolower($json_data[$i][8]) == "tidak aktif") {
 									$status = 0;
 								}else{
 									$status = 1;
@@ -1295,15 +1295,16 @@ class M_Product extends MY_Model {
 							$this->db->insert($this->tabel, array(
 								'id' => $produk_id,
 								'toko_id' => $toko['id'],
-								'sku_produk' => $json_data[$i][9],
+								'sku_produk' => $json_data[$i][10],
 								'nama_produk' => $json_data[$i][1],
-								'keterangan' => $json_data[$i][4],
-								'harga' => $json_data[$i][6],
-								'berat' => $json_data[$i][10],
-								'stok' => $json_data[$i][8],
+								'keterangan' => $json_data[$i][5],
+								'harga' => $json_data[$i][7],
+								'berat' => $json_data[$i][11],
+								'stok' => $json_data[$i][9],
 								'kondisi' => $kondisi,
-								'min_beli' => $json_data[$i][5],
+								'min_beli' => $json_data[$i][6],
 								'kategori_id' => $json_data[$i][2],
+								'etalase_id' => $json_data[$i][3],
 								'status' => $status,
 								'slug' => $slug
 							));

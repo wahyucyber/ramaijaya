@@ -4,7 +4,7 @@
 <script type="text/javascript">
 	class Import_produk {
 		constructor() {
-			this.getKategori();
+			this.getEtalase();
 		}
 
 		getKategori() {
@@ -41,6 +41,31 @@
 		  var url = 'data:application/vnd.ms-excel,' + escape(html); // Set your html table into url 
 		  elem.setAttribute("href", url);
 		  elem.setAttribute("download", "Kategori.xls"); // Choose the file name
+		  return false;
+		}
+
+		getEtalase() {
+			callApi('seller/etalase/get', { client_token: $jp_client_token },res => {
+				let output = ``;
+				$.each(res.Data, function(index, val) {
+					output += `
+						<tr>
+							<td>${val.id}</td>
+							<td>${val.nama}</td>
+						</tr>
+					`;
+				});
+
+				$("table#table-export-etalase tbody").html(output);
+			})
+		}
+
+		exportEtalase(elem) {
+		  var table = document.getElementById("table-export-etalase");
+		  var html = table.outerHTML;
+		  var url = 'data:application/vnd.ms-excel,' + escape(html); // Set your html table into url 
+		  elem.setAttribute("href", url);
+		  elem.setAttribute("download", "Etalase.xls"); // Choose the file name
 		  return false;
 		}
 
@@ -102,6 +127,10 @@
 
 	$(document).on("click", "a.download-kategori-excel", function () {
 		import_produk.exportF(this);
+	})
+
+	$(document).on("click", "a.download-etalase-excel", function () {
+		import_produk.exportEtalase(this);
 	})
 
 	$(document).on("click", "div.import-produk", function () {
