@@ -1214,6 +1214,11 @@ class M_Product extends MY_Model {
 						'Error' => true,
 						'Message' => "<b>#$i</b> Kategori ID harus diisi."
 					);
+				}else if (empty($json_data[$i][3])) {
+					$result[$no_a] = array(
+						'Error' => true,
+						'Message' => "<b>#$i</b> Etalase ID harus diisi."
+					);
 				}else if (empty($json_data[$i][4])) {
 					$result[$no_a] = array(
 						'Error' => true,
