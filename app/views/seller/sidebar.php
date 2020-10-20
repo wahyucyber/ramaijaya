@@ -105,6 +105,9 @@
 					</li> -->
 				</ul>
 			</li>
+			<li class="list-item <?= segment(2) == '' || segment(2) == 'sinkron'? 'active' : '' ; ?>">
+				<a href="<?= base_url(); ?>seller/sinkron"><i class="fad fa-sync _icon"></i> Sinkronisasi</a>
+			</li>
 			
 		</ul>
 	</div>

@@ -1,0 +1,366 @@
+ERROR - 2020-10-21 00:17:07 --> Severity: error --> Exception: Unable to locate the model you have specified: M_Sinkron /var/www/html/ramaijaya/api/lib/core/Loader.php 348
+ERROR - 2020-10-21 00:25:53 --> Query error: Unknown column 'api_token' in 'where clause' - Invalid query: 
+         SELECT
+            kasier_sync_key
+         FROM
+            mst_toko
+         WHERE
+            api_token = 'bdce502eef2673d13c5a5db2681f834d62dae17b113aef3a3d098d64483045e43a0472d1d15444f64d159a851fb4f517b919'
+      
+ERROR - 2020-10-21 00:25:53 --> Severity: error --> Exception: Call to a member function row_array() on bool /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 26
+ERROR - 2020-10-21 01:01:28 --> Severity: error --> Exception: syntax error, unexpected ')' /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 314
+ERROR - 2020-10-21 01:08:45 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE
+            default = '1'' at line 5 - Invalid query: 
+         SELECT
+            id
+         FROM
+            
+         WHERE
+            default = '1'
+      
+ERROR - 2020-10-21 01:08:45 --> Severity: error --> Exception: Call to a member function row_array() on bool /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 297
+ERROR - 2020-10-21 01:09:38 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= '1'' at line 6 - Invalid query: 
+         SELECT
+            id
+         FROM
+            mst_kategori
+         WHERE
+            default = '1'
+      
+ERROR - 2020-10-21 01:09:38 --> Severity: error --> Exception: Call to a member function row_array() on bool /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 298
+ERROR - 2020-10-21 01:09:59 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:09:59 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:09:59 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:09:59 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:09:59 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:09:59 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:09:59 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:09:59 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:09:59 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:09:59 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:09:59 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:09:59 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:09:59 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:09:59 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:09:59 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:09:59 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:09:59 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:09:59 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:09:59 --> Query error: Unknown column 'Array' in 'field list' - Invalid query: INSERT INTO `mst_produk` (`berat`, `diskon`, `etalase_id`, `harga`, `kasier_produk_id`, `kategori_id`, `keterangan`, `kondisi`, `min_beli`, `nama_produk`, `sku_produk`, `slug`, `status`, `stok`, `toko_id`, `verifikasi`) VALUES ('1000',0,Array,'2500','1','22','Barang 1','1','1','Barang 1','98373759890','barang-1','1','5','1','1'), ('1000',0,Array,'2000','2','22','Barang 2','1','1','Barang 2','2034840928034','barang-2','1','11','1','1'), ('1000',0,Array,'3000','3','22','Barang 3','1','1','Barang 3','37459374929','barang-3','1','0','1','1'), ('1000',0,Array,'4000','15','22','Barang 4','1','1','Barang 4','298374924309','barang-4','1','1','1','1'), ('1000',0,NULL,'14230','1526','22','BUNGA RAMPAI CERITA RAKYAT ACEH','1','1','BUNGA RAMPAI CERITA RAKYAT ACEH','202010160','bunga-rampai-cerita-rakyat-aceh','1','22','1','1'), ('1000',0,NULL,'13149','1527','22','BUNGA RAMPAI CERITA RAKYAT ACEH III','1','1','BUNGA RAMPAI CERITA RAKYAT ACEH III','202010161','bunga-rampai-cerita-rakyat-aceh-iii','1','23','1','1'), ('1000',0,NULL,'7100','1528','22','INDAHNYA SOPAN SANTUN','1','1','INDAHNYA SOPAN SANTUN','202010162','indahnya-sopan-santun','1','18','1','1'), ('1000',0,NULL,'11951','1529','22','AKU SIAGA BANTU CAKAP DAN TANGGAP','1','1','AKU SIAGA BANTU CAKAP DAN TANGGAP','202010163','aku-siaga-bantu-cakap-dan-tanggap','1','25','1','1'), ('1000',0,NULL,'10460','1530','22','AKU SIAGA TATA BERANI DAN TANGGUH','1','1','AKU SIAGA TATA BERANI DAN TANGGUH','202010164','aku-siaga-tata-berani-dan-tangguh','1','25','1','1')
+ERROR - 2020-10-21 01:11:54 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:11:54 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:11:54 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:11:54 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:11:54 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:11:54 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:11:54 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:11:54 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:11:54 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:11:54 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:11:54 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:11:54 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:11:54 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:11:54 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:11:54 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:11:54 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:11:54 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:11:54 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:11:54 --> Query error: Duplicate entry '0' for key 'mst_produk.PRIMARY' - Invalid query: INSERT INTO `mst_produk` (`berat`, `diskon`, `etalase_id`, `harga`, `kasier_produk_id`, `kategori_id`, `keterangan`, `kondisi`, `min_beli`, `nama_produk`, `sku_produk`, `slug`, `status`, `stok`, `toko_id`, `verifikasi`) VALUES ('1000',0,NULL,'2500','1','22','Barang 1','1','1','Barang 1','98373759890','barang-1','1','5','1','1'), ('1000',0,NULL,'2000','2','22','Barang 2','1','1','Barang 2','2034840928034','barang-2','1','11','1','1'), ('1000',0,NULL,'3000','3','22','Barang 3','1','1','Barang 3','37459374929','barang-3','1','0','1','1'), ('1000',0,NULL,'4000','15','22','Barang 4','1','1','Barang 4','298374924309','barang-4','1','1','1','1'), ('1000',0,NULL,'14230','1526','22','BUNGA RAMPAI CERITA RAKYAT ACEH','1','1','BUNGA RAMPAI CERITA RAKYAT ACEH','202010160','bunga-rampai-cerita-rakyat-aceh','1','22','1','1'), ('1000',0,NULL,'13149','1527','22','BUNGA RAMPAI CERITA RAKYAT ACEH III','1','1','BUNGA RAMPAI CERITA RAKYAT ACEH III','202010161','bunga-rampai-cerita-rakyat-aceh-iii','1','23','1','1'), ('1000',0,NULL,'7100','1528','22','INDAHNYA SOPAN SANTUN','1','1','INDAHNYA SOPAN SANTUN','202010162','indahnya-sopan-santun','1','18','1','1'), ('1000',0,NULL,'11951','1529','22','AKU SIAGA BANTU CAKAP DAN TANGGAP','1','1','AKU SIAGA BANTU CAKAP DAN TANGGAP','202010163','aku-siaga-bantu-cakap-dan-tanggap','1','25','1','1'), ('1000',0,NULL,'10460','1530','22','AKU SIAGA TATA BERANI DAN TANGGUH','1','1','AKU SIAGA TATA BERANI DAN TANGGUH','202010164','aku-siaga-tata-berani-dan-tangguh','1','25','1','1')
+ERROR - 2020-10-21 01:13:31 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:13:31 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:13:31 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:13:31 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:13:31 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:13:31 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:13:31 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:13:31 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:13:31 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:13:31 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:13:31 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:13:31 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:13:31 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:13:31 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:13:31 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:13:31 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:13:31 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:13:31 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:13:31 --> Query error: Duplicate entry '0' for key 'mst_produk.PRIMARY' - Invalid query: INSERT INTO `mst_produk` (`berat`, `diskon`, `etalase_id`, `harga`, `kasier_produk_id`, `kategori_id`, `keterangan`, `kondisi`, `min_beli`, `nama_produk`, `sku_produk`, `slug`, `status`, `stok`, `toko_id`, `verifikasi`) VALUES ('1000',0,NULL,'2500','1','22','Barang 1','1','1','Barang 1','98373759890','barang-1','1','5','1','1'), ('1000',0,NULL,'2000','2','22','Barang 2','1','1','Barang 2','2034840928034','barang-2','1','11','1','1'), ('1000',0,NULL,'3000','3','22','Barang 3','1','1','Barang 3','37459374929','barang-3','1','0','1','1'), ('1000',0,NULL,'4000','15','22','Barang 4','1','1','Barang 4','298374924309','barang-4','1','1','1','1'), ('1000',0,NULL,'14230','1526','22','BUNGA RAMPAI CERITA RAKYAT ACEH','1','1','BUNGA RAMPAI CERITA RAKYAT ACEH','202010160','bunga-rampai-cerita-rakyat-aceh','1','22','1','1'), ('1000',0,NULL,'13149','1527','22','BUNGA RAMPAI CERITA RAKYAT ACEH III','1','1','BUNGA RAMPAI CERITA RAKYAT ACEH III','202010161','bunga-rampai-cerita-rakyat-aceh-iii','1','23','1','1'), ('1000',0,NULL,'7100','1528','22','INDAHNYA SOPAN SANTUN','1','1','INDAHNYA SOPAN SANTUN','202010162','indahnya-sopan-santun','1','18','1','1'), ('1000',0,NULL,'11951','1529','22','AKU SIAGA BANTU CAKAP DAN TANGGAP','1','1','AKU SIAGA BANTU CAKAP DAN TANGGAP','202010163','aku-siaga-bantu-cakap-dan-tanggap','1','25','1','1'), ('1000',0,NULL,'10460','1530','22','AKU SIAGA TATA BERANI DAN TANGGUH','1','1','AKU SIAGA TATA BERANI DAN TANGGUH','202010164','aku-siaga-tata-berani-dan-tangguh','1','25','1','1')
+ERROR - 2020-10-21 01:14:07 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:07 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:07 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:07 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:07 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:07 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:07 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:07 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:07 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:07 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:07 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:07 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:07 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:07 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:07 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:07 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:07 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:07 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:07 --> Query error: Duplicate entry '0' for key 'mst_produk.PRIMARY' - Invalid query: INSERT INTO `mst_produk` (`berat`, `diskon`, `etalase_id`, `harga`, `kasier_produk_id`, `kategori_id`, `keterangan`, `kondisi`, `min_beli`, `nama_produk`, `sku_produk`, `slug`, `status`, `stok`, `toko_id`, `verifikasi`) VALUES ('1000',0,NULL,'2500','1','22','Barang 1','1','1','Barang 1','98373759890','barang-1','1','5','1','1'), ('1000',0,NULL,'2000','2','22','Barang 2','1','1','Barang 2','2034840928034','barang-2','1','11','1','1'), ('1000',0,NULL,'3000','3','22','Barang 3','1','1','Barang 3','37459374929','barang-3','1','0','1','1'), ('1000',0,NULL,'4000','15','22','Barang 4','1','1','Barang 4','298374924309','barang-4','1','1','1','1'), ('1000',0,NULL,'14230','1526','22','BUNGA RAMPAI CERITA RAKYAT ACEH','1','1','BUNGA RAMPAI CERITA RAKYAT ACEH','202010160','bunga-rampai-cerita-rakyat-aceh','1','22','1','1'), ('1000',0,NULL,'13149','1527','22','BUNGA RAMPAI CERITA RAKYAT ACEH III','1','1','BUNGA RAMPAI CERITA RAKYAT ACEH III','202010161','bunga-rampai-cerita-rakyat-aceh-iii','1','23','1','1'), ('1000',0,NULL,'7100','1528','22','INDAHNYA SOPAN SANTUN','1','1','INDAHNYA SOPAN SANTUN','202010162','indahnya-sopan-santun','1','18','1','1'), ('1000',0,NULL,'11951','1529','22','AKU SIAGA BANTU CAKAP DAN TANGGAP','1','1','AKU SIAGA BANTU CAKAP DAN TANGGAP','202010163','aku-siaga-bantu-cakap-dan-tanggap','1','25','1','1'), ('1000',0,NULL,'10460','1530','22','AKU SIAGA TATA BERANI DAN TANGGUH','1','1','AKU SIAGA TATA BERANI DAN TANGGUH','202010164','aku-siaga-tata-berani-dan-tangguh','1','25','1','1')
+ERROR - 2020-10-21 01:14:40 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:40 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:40 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:40 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:40 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:40 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:40 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:40 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:40 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:40 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:40 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:40 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:40 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:40 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:40 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:40 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:40 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:40 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 304
+ERROR - 2020-10-21 01:14:53 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:14:53 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:14:53 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:14:53 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:14:53 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:14:53 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:14:53 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:14:53 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:14:53 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:14:53 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:14:53 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:14:53 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:14:53 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:14:53 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:14:53 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:14:53 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:14:53 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:14:53 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:15:07 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:15:07 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:15:07 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:15:07 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:15:07 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:15:07 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:15:07 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:15:07 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:15:07 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:15:07 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:15:07 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:15:07 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:15:07 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:15:07 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:15:07 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:15:07 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:15:07 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:15:07 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 01:15:07 --> Query error: Duplicate entry '0' for key 'mst_produk.PRIMARY' - Invalid query: INSERT INTO `mst_produk` (`berat`, `diskon`, `etalase_id`, `harga`, `kasier_produk_id`, `kategori_id`, `keterangan`, `kondisi`, `min_beli`, `nama_produk`, `sku_produk`, `slug`, `status`, `stok`, `toko_id`, `verifikasi`) VALUES ('1000',0,'41','2500','1','22','Barang 1','1','1','Barang 1','98373759890','barang-1','1','5','1','1'), ('1000',0,'41','2000','2','22','Barang 2','1','1','Barang 2','2034840928034','barang-2','1','11','1','1'), ('1000',0,'41','3000','3','22','Barang 3','1','1','Barang 3','37459374929','barang-3','1','0','1','1'), ('1000',0,'41','4000','15','22','Barang 4','1','1','Barang 4','298374924309','barang-4','1','1','1','1'), ('1000',0,'10','14230','1526','22','BUNGA RAMPAI CERITA RAKYAT ACEH','1','1','BUNGA RAMPAI CERITA RAKYAT ACEH','202010160','bunga-rampai-cerita-rakyat-aceh','1','22','1','1'), ('1000',0,'9','13149','1527','22','BUNGA RAMPAI CERITA RAKYAT ACEH III','1','1','BUNGA RAMPAI CERITA RAKYAT ACEH III','202010161','bunga-rampai-cerita-rakyat-aceh-iii','1','23','1','1'), ('1000',0,'9','7100','1528','22','INDAHNYA SOPAN SANTUN','1','1','INDAHNYA SOPAN SANTUN','202010162','indahnya-sopan-santun','1','18','1','1'), ('1000',0,'9','11951','1529','22','AKU SIAGA BANTU CAKAP DAN TANGGAP','1','1','AKU SIAGA BANTU CAKAP DAN TANGGAP','202010163','aku-siaga-bantu-cakap-dan-tanggap','1','25','1','1'), ('1000',0,'9','10460','1530','22','AKU SIAGA TATA BERANI DAN TANGGUH','1','1','AKU SIAGA TATA BERANI DAN TANGGUH','202010164','aku-siaga-tata-berani-dan-tangguh','1','25','1','1')
+ERROR - 2020-10-21 01:16:19 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:16:19 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:16:19 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:16:19 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:16:19 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:16:19 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:16:19 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:16:19 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:16:19 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:16:19 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:16:19 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:16:19 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:16:19 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:16:19 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:16:19 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:16:19 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:16:19 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:16:19 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:16:20 --> Query error: Duplicate entry '0' for key 'mst_produk.PRIMARY' - Invalid query: INSERT INTO `mst_produk` (`berat`, `diskon`, `etalase_id`, `harga`, `kasier_produk_id`, `kategori_id`, `keterangan`, `kondisi`, `min_beli`, `nama_produk`, `sku_produk`, `slug`, `status`, `stok`, `toko_id`, `verifikasi`) VALUES ('1000',0,'41','2500','1','22','Barang 1','1','1','Barang 1','98373759890','barang-1','1','5','1','1'), ('1000',0,'41','2000','2','22','Barang 2','1','1','Barang 2','2034840928034','barang-2','1','11','1','1'), ('1000',0,'41','3000','3','22','Barang 3','1','1','Barang 3','37459374929','barang-3','1','0','1','1'), ('1000',0,'41','4000','15','22','Barang 4','1','1','Barang 4','298374924309','barang-4','1','1','1','1'), ('1000',0,'10','14230','1526','22','BUNGA RAMPAI CERITA RAKYAT ACEH','1','1','BUNGA RAMPAI CERITA RAKYAT ACEH','202010160','bunga-rampai-cerita-rakyat-aceh','1','22','1','1'), ('1000',0,'9','13149','1527','22','BUNGA RAMPAI CERITA RAKYAT ACEH III','1','1','BUNGA RAMPAI CERITA RAKYAT ACEH III','202010161','bunga-rampai-cerita-rakyat-aceh-iii','1','23','1','1'), ('1000',0,'9','7100','1528','22','INDAHNYA SOPAN SANTUN','1','1','INDAHNYA SOPAN SANTUN','202010162','indahnya-sopan-santun','1','18','1','1'), ('1000',0,'9','11951','1529','22','AKU SIAGA BANTU CAKAP DAN TANGGAP','1','1','AKU SIAGA BANTU CAKAP DAN TANGGAP','202010163','aku-siaga-bantu-cakap-dan-tanggap','1','25','1','1'), ('1000',0,'9','10460','1530','22','AKU SIAGA TATA BERANI DAN TANGGUH','1','1','AKU SIAGA TATA BERANI DAN TANGGUH','202010164','aku-siaga-tata-berani-dan-tangguh','1','25','1','1')
+ERROR - 2020-10-21 01:18:04 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:18:04 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:18:04 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:18:04 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:18:04 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:18:04 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:18:04 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:18:04 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:18:04 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:18:04 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:18:04 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:18:04 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:18:04 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:18:04 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:18:04 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:18:04 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:18:04 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:18:04 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 306
+ERROR - 2020-10-21 01:18:05 --> Query error: Duplicate entry '3995' for key 'mst_produk.PRIMARY' - Invalid query: INSERT INTO `mst_produk` (`berat`, `diskon`, `etalase_id`, `harga`, `id`, `kasier_produk_id`, `kategori_id`, `keterangan`, `kondisi`, `min_beli`, `nama_produk`, `sku_produk`, `slug`, `status`, `stok`, `toko_id`, `verifikasi`) VALUES ('1000',0,'41','2500',3995,'1','22','Barang 1','1','1','Barang 1','98373759890','barang-1','1','5','1','1'), ('1000',0,'41','2000',3995,'2','22','Barang 2','1','1','Barang 2','2034840928034','barang-2','1','11','1','1'), ('1000',0,'41','3000',3995,'3','22','Barang 3','1','1','Barang 3','37459374929','barang-3','1','0','1','1'), ('1000',0,'41','4000',3995,'15','22','Barang 4','1','1','Barang 4','298374924309','barang-4','1','1','1','1'), ('1000',0,'10','14230',3995,'1526','22','BUNGA RAMPAI CERITA RAKYAT ACEH','1','1','BUNGA RAMPAI CERITA RAKYAT ACEH','202010160','bunga-rampai-cerita-rakyat-aceh','1','22','1','1'), ('1000',0,'9','13149',3995,'1527','22','BUNGA RAMPAI CERITA RAKYAT ACEH III','1','1','BUNGA RAMPAI CERITA RAKYAT ACEH III','202010161','bunga-rampai-cerita-rakyat-aceh-iii','1','23','1','1'), ('1000',0,'9','7100',3995,'1528','22','INDAHNYA SOPAN SANTUN','1','1','INDAHNYA SOPAN SANTUN','202010162','indahnya-sopan-santun','1','18','1','1'), ('1000',0,'9','11951',3995,'1529','22','AKU SIAGA BANTU CAKAP DAN TANGGAP','1','1','AKU SIAGA BANTU CAKAP DAN TANGGAP','202010163','aku-siaga-bantu-cakap-dan-tanggap','1','25','1','1'), ('1000',0,'9','10460',3995,'1530','22','AKU SIAGA TATA BERANI DAN TANGGUH','1','1','AKU SIAGA TATA BERANI DAN TANGGUH','202010164','aku-siaga-tata-berani-dan-tangguh','1','25','1','1')
+ERROR - 2020-10-21 01:18:43 --> Severity: Compile Error --> Can't use method return value in write context /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 343
+ERROR - 2020-10-21 01:18:44 --> Severity: Compile Error --> Can't use method return value in write context /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 343
+ERROR - 2020-10-21 01:19:17 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:19:17 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:19:17 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:19:17 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:19:17 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:19:17 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:19:17 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:19:17 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:19:17 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:19:17 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:19:17 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:19:17 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:19:17 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:19:17 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:19:17 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:19:17 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:19:17 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:19:17 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:19:44 --> Severity: Warning --> Invalid argument supplied for foreach() /var/www/html/ramaijaya/api/app/models/seller/M_Product.php 1095
+ERROR - 2020-10-21 01:19:46 --> Severity: Warning --> Invalid argument supplied for foreach() /var/www/html/ramaijaya/api/app/models/seller/M_Product.php 1095
+ERROR - 2020-10-21 01:19:48 --> Severity: Warning --> Invalid argument supplied for foreach() /var/www/html/ramaijaya/api/app/models/seller/M_Product.php 1095
+ERROR - 2020-10-21 01:19:50 --> Severity: Warning --> Invalid argument supplied for foreach() /var/www/html/ramaijaya/api/app/models/seller/M_Product.php 1095
+ERROR - 2020-10-21 01:19:51 --> Severity: Warning --> Invalid argument supplied for foreach() /var/www/html/ramaijaya/api/app/models/seller/M_Product.php 1095
+ERROR - 2020-10-21 01:19:53 --> Severity: Warning --> Invalid argument supplied for foreach() /var/www/html/ramaijaya/api/app/models/seller/M_Product.php 1095
+ERROR - 2020-10-21 01:19:54 --> Severity: Warning --> Invalid argument supplied for foreach() /var/www/html/ramaijaya/api/app/models/seller/M_Product.php 1095
+ERROR - 2020-10-21 01:19:56 --> Severity: Warning --> Invalid argument supplied for foreach() /var/www/html/ramaijaya/api/app/models/seller/M_Product.php 1095
+ERROR - 2020-10-21 01:19:57 --> Severity: Warning --> Invalid argument supplied for foreach() /var/www/html/ramaijaya/api/app/models/seller/M_Product.php 1095
+ERROR - 2020-10-21 01:20:12 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:12 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:12 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:12 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:12 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:12 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:12 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:12 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:12 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:12 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:12 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:12 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:12 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:12 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:12 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:12 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:12 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:12 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:40 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:40 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:40 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:40 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:40 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:40 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:40 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:40 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:40 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:40 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:40 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:40 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:40 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:40 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:40 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:40 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:40 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:40 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:20:55 --> Severity: Warning --> Invalid argument supplied for foreach() /var/www/html/ramaijaya/api/app/models/seller/M_Product.php 1095
+ERROR - 2020-10-21 01:20:56 --> Severity: Warning --> Invalid argument supplied for foreach() /var/www/html/ramaijaya/api/app/models/seller/M_Product.php 1095
+ERROR - 2020-10-21 01:20:58 --> Severity: Warning --> Invalid argument supplied for foreach() /var/www/html/ramaijaya/api/app/models/seller/M_Product.php 1095
+ERROR - 2020-10-21 01:20:59 --> Severity: Warning --> Invalid argument supplied for foreach() /var/www/html/ramaijaya/api/app/models/seller/M_Product.php 1095
+ERROR - 2020-10-21 01:22:38 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:22:38 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:22:38 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:22:38 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:22:38 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:22:38 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:22:38 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:22:38 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:22:38 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:22:38 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:22:38 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:22:38 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:22:38 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:22:38 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:22:38 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:22:38 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:22:38 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:22:38 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:23:36 --> Severity: Warning --> Invalid argument supplied for foreach() /var/www/html/ramaijaya/api/app/models/seller/M_Product.php 1095
+ERROR - 2020-10-21 01:23:37 --> Severity: Warning --> Invalid argument supplied for foreach() /var/www/html/ramaijaya/api/app/models/seller/M_Product.php 1095
+ERROR - 2020-10-21 01:23:39 --> Severity: Warning --> Invalid argument supplied for foreach() /var/www/html/ramaijaya/api/app/models/seller/M_Product.php 1095
+ERROR - 2020-10-21 01:23:40 --> Severity: Warning --> Invalid argument supplied for foreach() /var/www/html/ramaijaya/api/app/models/seller/M_Product.php 1095
+ERROR - 2020-10-21 01:23:42 --> Severity: Warning --> Invalid argument supplied for foreach() /var/www/html/ramaijaya/api/app/models/seller/M_Product.php 1095
+ERROR - 2020-10-21 01:23:43 --> Severity: Warning --> Invalid argument supplied for foreach() /var/www/html/ramaijaya/api/app/models/seller/M_Product.php 1095
+ERROR - 2020-10-21 01:23:44 --> Severity: Warning --> Invalid argument supplied for foreach() /var/www/html/ramaijaya/api/app/models/seller/M_Product.php 1095
+ERROR - 2020-10-21 01:23:46 --> Severity: Warning --> Invalid argument supplied for foreach() /var/www/html/ramaijaya/api/app/models/seller/M_Product.php 1095
+ERROR - 2020-10-21 01:24:53 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:24:53 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:24:53 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:24:53 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:24:53 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:24:53 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:24:53 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:24:53 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:24:53 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:24:53 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:24:53 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:24:53 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:24:53 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:24:53 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:24:53 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:24:53 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:24:53 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:24:53 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:15 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:15 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:15 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:15 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:15 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:15 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:15 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:15 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:15 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:15 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:15 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:15 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:15 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:15 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:15 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:15 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:15 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:15 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:18 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:18 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:18 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:18 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:18 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:18 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:18 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:18 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:18 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:18 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:18 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:18 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:18 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:18 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:18 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:18 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:18 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:18 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:43 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:43 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:43 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:43 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:43 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:43 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:43 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:43 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:43 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:43 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:43 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:43 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:43 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:43 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:43 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:43 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:43 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 01:25:43 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
