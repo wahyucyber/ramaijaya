@@ -48,6 +48,7 @@ class M_Sinkron extends MY_Model {
       $get_produk = $this->db->query("
          SELECT
             $this->etalase.id,
+            $this->etalase.kasier_etalase_id,
             $this->etalase.nama_etalase AS nama
          FROM
             $this->produk
@@ -107,6 +108,7 @@ class M_Sinkron extends MY_Model {
       $get_produk = $this->db->query("
          SELECT
             id,
+            kasier_produk_id,
             nama_produk,
             keterangan,
             harga,
