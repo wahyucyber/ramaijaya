@@ -364,3 +364,11 @@ ERROR - 2020-10-21 01:25:43 --> Severity: Warning --> array_column() expects par
 ERROR - 2020-10-21 01:25:43 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
 ERROR - 2020-10-21 01:25:43 --> Severity: Warning --> array_column() expects parameter 1 to be array, object given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
 ERROR - 2020-10-21 01:25:43 --> Severity: Warning --> array_search() expects parameter 2 to be array, null given /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 307
+ERROR - 2020-10-21 23:45:18 --> Severity: Warning --> Invalid argument supplied for foreach() /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 188
+ERROR - 2020-10-21 23:45:18 --> Severity: Warning --> Invalid argument supplied for foreach() /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 23:47:27 --> Severity: Warning --> Invalid argument supplied for foreach() /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 188
+ERROR - 2020-10-21 23:47:27 --> Severity: Warning --> Invalid argument supplied for foreach() /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 23:49:58 --> Severity: Warning --> Invalid argument supplied for foreach() /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 188
+ERROR - 2020-10-21 23:49:58 --> Severity: Warning --> Invalid argument supplied for foreach() /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305
+ERROR - 2020-10-21 23:52:58 --> Severity: Warning --> Invalid argument supplied for foreach() /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 188
+ERROR - 2020-10-21 23:52:58 --> Severity: Warning --> Invalid argument supplied for foreach() /var/www/html/ramaijaya/api/app/models/seller/M_Sinkron.php 305

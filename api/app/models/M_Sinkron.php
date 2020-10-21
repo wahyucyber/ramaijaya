@@ -51,11 +51,9 @@ class M_Sinkron extends MY_Model {
             $this->etalase.kasier_etalase_id,
             $this->etalase.nama_etalase AS nama
          FROM
-            $this->produk
-            LEFT JOIN $this->etalase ON $this->etalase.id = $this->produk.etalase_id
+            $this->etalase
          WHERE
-            $this->produk.toko_id = '$toko_id'
-         GROUP BY $this->produk.etalase_id
+            $this->etalase.toko_id = '$toko_id'
       ")->result_array();
 
       $output['Error'] = false;

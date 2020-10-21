@@ -306,6 +306,7 @@ class M_Sinkron extends MY_Model {
          $diskon = $key['diskon']/$key['harga_jual']*100;
          if(is_numeric(array_search($key['id'], array_column($get_produk, 'kasier_produk_id')))) {
             $produk_update[$produk_update_no++] = array(
+               'id' => $key['ramaijaya_barang_id'],
                'kasier_produk_id' => $key['id'],
                'toko_id' => $toko_id,
                'sku_produk' => $key['kode'],
@@ -365,7 +366,7 @@ class M_Sinkron extends MY_Model {
       }
 
       if(count($produk_update) != 0) {
-         $this->db->update_batch($this->produk, $produk_update, 'kasier_produk_id');
+         $this->db->update_batch($this->produk, $produk_update, 'id');
       }
 
       if(count($produk_update2) != 0) {
@@ -380,7 +381,8 @@ class M_Sinkron extends MY_Model {
 
       $output = array(
          'Error' => false,
-         'Message' => "Produk berhasil disinkronisasi."
+         'Message' => "Produk berhasil disinkronisasi.",
+         'produk' => $sync_produk['data']
       );
 
       output:
