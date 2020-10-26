@@ -32,6 +32,7 @@ class M_Product extends MY_Model {
 		// $limit = isset($params['limit'])? $params['limit'] : 10;
 		$paging = ($start != "" && !empty($length)) ? "LIMIT $start, $length" : "";
 		$kategori = $params['kategori_id'];
+		$etalase = $params['etalase_id'];
 		$status = $params['status'];
 		if (empty($client_token)) {
 			$result['Error'] = true;
@@ -59,6 +60,7 @@ class M_Product extends MY_Model {
 				$where = empty($params['search']['value'])? "" : " AND $this->tabel.nama_produk LIKE '%".$params['search']['value']."%'";
 				(!empty($kategori)) ? $where .= " AND $this->tabel.kategori_id = '$kategori'":"";
 				($status != "") ? $where .= " AND $this->tabel.status = '$status'":"";
+				$where .= (!empty($etalase)) ? " AND $this->tabel.etalase_id = '$etalase'":"";
 				
 				$recordsTotal = $this->db->query("SELECT
 												$this->tabel.id as id_produk,
@@ -161,6 +163,7 @@ class M_Product extends MY_Model {
 												$this->tabel.lama_preorder,
 												$this->tabel.waktu_preorder,
 												$this->tabel.etalase_id,
+												$this->etalase.nama_etalase,
 												$this->tabel.kategori_id,
 												$this->tabel_kategori.nama_kategori,
 												$this->tabel.slug as slug_produk,
@@ -177,6 +180,7 @@ class M_Product extends MY_Model {
 												$this->tabel_toko
 											ON
 												$this->tabel.toko_id = $this->tabel_toko.id
+											LEFT JOIN $this->etalase ON $this->etalase.id = $this->tabel.etalase_id
 											WHERE
 												$this->tabel.toko_id = $toko[id_toko]
 											$where
@@ -210,6 +214,7 @@ class M_Product extends MY_Model {
 							'lama_preorder' => $key['lama_preorder'],
 							'waktu_preorder' => $key['waktu_preorder'],
 							'etalase_id' => $key['etalase_id'],
+							'etalase_nama' => $key['nama_etalase'],
 							'kategori_id' => $key['kategori_id'],
 							'nama_kategori' => $key['nama_kategori'],
 							'slug_produk' => $key['slug_produk'],

@@ -77,6 +77,10 @@
 						</select>
 					</div>
 					<div class="col-md-4">
+						<select class="form-control filter-etalase select2" data-placeholder="Berdasarkan Etalase">
+						</select>
+					</div>
+					<div class="col-md-4">
 						<select class="form-control filter-status-product select2" data-placeholder="Status">
 							<option value="">Samua</option>
 							<option value="1">Aktif</option>

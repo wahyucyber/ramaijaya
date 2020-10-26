@@ -12,20 +12,23 @@
 	class Product {
 		constructor()
 		{
-			this.Keyword = ''
-			this.ProdukId = null
-			this.run()
-			this.getCategory()
+			this.Keyword = '';
+			this.ProdukId = null;
+			this.run();
+			this.getCategory();
+			this.getEtalase();
 		}
 
 		run(params = "")
 		{
 			var kategori_id = params['kategori_id'];
+			var etalase_id = params['etalase_id'];
 			var status= params['status'];
 			this.ProdukId = null
 			var data = {
 				client_token: $jp_client_token,
 				kategori_id: kategori_id,
+				etalase_id: etalase_id,
 				status: status
 			}
 
@@ -44,11 +47,18 @@
 					{
 						data: null,
 						render: function (data) {
-							var blokir = ''
+							var blokir = '';
+							var etalase = '';
+
 							if (data.verifikasi == 0) {
 								blokir += `<span class="badge badge-danger badge-pill">Diblokir</span><br>
 								<small class="text-danger">${data.catatan_diblokir}</small>`
 							}
+
+							if(data.etalase_id != null) {
+								etalase = `<span class="badge badge-success fs-10">${data.etalase_nama}</span>`;
+							}
+
 							return `
 							<div class="media">
 								<img src="${data.foto_produk}" alt="" width="47px" class="img-thumbnail">
@@ -56,6 +66,8 @@
 									<h5 class="m-0 fs-14 fw-600">
 									<a href="${base_url()}shop/${data.slug_toko}/${data.slug_produk}" target="_blank" class="text-orange">${data.nama_produk}</a></h5>
 									<span class="badge badge-success bg-orange fs-10">${data.nama_kategori}</span>
+									${etalase}
+									<br/>
 									<small class="text-muted fs-10">${data.keterangan}</small>
 								</div>
 							</div>
@@ -174,10 +186,24 @@
 			})
 		}
 
+		getEtalase() {
+			callApi("seller/etalase/get", {
+				client_token: $jp_client_token
+			}, e => {
+				var option = `<option value=""></option>`;
+				$.each(e.Data, function (index, value) { 
+					 option += `<option value="${value.id}">${value.nama}</option>`;
+				});
+
+				$("select.filter-etalase").html(option);
+			})
+		}
+
 		refresh() {
 			this.run()
 			this.getCategory()
 			$("select.filter-kategori-product").val('').trigger('change');
+			$("select.filter-etalase").val('').trigger('change');
 			$("select.filter-status-product").val('').trigger('change');
 		}
 
@@ -222,8 +248,21 @@
 	$(document).on("change", ".filter-kategori-product", function () {
 		kategori_id = $(this).val();
 		status = $("select.filter-status-product").val();
+		etalase_id = $("select.filter-etalase").val();
 		product.run({
 			kategori_id: kategori_id,
+			etalase_id: etalase_id,
+			status: status
+		});
+	})
+
+	$(document).on("change", ".filter-etalase", function () {
+		kategori_id = $("select.filter-kategori-product").val();
+		etalase_id = $(this).val();
+		status = $("select.filter-status-product").val();
+		product.run({
+			kategori_id: kategori_id,
+			etalase_id: etalase_id,
 			status: status
 		});
 	})
@@ -231,9 +270,11 @@
 	$(document).on("change", ".filter-status-product", function () {
 		status = $(this).val();
 		kategori_id = $("select.filter-kategori-product").val();
+		etalase_id = $("select.filter-etalase").val();
 		product.run({
 			status: status,
-			kategori_id: kategori_id
+			kategori_id: kategori_id,
+			etalase_id: etalase_id
 		});
 	})
 
