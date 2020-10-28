@@ -1,0 +1,15 @@
+ERROR - 2020-10-28 00:37:55 --> Severity: error --> Exception: Call to undefined method M_Shop::status_toko() /var/www/html/ramaijaya/api/app/controllers/seller/Shop.php 38
+ERROR - 2020-10-28 00:38:29 --> Severity: error --> Exception: Call to undefined method M_Shop::status_toko() /var/www/html/ramaijaya/api/app/controllers/seller/Shop.php 38
+ERROR - 2020-10-28 00:39:00 --> Query error: Unknown column 'catatan' in 'field list' - Invalid query: UPDATE `mst_toko` SET `awal_tutup` = NULL, `akhir_tutup` = NULL, `catatan` = NULL, `buka` = '0'
+ERROR - 2020-10-28 00:39:14 --> Query error: Unknown column 'catatan' in 'field list' - Invalid query: UPDATE `mst_toko` SET `awal_tutup` = NULL, `akhir_tutup` = NULL, `catatan` = NULL, `buka` = '0'
+ERROR - 2020-10-28 00:40:15 --> Query error: Unknown column 'catatan' in 'field list' - Invalid query: UPDATE `mst_toko` SET `awal_tutup` = NULL, `akhir_tutup` = NULL, `catatan` = NULL, `buka` = '1'
+ERROR - 2020-10-28 00:40:25 --> Query error: Unknown column 'catatan' in 'field list' - Invalid query: UPDATE `mst_toko` SET `awal_tutup` = NULL, `akhir_tutup` = NULL, `catatan` = NULL, `buka` = '0'
+ERROR - 2020-10-28 00:40:36 --> Query error: Unknown column 'catatan' in 'field list' - Invalid query: UPDATE `mst_toko` SET `awal_tutup` = NULL, `akhir_tutup` = NULL, `catatan` = NULL, `buka` = '0'
+ERROR - 2020-10-28 00:40:58 --> Query error: Unknown column 'catatan' in 'field list' - Invalid query: UPDATE `mst_toko` SET `awal_tutup` = NULL, `akhir_tutup` = NULL, `catatan` = NULL, `buka` = '0'
+ERROR - 2020-10-28 00:42:28 --> Query error: Unknown column 'catatan' in 'field list' - Invalid query: UPDATE `mst_toko` SET `awal_tutup` = NULL, `akhir_tutup` = NULL, `catatan` = NULL, `buka` = '0'
+ERROR - 2020-10-28 00:42:58 --> Query error: Unknown column 'catatan' in 'field list' - Invalid query: UPDATE `mst_toko` SET `awal_tutup` = NULL, `akhir_tutup` = NULL, `catatan` = NULL, `buka` = '0'
+WHERE `id` = '1'
+ERROR - 2020-10-28 15:48:44 --> Query error: Unknown column 'buka_toko' in 'field list' - Invalid query: UPDATE `mst_toko` SET `buka_toko` = CASE 
+WHEN `id` = '1' THEN '0'
+ELSE `buka_toko` END
+WHERE `id` IN('1')

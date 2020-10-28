@@ -52,40 +52,50 @@
 
 						if (data.buka_toko == 0) {
 
+							var tanggal = `-`;
+							var catatan = ``;
+							var tutup_sekarang = ``;
+
+							if(data.akhir_tutup != null) {
+								tanggal = `${data.akhir_tutup}`;
+							}
+
+							if(data.catatan_tutup != null) {
+								catatan = data.catatan_tutup;
+							}
+
+							if(data.buka_toko == 0) {
+								tutup_sekarang = `checked`;
+							}
+
 							status += `<div class="fs-14 mb-3"><img src="${base_url('assets/img/default/icon-shop-close.png')}" alt="" width="35px" /> Ditutup</div>
 											<div class="fs-12 text-muted">
-												Tutup sampai: 6/5/2020
+												Tutup sampai: ${tanggal}
 											</div>
 											<div class="fs-12 text-muted mb-2">
-												Catatan: Catatan alasan tutup toko
+												Catatan: ${catatan}
 											</div>
 											<div id="btn-close-edit" class="shop-status-edit collapse show">
-												<button class="btn btn-success btn-sm"><i class="fal fa-check-circle"></i>	Buka Toko</button>
-												<button class="btn btn-light btn-sm" data-toggle="collapse" data-target=".shop-status-edit" aria-controls="close-shop btn-close-edit"><i class="fal fa-edit"></i>	Ubah jadwal Tutup Toko</button>
-											</div>
-											<div class="card shadow-sm collapse shop-status-edit" id="close-shop">
-												<div class="card-body">
-													<h4 class="fs-13 mb-3">Atur jadwal Tutup Toko </h4>
-													<div class="form-group row">
-														<div class="col-md-6">
-															<label>Mulai Tanggal</label>
-															<input type="date" class="form-control" />
-														</div>
-														<div class="col-md-6">
-															<label>Sampai Tanggal</label>
-															<input type="date" class="form-control" />
-														</div>
-													</div>
-													<div class="form-group">
-														<label>Catatan</label>
-														<textarea rows="1" class="form-control"></textarea>
-													</div>
-													<button class="btn btn-sm btn-success"><i class="fal fa-check-circle"></i>	Ubah</button>
-													<button class="btn btn-sm btn-danger" data-toggle="collapse" data-target=".shop-status-edit" aria-controls="close-shop btn-close-edit"><i class="fal fa-times-circle"></i>	Batal</button>
-												</div>
-											</div>`
+												<button class="btn btn-success btn-sm _status--buka-toko"><i class="fal fa-check-circle"></i>	Buka Toko</button>
+											</div>`;
 
 						}else{
+
+							var tanggal = `-`;
+							var catatan = ``;
+							var tutup_sekarang = ``;
+
+							if(data.akhir_tutup != null) {
+								tanggal = `${data.akhir_tutup}`;
+							}
+
+							if(data.catatan_tutup != null) {
+								catatan = data.catatan_tutup;
+							}
+
+							if(data.buka_toko == 0) {
+								tutup_sekarang = `checked`;
+							}
 
 							status += `<div class="fs-14 mb-3"><img src="${base_url('assets/img/default/icon-shop-open.png')}" alt="" width="35px" /> Buka</div>
 											<div class="card shadow-sm" id="close-shop">
@@ -93,26 +103,24 @@
 													<h4 class="fs-13 mb-3">Atur jadwal Tutup Toko </h4>
 													<div class="form-group row">
 														<div class="col-md-6">
-															<label>Mulai Tanggal</label>
-															<input type="date" class="form-control" />
-														</div>
-														<div class="col-md-6">
-															<label>Sampai Tanggal</label>
-															<input type="date" class="form-control" />
+															<label>Tanggal</label>
+															<input type="text" name="" id="" class="form-control _daterangepicker">
+															<input type="hidden" name="" class="_daterangepicker--dari-tanggal">
+															<input type="hidden" name="" class="_daterangepicker--ke-tanggal">
 														</div>
 													</div>
 													<div class="form-group">
 														<div class="custom-control custom-checkbox">
-														  <input type="checkbox" class="custom-control-input">
+														  <input type="checkbox" id="remember" ${tutup_sekarang} class="custom-control-input tutup-sekarang">
 														  <label class="custom-control-label fs-13" for="remember">Tutup Sekarang</label>
 														</div>
 													</div>
 													<div class="form-group">
 														<label>Catatan</label>
-														<textarea rows="1" class="form-control"></textarea>
+														<textarea rows="1" class="form-control catatan-tutup">${catatan}</textarea>
 													</div>
-													<button class="btn btn-sm btn-success"><i class="fal fa-cog"></i>	Atur</button>
-													<button class="btn btn-sm btn-warning"><i class="fal fa-sync"></i>	Reset</button>
+													<button class="btn btn-sm btn-success _set--status-toko"><i class="fal fa-cog"></i>	Atur</button>
+													<button class="btn btn-sm btn-warning _set--reset-status-toko"><i class="fal fa-sync"></i>	Reset</button>
 												</div>
 											</div>`
 
@@ -127,9 +135,78 @@
 					}
 
 					$('#content--shop .shop-status').html(status)
+
+					var config_daterangepicker = {
+						autoUpdateInput: false,
+						locale: {
+							cancelLabel: 'Clear'
+						},
+						ranges: {
+							'Today': [moment(), moment()],
+							'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+							'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+							'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+							'This Month': [moment().startOf('month'), moment().endOf('month')],
+							'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+						}
+					};
+
+					if(data.awal_tutup != null && data.akhir_tutup != null) {
+						config_daterangepicker = {
+							autoUpdateInput: false,
+							startDate: data.awal_tutup == null ? "" : setting_shop._date(data.awal_tutup),
+							endDate: data.akhir_tutup == null ? "" : setting_shop._date(data.akhir_tutup),
+							locale: {
+								cancelLabel: 'Clear'
+							},
+							ranges: {
+								'Today': [moment(), moment()],
+								'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+								'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+								'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+								'This Month': [moment().startOf('month'), moment().endOf('month')],
+								'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+							}
+						}
+
+						$("input._daterangepicker").val(setting_shop._dateFormat(data.awal_tutup) + ' - ' + setting_shop._dateFormat(data.akhir_tutup));
+						$("input[type=hidden]._daterangepicker--dari-tanggal").val(setting_shop._dateFormat(data.awal_tutup));
+						$("input[type=hidden]._daterangepicker--ke-tanggal").val(setting_shop._dateFormat(data.akhir_tutup));
+					}
+					$('input._daterangepicker').daterangepicker(config_daterangepicker);
+
+					$('input._daterangepicker').on('apply.daterangepicker', function(ev, picker) {
+						$(this).val(picker.startDate.format('YYYY/MM/DD') + ' - ' + picker.endDate.format('YYYY/MM/DD'));
+						$("input[type=hidden]._daterangepicker--dari-tanggal").val(picker.startDate.format('YYYY-MM-DD'));
+						$("input[type=hidden]._daterangepicker--ke-tanggal").val(picker.endDate.format('YYYY-MM-DD'));
+					});
+
+					$('input._daterangepicker').on('cancel.daterangepicker', function(ev, picker) {
+						$(this).val(``);
+						$("input[type=hidden]._daterangepicker--dari-tanggal").val(``);
+						$("input[type=hidden]._daterangepicker--ke-tanggal").val(``);
+					});
 				}
 
 			})
+		}
+
+		_date(date) {
+			let dt = new Date(date);
+			let d = dt.getDate();
+			let m = dt.getMonth() + 1;
+			let y = dt.getFullYear();
+
+			return m+"/"+d+"/"+y;
+		}
+
+		_dateFormat(date) {
+			let dt = new Date(date);
+			let d = dt.getDate();
+			let m = dt.getMonth() + 1;
+			let y = dt.getFullYear();
+
+			return y+"/"+m+"/"+d;
 		}
 
 		edit()
@@ -185,6 +262,18 @@
 			})
 		}
 
+		status(params) {
+			callApi("seller/shop/status_toko", params, e => {
+				let message = e.Message;
+				if (e.Error) {
+					notifAlert(message, "error", 5000);
+				}else{
+					notifAlert(message, "success", 5000);
+					setting_shop.run()
+				}
+			});
+		}
+
 	}
 
 	var setting_shop = new SettingShop
@@ -218,6 +307,35 @@
 		setting_shop.edit();
 
 		return false;
+	})
+
+	$(document).on("click", "button._set--status-toko", function() {
+		let dari_tanggal = $("input._daterangepicker--dari-tanggal").val();
+		let ke_tanggal = $("input._daterangepicker--ke-tanggal").val();
+		let tutup = $("input[type=checkbox].tutup-sekarang").prop('checked') ? 1 : 0;
+		let catatan = $("textarea.catatan-tutup").val();
+
+		setting_shop.status({
+			client_token: $jp_client_token,
+			dari_tanggal: dari_tanggal,
+			ke_tanggal: ke_tanggal,
+			tutup: tutup,
+			catatan: catatan
+		});
+	})
+
+	$(document).on("click", "button._status--buka-toko", function() {
+		setting_shop.status({
+			client_token: $jp_client_token
+		});
+	})
+
+	$(document).on("click", "button._set--reset-status-toko", function() {
+		$("input._daterangepicker").val(``);
+		$("input._daterangepicker--dari-tanggal").val(``);
+		$("input._daterangepicker--ke-tanggal").val(``);
+		$("input[type=checkbox].tutup-sekarang").prop('checked', false);
+		$("textarea.catatan-tutup").val(``);
 	})
 
 </script>

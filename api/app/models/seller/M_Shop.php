@@ -355,6 +355,76 @@ class M_Shop extends MY_Model {
 		return $hasil;
 	}
 
+	public function status_toko($params)
+	{
+		$client_token = $params['client_token'];
+		$dari_tanggal = $params['dari_tanggal'];
+		$ke_tanggal = $params['ke_tanggal'];
+		$tutup = $params['tutup'];
+		$catatan = $params['catatan'];
+
+		if(empty($client_token)) {
+			$output = array(
+				'Error' => true,
+				'Message' => "client_token is required."
+			);
+			goto output;
+		}
+
+		$toko_id = $this->db->query("
+			SELECT
+				$this->tabel.id
+			FROM
+				$this->tabel_user
+				LEFT JOIN $this->tabel ON $this->tabel.user_id = $this->tabel_user.id
+			WHERE
+				$this->tabel_user.api_token = '$client_token'
+		")->row_array()['id'];
+
+		if($tutup == 1) {
+			$this->db->update($this->tabel, array(
+				'awal_tutup' => null,
+				'akhir_tutup' => null,
+				'catatan_tutup' => $catatan,
+				'buka' => '0'
+			), array(
+				'id' => $toko_id
+			));
+		}else if(!empty($dari_tanggal) && !empty($ke_tanggal)) {
+
+			$tutup = "1";
+			if(strtotime($dari_tanggal) == strtotime(date("Y-m-d"))) {
+				$tutup = "0";
+			}
+
+			$this->db->update($this->tabel, array(
+				'awal_tutup' => $dari_tanggal,
+				'akhir_tutup' => $ke_tanggal,
+				'catatan_tutup' => $catatan,
+				'buka' => $tutup
+			), array(
+				'id' => $toko_id
+			));
+		}else if(empty($tutup) && empty($dari_tanggal) && empty($ke_tanggal)) {
+			$this->db->update($this->tabel, array(
+				'awal_tutup' => NULL,
+				'akhir_tutup' => NULL,
+				'catatan_tutup' => NULL,
+				'buka' => '1'
+			), array(
+				'id' => $toko_id
+			));
+		}
+
+		$output = array(
+			'Error' => false,
+			'Message' => "status toko berhasil diperbarui."
+		);
+
+		output:
+		return $output;
+	}
+
 }
 
 /* End of file M_Shop.php */

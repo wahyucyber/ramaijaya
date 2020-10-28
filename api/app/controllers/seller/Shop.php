@@ -33,6 +33,13 @@ class Shop extends MY_Controller {
 		$this->response($result);
 	}
 
+	function status_toko_post()
+	{
+		$result = $this->shop->status_toko($this->post());
+
+		$this->response($result);
+	}
+
 }
 
 /* End of file Shop.php */
