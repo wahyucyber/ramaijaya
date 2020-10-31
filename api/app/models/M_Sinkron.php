@@ -109,6 +109,7 @@ class M_Sinkron extends MY_Model {
             kasier_produk_id,
             nama_produk,
             keterangan,
+            harga_beli,
             harga,
             diskon,
             berat,

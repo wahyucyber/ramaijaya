@@ -393,7 +393,7 @@ class M_Shop extends MY_Model {
 		}else if(!empty($dari_tanggal) && !empty($ke_tanggal)) {
 
 			$tutup = "1";
-			if(strtotime($dari_tanggal) == strtotime(date("Y-m-d"))) {
+			if(strtotime($dari_tanggal) <= strtotime(date("Y-m-d"))) {
 				$tutup = "0";
 			}
 

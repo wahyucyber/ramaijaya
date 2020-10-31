@@ -13,3 +13,8 @@ ERROR - 2020-10-28 15:48:44 --> Query error: Unknown column 'buka_toko' in 'fiel
 WHEN `id` = '1' THEN '0'
 ELSE `buka_toko` END
 WHERE `id` IN('1')
+ERROR - 2020-10-28 15:53:06 --> Severity: Warning --> mysqli::query(): (HY001/1038): Out of sort memory, consider increasing server sort buffer size /var/www/html/ramaijaya/api/lib/database/drivers/mysqli/mysqli_driver.php 307
+ERROR - 2020-10-28 15:53:06 --> Query error: Out of sort memory, consider increasing server sort buffer size - Invalid query: SELECT * FROM mst_produk 
+										WHERE status = 1 AND verifikasi = 1 
+										ORDER BY created_at DESC LIMIT 0,5
+ERROR - 2020-10-28 15:53:06 --> Severity: error --> Exception: Call to a member function result_array() on bool /var/www/html/ramaijaya/api/app/models/M_Search.php 36

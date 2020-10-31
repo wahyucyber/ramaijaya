@@ -848,13 +848,13 @@ class M_Product extends MY_Model {
 					WHERE
 						CONCAT($this->tabel.nama_produk, ' ', $this->tabel_toko.nama_toko) LIKE '%$q%'
 						AND
-							$this->tabel_toko.status = 1
+							$this->tabel_toko.status = '1'
 						AND 
-							$this->tabel_toko.buka = 1
+							$this->tabel_toko.buka = '1'
 						AND
-							$this->tabel.status = 1
+							$this->tabel.status = '1'
 						AND
-							$this->tabel.verifikasi = 1
+							$this->tabel.verifikasi = '1'
 						$where
 					$filter_order
 					LIMIT
@@ -989,9 +989,9 @@ class M_Product extends MY_Model {
 					WHERE
 						CONCAT($this->tabel.nama_produk, ' ', $this->tabel_toko.nama_toko) LIKE '%$q%'
 						AND 
-						$this->tabel_toko.status = 1
+						$this->tabel_toko.status = '1'
 						AND
-						$this->tabel_toko.buka = 1
+						$this->tabel_toko.buka = '1'
 						$where
 					GROUP BY $this->tabel_toko.id
 					LIMIT

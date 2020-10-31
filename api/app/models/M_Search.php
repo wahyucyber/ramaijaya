@@ -29,9 +29,16 @@ class M_Search extends CI_Model {
 
 			$like = $q?" AND nama_produk LIKE '%$search?$search : ($q? $q : )%'" : '';
 
-			$produk = $this->db->query("SELECT * FROM $this->tb_produk $like
-										WHERE status = 1 AND verifikasi = 1 
-										ORDER BY created_at DESC LIMIT 0,5");
+			$produk = $this->db->query("
+				SELECT 
+					* 
+				FROM 
+					$this->tb_produk $like
+				WHERE 
+					status = 1 AND 
+					verifikasi = 1 
+				ORDER BY created_at DESC LIMIT 0,5
+			");
 
 			$data_produk = $produk->result_array();
 

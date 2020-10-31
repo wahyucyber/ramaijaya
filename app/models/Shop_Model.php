@@ -21,9 +21,9 @@ class Shop_Model extends MY_Model {
 									WHERE
 										slug = '$slug'
 									AND
-										status = 1
+										status = '1'
 									AND
-										buka = 1")->row_array();
+										buka = '1'")->row_array();
 		$result['Error'] = true;
 		if ($toko) {
 			$result['Error'] = false;
@@ -47,9 +47,9 @@ class Shop_Model extends MY_Model {
 									WHERE
 										$this->tabel_produk.slug = '$slug'
 									AND
-										$this->tabel_produk.status = 1
+										$this->tabel_produk.status = '1'
 									AND
-										$this->tabel_produk.verifikasi = 1")->row_array();
+										$this->tabel_produk.verifikasi = '1'")->row_array();
 		$result['Error'] = true;
 		if ($produk) {
 			$result['Error'] = false;
