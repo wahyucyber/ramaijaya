@@ -267,7 +267,7 @@ class M_Sinkron extends MY_Model {
 
       $sync_produk = $this->_curl(array(
          'sync' => "produk",
-         'date' => ($last_sync != null) ? $last_sync : "",
+         // 'date' => ($last_sync != null) ? $last_sync : "",
          'client_key' => $client_token
       ));
 
@@ -311,6 +311,7 @@ class M_Sinkron extends MY_Model {
                'toko_id' => $toko_id,
                'sku_produk' => $key['kode'],
                'nama_produk' => $key['nama'],
+               'keterangan' => $key['keterangan'],
                'harga_beli' => $key['harga_beli'],
                'harga' => $key['harga_jual'],
                'diskon' => $diskon,
@@ -329,6 +330,7 @@ class M_Sinkron extends MY_Model {
                'toko_id' => $toko_id,
                'sku_produk' => $key['kode'],
                'nama_produk' => $key['nama'],
+               'keterangan' => $key['keterangan'],
                'harga_beli' => $key['harga_beli'],
                'harga' => $key['harga_jual'],
                'diskon' => $diskon,
@@ -348,7 +350,7 @@ class M_Sinkron extends MY_Model {
                'sku_produk' => $key['kode'],
                'nama_produk' => $key['nama'],
                'slug' => slugify($key['nama']),
-               'keterangan' => $key['nama'],
+               'keterangan' => $key['keterangan'],
                'harga_beli' => $key['harga_beli'],
                'harga' => $key['harga_jual'],
                'diskon' => $diskon,
@@ -384,8 +386,7 @@ class M_Sinkron extends MY_Model {
 
       $output = array(
          'Error' => false,
-         'Message' => "Produk berhasil disinkronisasi.",
-         'produk' => $sync_produk['data']
+         'Message' => "Produk berhasil disinkronisasi."
       );
 
       output:

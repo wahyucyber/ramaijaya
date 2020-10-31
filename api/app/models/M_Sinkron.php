@@ -114,7 +114,8 @@ class M_Sinkron extends MY_Model {
             diskon,
             berat,
             stok,
-            etalase_id
+            etalase_id,
+            status
          FROM
             $this->produk
          WHERE
