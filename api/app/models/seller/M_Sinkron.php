@@ -319,7 +319,7 @@ class M_Sinkron extends MY_Model {
                'berat' => '1000',
                'min_beli' => '1',
                'etalase_id' => $etalase[$key['etalase_id']],
-               'status' => '1',
+               'status' => $key['is_jual'],
                'verifikasi' => '1'
             );
          }else if($key['ramaijaya_barang_id'] != 0) {
@@ -337,7 +337,7 @@ class M_Sinkron extends MY_Model {
                'berat' => '1000',
                'min_beli' => '1',
                'etalase_id' => $etalase[$key['etalase_id']],
-               'status' => '1',
+               'status' => $key['is_jual'],
                'verifikasi' => '1'
             );
          }else {
@@ -358,7 +358,7 @@ class M_Sinkron extends MY_Model {
                'min_beli' => '1',
                'kategori_id' => $kategori_id,
                'etalase_id' => $etalase[$key['etalase_id']],
-               'status' => '1',
+               'status' => $key['is_jual'],
                'verifikasi' => '1'
             );
          }
